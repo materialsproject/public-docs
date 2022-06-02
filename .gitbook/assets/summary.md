@@ -1,0 +1,75 @@
+# SummaryDoc
+
+## Properties
+
+- **`builder_meta`** *(EmmetMeta)*: Builder metadata. 
+- **`nsites`** *(integer)*: Total number of sites in the structure. 
+- **`elements`** *(list)*: List of elements in the material. 
+- **`nelements`** *(integer)*: Number of elements. 
+- **`composition`** *(dictionary)*: Full composition for the material. 
+- **`composition_reduced`** *(dictionary)*: Simplified representation of the composition. 
+- **`formula_pretty`** *(string)*: Cleaned representation of the formula. 
+- **`formula_anonymous`** *(string)*: Anonymized representation of the formula. 
+- **`chemsys`** *(string)*: dash-delimited string of elements in the material. 
+- **`volume`** *(float)*: Total volume for this structure in Angstroms^3. 
+- **`density`** *(float)*: Density in grams per cm^3. 
+- **`density_atomic`** *(float)*: The atomic packing density in atoms per cm^3. 
+- **`symmetry`** *(SymmetryData)*: Symmetry data for this material. 
+- **`material_id`** *(string)*: The Materials Project ID of the material, used as a universal reference across property documents.This comes in the form: mp-******. 
+- **`deprecated`** *(boolean)*: Whether this property document is deprecated. 
+- **`deprecation_reasons`** *(list)*: List of deprecation tags detailing why this document isn't valid. 
+- **`last_updated`** *(string)*: Timestamp for the most recent calculation update for this property. 
+- **`origins`** *(list)*: Dictionary for tracking the provenance of properties. 
+- **`warnings`** *(list)*: Any warnings related to this property. 
+- **`structure`** *(dictionary)*: The lowest energy structure for this material. \<materials\>
+- **`task_ids`** *(list)*: List of Calculations IDs associated with this material. \<materials\>
+- **`uncorrected_energy_per_atom`** *(float)*: The total DFT energy of this material per atom in eV/atom. \<thermo\>
+- **`energy_per_atom`** *(float)*: The total corrected DFT energy of this material per atom in eV/atom. \<thermo\>
+- **`formation_energy_per_atom`** *(float)*: The formation energy per atom in eV/atom. \<thermo\>
+- **`energy_above_hull`** *(float)*: The energy above the hull in eV/Atom. \<thermo\>
+- **`is_stable`** *(boolean)*: Flag for whether this material is on the hull and therefore stable. \<thermo\>
+- **`equilibrium_reaction_energy_per_atom`** *(float)*: The reaction energy of a stable entry from the neighboring equilibrium stable materials in eV. Also known as the inverse distance to hull. \<thermo\>
+- **`decomposes_to`** *(list)*: List of decomposition data for this material. Only valid for metastable or unstable material. \<thermo\>
+- **`xas`** *(list)*: List of xas documents. \<xas\>
+- **`grain_boundaries`** *(list)*: List of grain boundary documents. \<grain_boundary\>
+- **`band_gap`** *(float)*: Band gap energy in eV. \<electronic_structure\>
+- **`cbm`** *(number, object)*: Conduction band minimum data. \<electronic_structure\>
+- **`vbm`** *(number, object)*: Valence band maximum data. \<electronic_structure\>
+- **`efermi`** *(float)*: Fermi energy in eV. \<electronic_structure\>
+- **`is_gap_direct`** *(boolean)*: Whether the band gap is direct. \<electronic_structure\>
+- **`is_metal`** *(boolean)*: Whether the material is a metal. \<electronic_structure\>
+- **`es_source_calc_id`** *(string, integer)*: The source calculation ID for the electronic structure data. \<electronic_structure\>
+- **`bandstructure`** *(BandstructureData)*: Band structure data for the material. \<electronic_structure\>
+- **`dos`** *(DosData)*: Density of states data for the material. \<electronic_structure\>
+- **`dos_energy_up`** *(float)*: Spin-up DOS band gap in eV. \<electronic_structure\>
+- **`dos_energy_down`** *(float)*: Spin-down DOS band gap in eV. \<electronic_structure\>
+- **`is_magnetic`** *(boolean)*: Whether the material is magnetic. \<magnetism\>
+- **`ordering`** *(string)*: Type of magnetic ordering. \<magnetism\>
+- **`total_magnetization`** *(float)*: Total magnetization in μB. \<magnetism\>
+- **`total_magnetization_normalized_vol`** *(float)*: Total magnetization normalized by volume in μB/Å³. \<magnetism\>
+- **`total_magnetization_normalized_formula_units`** *(float)*: Total magnetization normalized by formula unit in μB/f.u. . \<magnetism\>
+- **`num_magnetic_sites`** *(integer)*: The number of magnetic sites. \<magnetism\>
+- **`num_unique_magnetic_sites`** *(integer)*: The number of unique magnetic sites. \<magnetism\>
+- **`types_of_magnetic_species`** *(list)*: Magnetic specie elements. \<magnetism\>
+- **`k_voigt`** *(float)*: Voigt average of the bulk modulus in GPa. \<elasticity\>
+- **`k_reuss`** *(float)*: Reuss average of the bulk modulus in GPa. \<elasticity\>
+- **`k_vrh`** *(float)*: Voigt-Reuss-Hill average of the bulk modulus in GPa. \<elasticity\>
+- **`g_voigt`** *(float)*: Voigt average of the shear modulus in GPa. \<elasticity\>
+- **`g_reuss`** *(float)*: Reuss average of the shear modulus in GPa. \<elasticity\>
+- **`g_vrh`** *(float)*: Voigt-Reuss-Hill average of the shear modulus in GPa. \<elasticity\>
+- **`universal_anisotropy`** *(float)*: Elastic anisotropy. \<elasticity\>
+- **`homogeneous_poisson`** *(float)*: Poisson's ratio. \<elasticity\>
+- **`e_total`** *(float)*: Total dielectric constant. \<dielectric\>
+- **`e_ionic`** *(float)*: Ionic contribution to dielectric constant. \<dielectric\>
+- **`e_electronic`** *(float)*: Electronic contribution to dielectric constant. \<dielectric\>
+- **`n`** *(float)*: Refractive index. \<dielectric\>
+- **`e_ij_max`** *(float)*: Piezoelectric modulus. \<piezoelectric\>
+- **`weighted_surface_energy_EV_PER_ANG2`** *(float)*: Weighted surface energy in eV/Å². \<surface_properties\>
+- **`weighted_surface_energy`** *(float)*: Weighted surface energy in J/m². \<surface_properties\>
+- **`weighted_work_function`** *(float)*: Weighted work function in eV. \<surface_properties\>
+- **`surface_anisotropy`** *(float)*: Surface energy anisotropy. \<surface_properties\>
+- **`shape_factor`** *(float)*: Shape factor. \<surface_properties\>
+- **`has_reconstructed`** *(boolean)*: Whether the material has any reconstructed surfaces. \<surface_properties\>
+- **`possible_species`** *(list)*: Possible charged species in this material. \<oxidation_states\>
+- **`has_props`** *(list)*: List of properties that are available for a given material. \<summary\>
+- **`theoretical`** *(boolean)*: Whether the material is theoretical. \<provenance\>
