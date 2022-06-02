@@ -57,7 +57,7 @@ For API users, if you are retrieving formation energies directly via the API, yo
 
 This release updates some older materials with new calculations, and adjusts our rules for deprecating older calculations. It does not contain any new materials. Thanks to the new calculations many materials that were previously deprecated are now accessible again. This release is in preparation for a switch to our new compatibility scheme which will improve our predictions of formation energy.
 
-## v2021-02-08
+## v2021.02.08
 
 We had a small new database release today, this introduces new higher-quality calculations for around 30,000 materials. It also deprecates 78 materials since we currently do not have calculations for these materials that match our current quality standards; we hope to restore these 78 materials in a subsequent release. For an exact list, please see the attached file.
 
