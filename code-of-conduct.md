@@ -4,6 +4,8 @@ The Materials Project does not have a unified code of conduct at present since i
 
 However, as guidance, we refer all contributors to the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code\_of\_conduct/) for setting expectations for each other. Text from the Contributor Covenant is copied below.
 
+We have set up the [conduct@materialsproject.org](mailto:conduct@materialsproject.org) email address for any issues involving inappropriate conduct.&#x20;
+
 ### Our Pledge <a href="#our-pledge" id="our-pledge"></a>
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
