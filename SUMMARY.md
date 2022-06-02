@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Getting Involved](getting-involved.md)
+* [Database Versions](database-versions.md)
 
 ## Methodology
 
@@ -59,10 +60,10 @@
 
 ## Getting Involved
 
-* [The MP Community](getting-involved-1/the-mp-community.md)
-* [Community Guidelines](getting-involved-1/community-guidelines.md)
-* [Contributing Data](getting-involved-1/contributing-data.md)
-* [Contributing Code](getting-involved-1/contributing-code.md)
+* [The MP Community](getting-involved/the-mp-community.md)
+* [Community Guidelines](getting-involved/community-guidelines.md)
+* [Contributing Data](getting-involved/contributing-data.md)
+* [Contributing Code](getting-involved/contributing-code.md)
 
 ## Downloading Data
 
