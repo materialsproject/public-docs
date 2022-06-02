@@ -6,6 +6,7 @@
 * [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)
 * [Changes](changes.md)
+* [Code of Conduct](code-of-conduct.md)
 
 ## Methodology
 
@@ -59,13 +60,6 @@
 * [Battery Explorer](apps/battery-explorer.md)
 * [Molecules Explorer](apps/molecules-explorer.md)
 * [Synthesis Explorer](apps/synthesis-explorer.md)
-
-## Getting Involved
-
-* [The MP Community](getting-involved/the-mp-community.md)
-* [Community Guidelines](getting-involved/community-guidelines.md)
-* [Contributing Data](getting-involved/contributing-data.md)
-* [Contributing Code](getting-involved/contributing-code.md)
 
 ## Downloading Data
 
