@@ -12,7 +12,7 @@ Typically, there are two sets of lattice parameters reported. Lattice parameters
 
 If the lattice parameters are very different to what you expect, check the setting first!
 
-Some systematic errors are also present. These will typically be an over-estimation of 1–3% for most crystals. Layered crystals will also typically have significant error in the interlayer distances since van der Waals interactions are not described well by the simulation methods used by Materials Project. See [Calculation Details](methodology/calculation-details/) for more information.
+Some systematic errors are also present. These will typically be an over-estimation of 1–3% for most crystals. Layered crystals will also typically have significant error in the interlayer distances since van der Waals interactions are not well-described by the simulation methods (PBE) used by Materials Project. These systematic errors will be improved as Materials Project switches to user newer simulation methods (r2SCAN). See [Calculation Details](methodology/calculation-details/) for more information.
 
 ## Why is the band gap different to what I expect?
 

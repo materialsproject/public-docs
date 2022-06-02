@@ -3,7 +3,9 @@
 * [Introduction](README.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Getting Involved](getting-involved.md)
+* [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)
+* [Changes](changes.md)
 
 ## Methodology
 
