@@ -1,2 +1,0 @@
-# Lattice Parameters
-
