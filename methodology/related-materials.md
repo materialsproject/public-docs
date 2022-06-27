@@ -22,7 +22,7 @@ We use a novel method called CrystalNN to find near(est) neighbors in periodic s
 The second step of the structure similarity calculation is the computation of a crystal site fingerprint, $$v^{site}$$, for each site in the two structures. The fingerprint is a 61-dimensional vector in which each element carries information about the local coordination environment computed with the _site_ module of the python package [matminer](https://github.com/hackingmaterials/matminer). For example, the first two elements "wt $$\text{CN}_1$$" and "single bond $$\text{CN}_1$$" provide estimates of the likelihood (or weight) of how much the given site should be considered 1-fold coordinated (i.e., _w_$$|_{CN=1}$$_)._ The third element "wt $$\text{CN}_2$$" provides a 2-fold coordination likelihood, whereas the fourth element "L-shaped $$\text{CN}_2$$" holds the resemblance similarity to an L-shaped coordination geometry (also called local structure order parameter) given that we find a coordination configuration with 2 atoms ($$q_{L}|_{CN=2}$$). The local structure order parameters can assume values between 0, meaning that the observed local environment has no resemblance with the target motif to which it is compared, and 1, which stands for perfect motif match. The remaining elements are: "water-like $$\text{CN}_2$$", "bent 120 degrees $$\text{CN}_2$$", "bent 150 degrees $$\text{CN}_2$$", "linear $$\text{CN}_2$$", "wt $$\text{CN}_3$$", "trigonal planar $$\text{CN}_3$$", "trigonal non-coplanar $$\text{CN}_3$$", "T-shaped $$\text{CN}_3$$", "wt $$\text{CN}_4$$", "square co-planar $$\text{CN}_4$$", "tetrahedral $$\text{CN}_4$$", "rectangular see-saw-like $$\text{CN}_4$$", "see-saw-like $$\text{CN}_4$$", "trigonal pyramidal $$\text{CN}_4$$", "wt $$\text{CN}_5$$", "pentagonal planar $$\text{CN}_5$$", "square pyramidal $$\text{CN}_5$$", "trigonal bipyramidal $$\text{CN}_5$$", "wt $$\text{CN}_6$$", "hexagonal planar $$\text{CN}_6$$", "octahedral $$\text{CN}_6$$", "pentagonal pyramidal $$\text{CN}_6$$", "wt $$\text{CN}_7$$" "hexagonal pyramidal $$\text{CN}_7$$", "pentagonal bipyramidal $$\text{CN}_7$$", "wt $$\text{CN}_8$$" "body-centered cubic $$\text{CN}_8$$", "hexagonal bipyramidal $$\text{CN}_8$$", "wt $$\text{CN}_9$$", "q2 $$\text{CN}_9$$", "q4 $$\text{CN}_9$$", "q6 $$\text{CN}_9$$", "wt $$\text{CN}_{10}$$", "q2 $$\text{CN}_{10}$$", "q4 $$\text{CN}_{10}$$", "q6 $$\text{CN}_{10}$$", "wt $$\text{CN}_{11}$$", "q2 $$\text{CN}_{11}$$", "q4 $$\text{CN}_{11}$$", "q6 $$\text{CN}_{11}$$", "wt $$\text{CN}_{12}$$", "cuboctahedral $$\text{CN}_{12}$$", "q2 $$\text{CN}_{12}$$", "q4 $$\text{CN}_{12}$$", "q6 $$\text{CN}_{12}$$", "wt $$\text{CN}_{13}$$", "wt $$\text{CN}_{14}$$", "wt $$\text{CN}_{15}$$", "wt $$\text{CN}_{16}$$", "wt $$\text{CN}_{17}$$", "wt $$\text{CN}_{18}$$", "wt $$\text{CN}_{19}$$", "wt $$\text{CN}_{20}$$", "wt $$\text{CN}_{21}$$", "wt $$\text{CN}_{22}$$" "wt $$\text{CN}_{23}$$" and "wt $$\text{CN}_{24}$$" Note that $$q_n$$ refers to Steinhardt bond orientational order parameter of order n. The resulting site fingerprint is thus defined as:
 
 $$
-\mathbf{v}^\mathrm{site} = [w|_{\mathrm{CN}=1}, \quad w|_{\mathrm{CN}=2}, \quad q_\mathrm{L}|_{\mathrm{CN}=2}, \quad q_\mathrm{water}|_{\mathrm{CN}=2}, \quad \dots, \quad w|_{\mathrm{CN}=24}]^\mathrm{T}
+\mathbf{v}^\text{site} = [w|_{\text{CN}=1}, \quad w|_{\text{CN}=2}, \quad q_\text{L}|_{\text{CN}=2}, \quad q_\text{water}|_{\text{CN}=2}, \quad \dots, \quad w|_{\text{CN}=24}]^\text{T}
 $$
 
 ## Structure Fingerprints
@@ -30,7 +30,7 @@ $$
 The fingerprints from sites in a given structure are subsequently statistically processed to yield the minimum, maximum, mean, and standard deviation of each coordination information element," The resultant ordered vector defines a structure fingerprint, $v^{struct}$:
 
 $$
-\mathbf{v}^\mathrm{struct} = [ \min(w|_{\mathrm{CN}=1}), \quad \max(w|_{\mathrm{CN}=1}), \quad \mathrm{mean}(w|_{\mathrm{CN}=1}), \quad \mathrm{std}(w|_{\mathrm{CN}=1}), \dots, \min(w|_{\mathrm{CN}=24}), \quad \max(w|_{\mathrm{CN}=24}), \quad \mathrm{mean}(w|_{\mathrm{CN}=24}), \quad \mathrm{std}(w|_{\mathrm{CN}=24}) ]^\mathrm{T}
+\mathbf{v}^\text{struct} = [ \min(w|_{\text{CN}=1}), \quad \max(w|_{\text{CN}=1}), \quad \text{mean}(w|_{\text{CN}=1}), \quad \text{std}(w|_{\text{CN}=1}), \dots, \min(w|_{\text{CN}=24}), \quad \max(w|_{\text{CN}=24}), \quad \text{mean}(w|_{\text{CN}=24}), \quad \text{std}(w|_{\text{CN}=24}) ]^\text{T}
 $$
 
 ## Structure Distance/Dissimilarity
@@ -38,7 +38,7 @@ $$
 Finally, structure similarity is determined by the distance, _d_, between two structure fingerprints $$v_{i}^{struct}$$ and$$v_{j}^{struct}$$:
 
 $$
-d = || \mathbf{v}_{i}^\mathrm{struct} - \mathbf{v}_{j}^\mathrm{struct} ||
+d = || \mathbf{v}_{i}^\text{struct} - \mathbf{v}_{j}^\text{struct} ||
 $$
 
 A small distance value indicates high similarity between two structures, whereas a large distance (>1) suggests that the structures are very dissimilar," The spinel example below gives an approximate threshold up to which **distance you can still consider two structures to be similar (0.9)**," Anything beyond 0.9 is most certainly not the same structure prototype.
