@@ -5,7 +5,8 @@
 * [Getting Involved](getting-involved.md)
 * [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)
-* [Changes](changes.md)
+* [Changes](changes/README.md)
+  * [Website Changelog](changes/website-changelog.md)
 * [Code of Conduct](code-of-conduct.md)
 
 ## Methodology

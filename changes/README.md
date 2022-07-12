@@ -27,8 +27,8 @@ The previous MkDocs documentation is [still available](https://github.com/materi
 
 ### Database
 
-The Materials Project database is constantly evolving as new and better calculations become available, both as a result of new features and better methods, and also as errors or problems are identified and fixed. See [Database Versions](database-versions.md) for more information.
+The Materials Project database is constantly evolving as new and better calculations become available, both as a result of new features and better methods, and also as errors or problems are identified and fixed. See [Database Versions](../database-versions.md) for more information.
 
 ### API
 
-There is a new Materials Project API along with the new website. See [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md) for important information about this change.&#x20;
+There is a new Materials Project API along with the new website. See [Differences between new and legacy API](../downloading-data/differences-between-new-and-legacy-api.md) for important information about this change.&#x20;
