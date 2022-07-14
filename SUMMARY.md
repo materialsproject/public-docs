@@ -49,6 +49,7 @@
   * [Battery Explorer](apps/explorer-apps/battery-explorer/README.md)
     * [Filter by Formula/Composition](apps/explorer-apps/battery-explorer/filter-by-formula-composition.md)
     * [Filter by Battery Properties](apps/explorer-apps/battery-explorer/filter-by-battery-properties.md)
+    * [Battery Material Details Page](apps/explorer-apps/battery-explorer/battery-material-details-page.md)
   * [Synthesis Explorer](apps/synthesis-explorer.md)
   * [Catalysis Explorer](apps/catalysis-explorer.md)
   * [MOF Explorer](apps/mof-explorer/README.md)
