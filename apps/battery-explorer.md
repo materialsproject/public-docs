@@ -1,3 +1,0 @@
-# Battery Explorer
-
-To do.

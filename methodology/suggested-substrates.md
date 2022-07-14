@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Synthesizing 2D materials and thin films comes comes with a challenge: how does one determine which subtrate to use? Common substrate materials include Al, SiO$\_2$, Sapphire
+Synthesizing 2D materials and thin films comes comes with a challenge: how does one determine which subtrate to use? Common substrate materials include Al, SiO \$$\_2\$$ , Sapphire
 
 
 
