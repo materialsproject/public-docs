@@ -2,7 +2,8 @@
 
 * [Introduction](README.md)
 * [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
-* [Getting Involved](getting-involved.md)
+* [Getting Involved](getting-involved/README.md)
+  * [Potential Collaborators](getting-involved/potential-collaborators.md)
 * [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)
 * [MPContribs](mpcontribs.md)

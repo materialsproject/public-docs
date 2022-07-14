@@ -44,7 +44,7 @@ The Materials Project core data is all calculated in-house by the Materials Proj
 
 The same crystal structure can have multiple, equivalent sets of lattice parameters depending on what crystallographic "setting" is used.
 
-Typically, there are two sets of lattice parameters reported. Lattice parameters can be defined for the **primitive** **cell**, which is a definition of the crystal with the fewest number of atoms and therefore conenient for simulations and other uses, and the **conventional cell**, which is typically easier to visualize and more like you will see in textbooks.
+Typically, there are two sets of lattice parameters reported. Lattice parameters can be defined for the **primitive** **cell**, which is a definition of the crystal with the fewest number of atoms and therefore convenient for simulations and other uses, and the **conventional cell**, which is typically easier to visualize and more like you will see in textbooks.
 
 If the lattice parameters are very different to what you expect, check the setting first!
 
