@@ -50,7 +50,7 @@
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
   * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
-  * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
+  * [Molecules Explorer](apps/explorer-apps/molecules-explorer.md)
     * [Background](apps/explore-and-search-apps/molecules-explorer/background.md)
     * [Tutorial](apps/explore-and-search-apps/molecules-explorer/tutorial.md)
     * [FAQ](apps/explore-and-search-apps/molecules-explorer/faq.md)
@@ -89,7 +89,7 @@
     * [Background](apps/analysis-apps/pourbaix-diagram/background.md)
     * [Tutorial](apps/analysis-apps/pourbaix-diagram/tutorial.md)
     * [FAQ](apps/analysis-apps/pourbaix-diagram/faq-+-known-issues.md)
-  * [Crystal Toolkit](apps/analysis-apps/crystal-toolkit/README.md)
+  * [Crystal Toolkit](apps/analysis-apps/crystal-toolkit.md)
     * [Background](apps/analysis-apps/crystal-toolkit/background.md)
     * [Tutorial](apps/analysis-apps/crystal-toolkit/tutorial.md)
     * [FAQ](apps/analysis-apps/crystal-toolkit/faq.md)
