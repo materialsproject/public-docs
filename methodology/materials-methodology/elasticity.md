@@ -17,17 +17,19 @@ The Materials Project predicts elastic constants for over ten thousand materials
 
 ## Methodology
 
-The elastic constants from the Materials Project (MP) are calculated from first-principles Density Functional Theory (DFT). For a material, the process is started by performing an accurate structural relaxation, to a state of approximately zero stress. Subsequently, the relaxed structure is strained by changing its lattice vectors (magnitude and angle) and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full elastic tensor. From this, aggregate properties such as Voigt, Reuss, and Hill bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy. For example, the $$6\times6$$ Voigt matrix should be positive definite to ensure mechanical stability of a material.
+### Overview&#x20;
+
+The elastic constants from the Materials Project (MP) are calculated from first-principles Density Functional Theory (DFT). For a material, the process is started by performing an accurate structural relaxation, to a state of approximately zero stress. Subsequently, the relaxed structure is strained by changing its lattice vectors (magnitude and angle) and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full elastic tensor. From this, aggregate properties such as Voigt, Reuss, and Hill bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy. For example, the $$6\times6$$ Voigt elastic matrix should be positive definite to ensure mechanical stability of a material.
 
 ### Voigt notation
 
-Formally, the elastic tensor, $$\hat{\boldsymbol{C}}$$, is a forth-order tensor with 81 components:
+Formally, the elastic tensor, $$\hat{\boldsymbol{C}}$$, is a forth-order tensor with 81 components (but only with 21 independent components):
 
 $$
-\boldsymbol{\sigma} = \hat{\boldsymbol{C}}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = \hat{C}_{ijkl} \epsilon_{kl} ,
+\boldsymbol{\sigma} = \boldsymbol{C}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = C_{ijkl} \epsilon_{kl} ,
 $$
 
-where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in Voigt notation under the transformation $$11 \mapsto 1, 22 \mapsto 2, 33 \mapsto 3, 23 \mapsto 4, 13 \mapsto 5, 12 \mapsto 6$$. With this, the above linear elastic relationship can be expressed as&#x20;
+where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively, and $$i,j,k,l$$ are Cartesian indices, taking values $$x$$, $$y$$, and $$z$$. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in [Voigt notation](https://en.wikipedia.org/wiki/Voigt\_notation) under the transformation $$xx \mapsto 1, yy \mapsto 2, zz \mapsto 3, yz \mapsto 4, xz \mapsto 5, xy \mapsto 6$$. For example, the strain transforms like $$\epsilon_1 = \epsilon_{xx}, \epsilon_2 = \epsilon_{yy}, \epsilon_3 = \epsilon_{zz}, \epsilon_4 = \epsilon_{yz},  \epsilon_5 = \epsilon_{xz},  \epsilon_6 = \epsilon_{xy}$$, and the elastic tensor transforms like $$C_{xxxx} \mapsto C_{11}, C_{xxyy} \mapsto C_{12}, .....$$Then the above linear elastic relationship can be expressed as&#x20;
 
 $$
 \boldsymbol{S} = \boldsymbol{C}\boldsymbol{E}.
@@ -35,15 +37,58 @@ $$
 
 In indicial notation, this is
 
-###
+The elastic tensor in Voigt notation, $$\boldsymbol{C}$$, is a $$6\times6$$ symmetric matrix, with 21 independent components.&#x20;
 
 ### Formalism
 
-The lattice vectors $$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure are taken and the structure is deformed according to a deformation gradient $$\boldsymbol{F}$$:&#x20;
+With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure of a material, it is deformed according to a deformation gradient $$\boldsymbol{F}$$:&#x20;
 
 $$
 \hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i  \quad i=1,2,3 .
 $$
+
+The deformation gradient $$\boldsymbol{F}$$ is obtained by solving &#x20;
+
+$$
+\boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right),
+$$
+
+​where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Six strain states are applied, namely&#x20;
+
+$$
+\boldsymbol{E}=
+\left[{\begin{matrix}
+\delta \\
+0\\
+0 \\0 \\0 \\0 \\
+\end{matrix}}\right] \quad
+$$
+
+$$
+\boldsymbol{E}=
+\left[{\begin{matrix}
+0 \\
+\delta\\
+0 \\
+0 \\
+0 \\
+0 \\
+\end{matrix}}\right] \quad
+$$
+
+$$
+\boldsymbol{E}=
+\left[{\begin{matrix}
+0 \\
+0\\
+\delta \\
+0 \\
+0 \\
+0 \\
+\end{matrix}}\right] \quad
+$$
+
+&#x20;
 
 The stress tensor, $$\boldsymbol{S}$$, is then obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are relaxed. Six deformation gradients $$\boldsymbol{F}$$ (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six deformation modes, 4 different default magnitudes of deformation are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\mathbf{S}$$, is calculated, allowing for relaxation of the ionic degrees of freedom. Note that in this work, conventional unit cells, obtained using `pymatgen.symmetry.SpacegroupAnalyzer.get_conventional_standard_structure` are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).
 
