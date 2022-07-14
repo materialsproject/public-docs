@@ -32,12 +32,40 @@ $$
 where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively, and $$i,j,k,l$$ are Cartesian indices, taking values $$x$$, $$y$$, and $$z$$. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in [Voigt notation](https://en.wikipedia.org/wiki/Voigt\_notation) under the transformation $$xx \mapsto 1, yy \mapsto 2, zz \mapsto 3, yz \mapsto 4, xz \mapsto 5, xy \mapsto 6$$. For example, the strain transforms like $$\epsilon_1 = \epsilon_{xx}, \epsilon_2 = \epsilon_{yy}, \epsilon_3 = \epsilon_{zz}, \epsilon_4 = \epsilon_{yz},  \epsilon_5 = \epsilon_{xz},  \epsilon_6 = \epsilon_{xy}$$, and the elastic tensor transforms like $$C_{xxxx} \mapsto C_{11}, C_{xxyy} \mapsto C_{12}, .....$$Then the above linear elastic relationship can be expressed as&#x20;
 
 $$
-\boldsymbol{S} = \boldsymbol{C}\boldsymbol{E}.
+\left[
+\begin{matrix}
+\sigma_{1} \\
+\sigma_{2} \\
+\sigma_{3} \\
+\sigma_{4} \\
+\sigma_{5} \\
+\sigma_{6}
+\end{matrix}
+\right]
+=
+\left[
+\begin{matrix}
+C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16} \\
+C_{12} & C_{22} & C_{23} & C_{24} & C_{25} & C_{26} \\
+C_{13} & C_{23} & C_{33} & C_{34} & C_{35} & C_{36} \\
+C_{14} & C_{24} & C_{34} & C_{44} & C_{45} & C_{46} \\
+C_{15} & C_{25} & C_{35} & C_{45} & C_{55} & C_{56} \\
+C_{16} & C_{26} & C_{36} & C_{46} & C_{56} & C_{66} \\
+\end{matrix}
+\right]
+\left[
+\begin{matrix}
+ \epsilon_{1} \\
+ \epsilon_{2} \\
+ \epsilon_{3} \\
+2  \epsilon_{5} \\
+2  \epsilon_{5} \\
+2 \epsilon_{6}
+\end{matrix}
+\right]
 $$
 
-In indicial notation, this is
-
-The elastic tensor in Voigt notation, $$\boldsymbol{C}$$, is a $$6\times6$$ symmetric matrix, with 21 independent components.&#x20;
+The elastic tensor in Voigt notation is a $$6\times6$$ symmetric matrix, indicating that the elastic tensor has 21 independent components.&#x20;
 
 ### Formalism
 
