@@ -18,6 +18,6 @@ Here are the articles in this section:
 [tutorial.md](analysis-apps/pourbaix-diagram/tutorial.md)
 {% endcontent-ref %}
 
-{% content-ref url="analysis-apps/pourbaix-diagram/faq.md" %}
-[faq.md](analysis-apps/pourbaix-diagram/faq.md)
+{% content-ref url="analysis-apps/pourbaix-diagram/faq-+-known-issues.md" %}
+[faq-+-known-issues.md](analysis-apps/pourbaix-diagram/faq-+-known-issues.md)
 {% endcontent-ref %}
