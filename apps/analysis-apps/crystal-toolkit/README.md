@@ -11,7 +11,7 @@ description: >-
 * An app on the Materials Project that allows manipulation and transformation of crystal structures, both from the Materials Project database or uploaded by the user.
 * It refers to the [underlying Crystal Toolkit code](https://docs.crystaltoolkit.org), which was developed to write this app and which now powers the entire Materials Project website!
 
-This documentation page shows how to use the app.
+This documentation page shows how to use the app specifically.
 
 ## [Example of how to use the Crystal Toolkit app to export a crystal slab (surface)](https://app.tango.us/app/workflow/80c31346-a846-4e97-af5a-14ff05168d1d?utm\_source=markdown\&utm\_medium=markdown\&utm\_campaign=workflow%20export%20links)
 
