@@ -25,6 +25,15 @@ The table below lists the various MPContribs portals currently available. When y
 
 ## Concepts
 
-* projects
+Each MPContribs deployment is organized into **projects**. The MP account creating the project becomes its owner. An owner can ask for the MP accounts of their collaborators to be given access to their project. A collaborator assumes the same level of permissions within a project as the owner.
+
+A project contains a list of **contributions** to existing MP materials (or alternatively to formulas and chemical systems). It's in the owner's purview to decide what exactly constitutes a project. Often this will simply be an umbrella for a dataset containing contributions to MP materials that are comparable in their scientific context and thus are consistent in their data schema.
+
+Any MP account can create (or be an owner of) a maximum of 3 projects at any time. Project owners can immediately start adding up to 10 contributions to their project without approval from MP. To add more contributions, project owners or their collaborators can [reach out to MPContribs administrators](mailto:contribs@materialproject.org) to obtain approval.
+
+public private
+
+A single contribution constitutes a ... of data assigned and linked to the according MP material through materials ID.. (or alternative formula or chemical su
+
 * contributions
 * contribution components: data, structures, tables, attachments
