@@ -1,14 +1,11 @@
----
-description: 'TODO: Update with recent elastic changes'
----
-
 # Elastic Constants
 
-## What is elasticity?
+## Introduction
 
-In basic terms, the property of "elasticity" describes the stretchiness or compressibility of a material.
+Elasticity describes a material's ability to resist deformations (i.e. size and shape) when subjected to external forces. This can be thought about in two, complementary ways:
 
-This can be thought about in two, complementary ways: either how much stress is required to stretch (or compress) a material by a certain amount, or if a certain amount of stress is applied to that material, how much will it end up stretched (or compressed)?
+* &#x20;how much force is required to deform (stretch or compress) a material by a certain amount;
+* &#x20;how much a material will deform (stretch or compress) when a certain amount of external forces is applied to that material.&#x20;
 
 Elasticity is considered a reversible process. When the stress is removed, the material returns to its original size and shape. This is only true up to a point: if a material is stressed or strained too much, then it will be permanently changed.&#x20;
 
@@ -152,7 +149,7 @@ To obtain accurate elastic constants from DFT, a well-converged stress tensor is
 
 &#x20;&#x20;
 
-![Visualization of the current elastic-property database, consisting of over 1,100 metals and inorganic compounds. This map shows the shear and bulk moduli, together with isotropic Poisson ratio and volume-per-atom. See the paper \[Charting the complete elastic properties of inorganic crystalline compounds\](http://www.nature.com/articles/sdata20159) for details.](../.gitbook/assets/Data\_figure\_11\_22.png)
+![Visualization of the current elastic-property database, consisting of over 1,100 metals and inorganic compounds. This map shows the shear and bulk moduli, together with isotropic Poisson ratio and volume-per-atom. See the paper \[Charting the complete elastic properties of inorganic crystalline compounds\](http://www.nature.com/articles/sdata20159) for details.](../../.gitbook/assets/Data\_figure\_11\_22.png)
 
 ### Symmetrization
 

@@ -24,8 +24,8 @@ More detailed information on GGA_+U_ and pseudopotentials used see the two subse
 [gga+u-calculations.md](gga+u-calculations.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../apps/mof-explorer/calculation-parameters/psuedopotentials.md" %}
-[psuedopotentials.md](../../apps/mof-explorer/calculation-parameters/psuedopotentials.md)
+{% content-ref url="../../mof-methodology/calculation-parameters/psuedopotentials.md" %}
+[psuedopotentials.md](../../mof-methodology/calculation-parameters/psuedopotentials.md)
 {% endcontent-ref %}
 
 ## References
