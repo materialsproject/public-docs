@@ -1,3 +1,7 @@
+---
+description: Comparison between the old (legacy) and new Materials Project (MP) APIs.
+---
+
 # Differences between new and legacy API
 
 A summary of differences between the new and legacy API can be found in the table below. For more detailed information on differences regarding the Python API client, please see the [Legacy API Users](using-the-api/legacy-api-users.md) section.

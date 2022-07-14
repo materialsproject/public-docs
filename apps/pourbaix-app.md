@@ -1,3 +1,9 @@
+---
+description: >-
+  Background, tutorials, and FAQ for the Pourbaix Diagram App on the Materials
+  Project (MP) website.
+---
+
 # Pourbaix Diagram
 
 {% hint style="danger" %}

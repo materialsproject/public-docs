@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page describes the background and how to use the Phase Diagram App on the
-  Materials Project website.
+  Background, tutorials, and FAQ for the Phase Diagram App on the Materials
+  Project (MP) website.
 ---
 
 # Phase Diagram

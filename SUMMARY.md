@@ -69,7 +69,6 @@
     * [Version History](apps/mof-explorer/version-history.md)
     * [How to Cite](apps/mof-explorer/how-to-cite.md)
     * [Additional Details](apps/mof-explorer/additional-details/README.md)
-* [Explore Contributed Data](apps/explore-contributed-data.md)
 * [Analysis Apps](apps/analysis-apps/README.md)
   * [Phase Diagram](apps/analysis-apps/phase-diagram/README.md)
     * [Background](apps/analysis-apps/phase-diagram/background.md)
@@ -83,18 +82,19 @@
   * [Reaction Calculator](apps/analysis-apps/reaction-calculator.md)
   * [Interface Reactions](apps/analysis-apps/interface-reactions.md)
 * [Characterization Apps](apps/characterization-apps/README.md)
-  * [X-Ray Absorption Spectra (XAS)](apps/characterization-apps/x-ray-absorption-spectra-xas.md)
+  * [X-ray Absorption Spectra (XAS)](apps/characterization-apps/x-ray-absorption-spectra-xas.md)
+* [Explore Contributed Data](apps/explore-contributed-data.md)
 
 ## Downloading Data
 
 * [How do I download the Materials Project database?](downloading-data/how-do-i-download-the-materials-project-database.md)
-* [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Using the API](downloading-data/using-the-api/README.md)
   * [Getting Started](downloading-data/using-the-api/getting-started.md)
   * [Querying Data](downloading-data/using-the-api/querying-data.md)
   * [Examples](downloading-data/using-the-api/examples.md)
   * [Advanced Usage](downloading-data/using-the-api/advanced-usage.md)
   * [Legacy API Users](downloading-data/using-the-api/legacy-api-users.md)
+* [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Download Contributed Data](downloading-data/download-contributed-data.md)
 
 ## Uploading Data
