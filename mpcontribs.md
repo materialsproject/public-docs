@@ -9,7 +9,7 @@ description: Introduction to MP's contribution platform MPContribs
 See below for a list of [current MPContribs deployments](mpcontribs.md#deployments) and an overview of its [concepts](mpcontribs.md#undefined). Continue with the following sections in MP's documentation to learn more:&#x20;
 
 * [Explore Contributed Data](apps/explore-contributed-data.md)
-* [Download Contributed Data](downloading-data/download-contributed-data.md)
+* [Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
 * [Contribute your own Data](uploading-data/what-is-mpcontribs.md)
 
 ## Deployments
@@ -25,15 +25,22 @@ The table below lists the various MPContribs portals currently available. When y
 
 ## Concepts
 
+{% hint style="danger" %}
+Under Construction
+{% endhint %}
+
 Each MPContribs deployment is organized into **projects**. The MP account creating the project becomes its owner. An owner can ask for the MP accounts of their collaborators to be given access to their project. A collaborator assumes the same level of permissions within a project as the owner.
 
 A project contains a list of **contributions** to existing MP materials (or alternatively to formulas and chemical systems). It's in the owner's purview to decide what exactly constitutes a project. Often this will simply be an umbrella for a dataset containing contributions to MP materials that are comparable in their scientific context and thus are consistent in their data schema.
 
 Any MP account can create (or be an owner of) a maximum of 3 projects at any time. Project owners can immediately start adding up to 10 contributions to their project without approval from MP. To add more contributions, project owners or their collaborators can [reach out to MPContribs administrators](mailto:contribs@materialproject.org) to obtain approval.
 
-public private
+By default, projects are set to private, i.e. only visible to owners and their collaborators. Each individual contribution in a project is set to public by default and thus automatically released to the public when the project is published. Since the public/private flag can be controlled for each contribution individually, some contributions in a project can be kept private even if the project is public. The public/private state of a project and its contributions can be changed/reverted at any time.
 
-A single contribution constitutes a ... of data assigned and linked to the according MP material through materials ID.. (or alternative formula or chemical su
+A single contribution constitutes a small blob of data assigned and linked to the according MP material through identifiers such as MP's [materials IDs](frequently-asked-questions.md#what-is-a-task\_id-and-what-is-a-material\_id-and-how-do-they-differ), formulas or chemical systems. In addition to these identifiers, each individual contribution can contain the following four components:
 
-* contributions
-* contribution components: data, structures, tables, attachments
+* A **data** component containing hierarchically organized key-value data (think nested dictionaries). In its flattened format, this component can contain a maximum of 50 keys/fields each of which becomes a **column** in the overview table on the [project landing pages](apps/explore-contributed-data.md). Nested fields in the data dictionary are organized as nested columns on the landing page table. Any data types included in the data component become queryable, filterable and sortable using a wide variety of operators. See the [API documentation](mpcontribs.md#deployments) for any MPContribs deployment for a generic list of available filters.&#x20;
+
+
+
+see the section for [contributing data](uploading-data/what-is-mpcontribs.md) for more information.

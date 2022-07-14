@@ -53,7 +53,7 @@
 ## Apps
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
-  * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
+  * [Materials Explorer](apps/explore-and-search-apps/materials-explorer/README.md)
     * [Tutorial](apps/explore-and-search-apps/materials-explorer/tutorial.md)
   * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
     * [Background](apps/explore-and-search-apps/molecules-explorer/background.md)
@@ -115,7 +115,7 @@
   * [Legacy API Users](downloading-data/using-the-api/legacy-api-users.md)
   * [Deprecated Materials](downloading-data/using-the-api/deprecated-materials.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
-* [Download Contributed Data](downloading-data/download-contributed-data.md)
+* [Query and Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
 
 ## Uploading Data
 
