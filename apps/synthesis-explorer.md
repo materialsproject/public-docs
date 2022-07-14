@@ -1,6 +1,14 @@
+---
+description: >-
+  Search synthesis recipes extracted from literature sources by natural language
+  processing.
+---
+
 # Synthesis Explorer
 
 Here are the articles in this section:
+
+
 
 {% content-ref url="explore-and-search-apps/synthesis-explorer/background.md" %}
 [background.md](explore-and-search-apps/synthesis-explorer/background.md)
