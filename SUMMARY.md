@@ -108,6 +108,7 @@
   * [Examples](downloading-data/using-the-api/examples.md)
   * [Advanced Usage](downloading-data/using-the-api/advanced-usage.md)
   * [Legacy API Users](downloading-data/using-the-api/legacy-api-users.md)
+  * [Deprecated Materials](downloading-data/using-the-api/deprecated-materials.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Download Contributed Data](downloading-data/download-contributed-data.md)
 
