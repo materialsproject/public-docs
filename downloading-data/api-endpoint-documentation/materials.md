@@ -1,5 +1,5 @@
 ---
-description: Information on the Summary endpoint and its data.
+description: Information on the Materials endpoint and its data.
 ---
 
 # Materials
