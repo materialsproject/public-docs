@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-363 -592 2816 2525" width="2816" height="2525">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -2 5 4" markerWidth="5" markerHeight="4" color="black">
+      <g>
+        <path d="M 2.6666667 0 L 0 -1 L 0 1 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <filter id="Shadow" filterUnits="userSpaceOnUse" x="-644.6" y="-844.5">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="1.308"/>
+      <feOffset in="blur" result="offset" dx="0" dy="2"/>
+      <feFlood flood-color="black" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="offset" operator="in" result="color"/>
+      <feMerge>
+        <feMergeNode in="color"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g id="Canvas_1" stroke="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none" fill="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="-363" y="-592" width="2816" height="2525"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_161">
+        <path d="M -359 -309 L 1451 -309 C 1452.6569 -309 1454 -307.65685 1454 -306 L 1454 1391 C 1454 1392.6569 1452.6569 1394 1451 1394 L -359 1394 C -360.65685 1394 -362 1392.6569 -362 1391 L -362 -306 C -362 -307.65685 -360.65685 -309 -359 -309 Z" fill="white"/>
+        <path d="M -359 -309 L 1451 -309 C 1452.6569 -309 1454 -307.65685 1454 -306 L 1454 1391 C 1454 1392.6569 1452.6569 1394 1451 1394 L -359 1394 C -360.65685 1394 -362 1392.6569 -362 1391 L -362 -306 C -362 -307.65685 -360.65685 -309 -359 -309 Z" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8.0,8.0" stroke-width="2"/>
+      </g>
+      <g id="Graphic_2">
+        <path d="M 805.5592 -177 L 805.5592 -217 C 805.5592 -219.76 834.6016 -222 870.386 -222 C 906.1704 -222 935.2127 -219.76 935.2127 -217 L 935.2127 -177 C 935.2127 -174.24 906.1704 -172 870.386 -172 C 834.6016 -172 805.5592 -174.24 805.5592 -177" fill="#f26077"/>
+        <path d="M 805.5592 -177 L 805.5592 -217 C 805.5592 -219.76 834.6016 -222 870.386 -222 C 906.1704 -222 935.2127 -219.76 935.2127 -217 L 935.2127 -177 C 935.2127 -174.24 906.1704 -172 870.386 -172 C 834.6016 -172 805.5592 -174.24 805.5592 -177 M 805.5592 -217 C 805.5592 -214.24 834.6016 -212 870.386 -212 C 906.1704 -212 935.2127 -214.24 935.2127 -217" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(811.5592 -206)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="43.90275" y="13">tasks</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <rect x="795" y="-8" width="150" height="80" fill="#00bfc0"/>
+        <rect x="795" y="-8" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(801 14)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="10.5065" y="13">vasp. task_validator. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="30.013" y="31">TaskValidator</tspan>
+        </text>
+      </g>
+      <g id="Graphic_4">
+        <path d="M 805.5593 133.8 L 805.5593 100.2 C 805.5593 97.8816 834.6017 96 870.386 96 C 906.1704 96 935.2127 97.8816 935.2127 100.2 L 935.2127 133.8 C 935.2127 136.1184 906.1704 138 870.386 138 C 834.6017 138 805.5593 136.1184 805.5593 133.8" fill="#ff914d"/>
+        <path d="M 805.5593 133.8 L 805.5593 100.2 C 805.5593 97.8816 834.6017 96 870.386 96 C 906.1704 96 935.2127 97.8816 935.2127 100.2 L 935.2127 133.8 C 935.2127 136.1184 906.1704 138 870.386 138 C 834.6017 138 805.5593 136.1184 805.5593 133.8 M 805.5593 100.2 C 805.5593 102.5184 834.6017 104.4 870.386 104.4 C 906.1704 104.4 935.2127 102.5184 935.2127 100.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(811.5593 108)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="30.298233" y="13">validation</tspan>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <rect x="667" y="165" width="150" height="80" fill="#00bfc0"/>
+        <rect x="667" y="165" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(673 187)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="24.228" y="13">vasp. materials. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="22.0765" y="31">MaterialsBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <path d="M 677.5593 301.8 L 677.5593 268.2 C 677.5593 265.8816 706.6017 264 742.386 264 C 778.1704 264 807.2127 265.8816 807.2127 268.2 L 807.2127 301.8 C 807.2127 304.1184 778.1704 306 742.386 306 C 706.6017 306 677.5593 304.1184 677.5593 301.8" fill="#f26077"/>
+        <path d="M 677.5593 301.8 L 677.5593 268.2 C 677.5593 265.8816 706.6017 264 742.386 264 C 778.1704 264 807.2127 265.8816 807.2127 268.2 L 807.2127 301.8 C 807.2127 304.1184 778.1704 306 742.386 306 C 706.6017 306 677.5593 304.1184 677.5593 301.8 M 677.5593 268.2 C 677.5593 270.5184 706.6017 272.4 742.386 272.4 C 778.1704 272.4 807.2127 270.5184 807.2127 268.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(683.5593 276)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="32.111733" y="13">materials</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <rect x="639" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="639" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(645 350)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="41.089" y="13">materials. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="20.0225" y="31">oxidation_states. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="2.0955" y="49">OxidationStatesBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <path d="M 687.3465 554 L 687.3465 514 C 687.3465 511.24 716.3889 509 752.1733 509 C 787.9576 509 817 511.24 817 514 L 817 554 C 817 556.76 787.9576 559 752.1733 559 C 716.3889 559 687.3465 556.76 687.3465 554" fill="#f26077"/>
+        <path d="M 687.3465 554 L 687.3465 514 C 687.3465 511.24 716.3889 509 752.1733 509 C 787.9576 509 817 511.24 817 514 L 817 554 C 817 556.76 787.9576 559 752.1733 559 C 716.3889 559 687.3465 556.76 687.3465 554 M 687.3465 514 C 687.3465 516.76 716.3889 519 752.1733 519 C 787.9576 519 817 516.76 817 514" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(693.3465 525)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="29.212733" y="13">oxi_states</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <rect x="205.44072" y="640" width="150" height="80" fill="#00bfc0"/>
+        <rect x="205.44072" y="640" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(211.44072 662)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="29.3955" y="13">vasp. thermo. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="25.918" y="31">ThermoBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <path d="M 275.55928 867 L 275.55928 827 C 275.55928 824.24 304.60166 822 340.386 822 C 376.17037 822 405.21275 824.24 405.21275 827 L 405.21275 867 C 405.21275 869.76 376.17037 872 340.386 872 C 304.60166 872 275.55928 869.76 275.55928 867" fill="#f26077"/>
+        <path d="M 275.55928 867 L 275.55928 827 C 275.55928 824.24 304.60166 822 340.386 822 C 376.17037 822 405.21275 824.24 405.21275 827 L 405.21275 867 C 405.21275 869.76 376.17037 872 340.386 872 C 304.60166 872 275.55928 869.76 275.55928 867 M 275.55928 827 C 275.55928 829.76 304.60166 832 340.386 832 C 376.17037 832 405.21275 829.76 405.21275 827" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(281.55928 838)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="37.389733" y="13">thermo</tspan>
+        </text>
+      </g>
+      <g id="Graphic_11">
+        <path d="M 125 867 L 125 827 C 125 824.24 154.04238 822 189.82673 822 C 225.6111 822 254.65346 824.24 254.65346 827 L 254.65346 867 C 254.65346 869.76 225.6111 872 189.82673 872 C 154.04238 872 125 869.76 125 867" fill="#f26077"/>
+        <path d="M 125 867 L 125 827 C 125 824.24 154.04238 822 189.82673 822 C 225.6111 822 254.65346 824.24 254.65346 827 L 254.65346 867 C 254.65346 869.76 225.6111 872 189.82673 872 C 154.04238 872 125 869.76 125 867 M 125 827 C 125 829.76 154.04238 832 189.82673 832 C 225.6111 832 254.65346 829.76 254.65346 827" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(131 838)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="13.924733" y="13">phase_diagram</tspan>
+        </text>
+      </g>
+      <g id="Graphic_12">
+        <rect x="-153.17327" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="-153.17327" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-147.17327 359)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.3955" y="13">materials. provenance. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.5885" y="31">ProvenanceBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_13">
+        <path d="M -304 210 L -304 170 C -304 167.24 -274.9576 165 -239.17325 165 C -203.38888 165 -174.3465 167.24 -174.3465 170 L -174.3465 210 C -174.3465 212.76 -203.38888 215 -239.17325 215 C -274.9576 215 -304 212.76 -304 210" fill="#ff914d"/>
+        <path d="M -304 210 L -304 170 C -304 167.24 -274.9576 165 -239.17325 165 C -203.38888 165 -174.3465 167.24 -174.3465 170 L -174.3465 210 C -174.3465 212.76 -203.38888 215 -239.17325 215 C -274.9576 215 -304 212.76 -304 210 M -304 170 C -304 172.76 -274.9576 175 -239.17325 175 C -203.38888 175 -174.3465 172.76 -174.3465 170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-298 181)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="32.11175" y="13">snls_user</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <path d="M -144 210 L -144 170 C -144 167.24 -114.95762 165 -79.17325 165 C -43.388883 165 -14.346499 167.24 -14.346499 170 L -14.346499 210 C -14.346499 212.76 -43.388883 215 -79.17325 215 C -114.95762 215 -144 212.76 -144 210" fill="#ff914d"/>
+        <path d="M -144 210 L -144 170 C -144 167.24 -114.95762 165 -79.17325 165 C -43.388883 165 -14.346499 167.24 -14.346499 170 L -14.346499 210 C -14.346499 212.76 -43.388883 215 -79.17325 215 C -114.95762 215 -144 212.76 -144 210 M -144 170 C -144 172.76 -114.95762 175 -79.17325 175 C -43.388883 175 -14.346499 172.76 -14.346499 170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-138 181)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="33.08025" y="13">snls_icsd</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <path d="M 16 210 L 16 170 C 16 167.24 45.042384 165 80.82675 165 C 116.61112 165 145.6535 167.24 145.6535 170 L 145.6535 210 C 145.6535 212.76 116.61112 215 80.82675 215 C 45.042384 215 16 212.76 16 210" fill="#ff914d"/>
+        <path d="M 16 210 L 16 170 C 16 167.24 45.042384 165 80.82675 165 C 116.61112 165 145.6535 167.24 145.6535 170 L 145.6535 210 C 145.6535 212.76 116.61112 215 80.82675 215 C 45.042384 215 16 212.76 16 210 M 16 170 C 16 172.76 45.042384 175 80.82675 175 C 116.61112 175 145.6535 172.76 145.6535 170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(22 181)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="22.966252" y="13">snls_pauling</tspan>
+        </text>
+      </g>
+      <g id="Graphic_16">
+        <path d="M 176 210 L 176 170 C 176 167.24 205.04238 165 240.82675 165 C 276.61112 165 305.6535 167.24 305.6535 170 L 305.6535 210 C 305.6535 212.76 276.61112 215 240.82675 215 C 205.04238 215 176 212.76 176 210" fill="#ff914d"/>
+        <path d="M 176 210 L 176 170 C 176 167.24 205.04238 165 240.82675 165 C 276.61112 165 305.6535 167.24 305.6535 170 L 305.6535 210 C 305.6535 212.76 276.61112 215 240.82675 215 C 205.04238 215 176 212.76 176 210 M 176 170 C 176 172.76 205.04238 175 240.82675 175 C 276.61112 175 305.6535 172.76 305.6535 170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(182 181)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="4.1747517" y="13">snls_mp_complete</tspan>
+        </text>
+      </g>
+      <g id="Graphic_17">
+        <path d="M -143 614 L -143 574 C -143 571.24 -113.95762 569 -78.17327 569 C -42.388913 569 -13.346537 571.24 -13.346537 574 L -13.346537 614 C -13.346537 616.76 -42.388913 619 -78.17327 619 C -113.95762 619 -143 616.76 -143 614" fill="#f26077"/>
+        <path d="M -143 614 L -143 574 C -143 571.24 -113.95762 569 -78.17327 569 C -42.388913 569 -13.346537 571.24 -13.346537 574 L -13.346537 614 C -13.346537 616.76 -42.388913 619 -78.17327 619 C -113.95762 619 -143 616.76 -143 614 M -143 574 C -143 576.76 -113.95762 579 -78.17327 579 C -42.388913 579 -13.346537 576.76 -13.346537 574" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-137 585)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="24.493733" y="13">provenance</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <rect x="780.5" y="1203" width="150" height="80" fill="#00bfc0"/>
+        <rect x="780.5" y="1203" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(786.5 1225)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="11.3515" y="13">materials. summary. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="21.459" y="31">SummaryBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_19">
+        <path d="M 275.55926 1129 L 275.55926 1089 C 275.55926 1086.24 304.60165 1084 340.386 1084 C 376.1704 1084 405.21277 1086.24 405.21277 1089 L 405.21277 1129 C 405.21277 1131.76 376.1704 1134 340.386 1134 C 304.60165 1134 275.55926 1131.76 275.55926 1129" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 275.55926 1129 L 275.55926 1089 C 275.55926 1086.24 304.60165 1084 340.386 1084 C 376.1704 1084 405.21277 1086.24 405.21277 1089 L 405.21277 1129 C 405.21277 1131.76 376.1704 1134 340.386 1134 C 304.60165 1134 275.55926 1131.76 275.55926 1129 M 275.55926 1089 C 275.55926 1091.76 304.60165 1094 340.386 1094 C 376.1704 1094 405.21277 1091.76 405.21277 1089" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(281.55926 1100)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="49.19375" y="13">xas</tspan>
+        </text>
+      </g>
+      <g id="Graphic_20">
+        <path d="M 435.55926 1129 L 435.55926 1089 C 435.55926 1086.24 464.60165 1084 500.386 1084 C 536.1704 1084 565.21277 1086.24 565.21277 1089 L 565.21277 1129 C 565.21277 1131.76 536.1704 1134 500.386 1134 C 464.60165 1134 435.55926 1131.76 435.55926 1129" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 435.55926 1129 L 435.55926 1089 C 435.55926 1086.24 464.60165 1084 500.386 1084 C 536.1704 1084 565.21277 1086.24 565.21277 1089 L 565.21277 1129 C 565.21277 1131.76 536.1704 1134 500.386 1134 C 464.60165 1134 435.55926 1131.76 435.55926 1129 M 435.55926 1089 C 435.55926 1091.76 464.60165 1094 500.386 1094 C 536.1704 1094 565.21277 1091.76 565.21277 1089" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(441.55926 1100)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="32.44975" y="13">chemenv</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <path d="M 595.55926 1129 L 595.55926 1089 C 595.55926 1086.24 624.60165 1084 660.386 1084 C 696.1704 1084 725.2128 1086.24 725.2128 1089 L 725.2128 1129 C 725.2128 1131.76 696.1704 1134 660.386 1134 C 624.60165 1134 595.55926 1131.76 595.55926 1129" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 595.55926 1129 L 595.55926 1089 C 595.55926 1086.24 624.60165 1084 660.386 1084 C 696.1704 1084 725.2128 1086.24 725.2128 1089 L 725.2128 1129 C 725.2128 1131.76 696.1704 1134 660.386 1134 C 624.60165 1134 595.55926 1131.76 595.55926 1129 M 595.55926 1089 C 595.55926 1091.76 624.60165 1094 660.386 1094 C 696.1704 1094 725.2128 1091.76 725.2128 1089" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(601.55926 1100)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="7.782252" y="13">grain_boundaries</tspan>
+        </text>
+      </g>
+      <g id="Graphic_22">
+        <path d="M 1213.9529 554.8 L 1213.9529 521.2 C 1213.9529 518.8816 1242.9953 517 1278.7796 517 C 1314.564 517 1343.6064 518.8816 1343.6064 521.2 L 1343.6064 554.8 C 1343.6064 557.1184 1314.564 559 1278.7796 559 C 1242.9953 559 1213.9529 557.1184 1213.9529 554.8" fill="#f26077"/>
+        <path d="M 1213.9529 554.8 L 1213.9529 521.2 C 1213.9529 518.8816 1242.9953 517 1278.7796 517 C 1314.564 517 1343.6064 518.8816 1343.6064 521.2 L 1343.6064 554.8 C 1343.6064 557.1184 1314.564 559 1278.7796 559 C 1242.9953 559 1213.9529 557.1184 1213.9529 554.8 M 1213.9529 521.2 C 1213.9529 523.5184 1242.9953 525.4 1278.7796 525.4 C 1314.564 525.4 1343.6064 523.5184 1343.6064 521.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1219.9529 529)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x=".43073264" y="13">electronic_structure</tspan>
+        </text>
+      </g>
+      <g id="Graphic_23">
+        <path d="M 1039.1733 554.8 L 1039.1733 521.2 C 1039.1733 518.8816 1068.2156 517 1104 517 C 1139.7844 517 1168.8267 518.8816 1168.8267 521.2 L 1168.8267 554.8 C 1168.8267 557.1184 1139.7844 559 1104 559 C 1068.2156 559 1039.1733 557.1184 1039.1733 554.8" fill="#f26077"/>
+        <path d="M 1039.1733 554.8 L 1039.1733 521.2 C 1039.1733 518.8816 1068.2156 517 1104 517 C 1139.7844 517 1168.8267 518.8816 1168.8267 521.2 L 1168.8267 554.8 C 1168.8267 557.1184 1139.7844 559 1104 559 C 1068.2156 559 1039.1733 557.1184 1039.1733 554.8 M 1039.1733 521.2 C 1039.1733 523.5184 1068.2156 525.4 1104 525.4 C 1139.7844 525.4 1168.8267 523.5184 1168.8267 521.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1045.1733 529)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="26.326733" y="13">magnetism</tspan>
+        </text>
+      </g>
+      <g id="Graphic_24">
+        <path d="M 879.5593 1129 L 879.5593 1089 C 879.5593 1086.24 908.6016 1084 944.386 1084 C 980.1704 1084 1009.2128 1086.24 1009.2128 1089 L 1009.2128 1129 C 1009.2128 1131.76 980.1704 1134 944.386 1134 C 908.6016 1134 879.5593 1131.76 879.5593 1129" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 879.5593 1129 L 879.5593 1089 C 879.5593 1086.24 908.6016 1084 944.386 1084 C 980.1704 1084 1009.2128 1086.24 1009.2128 1089 L 1009.2128 1129 C 1009.2128 1131.76 980.1704 1134 944.386 1134 C 908.6016 1134 879.5593 1131.76 879.5593 1129 M 879.5593 1089 C 879.5593 1091.76 908.6016 1094 944.386 1094 C 980.1704 1094 1009.2128 1091.76 1009.2128 1089" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(885.5593 1100)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="33.08025" y="13">elasticity</tspan>
+        </text>
+      </g>
+      <g id="Graphic_25">
+        <path d="M -101 1129 L -101 1089 C -101 1086.24 -71.95762 1084 -36.17327 1084 C -.3889127 1084 28.653463 1086.24 28.653463 1089 L 28.653463 1129 C 28.653463 1131.76 -.3889127 1134 -36.17327 1134 C -71.95762 1134 -101 1131.76 -101 1129" fill="#f26077"/>
+        <path d="M -101 1129 L -101 1089 C -101 1086.24 -71.95762 1084 -36.17327 1084 C -.3889127 1084 28.653463 1086.24 28.653463 1089 L 28.653463 1129 C 28.653463 1131.76 -.3889127 1134 -36.17327 1134 C -71.95762 1134 -101 1131.76 -101 1129 M -101 1089 C -101 1091.76 -71.95762 1094 -36.17327 1094 C -.3889127 1094 28.653463 1091.76 28.653463 1089" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-95 1100)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="31.871233" y="13">dielectric</tspan>
+        </text>
+      </g>
+      <g id="Graphic_26">
+        <path d="M 879.1733 550.8 L 879.1733 517.2 C 879.1733 514.8816 908.2156 513 944 513 C 979.7844 513 1008.8267 514.8816 1008.8267 517.2 L 1008.8267 550.8 C 1008.8267 553.1184 979.7844 555 944 555 C 908.2156 555 879.1733 553.1184 879.1733 550.8" fill="#f26077"/>
+        <path d="M 879.1733 550.8 L 879.1733 517.2 C 879.1733 514.8816 908.2156 513 944 513 C 979.7844 513 1008.8267 514.8816 1008.8267 517.2 L 1008.8267 550.8 C 1008.8267 553.1184 979.7844 555 944 555 C 908.2156 555 879.1733 553.1184 879.1733 550.8 M 879.1733 517.2 C 879.1733 519.5184 908.2156 521.4 944 521.4 C 979.7844 521.4 1008.8267 519.5184 1008.8267 517.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(885.1733 525)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="21.386733" y="13">piezoelectric</tspan>
+        </text>
+      </g>
+      <g id="Graphic_27">
+        <path d="M 1054 1130 L 1054 1090 C 1054 1087.24 1083.0424 1085 1118.8268 1085 C 1154.6111 1085 1183.6535 1087.24 1183.6535 1090 L 1183.6535 1130 C 1183.6535 1132.76 1154.6111 1135 1118.8268 1135 C 1083.0424 1135 1054 1132.76 1054 1130" fill="#ff914d" fill-opacity=".5"/>
+        <path d="M 1054 1130 L 1054 1090 C 1054 1087.24 1083.0424 1085 1118.8268 1085 C 1154.6111 1085 1183.6535 1087.24 1183.6535 1090 L 1183.6535 1130 C 1183.6535 1132.76 1154.6111 1135 1118.8268 1135 C 1083.0424 1135 1054 1132.76 1054 1130 M 1054 1090 C 1054 1092.76 1083.0424 1095 1118.8268 1095 C 1154.6111 1095 1183.6535 1092.76 1183.6535 1090" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1060 1101)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="24.402752" y="13">pmg_ph_bs</tspan>
+        </text>
+      </g>
+      <g id="Graphic_28">
+        <path d="M 53.55928 1130 L 53.55928 1090 C 53.55928 1087.24 82.60166 1085 118.38601 1085 C 154.17037 1085 183.21275 1087.24 183.21275 1090 L 183.21275 1130 C 183.21275 1132.76 154.17037 1135 118.38601 1135 C 82.60166 1135 53.55928 1132.76 53.55928 1130" fill="#f26077"/>
+        <path d="M 53.55928 1130 L 53.55928 1090 C 53.55928 1087.24 82.60166 1085 118.38601 1085 C 154.17037 1085 183.21275 1087.24 183.21275 1090 L 183.21275 1130 C 183.21275 1132.76 154.17037 1135 118.38601 1135 C 82.60166 1135 53.55928 1132.76 53.55928 1130 M 53.55928 1090 C 53.55928 1092.76 82.60166 1095 118.38601 1095 C 154.17037 1095 183.21275 1092.76 183.21275 1090" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(59.55928 1092)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="1.9972326" y="13">insertion_electrode</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="55.94073" y="31">s</tspan>
+        </text>
+      </g>
+      <g id="Graphic_29">
+        <path d="M 885 968 L 885 928 C 885 925.24 914.0424 923 949.8268 923 C 985.6111 923 1014.6535 925.24 1014.6535 928 L 1014.6535 968 C 1014.6535 970.76 985.6111 973 949.8268 973 C 914.0424 973 885 970.76 885 968" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 885 968 L 885 928 C 885 925.24 914.0424 923 949.8268 923 C 985.6111 923 1014.6535 925.24 1014.6535 928 L 1014.6535 968 C 1014.6535 970.76 985.6111 973 949.8268 973 C 914.0424 973 885 970.76 885 968 M 885 928 C 885 930.76 914.0424 933 949.8268 933 C 985.6111 933 1014.6535 930.76 1014.6535 928" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(891 939)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.8107517" y="13">surface_properties</tspan>
+        </text>
+      </g>
+      <g id="Graphic_30">
+        <path d="M 1045 968 L 1045 928 C 1045 925.24 1074.0424 923 1109.8268 923 C 1145.6111 923 1174.6535 925.24 1174.6535 928 L 1174.6535 968 C 1174.6535 970.76 1145.6111 973 1109.8268 973 C 1074.0424 973 1045 970.76 1045 968" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 1045 968 L 1045 928 C 1045 925.24 1074.0424 923 1109.8268 923 C 1145.6111 923 1174.6535 925.24 1174.6535 928 L 1174.6535 968 C 1174.6535 970.76 1145.6111 973 1109.8268 973 C 1074.0424 973 1045 970.76 1045 968 M 1045 928 C 1045 930.76 1074.0424 933 1109.8268 933 C 1145.6111 933 1174.6535 930.76 1174.6535 928" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1051 939)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="28.380752" y="13">substrates</tspan>
+        </text>
+      </g>
+      <g id="Graphic_31">
+        <path d="M 1205 968 L 1205 928 C 1205 925.24 1234.0424 923 1269.8268 923 C 1305.6111 923 1334.6535 925.24 1334.6535 928 L 1334.6535 968 C 1334.6535 970.76 1305.6111 973 1269.8268 973 C 1234.0424 973 1205 970.76 1205 968" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 1205 968 L 1205 928 C 1205 925.24 1234.0424 923 1269.8268 923 C 1305.6111 923 1334.6535 925.24 1334.6535 928 L 1334.6535 968 C 1334.6535 970.76 1305.6111 973 1269.8268 973 C 1234.0424 973 1205 970.76 1205 968 M 1205 928 C 1205 930.76 1234.0424 933 1269.8268 933 C 1305.6111 933 1334.6535 930.76 1334.6535 928" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1211 939)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="48.46575" y="13">eos</tspan>
+        </text>
+      </g>
+      <g id="Graphic_32">
+        <path d="M 1213.9529 1130 L 1213.9529 1090 C 1213.9529 1087.24 1242.9953 1085 1278.7796 1085 C 1314.564 1085 1343.6064 1087.24 1343.6064 1090 L 1343.6064 1130 C 1343.6064 1132.76 1314.564 1135 1278.7796 1135 C 1242.9953 1135 1213.9529 1132.76 1213.9529 1130" fill="#ff914d" fill-opacity=".5"/>
+        <path d="M 1213.9529 1130 L 1213.9529 1090 C 1213.9529 1087.24 1242.9953 1085 1278.7796 1085 C 1314.564 1085 1343.6064 1087.24 1343.6064 1090 L 1343.6064 1130 C 1343.6064 1132.76 1314.564 1135 1278.7796 1135 C 1242.9953 1135 1213.9529 1132.76 1213.9529 1130 M 1213.9529 1090 C 1213.9529 1092.76 1242.9953 1095 1278.7796 1095 C 1314.564 1095 1343.6064 1092.76 1343.6064 1090" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1219.9529 1092)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.0762517" y="13">atomate_chgcar_fs</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="39.44375" y="31">_index</tspan>
+        </text>
+      </g>
+      <g id="Graphic_34">
+        <rect x="585" y="654" width="150" height="80" fill="#00bfc0"/>
+        <rect x="585" y="654" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(591 676)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="19.2945" y="13">materials. bonds. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="23.747" y="31">BondingBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_35">
+        <path d="M 595.1733 867 L 595.1733 827 C 595.1733 824.24 624.21564 822 660 822 C 695.78436 822 724.8267 824.24 724.8267 827 L 724.8267 867 C 724.8267 869.76 695.78436 872 660 872 C 624.21564 872 595.1733 869.76 595.1733 867" fill="#f26077"/>
+        <path d="M 595.1733 867 L 595.1733 827 C 595.1733 824.24 624.21564 822 660 822 C 695.78436 822 724.8267 824.24 724.8267 827 L 724.8267 867 C 724.8267 869.76 695.78436 872 660 872 C 624.21564 872 595.1733 869.76 595.1733 867 M 595.1733 827 C 595.1733 829.76 624.21564 832 660 832 C 695.78436 832 724.8267 829.76 724.8267 827" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(601.1733 838)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="40.522733" y="13">bonds</tspan>
+        </text>
+      </g>
+      <g id="Graphic_36">
+        <rect x="1203.7796" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1203.7796" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1209.7796 341)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="41.089" y="13">materials. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="10.1685" y="31">electronic_structure. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.311" y="49">ElectronicStructureBuil</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="59.2565" y="67">der</tspan>
+        </text>
+      </g>
+      <g id="Graphic_37">
+        <path d="M 1125 269 L 1125 229 C 1125 226.24 1154.0424 224 1189.8268 224 C 1225.6111 224 1254.6535 226.24 1254.6535 229 L 1254.6535 269 C 1254.6535 271.76 1225.6111 274 1189.8268 274 C 1154.0424 274 1125 271.76 1125 269" fill="#ff914d" fill-opacity=".5"/>
+        <path d="M 1125 269 L 1125 229 C 1125 226.24 1154.0424 224 1189.8268 224 C 1225.6111 224 1254.6535 226.24 1254.6535 229 L 1254.6535 269 C 1254.6535 271.76 1225.6111 274 1189.8268 274 C 1154.0424 274 1125 271.76 1125 269 M 1125 229 C 1125 231.76 1154.0424 234 1189.8268 234 C 1225.6111 234 1254.6535 231.76 1254.6535 229" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1131 231)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="2.9722517" y="13">s3_bandstructure_i</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="44.25375" y="31">ndex</tspan>
+        </text>
+      </g>
+      <g id="Graphic_38">
+        <path d="M 1304 269 L 1304 229 C 1304 226.24 1333.0424 224 1368.8268 224 C 1404.6111 224 1433.6535 226.24 1433.6535 229 L 1433.6535 269 C 1433.6535 271.76 1404.6111 274 1368.8268 274 C 1333.0424 274 1304 271.76 1304 269" fill="#ff914d" fill-opacity=".5"/>
+        <path d="M 1304 269 L 1304 229 C 1304 226.24 1333.0424 224 1368.8268 224 C 1404.6111 224 1433.6535 226.24 1433.6535 229 L 1433.6535 269 C 1433.6535 271.76 1404.6111 274 1368.8268 274 C 1333.0424 274 1304 271.76 1304 269 M 1304 229 C 1304 231.76 1333.0424 234 1368.8268 234 C 1404.6111 234 1433.6535 231.76 1433.6535 229" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1310 240)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="18.975252" y="13">s3_dos_index</tspan>
+        </text>
+      </g>
+      <g id="Graphic_39">
+        <rect x="1029" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1029" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1035 359)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="5.339" y="13">materials. magnetism. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="21.2185" y="31">MagneticBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_40">
+        <rect x="332" y="346" width="150" height="80" fill="#00bfc0"/>
+        <rect x="332" y="346" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(338 368)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="11.0135" y="13">materials. dielectric. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="21.121" y="31">DielectricBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_41">
+        <rect x="869" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="869" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(875 359)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x=".776" y="13">materials. piezoelectric. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="11.969" y="31">PiezoelectricBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_42">
+        <rect x="61.98024" y="337" width="150" height="80" fill="#00bfc0"/>
+        <rect x="61.98024" y="337" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(67.98024 359)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="7.029" y="13">materials. electrodes. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.5515" y="31">StructureGroupBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_43">
+        <path d="M 43 614 L 43 574 C 43 571.24 85.10315 569 136.98024 569 C 188.85734 569 230.96048 571.24 230.96048 574 L 230.96048 614 C 230.96048 616.76 188.85734 619 136.98024 619 C 85.10315 619 43 616.76 43 614" fill="#ff914d"/>
+        <path d="M 43 614 L 43 574 C 43 571.24 85.10315 569 136.98024 569 C 188.85734 569 230.96048 571.24 230.96048 574 L 230.96048 614 C 230.96048 616.76 188.85734 619 136.98024 619 C 85.10315 619 43 616.76 43 614 M 43 574 C 43 576.76 85.10315 579 136.98024 579 C 188.85734 579 230.96048 576.76 230.96048 574" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(49 585)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="4.42274" y="13">insertion_electrodes_groups</tspan>
+        </text>
+      </g>
+      <g id="Graphic_44">
+        <rect x="43" y="930" width="150" height="80" fill="#00bfc0"/>
+        <rect x="43" y="930" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(49 943)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="7.029" y="13">materials. electrodes. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="1.2245" y="31">InsertionElectrodeBuild</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="63.228" y="49">er</tspan>
+        </text>
+      </g>
+      <g id="Graphic_45">
+        <rect x="425" y="645" width="150" height="80" fill="#00bfc0"/>
+        <rect x="425" y="645" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(431 658)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="12.4435" y="13">materials. robocrys. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="2.8105" y="31">RobocrystallographerB</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="52.5225" y="49">uilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_46">
+        <path d="M 435.5593 867 L 435.5593 827 C 435.5593 824.24 464.60166 822 500.386 822 C 536.1704 822 565.21275 824.24 565.21275 827 L 565.21275 867 C 565.21275 869.76 536.1704 872 500.386 872 C 464.60166 872 435.5593 869.76 435.5593 867" fill="#f26077"/>
+        <path d="M 435.5593 867 L 435.5593 827 C 435.5593 824.24 464.60166 822 500.386 822 C 536.1704 822 565.21275 824.24 565.21275 827 L 565.21275 867 C 565.21275 869.76 536.1704 872 500.386 872 C 464.60166 872 435.5593 869.76 435.5593 867 M 435.5593 827 C 435.5593 829.76 464.60166 832 500.386 832 C 536.1704 832 565.21275 829.76 565.21275 827" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(441.5593 838)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="33.171233" y="13">robocrys</tspan>
+        </text>
+      </g>
+      <g id="Graphic_47">
+        <path d="M 790.6733 1356 L 790.6733 1316 C 790.6733 1313.24 819.7156 1311 855.5 1311 C 891.2844 1311 920.3267 1313.24 920.3267 1316 L 920.3267 1356 C 920.3267 1358.76 891.2844 1361 855.5 1361 C 819.7156 1361 790.6733 1358.76 790.6733 1356" fill="#f26077"/>
+        <path d="M 790.6733 1356 L 790.6733 1316 C 790.6733 1313.24 819.7156 1311 855.5 1311 C 891.2844 1311 920.3267 1313.24 920.3267 1316 L 920.3267 1356 C 920.3267 1358.76 891.2844 1361 855.5 1361 C 819.7156 1361 790.6733 1358.76 790.6733 1356 M 790.6733 1316 C 790.6733 1318.76 819.7156 1321 855.5 1321 C 891.2844 1321 920.3267 1318.76 920.3267 1316" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(796.6733 1327)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="32.222233" y="13">summary</tspan>
+        </text>
+      </g>
+      <g id="Line_70">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 870 -22.9 L 870 -17.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_71">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 742 -90 L 742 155.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_72">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 1278.7796 -90 L 1278.7796 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_73">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 1104 -90 L 1104 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_74">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 407 -90 L 407 336.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_75">
+        <path d="M 870.386 -172 L 870.386 -162 L 870.193 -90 L 944 -90 L 944 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_76">
+        <path d="M 870 72 L 870 82 L 870.193 84 L 870.386 84 L 870.386 86.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_77">
+        <path d="M 870.386 138 L 870.386 151.5 L 742 151.5 L 742 155.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_78">
+        <line x1="742" y1="245" x2="742" y2="254.10753" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_79">
+        <path d="M 742.386 306 L 742.386 321.5 L 714 321.5 L 714 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_80">
+        <path d="M 742.386 306 L 742.386 321.47126 L 280.44072 321.47126 L 280.44072 630.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_81">
+        <path d="M 742.386 306 L 742.386 321.47126 L -78.17327 321.47126 L -78.17327 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_82">
+        <path d="M 742.386 306 L 742.386 321.4982 L 855.5 321.4982 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_83">
+        <path d="M 742.386 306 L 742.386 321.5 L 1278.7796 321.5 L 1278.7796 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_84">
+        <path d="M 742.386 306 L 742.386 321.5 L 1104 321.5 L 1104 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_85">
+        <path d="M 742.386 306 L 742.386 321.47126 L 407 321.47126 L 407 336.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_86">
+        <path d="M 742.386 306 L 742.386 321.5 L 944 321.5 L 944 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_87">
+        <path d="M 742.386 306 L 742.386 321.47126 L 136.98024 321.47126 L 136.98024 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_88">
+        <path d="M 714 417 L 714 463 L 752.1733 463 L 752.1733 499.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_89">
+        <path d="M 752.1733 559 L 752.1733 606.5 L 280.44072 606.5 L 280.44072 630.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_90">
+        <path d="M 752.1733 559 L 752.1733 881 L 855.5 881 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_91">
+        <path d="M 752.1733 559 L 752.1733 606.5 L 660 606.5 L 660 644.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_92">
+        <path d="M 752.1733 559 L 752.1733 606.5 L 500 606.5 L 500 635.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_93">
+        <path d="M 280.44072 720 L 280.44072 771 L 340.386 771 L 340.386 812.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_94">
+        <path d="M 280.44072 720 L 280.44072 771 L 189.82673 771 L 189.82673 812.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_95">
+        <path d="M 340.386 872 L 340.386 1037.5 L 855.5 1037.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_96">
+        <path d="M 340.386 872 L 340.386 901 L 118 901 L 118 920.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_98">
+        <line x1="-78.17327" y1="417" x2="-78.17327" y2="559.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_99">
+        <path d="M -239.17325 215 L -239.17325 276 L -78.17327 276 L -78.17327 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_100">
+        <path d="M -79.17325 215 L -79.17325 225 L -78.67326 276 L -78.17327 322.1 L -78.17327 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_101">
+        <path d="M 80.82675 215 L 80.82675 276 L -78.17327 276 L -78.17327 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_102">
+        <path d="M 240.82675 215 L 240.82675 276 L -78.17327 276 L -78.17327 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_103">
+        <path d="M -78.17327 619 L -78.17327 911 L 855.5 911 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_105">
+        <line x1="855.5" y1="1283" x2="855.5" y2="1301.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_106">
+        <path d="M 340.386 1134 L 340.386 1168.5 L 855.5 1168.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_107">
+        <path d="M 500.386 1134 L 500.386 1168.5 L 855.5 1168.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_108">
+        <path d="M 660.386 1134 L 660.386 1168.5 L 855.5 1168.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_109">
+        <path d="M 1278.7796 559 L 1278.7796 881 L 855.5 881 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_110">
+        <path d="M 1104 559 L 1104 881 L 855.5 881 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_111">
+        <path d="M 944.386 1134 L 944.386 1168.5 L 855.5 1168.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_112">
+        <path d="M -36.17327 1134 L -36.17327 1168.5 L 855.5 1168.5 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_113">
+        <path d="M 944 555 L 944 881.6475 L 855.5 881.6475 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_114">
+        <path d="M 1118.8268 1135 L 1118.8268 1169 L 855.5 1169 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_115">
+        <path d="M 118.38601 1135 L 118.38601 1169 L 855.5 1169 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_116">
+        <path d="M 949.8268 973 L 949.8268 1039.6642 L 855.5 1039.6642 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_117">
+        <path d="M 1109.8268 973 L 1109.8268 1038.9616 L 855.5 1038.9616 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_118">
+        <path d="M 1269.8268 973 L 1269.8268 1039.1365 L 855.5 1039.1365 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_119">
+        <path d="M 1278.7796 1135 L 1278.7796 1170.5775 L 855.5 1170.5775 L 855.5 1193.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_120">
+        <line x1="660" y1="734" x2="660" y2="812.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_122">
+        <line x1="1278.7796" y1="417" x2="1278.7796" y2="507.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_123">
+        <path d="M 1189.8268 274 L 1189.8268 305.5 L 1278.7796 305.5 L 1278.7796 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_124">
+        <path d="M 1368.8268 274 L 1368.8268 305.5 L 1278.7796 305.5 L 1278.7796 327.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_125">
+        <line x1="1104" y1="417" x2="1104" y2="507.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_126">
+        <path d="M 407 426 L 407 728.4778 L -36.17327 728.4778 L -36.17327 1074.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_127">
+        <line x1="944" y1="417" x2="944" y2="503.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_128">
+        <line x1="136.98024" y1="417" x2="136.98024" y2="559.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_129">
+        <path d="M 136.98024 619 L 136.98024 750.5681 L 118 750.5681 L 118 920.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_130">
+        <path d="M 118 1010 L 118 1020 L 118.19301 1047.5 L 118.38601 1070.1 L 118.38601 1075.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_131">
+        <path d="M 500 725 L 500 735 L 500.193 773.5 L 500.386 807.1 L 500.386 812.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Graphic_163">
+        <text transform="translate(-338.8735 -289)" fill="black">
+          <tspan font-family="Gill Sans" font-size="47" fill="black" x="0" y="43">Inorganic Crystal Database Builders</tspan>
+        </text>
+      </g>
+      <g id="Graphic_162">
+        <path d="M 1501 -309 L 2448.295 -309 C 2449.952 -309 2451.295 -307.65685 2451.295 -306 L 2451.295 847.59 C 2451.295 849.2469 2449.952 850.59 2448.295 850.59 L 1501 850.59 C 1499.3431 850.59 1498 849.2469 1498 847.59 L 1498 -306 C 1498 -307.65685 1499.3431 -309 1501 -309 Z" fill="white"/>
+        <path d="M 1501 -309 L 2448.295 -309 C 2449.952 -309 2451.295 -307.65685 2451.295 -306 L 2451.295 847.59 C 2451.295 849.2469 2449.952 850.59 2448.295 850.59 L 1501 850.59 C 1499.3431 850.59 1498 849.2469 1498 847.59 L 1498 -306 C 1498 -307.65685 1499.3431 -309 1501 -309 Z" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8.0,8.0" stroke-width="2"/>
+      </g>
+      <g id="Graphic_49">
+        <rect x="1841.295" y="-117" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1841.295" y="-117" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1847.295 -104)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.452" y="13">qchem. molecules. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="2.297" y="31">MoleculesAssociationB</tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="52.5225" y="49">uilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_50">
+        <path d="M 1851.8543 33.8 L 1851.8543 .2 C 1851.8543 -2.1184 1880.8967 -4 1916.681 -4 C 1952.4654 -4 1981.5077 -2.1184 1981.5077 .2 L 1981.5077 33.8 C 1981.5077 36.1184 1952.4654 38 1916.681 38 C 1880.8967 38 1851.8543 36.1184 1851.8543 33.8" fill="#ff914d"/>
+        <path d="M 1851.8543 33.8 L 1851.8543 .2 C 1851.8543 -2.1184 1880.8967 -4 1916.681 -4 C 1952.4654 -4 1981.5077 -2.1184 1981.5077 .2 L 1981.5077 33.8 C 1981.5077 36.1184 1952.4654 38 1916.681 38 C 1880.8967 38 1851.8543 36.1184 1851.8543 33.8 M 1851.8543 .2 C 1851.8543 2.5184 1880.8967 4.4 1916.681 4.4 C 1952.4654 4.4 1981.5077 2.5184 1981.5077 .2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1857.8543 8)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="10.057233" y="13">molecules_assoc</tspan>
+        </text>
+      </g>
+      <g id="Graphic_51">
+        <rect x="1841.295" y="65" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1841.295" y="65" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1847.295 87)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.452" y="13">qchem. molecules. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="18.924" y="31">MoleculesBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <path d="M 1851.8543 201.8 L 1851.8543 168.2 C 1851.8543 165.8816 1880.8967 164 1916.681 164 C 1952.4654 164 1981.5077 165.8816 1981.5077 168.2 L 1981.5077 201.8 C 1981.5077 204.1184 1952.4654 206 1916.681 206 C 1880.8967 206 1851.8543 204.1184 1851.8543 201.8" fill="#ff914d"/>
+        <path d="M 1851.8543 201.8 L 1851.8543 168.2 C 1851.8543 165.8816 1880.8967 164 1916.681 164 C 1952.4654 164 1981.5077 165.8816 1981.5077 168.2 L 1981.5077 201.8 C 1981.5077 204.1184 1952.4654 206 1916.681 206 C 1880.8967 206 1851.8543 204.1184 1851.8543 201.8 M 1851.8543 168.2 C 1851.8543 170.5184 1880.8967 172.4 1916.681 172.4 C 1952.4654 172.4 1981.5077 170.5184 1981.5077 168.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1857.8543 176)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="29.446733" y="13">molecules</tspan>
+        </text>
+      </g>
+      <g id="Graphic_53">
+        <path d="M 1934.8543 -149 L 1934.8543 -189 C 1934.8543 -191.76 1963.8966 -194 1999.681 -194 C 2035.4654 -194 2064.5078 -191.76 2064.5078 -189 L 2064.5078 -149 C 2064.5078 -146.24 2035.4654 -144 1999.681 -144 C 1963.8966 -144 1934.8543 -146.24 1934.8543 -149" fill="#ff914d"/>
+        <path d="M 1934.8543 -149 L 1934.8543 -189 C 1934.8543 -191.76 1963.8966 -194 1999.681 -194 C 2035.4654 -194 2064.5078 -191.76 2064.5078 -189 L 2064.5078 -149 C 2064.5078 -146.24 2035.4654 -144 1999.681 -144 C 1963.8966 -144 1934.8543 -146.24 1934.8543 -149 M 1934.8543 -189 C 1934.8543 -186.24 1963.8966 -184 1999.681 -184 C 2035.4654 -184 2064.5078 -186.24 2064.5078 -189" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1940.8543 -178)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="11.272752" y="13">molecules_tasks</tspan>
+        </text>
+      </g>
+      <g id="Graphic_54">
+        <rect x="1570.295" y="237" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1570.295" y="237" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1576.295 259)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.7055" y="13">molecules. atomic. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="6.4375" y="31">PartialChargesBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_55">
+        <path d="M 1580.8543 464.8 L 1580.8543 431.2 C 1580.8543 428.8816 1609.8967 427 1645.681 427 C 1681.4654 427 1710.5077 428.8816 1710.5077 431.2 L 1710.5077 464.8 C 1710.5077 467.1184 1681.4654 469 1645.681 469 C 1609.8967 469 1580.8543 467.1184 1580.8543 464.8" fill="#ff914d"/>
+        <path d="M 1580.8543 464.8 L 1580.8543 431.2 C 1580.8543 428.8816 1609.8967 427 1645.681 427 C 1681.4654 427 1710.5077 428.8816 1710.5077 431.2 L 1710.5077 464.8 C 1710.5077 467.1184 1681.4654 469 1645.681 469 C 1609.8967 469 1580.8543 467.1184 1580.8543 464.8 M 1580.8543 431.2 C 1580.8543 433.5184 1609.8967 435.4 1645.681 435.4 C 1681.4654 435.4 1710.5077 433.5184 1710.5077 431.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1586.8543 439)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="3.3167326" y="13">molecules_charges</tspan>
+        </text>
+      </g>
+      <g id="Graphic_56">
+        <rect x="2271.8543" y="237" width="150" height="80" fill="#00bfc0"/>
+        <rect x="2271.8543" y="237" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(2277.8543 259)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.7055" y="13">molecules. atomic. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="14.985" y="31">PartialSpinsBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_57">
+        <path d="M 2282.8543 464.8 L 2282.8543 431.2 C 2282.8543 428.8816 2311.8967 427 2347.681 427 C 2383.4654 427 2412.5077 428.8816 2412.5077 431.2 L 2412.5077 464.8 C 2412.5077 467.1184 2383.4654 469 2347.681 469 C 2311.8967 469 2282.8543 467.1184 2282.8543 464.8" fill="#ff914d"/>
+        <path d="M 2282.8543 464.8 L 2282.8543 431.2 C 2282.8543 428.8816 2311.8967 427 2347.681 427 C 2383.4654 427 2412.5077 428.8816 2412.5077 431.2 L 2412.5077 464.8 C 2412.5077 467.1184 2383.4654 469 2347.681 469 C 2311.8967 469 2282.8543 467.1184 2282.8543 464.8 M 2282.8543 431.2 C 2282.8543 433.5184 2311.8967 435.4 2347.681 435.4 C 2383.4654 435.4 2412.5077 433.5184 2412.5077 431.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(2288.8543 439)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="11.279233" y="13">molecules_spins</tspan>
+        </text>
+      </g>
+      <g id="Graphic_58">
+        <rect x="1730.295" y="237" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1730.295" y="237" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1736.295 259)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="16.142" y="13">molecules. bonds. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="23.747" y="31">BondingBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_59">
+        <path d="M 1740.8543 464.8 L 1740.8543 431.2 C 1740.8543 428.8816 1769.8967 427 1805.681 427 C 1841.4654 427 1870.5077 428.8816 1870.5077 431.2 L 1870.5077 464.8 C 1870.5077 467.1184 1841.4654 469 1805.681 469 C 1769.8967 469 1740.8543 467.1184 1740.8543 464.8" fill="#ff914d"/>
+        <path d="M 1740.8543 464.8 L 1740.8543 431.2 C 1740.8543 428.8816 1769.8967 427 1805.681 427 C 1841.4654 427 1870.5077 428.8816 1870.5077 431.2 L 1870.5077 464.8 C 1870.5077 467.1184 1841.4654 469 1805.681 469 C 1769.8967 469 1740.8543 467.1184 1740.8543 464.8 M 1740.8543 431.2 C 1740.8543 433.5184 1769.8967 435.4 1805.681 435.4 C 1841.4654 435.4 1870.5077 433.5184 1870.5077 431.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1746.8543 439)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="7.892733" y="13">molecules_bonds</tspan>
+        </text>
+      </g>
+      <g id="Graphic_60">
+        <rect x="1952.295" y="237" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1952.295" y="237" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1958.295 259)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="12.918" y="13">molecules. orbitals. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="28.2255" y="31">OrbitalBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_61">
+        <path d="M 1962.8543 464.8 L 1962.8543 431.2 C 1962.8543 428.8816 1991.8967 427 2027.681 427 C 2063.4654 427 2092.5077 428.8816 2092.5077 431.2 L 2092.5077 464.8 C 2092.5077 467.1184 2063.4654 469 2027.681 469 C 1991.8967 469 1962.8543 467.1184 1962.8543 464.8" fill="#ff914d"/>
+        <path d="M 1962.8543 464.8 L 1962.8543 431.2 C 1962.8543 428.8816 1991.8967 427 2027.681 427 C 2063.4654 427 2092.5077 428.8816 2092.5077 431.2 L 2092.5077 464.8 C 2092.5077 467.1184 2063.4654 469 2027.681 469 C 1991.8967 469 1962.8543 467.1184 1962.8543 464.8 M 1962.8543 431.2 C 1962.8543 433.5184 1991.8967 435.4 2027.681 435.4 C 2063.4654 435.4 2092.5077 433.5184 2092.5077 431.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1968.8543 439)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="4.1747326" y="13">molecules_orbitals</tspan>
+        </text>
+      </g>
+      <g id="Graphic_62">
+        <rect x="2111.8543" y="237" width="150" height="80" fill="#00bfc0"/>
+        <rect x="2111.8543" y="237" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(2117.8543 259)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="13.386" y="13">molecules. thermo. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="25.918" y="31">ThermoBuilder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_63">
+        <path d="M 2122.8543 464.8 L 2122.8543 431.2 C 2122.8543 428.8816 2151.8967 427 2187.681 427 C 2223.4654 427 2252.5077 428.8816 2252.5077 431.2 L 2252.5077 464.8 C 2252.5077 467.1184 2223.4654 469 2187.681 469 C 2151.8967 469 2122.8543 467.1184 2122.8543 464.8" fill="#ff914d"/>
+        <path d="M 2122.8543 464.8 L 2122.8543 431.2 C 2122.8543 428.8816 2151.8967 427 2187.681 427 C 2223.4654 427 2252.5077 428.8816 2252.5077 431.2 L 2252.5077 464.8 C 2252.5077 467.1184 2223.4654 469 2187.681 469 C 2151.8967 469 2122.8543 467.1184 2122.8543 464.8 M 2122.8543 431.2 C 2122.8543 433.5184 2151.8967 435.4 2187.681 435.4 C 2223.4654 435.4 2252.5077 433.5184 2252.5077 431.2" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(2128.8543 439)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="4.7597326" y="13">molecules_thermo</tspan>
+        </text>
+      </g>
+      <g id="Graphic_64">
+        <rect x="1841.295" y="554" width="150" height="80" fill="#00bfc0"/>
+        <rect x="1841.295" y="554" width="150" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1847.295 576)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="8.199" y="13">molecules. summary. </tspan>
+          <tspan font-family="Avenir" font-size="13" fill="black" x="21.459" y="31">SummaryBuilder</tspan>
+        </text>
+      </g>
+      <g id="Line_97">
+        <path d="M 2187.681 469 L 2187.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_121">
+        <path d="M 1805.681 469 L 1805.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_132">
+        <path d="M 1999.681 -144 L 1999.681 -130.5 L 1916.295 -130.5 L 1916.295 -126.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_133">
+        <path d="M 1916.295 -37 L 1916.295 -27 L 1916.488 -20.5 L 1916.681 -18.9 L 1916.681 -13.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_134">
+        <path d="M 1916.681 38 L 1916.681 48 L 1916.488 51.5 L 1916.295 51.5 L 1916.295 55.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_135">
+        <line x1="1916.295" y1="145" x2="1916.295" y2="154.10753" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_136">
+        <path d="M 1916.681 206 L 1916.681 221.5 L 1645.295 221.5 L 1645.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_137">
+        <path d="M 1916.681 206 L 1916.681 221.5 L 2346.8543 221.5 L 2346.8543 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_138">
+        <path d="M 1916.681 206 L 1916.681 221.5 L 1805.295 221.5 L 1805.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_139">
+        <path d="M 1916.681 206 L 1916.681 221.5 L 2027.295 221.5 L 2027.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_140">
+        <path d="M 1916.681 206 L 1916.681 221.5 L 2186.8543 221.5 L 2186.8543 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_141">
+        <path d="M 1916.681 206 L 1916.681 216 L 1916.488 380 L 1916.295 539.1 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_142">
+        <path d="M 1999.681 -144 L 1999.681 46.5 L 1645.295 46.5 L 1645.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_143">
+        <path d="M 1999.681 -144 L 1999.681 46.5 L 2346.8543 46.5 L 2346.8543 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_144">
+        <path d="M 1999.681 -144 L 1999.681 46.5 L 1805.295 46.5 L 1805.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_145">
+        <path d="M 1999.681 -144 L 1999.681 46.5 L 2027.295 46.5 L 2027.295 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_146">
+        <path d="M 1999.681 -144 L 1999.681 46.5 L 2186.8543 46.5 L 2186.8543 227.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_147">
+        <path d="M 1645.295 317 L 1645.295 327 L 1645.488 372 L 1645.681 412.1 L 1645.681 417.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_148">
+        <path d="M 2346.8543 317 L 2346.8543 327 L 2347.2676 372 L 2347.681 412.1 L 2347.681 417.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_149">
+        <path d="M 1805.295 317 L 1805.295 327 L 1805.488 372 L 1805.681 412.1 L 1805.681 417.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_150">
+        <path d="M 2027.295 317 L 2027.295 327 L 2027.488 372 L 2027.681 412.1 L 2027.681 417.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_151">
+        <path d="M 2186.8543 317 L 2186.8543 327 L 2187.2676 372 L 2187.681 412.1 L 2187.681 417.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_152">
+        <path d="M 1916.295 634 L 1916.295 644 L 1916.488 678 L 1916.681 707.1 L 1916.681 712.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_153">
+        <path d="M 1645.681 469 L 1645.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_154">
+        <path d="M 2347.681 469 L 2347.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_155">
+        <path d="M 2027.681 469 L 2027.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Line_156">
+        <path d="M 1805.681 469 L 1805.681 511.5 L 1916.295 511.5 L 1916.295 544.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <g id="Graphic_160">
+        <path d="M 1851.8543 767 L 1851.8543 727 C 1851.8543 724.24 1880.8967 722 1916.681 722 C 1952.4654 722 1981.5077 724.24 1981.5077 727 L 1981.5077 767 C 1981.5077 769.76 1952.4654 772 1916.681 772 C 1880.8967 772 1851.8543 769.76 1851.8543 767" fill="#f26077"/>
+        <path d="M 1851.8543 767 L 1851.8543 727 C 1851.8543 724.24 1880.8967 722 1916.681 722 C 1952.4654 722 1981.5077 724.24 1981.5077 727 L 1981.5077 767 C 1981.5077 769.76 1952.4654 772 1916.681 772 C 1880.8967 772 1851.8543 769.76 1851.8543 767 M 1851.8543 727 C 1851.8543 729.76 1880.8967 732 1916.681 732 C 1952.4654 732 1981.5077 729.76 1981.5077 727" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1857.8543 738)" fill="black">
+          <tspan font-family="Avenir" font-size="13" fill="black" x="32.222233" y="13">summary</tspan>
+        </text>
+      </g>
+      <g id="Graphic_164">
+        <text transform="translate(1514.0507 -296)" fill="black">
+          <tspan font-family="Gill Sans" font-size="47" fill="black" x="0" y="43">Molecules Database Builders</tspan>
+        </text>
+      </g>
+      <g id="Graphic_165">
+        <path d="M 1518.295 1057.455 L 1518.295 1017.455 C 1518.295 1014.695 1547.3374 1012.455 1583.1218 1012.455 C 1618.9061 1012.455 1647.9485 1014.695 1647.9485 1017.455 L 1647.9485 1057.455 C 1647.9485 1060.215 1618.9061 1062.455 1583.1218 1062.455 C 1547.3374 1062.455 1518.295 1060.215 1518.295 1057.455" fill="#ff914d"/>
+        <path d="M 1518.295 1057.455 L 1518.295 1017.455 C 1518.295 1014.695 1547.3374 1012.455 1583.1218 1012.455 C 1618.9061 1012.455 1647.9485 1014.695 1647.9485 1017.455 L 1647.9485 1057.455 C 1647.9485 1060.215 1618.9061 1062.455 1583.1218 1062.455 C 1547.3374 1062.455 1518.295 1060.215 1518.295 1057.455 M 1518.295 1017.455 C 1518.295 1020.215 1547.3374 1022.455 1583.1218 1022.455 C 1618.9061 1022.455 1647.9485 1020.215 1647.9485 1017.455" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_166">
+        <text transform="translate(1689.9183 1014.955)" fill="black">
+          <tspan font-family="Gill Sans" font-size="39" fill="black" x="0" y="36">Built Database Collection</tspan>
+        </text>
+      </g>
+      <g id="Graphic_167">
+        <rect x="1526" y="1294.955" width="120" height="50" fill="#00bfc0"/>
+        <rect x="1526" y="1294.955" width="120" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_168">
+        <text transform="translate(1692.7965 1292.955)" fill="black">
+          <tspan font-family="Gill Sans" font-size="39" fill="black" x="0" y="36">Database Builder</tspan>
+        </text>
+      </g>
+      <g id="Graphic_169">
+        <text transform="translate(1523.295 928)" fill="black">
+          <tspan font-family="Gill Sans" font-size="47" fill="black" x="0" y="43">Legend</tspan>
+        </text>
+      </g>
+      <g id="Graphic_171">
+        <path d="M 1518.295 1193.955 L 1518.295 1153.955 C 1518.295 1151.195 1547.3374 1148.955 1583.1218 1148.955 C 1618.9061 1148.955 1647.9485 1151.195 1647.9485 1153.955 L 1647.9485 1193.955 C 1647.9485 1196.715 1618.9061 1198.955 1583.1218 1198.955 C 1547.3374 1198.955 1518.295 1196.715 1518.295 1193.955" fill="#f26077"/>
+        <path d="M 1518.295 1193.955 L 1518.295 1153.955 C 1518.295 1151.195 1547.3374 1148.955 1583.1218 1148.955 C 1618.9061 1148.955 1647.9485 1151.195 1647.9485 1153.955 L 1647.9485 1193.955 C 1647.9485 1196.715 1618.9061 1198.955 1583.1218 1198.955 C 1547.3374 1198.955 1518.295 1196.715 1518.295 1193.955 M 1518.295 1153.955 C 1518.295 1156.715 1547.3374 1158.955 1583.1218 1158.955 C 1618.9061 1158.955 1647.9485 1156.715 1647.9485 1153.955" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_170">
+        <text transform="translate(1690 1153.955)" fill="black">
+          <tspan font-family="Gill Sans" font-size="39" fill="black" x="0" y="36">Built Database Collection with API</tspan>
+        </text>
+      </g>
+      <g id="Graphic_173">
+        <path d="M 1518.295 1126.955 L 1518.295 1086.955 C 1518.295 1084.195 1547.3374 1081.955 1583.1218 1081.955 C 1618.9061 1081.955 1647.9485 1084.195 1647.9485 1086.955 L 1647.9485 1126.955 C 1647.9485 1129.715 1618.9061 1131.955 1583.1218 1131.955 C 1547.3374 1131.955 1518.295 1129.715 1518.295 1126.955" fill="#ff914d" fill-opacity=".5"/>
+        <path d="M 1518.295 1126.955 L 1518.295 1086.955 C 1518.295 1084.195 1547.3374 1081.955 1583.1218 1081.955 C 1618.9061 1081.955 1647.9485 1084.195 1647.9485 1086.955 L 1647.9485 1126.955 C 1647.9485 1129.715 1618.9061 1131.955 1583.1218 1131.955 C 1547.3374 1131.955 1518.295 1129.715 1518.295 1126.955 M 1518.295 1086.955 C 1518.295 1089.715 1547.3374 1091.955 1583.1218 1091.955 C 1618.9061 1091.955 1647.9485 1089.715 1647.9485 1086.955" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_172">
+        <text transform="translate(1689.9183 1084.455)" fill="black">
+          <tspan font-family="Gill Sans" font-size="39" fill="black" x="0" y="36">Static Database Collection</tspan>
+        </text>
+      </g>
+      <g id="Line_177">
+        <path d="M 817 -407.35294 C 817 -407.35294 855.8061 -402.0383 873.5294 -357.35294 C 884.2153 -330.4108 884.2075 -296.79505 882.5166 -274.34725" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="6"/>
+      </g>
+      <g id="Graphic_179" filter="url(#Shadow)">
+        <rect x="100.6971" y="-591" width="700.49126" height="253.608" id="path"/>
+        <clipPath id="clip_path">
+          <use xl:href="#path"/>
+        </clipPath>
+        <g clip-path="url(#clip_path)">
+          <image xl:href="image2.jpeg" width="1997" height="723" transform="translate(100.6971 -591) scale(.3507718)"/>
+        </g>
+      </g>
+      <g id="Graphic_180">
+        <text transform="translate(-201 -512)" fill="black">
+          <tspan font-family="Gill Sans" font-size="35" fill="black" x="14.981445" y="32">New calculations </tspan>
+          <tspan font-family="Gill Sans" font-size="35" fill="black" x="2.99292" y="72">generated on HPC </tspan>
+          <tspan font-family="Gill Sans" font-size="35" fill="black" x="86.86987" y="112">system</tspan>
+        </text>
+      </g>
+      <g id="Line_181">
+        <path d="M 885 1379 C 885 1379 882.2853 1406.3356 941.5294 1429 C 981.7043 1444.3693 1037.5602 1452.6896 1069.3552 1456.4535" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="6"/>
+      </g>
+      <g id="Graphic_182">
+        <rect x="1071" y="1394" width="636.0363" height="539" id="path_2"/>
+        <clipPath id="clip_path_2">
+          <use xl:href="#path_2"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_2)">
+          <image xl:href="image3.tiff" width="780" height="661" transform="translate(1071 1394) scale(.8154312)"/>
+        </g>
+      </g>
+      <g id="Graphic_183">
+        <text transform="translate(1690 1548)" fill="black">
+          <tspan font-family="Gill Sans" font-size="41" fill="black" x="60.71802" y="38">Built database </tspan>
+          <tspan font-family="Gill Sans" font-size="41" fill="black" x="27.32544" y="85">collections power </tspan>
+          <tspan font-family="Gill Sans" font-size="41" fill="black" x="26.154297" y="132">the public API and </tspan>
+          <tspan font-family="Gill Sans" font-size="41" fill="black" x="57.65503" y="179">public website</tspan>
+        </text>
+      </g>
+      <g id="Graphic_185">
+        <path d="M 1518.295 1263.455 L 1518.295 1223.455 C 1518.295 1220.695 1547.3374 1218.455 1583.1218 1218.455 C 1618.9061 1218.455 1647.9485 1220.695 1647.9485 1223.455 L 1647.9485 1263.455 C 1647.9485 1266.215 1618.9061 1268.455 1583.1218 1268.455 C 1547.3374 1268.455 1518.295 1266.215 1518.295 1263.455" fill="#f26077" fill-opacity=".5"/>
+        <path d="M 1518.295 1263.455 L 1518.295 1223.455 C 1518.295 1220.695 1547.3374 1218.455 1583.1218 1218.455 C 1618.9061 1218.455 1647.9485 1220.695 1647.9485 1223.455 L 1647.9485 1263.455 C 1647.9485 1266.215 1618.9061 1268.455 1583.1218 1268.455 C 1547.3374 1268.455 1518.295 1266.215 1518.295 1263.455 M 1518.295 1223.455 C 1518.295 1226.215 1547.3374 1228.455 1583.1218 1228.455 C 1618.9061 1228.455 1647.9485 1226.215 1647.9485 1223.455" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_184">
+        <text transform="translate(1682.716 1223.455)" fill="black">
+          <tspan font-family="Gill Sans" font-size="39" fill="black" x="0" y="36">Static Database Collection with API</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

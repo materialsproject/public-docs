@@ -53,7 +53,8 @@
 ## Apps
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
-  * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
+  * [Materials Explorer](apps/explore-and-search-apps/materials-explorer/README.md)
+    * [Tutorial](apps/explore-and-search-apps/materials-explorer/tutorial.md)
   * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
     * [Background](apps/explore-and-search-apps/molecules-explorer/background.md)
     * [Tutorial](apps/explore-and-search-apps/molecules-explorer/tutorial.md)
@@ -119,3 +120,8 @@
 ## Uploading Data
 
 * [Contribute Data](uploading-data/what-is-mpcontribs.md)
+
+## Data Production
+
+* [Data Workflows](data-production/data-workflows.md)
+* [Data Builders](data-production/data-builders.md)
