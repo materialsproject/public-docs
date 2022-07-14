@@ -69,7 +69,7 @@ The elastic tensor in Voigt notation is a $$6\times6$$ symmetric matrix, indicat
 
 ### Formalism
 
-With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then,&#x20;
+With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then he stress tensor, $$\boldsymbol{\sigma}$$, is obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are allowed to relax.
 
 
 

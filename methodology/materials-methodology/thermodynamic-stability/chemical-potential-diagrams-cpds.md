@@ -1,4 +1,4 @@
-# Energy corrections
+# Chemical Potential Diagrams (CPDs)
 
 ## Introduction
 
