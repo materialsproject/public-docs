@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
-* [Getting Involved](getting-involved/README.md)
+* [Getting Involved](getting-involved.md)
   * [Potential Collaborators](getting-involved/potential-collaborators.md)
 * [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)
@@ -17,6 +17,7 @@
 ## Methodology
 
 * [Materials Methodology](methodology/materials-methodology/README.md)
+  * [Overview](methodology/materials-methodology/overview.md)
   * [Calculation Details](methodology/calculation-details/README.md)
     * [GGA+U Calculations](methodology/calculation-details/gga+u-calculations.md)
     * [Pseudopotentials](methodology/calculation-details/pseudopotentials.md)
