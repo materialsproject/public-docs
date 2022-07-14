@@ -1,5 +1,15 @@
 # Frequently Asked Questions
 
+## How do I cite Materials Project?
+
+Citations are appropriate wherever Materials Project data, methods or output are used. See this page on the Materials Project website for more information:
+
+{% embed url="https://materialsproject.org/about/cite" %}
+How to Cite Materials Project
+{% endembed %}
+
+There is a canonical Materials Project citation, and additional citations for specific properties or tools. See also the [Database Versions](database-versions.md) page for information on how to cite a specific database version.
+
 ## Where do the material properties shown on Materials Project come from?
 
 The Materials Project core data is all calculated in-house by the Materials Project team using a variety of simulation methods. To understand the quality of these predictions, it is crucial to read the peer-reviewed publications from the Materials Project where each property is benchmarked as much as possible against known experimental values: this will give an estimate of typical error and, importantly, any systematic error that may be present.
