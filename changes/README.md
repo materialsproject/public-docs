@@ -17,6 +17,12 @@ It is recommended that the URL [https://materialsproject.org](https://materialsp
 * [https://next-gen.materialsproject.org](https://next-gen.materialsproject.org) will always take visitors to the latest Materials Project website with the newest database version available.
 * [https://legacy.materialsproject.org](https://legacy.materialsproject.org) will take visitors to a frozen snapshot of the older Materials Project website. This is powered by an older version of the database with known issues. The legacy website is being left online for some time as we fully transition to the next-gen website, and to allow users time to make any adjustments as necessary for features that may only be available on the legacy website, however the legacy website will be taken offline in due course.
 
+See also the website changelog for a detailed list of changes:
+
+{% content-ref url="website-changelog.md" %}
+[website-changelog.md](website-changelog.md)
+{% endcontent-ref %}
+
 ### Documentation
 
 The Materials Project documentation has gone through several iterations, powered previously by MediaWiki and MkDocs software. The current version is powered by GitBook. This switch was made to allow more easy and rapid changes to the documentation, in the hopes of ensuring documentation is maintained at a consistent, high quality.
