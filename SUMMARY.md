@@ -75,7 +75,7 @@
     * [Background](apps/analysis-apps/phase-diagram/background.md)
     * [Tutorials](apps/analysis-apps/phase-diagram/tutorials.md)
     * [FAQ](apps/analysis-apps/phase-diagram/faq.md)
-  * [Pourbaix Diagram](apps/analysis-apps/pourbaix-diagram/README.md)
+  * [Pourbaix Diagram](apps/pourbaix-app.md)
     * [Background](apps/analysis-apps/pourbaix-diagram/background.md)
     * [Tutorial](apps/analysis-apps/pourbaix-diagram/tutorial.md)
     * [FAQ + Known Issues](apps/analysis-apps/pourbaix-diagram/faq-+-known-issues.md)
