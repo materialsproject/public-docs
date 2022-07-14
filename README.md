@@ -1,5 +1,5 @@
 ---
-description: Welcome to the Materials Project.
+description: Welcome to the Materials Project's public documentation repository!
 ---
 
 # Introduction

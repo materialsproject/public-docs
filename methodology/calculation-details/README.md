@@ -1,3 +1,9 @@
+---
+description: >-
+  Details of calculation parameters for the density functional theory (DFT)
+  calculation results contained in the Materials Project (MP) database.
+---
+
 # Calculation Details
 
 ## Parameters and Convergence

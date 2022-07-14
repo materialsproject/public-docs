@@ -1,5 +1,7 @@
 ---
-description: Running a QMOF-compatible workflow
+description: >-
+  How to run a density functional theory (DFT) workflow for calculating /
+  optimizing MOFs.
 ---
 
 # DFT Workflow

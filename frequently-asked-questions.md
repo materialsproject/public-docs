@@ -1,4 +1,10 @@
-# Frequently Asked Questions
+---
+description: >-
+  Common questions and answers about using the Materials Project (MP) website
+  and database.
+---
+
+# Frequently Asked Questions (FAQ)
 
 ## How do I cite Materials Project?
 

@@ -1,3 +1,7 @@
+---
+description: How to contribute to the Materials Project.
+---
+
 # Getting Involved
 
 The Materials Project would not be the resource it is today without the sustained efforts of many individual contributors who have helped make the Materials Project better. The Materials Project is a free, academic resource, with only a small team of core maintainers: any help received is always appreciated, and means we can make the Materials Project better for everyone!

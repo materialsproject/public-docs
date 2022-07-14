@@ -1,3 +1,9 @@
+---
+description: >-
+  Description of the Hubbard U terms used in the density functional theory (DFT)
+  calculations contained in the Materials Project (MP) database.
+---
+
 # GGA+U Calculations
 
 It is well-known that first principles calculations within the local density approximation (LDA) or generalized gradient approximation (GGA) lead to considerable error in calculated redox reaction energies of many transition metal compounds. This error arises from the self-interaction error in LDA and GGA, which is not canceled out in redox reactions where an electron is transferred between significantly different environments, such as between a metal and a transition metal or between a transition metal and oxygen or fluorine. Extensive discussion of this issue can be found in the following works. [\[1-4\]](gga+u-calculations.md#references)

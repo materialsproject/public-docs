@@ -1,3 +1,7 @@
+---
+description: A changelog of Materials Project (MP) database releases.
+---
+
 # Database Versions
 
 This page contains a summary of major changes for each version of the Materials Project database.

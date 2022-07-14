@@ -1,5 +1,7 @@
 ---
-description: Links to MP Community Resources and information about the MP Workshop
+description: >-
+  Links to Materials Project (MP) Community Resources and information about the
+  MP Workshop.
 ---
 
 # Community Resources

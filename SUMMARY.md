@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Frequently Asked Questions](frequently-asked-questions.md)
+* [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
 * [Getting Involved](getting-involved.md)
 * [Getting Help](getting-help.md)
 * [Database Versions](database-versions.md)

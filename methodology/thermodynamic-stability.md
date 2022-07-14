@@ -1,3 +1,9 @@
+---
+description: >-
+  How thermodynamic stability metrics (e.g., formation energies, energy
+  adjustments, etc.) are calculated on the Materials Project (MP) website.
+---
+
 # Thermodynamic Stability
 
 ## Total Energy Adjustments

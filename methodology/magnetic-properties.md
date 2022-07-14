@@ -1,3 +1,7 @@
+---
+description: How magnetic properties are calculated on the Materials Project (MP) website.
+---
+
 # Magnetic Properties
 
 ## What are magnetic properties?

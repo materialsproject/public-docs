@@ -1,3 +1,9 @@
+---
+description: >-
+  How the electronic band structure (BS) and density of states (DOS) are
+  calculated on the Materials Project (MP) website.
+---
+
 # Electronic Structure
 
 ## Band Structure and DOS computations details

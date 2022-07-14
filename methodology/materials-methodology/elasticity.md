@@ -1,3 +1,7 @@
+---
+description: How elastic constants are calculated on the Materials Project (MP) website.
+---
+
 # Elastic Constants
 
 ## Introduction

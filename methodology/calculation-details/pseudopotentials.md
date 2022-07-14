@@ -1,3 +1,9 @@
+---
+description: >-
+  Desciption of the density functional theory (DFT) pseudopotentials used in the
+  Materials Project (MP) database.
+---
+
 # Pseudopotentials
 
 Pseudopotentials are used to reduce computation time by replacing the full electron system in the coulombic potential by a system only taking explicitly into account the "valence" electrons (i.e., the electrons participating into bonding) but in a pseudopotential. This approach not only reduces the electron number but also the energy cutoff necessary (this is critical in plane-wave based computations). All computations in the materials project have been performed using a specific type of very efficient pseudopotentials: the projector augmented wave (PAW) pseudopotentials. [\[1\]](pseudopotentials.md#references) We used the library of PAW pseudopotentials provided by VASP but for a given element there are often several possibilities in the VASP library. This wiki presents how the choices between the different pseudopotential options were made.

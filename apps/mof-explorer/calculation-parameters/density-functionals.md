@@ -1,5 +1,8 @@
 ---
-description: Which density functionals were used and for what?
+description: >-
+  Description of the density functional theory (DFT) functionals and level of
+  theory used in MOF calculation results displayed on the Materials Project (MP)
+  website.
 ---
 
 # Density Functionals

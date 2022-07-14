@@ -1,3 +1,9 @@
+---
+description: >-
+  Background of how piezoelectric constants are calculated for the Materials
+  Project (MP) website.
+---
+
 # Piezoelectric Constants
 
 ## Introduction

@@ -1,3 +1,7 @@
+---
+description: How dielectric constants are calculated on the Materials Project (MP) website.
+---
+
 # Dielectric Constants
 
 ## Introduction

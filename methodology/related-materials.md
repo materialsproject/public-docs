@@ -1,5 +1,7 @@
 ---
-description: 'TODO: Update references'
+description: >-
+  How related materials are identified on the Materials Project (MP) website.
+  TODO: Update references
 ---
 
 # Related Materials

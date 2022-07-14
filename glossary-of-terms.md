@@ -1,7 +1,7 @@
 ---
 description: >-
-  Terms used by the Materials Project, ordered alphabetically. Some terms are
-  scientific terms while other terms refer to tools used in Materials Project
+  Terms used by the Materials Project (MP), ordered alphabetically. Some terms
+  are scientific terms while other terms refer to tools used in MP
   infrastructure.
 ---
 

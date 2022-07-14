@@ -1,3 +1,9 @@
+---
+description: >-
+  A changelog of Materials Project (MP) updates to the website, documentation,
+  database, and API.
+---
+
 # Changes
 
 The Materials Project is an active, academic research project. Changes are common as new research methods become available, and the quality and kind of data we present changes, and also as a result of organizational needs. This page summarizes major changes in different aspects of the Materials Project.

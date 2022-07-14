@@ -1,3 +1,7 @@
+---
+description: Resources for getting assistance with your MP questions and needs.
+---
+
 # Getting Help
 
 ## Materials Science Community Forum at matsci.org

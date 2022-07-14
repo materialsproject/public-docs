@@ -1,3 +1,9 @@
+---
+description: >-
+  How equations of state (EOS) are calculated on the Materials Project (MP)
+  website.
+---
+
 # Equations of State
 
 ## Introduction

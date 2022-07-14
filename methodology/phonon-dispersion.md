@@ -1,3 +1,9 @@
+---
+description: >-
+  How phonon dispersion and phonon band structures are calculated/visualized on
+  the Materials Project (MP) website.
+---
+
 # Phonon Dispersion
 
 ## Introduction
