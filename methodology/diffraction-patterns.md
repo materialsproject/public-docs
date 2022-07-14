@@ -6,7 +6,7 @@ Diffraction occurs when waves (electrons, x-rays, neutrons) scattering from obst
 
 ### X-ray Diffraction Formalism
 
-The calculation of x-ray diffraction patterns in the Materials Project relies on the diffraction condition in reciprocal space:&#x20;
+The calculation of x-ray diffraction patterns (XRD) in the Materials Project relies on the diffraction condition in reciprocal space:&#x20;
 
 $$
 \bold{k}=\bold{k'}+\bold{g}_{hkl}
@@ -47,3 +47,6 @@ P( \theta) =  \frac{1 +  \cos^2(2 \theta)}
            { \sin^2( \theta) \cos( \theta)}
 $$
 
+### Electron Diffraction&#x20;
+
+The Transmission Electron Microscopy (TEM) pattern for multiple Laue zones is calculated similarly to the XRD diffraction patterns and is available through the diffraction properties tab in the materials explorer. &#x20;
