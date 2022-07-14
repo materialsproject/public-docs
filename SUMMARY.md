@@ -50,7 +50,7 @@
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
   * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
-  * [Molecules Explorer](apps/explorer-apps/molecules-explorer.md)
+  * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
     * [Background](apps/explore-and-search-apps/molecules-explorer/background.md)
     * [Tutorial](apps/explore-and-search-apps/molecules-explorer/tutorial.md)
     * [FAQ](apps/explore-and-search-apps/molecules-explorer/faq.md)
