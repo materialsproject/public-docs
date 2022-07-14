@@ -6,3 +6,10 @@ description: >-
 
 # Download Contributed Data
 
+## Interactively
+
+project download buttons, query-specific downloads, versioned snapshots
+
+## Programmatically
+
+`client.download_contributions`
