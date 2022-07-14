@@ -84,7 +84,7 @@ $$
 ​where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Six strain states are applied, namely&#x20;
 
 $$
-\boldsymbol{E}=
+\boldsymbol{\epsilon}=
 \left[{\begin{matrix}
 \delta \\
 0\\
@@ -93,7 +93,7 @@ $$
 $$
 
 $$
-\boldsymbol{E}=
+\boldsymbol{\epsilon}=
 \left[{\begin{matrix}
 0 \\
 \delta\\
@@ -105,7 +105,7 @@ $$
 $$
 
 $$
-\boldsymbol{E}=
+\boldsymbol{\epsilon} =
 \left[{\begin{matrix}
 0 \\
 0\\
