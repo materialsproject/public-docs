@@ -42,7 +42,7 @@ The full list of U values used is described in the table below. For oxides and f
 
 ## Caveats
 
-The U values are calibrated for phase stability analyses, and should be used with care if applied to obtain other properties such as band structures. Also, the U values depend on the pseudopotential used. Further, typically, U values should be site specific, however in our approach, U values were applied to all sites with an element listed above, and only to the d-orbitals. A discussion of the pseudopotentials used in the Materials Project can be found here.
+The U values are calibrated for phase stability analyses, and should be used with care if applied to obtain other properties such as band structures. Also, the U values depend on the pseudopotential used. Further, typically, U values should be site specific, however in our approach, U values were applied to all sites with an element listed above, and only to the d-orbitals. A discussion of the pseudopotentials used in the Materials Project can be found [here](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details/pseudopotentials).
 
 ## Authors
 
