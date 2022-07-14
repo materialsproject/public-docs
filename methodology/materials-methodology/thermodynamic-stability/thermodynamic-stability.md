@@ -34,7 +34,7 @@ To estimate the accuracy of our total energy calculations, we compute reaction d
 
 The accuracy of calculated reaction energies depends on the chemical system investigated. In general, GGA calculations have similar errors among chemically similar systems. Hence, reaction energies between chemically similar systems (e.g., a reaction where the reactants and products are all oxides, such as $$\text{MgO + Al2O3} \rightarrow\text{MgAl2O4}$$ tend to have smaller errors than reactions between chemically dissimilar systems (e.g., between metals and insulators).
 
-![](../.gitbook/assets/FormE\_errors.png)
+![](../../../.gitbook/assets/FormE\_errors.png)
 
 _Figure 1: Errors in Calculated Formation Energies for 413 binaries in the Kubaschewski Tables. Energies are normalized to per mol atom._
 

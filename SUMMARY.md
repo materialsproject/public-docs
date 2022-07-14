@@ -22,7 +22,7 @@
     * [GGA+U Calculations](methodology/calculation-details/gga+u-calculations.md)
     * [Pseudopotentials](methodology/calculation-details/pseudopotentials.md)
   * [Thermodynamic Stability](methodology/materials-methodology/thermodynamic-stability/README.md)
-    * [Energy Corrections](methodology/thermodynamic-stability.md)
+    * [Energy Corrections](methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability.md)
     * [Phase Diagrams (PDs)](methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds.md)
     * [Chemical Potential Diagrams (CPDs)](methodology/materials-methodology/thermodynamic-stability/chemical-potential-diagrams-cpds.md)
     * [Finite Temperature Estimation](methodology/materials-methodology/thermodynamic-stability/finite-temperature-estimation.md)
