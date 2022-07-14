@@ -19,6 +19,16 @@ The Materials Project predicts elastic constants for over ten thousand materials
 
 The elastic constants from the Materials Project (MP) are calculated from first-principles Density Functional Theory (DFT). For a material, the process is started by performing an accurate structural relaxation, to a state of approximately zero stress. Subsequently, the relaxed structure is strained by changing its lattice vectors (magnitude and angle) and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full elastic tensor. From this, aggregate properties such as Voigt, Reuss, and Hill bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy. For example, the $$6\times6$$ Voigt matrix should be positive definite to ensure mechanical stability of a material.
 
+### Voigt notation
+
+Formally, the elastic tensor, $$\boldsymbol{C}$$, is a forth-order tensor with 81 components:
+
+$$
+\boldsymbol{\sigma} = \boldsymbol{C}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = C_{ijkl} \epsilon_{kl} ,
+$$
+
+where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor and thus we represent them in Voigt notation under the transformation&#x20;
+
 ### Formalism
 
 The lattice vectors $$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure are taken and the structure is deformed according to a deformation gradient $$\boldsymbol{F}$$:&#x20;
