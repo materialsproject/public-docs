@@ -85,7 +85,7 @@ Si, P, Cl, S will be used in their standard form (not hard) as suggested by VASP
 
 The Al\_h psp was found to be definitely wrong in terms of band structure. There were "ghost" states found in the DOS.
 
-Pb is interesting as the high e- psp shows significantly higher error in formation energies. We kept the high e- psp (Pb\_d), but it might be interesting to study this a little more. One hypothesis relies on a recent result showing that lead oxide formation energies need the use of spin-orbit coupling to be accurate. [\[2\]](pseudopotentials.md#references) Our computations do not include any relativistic corrections for valence electrons. However, spin-orbit coupling is taken into account during the psp construction. This would explain why a psp with more core electrons (treated indirectly with SO coupling) would give more accurate results than a psp with fewer electrons.
+Pb is interesting as the high e- psp shows significantly higher error in formation energies. We kept the high e- psp (Pb\_d), but it might be interesting to study this a little more. One hypothesis relies on a recent result showing that lead oxide formation energies need the use of spin-orbit coupling to be accurate. [\[2\]](pseudopotentials.md#references) Our computations do not include any relativistic corrections for valence electrons. However, spin-orbit coupling is taken into account during the psp construction. This would explain why a psp with more core electrons (treated indirectly with spin-orbit coupling) would give more accurate results than a psp with fewer electrons.
 
 Bi\_d shows a convergence problem, so the decision on Bi has been postponed to further analysis.
 

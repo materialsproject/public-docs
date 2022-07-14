@@ -17,7 +17,7 @@ The similarity between two structures _i_ and _j_ is assessed on the basis of lo
 
 ## Near-neighbor finding
 
-We use a novel method called CrystalNN to find near(est) neighbors in periodic structures. While the method will be introduced shortly [\[3\]](related-materials.md#references), it is already available through the python package [pymatgen](https://github.com/materialsproject/pymatgen).
+We use a novel method called [CrystalNN](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/local\_env.py#L3751) to find near(est) neighbors in periodic structures. While the method will be introduced shortly [\[3\]](related-materials.md#references), it is already available through the python package [pymatgen](https://github.com/materialsproject/pymatgen). A benchmarking framework has been developed to evaluate CrystallNN and compare it to other near-neighbor finding algorithms [\[4\]](related-materials.md#references).
 
 ## Site Fingerprints
 
@@ -97,6 +97,8 @@ with MPRester() as mpr:
 \[2]: 10.3389/fmats.2017.00034
 
 \[3]: H. Pan, J. Dagdelen, N. E. R. Zimmermann, A. Jain, in preparation (2018)
+
+\[4]: Pan, H., Ganose, A. M., Horton, M., Aykol, M., Persson, K. A., Zimmermann, N. E., & Jain, A. (2021). Benchmarking coordination number prediction algorithms on inorganic crystal structures. _Inorganic chemistry_, _60_(3), 1590-1603.
 
 ## Authors
 
