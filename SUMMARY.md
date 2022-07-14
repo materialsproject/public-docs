@@ -95,9 +95,6 @@
   * [Examples](downloading-data/using-the-api/examples.md)
   * [Advanced Usage](downloading-data/using-the-api/advanced-usage.md)
   * [Legacy API Users](downloading-data/using-the-api/legacy-api-users.md)
-* [API Endpoint Documentation](downloading-data/api-endpoint-documentation/README.md)
-  * [Summary](downloading-data/api-endpoint-documentation/summary.md)
-  * [Materials](downloading-data/api-endpoint-documentation/materials.md)
 * [Download Contributed Data](downloading-data/download-contributed-data.md)
 
 ## Uploading Data

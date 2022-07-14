@@ -4,7 +4,7 @@ description: Information for advanced users of the API.
 
 # Advanced Usage
 
-In addition the `search`, an alternative approach to querying data is with the underlying `_search` function. Instead of using input parameters defined in the client, direct API query parameters are used instead. Documentation on which of these are available for each endpoint can be found [here](https://api.materialsproject.org/docs) or in the [API endpoint documentation sections](../api-endpoint-documentation/). While this information is provided, **most people can and should stick to using the standard `search` function.**
+In addition the `search`, an alternative approach to querying data is with the underlying `_search` function. Instead of using input parameters defined in the client, direct API query parameters are used instead. Documentation on which of these are available for each endpoint can be found [here](https://api.materialsproject.org/docs) or [here](https://api.materialsproject.org/redoc). While this information is provided, **most people can and should stick to using the standard `search` function.**
 
 The code below is an example illustrating the difference in querying for data from the summary endpoint with volume criteria using `search` and `_search`:
 
