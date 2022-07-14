@@ -7,9 +7,9 @@ Elasticity describes a material's ability to resist deformations (i.e. size and 
 * &#x20;how much force is required to deform (stretch or compress) a material by a certain amount;
 * &#x20;how much a material will deform (stretch or compress) when a certain amount of external forces is applied to that material.&#x20;
 
-Elasticity is considered a reversible process. When the stress is removed, the material returns to its original size and shape. This is only true up to a point: if a material is stressed or strained too much, then it will be permanently changed.&#x20;
+Elasticity is considered a reversible process. When the force is removed, the material returns to its original size and shape. This is only true up to a point: if a material is deformed too much, then it will be permanently changed.&#x20;
 
-These relationships are quantified with **elastic constants** like the **elasticity tensor **_****_ and its inverse quantity, the **compliance tensor** as part of the theory of **linear elasticity.** These tensors can be used to calculate numbers such as the **bulk modulus, shear modulus or Poisson's ratio,** which are especially useful to describe simpler (isotropic) materials.
+For small deformations, most elastic materials exhibit linear elasticity and can be described by a linear relation between the stress and strain. These relationships are quantified with **elastic constants** like the **elasticity tensor **_****_ and its inverse quantity, the **compliance tensor**, as part of the theory of **linear elasticity.** These tensors can be used to calculate numbers such as the **bulk modulus, shear modulus, Young's modulus, linear compressibility, and Poisson's ratio,** which are especially useful to describe the elastic behavior of isotropic materials.
 
 It is beyond the scope of this documentation to explain this theory, but if this concept is new to readers, a good place to start is to learn about [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's\_law). Readers with mathematical backgrounds are referred to ["Physical properties of crystals: their representation by tensors and matrices" by J.F. Nye](https://books.google.com/books?id=ugwql-uVB44C).
 
