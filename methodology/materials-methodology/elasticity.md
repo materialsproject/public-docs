@@ -75,7 +75,7 @@ $$
 \hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i  \quad i=1,2,3 .
 $$
 
-The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Lagrangian strain $$\boldsymbol{E}$$,
+The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$,
 
 $$
 \boldsymbol{\epsilon} =  \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right),
