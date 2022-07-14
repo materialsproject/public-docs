@@ -152,7 +152,7 @@ To obtain accurate elastic constants from DFT, a well-converged stress tensor is
 
 &#x20;&#x20;
 
-![Visualization of the current elastic-property database, consisting of over 1,100 metals and inorganic compounds. This map shows the shear and bulk moduli, together with isotropic Poisson ratio and volume-per-atom. See the paper \[Charting the complete elastic properties of inorganic crystalline compounds\](http://www.nature.com/articles/sdata20159) for details.](../../.gitbook/assets/Data\_figure\_11\_22.png)
+![Visualization of the current elastic-property database, consisting of over 1,100 metals and inorganic compounds. This map shows the shear and bulk moduli, together with isotropic Poisson ratio and volume-per-atom. See the paper \[Charting the complete elastic properties of inorganic crystalline compounds\](http://www.nature.com/articles/sdata20159) for details.](../.gitbook/assets/Data\_figure\_11\_22.png)
 
 ### Symmetrization
 

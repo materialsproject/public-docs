@@ -12,7 +12,7 @@ The DOS indicates the full DOS by default but projections along atoms or orbital
 
 **Note**: _the term 'band gap' in this section generally refers to the fundamental gap, not the optical gap. The difference between these quantities is reported to be small in semiconductors but significant in insulators._ [\[2\]](electronic-structure.md#references)
 
-![](../../.gitbook/assets/band\_gaps.png)
+![](../.gitbook/assets/band\_gaps.png)
 
 &#x20;_Figure 1: Experimental versus computed band gaps for 237 compounds in an internal test. The computed gaps are underestimated by an average factor of 1.6, and the residual error even after accounting for this shift is significant (MAE of 0.6 eV). We thank M. Chan for her assistance in compiling this data._
 
