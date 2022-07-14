@@ -7,6 +7,7 @@
 * [Database Versions](database-versions.md)
 * [Changes](changes/README.md)
   * [Website Changelog](changes/website-changelog.md)
+* [Glossary of Terms](glossary-of-terms.md)
 * [Code of Conduct](code-of-conduct.md)
 
 ## Methodology
