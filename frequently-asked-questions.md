@@ -56,3 +56,13 @@ A `task_id` will never change. It will always refer to the same, individual calc
 A `material_id` might change in rare instances, such as the removal of the `mvc-` prefix, although this is avoided wherever possible.
 
 If a `material_id` _does_ change, we ensure a redirect on the website is always in place, and the new `material_id` can also be found programmatically with the API using the `get_material_id_from_task_id()` function. This way, any publications or research that reference an older `material_id` are still valid, and the relevant data can still be retrieved.
+
+## What does \_\_\_\_\_\_ mean?
+
+Consult our glossary here:
+
+{% content-ref url="glossary-of-terms.md" %}
+[glossary-of-terms.md](glossary-of-terms.md)
+{% endcontent-ref %}
+
+If a term is used in Materials Project but is not listed, [let us know](getting-help.md) and we will add it.
