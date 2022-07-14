@@ -69,19 +69,7 @@ The elastic tensor in Voigt notation is a $$6\times6$$ symmetric matrix, indicat
 
 ### Formalism
 
-With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then he stress tensor, $$\boldsymbol{\sigma}$$, is obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are allowed to relax.
-
-
-
-
-
-
-
-
-
-
-
-Six strain states are applied,&#x20;
+With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then he stress tensor, $$\boldsymbol{\sigma}$$, is obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are allowed to relax. Six strain states (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six strain states, 4 different default magnitudes strains are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\boldsymbol{\sigma}$$, is calculated. The obtained set of 24 stresses and strains are then used in a linear fitting to compute the elastic tensor. Note that conventional unit cells, obtained using pymatgen [`SpacegroupAnalyzer`](https://github.com/materialsproject/pymatgen/blob/95352c96d7aba865d01230d5c32a5a6704c0edba/pymatgen/symmetry/analyzer.py#L455), are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).&#x20;
 
 $$
 \boldsymbol{\epsilon}=
@@ -134,102 +122,6 @@ $$
 0\\
 2\delta \\
 \end{matrix}}\right].
-$$
-
-They are The stress tensor, $$\boldsymbol{S}$$, is then obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are relaxed. Six deformation gradients $$\boldsymbol{F}$$ (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six deformation modes, 4 different default magnitudes of deformation are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\mathbf{S}$$, is calculated, allowing for relaxation of the ionic degrees of freedom. Note that in this work, conventional unit cells, obtained using `pymatgen.symmetry.SpacegroupAnalyzer.get_conventional_standard_structure` are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 + \delta _{1} & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 \\
-\end{matrix}}\right]
-$$
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 & 0 & 0 \\
-0 & 1 + \delta _{1} & 0 \\
-0 & 0 & 1 \\
-\end{matrix}}\right]
-$$
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 + \delta _{1} \\
-\end{matrix}}\right]
-$$
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 & \delta _{2} & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 \\
-\end{matrix}}\right]
-$$
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 & 0 & \delta _{2} \\
-0 & 1 & 0 \\
-0 & 0 & 1 \\
-\end{matrix}}\right]
-$$
-
-$$
-\boldsymbol{F}=
-\left[{\begin{matrix}
-1 & 0 & 0 \\
-0 & 1 & \delta _{2} \\
-0 & 0 & 1 \\
-\end{matrix}}\right]
-$$
-
-$$
-\mathbf{E}=\frac{1}{2}(\mathbf{F^T} \mathbf{F} - \mathbf{I})
-$$
-
-We employ the Green-Lagrange strain tensor, $$\mathbf{E}$$, in this work, defined above. The 6x6 elastic tensor is calculated from the equation below, with $$\mathbf{E}$$ again the Green-Lagrange strain tensor and $$\mathbf{S}$$ the calculated stress tensor. The components are calculated from a linear least-squares-fit if stress versus strain. We make use of the following Voigt-notation in this work: $$11 \mapsto 1, 22 \mapsto 2, 33 \mapsto 3, 23 \mapsto 4, 13 \mapsto 5, 12 \mapsto 6$$.
-
-$$
-\left[
-\begin{matrix}
-S_{11} \\
-S_{22} \\
-S_{33} \\
-S_{23} \\
-S_{13} \\
-S_{12}
-\end{matrix}
-\right]
-=
-\left[
-\begin{matrix}
-C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16} \\
-C_{12} & C_{22} & C_{23} & C_{24} & C_{25} & C_{26} \\
-C_{13} & C_{23} & C_{33} & C_{34} & C_{35} & C_{36} \\
-C_{14} & C_{24} & C_{34} & C_{44} & C_{45} & C_{46} \\
-C_{15} & C_{25} & C_{35} & C_{45} & C_{55} & C_{56} \\
-C_{16} & C_{26} & C_{36} & C_{46} & C_{56} & C_{66} \\
-\end{matrix}
-\right]
-\left[
-\begin{matrix}
-E_{11} \\
-E_{22} \\
-E_{33} \\
-2 E_{23} \\
-2 E_{13} \\
-2 E_{12}
-\end{matrix}
-\right]
 $$
 
 Different choices of lattice vectors with respect to a Cartesian coordinate system may lead to elastic tensors that look different from what might be expected. For example, for the hexagonal crystal system it is commonly stated that  $$C_{11} = C_{22}$$. However, this is true under the conditions that lattice vectors $$\mathbf{a}_1$$and __ $$\mathbf{a}_2$$are both in the basal plane, whereas $$\mathbf{a}_3$$ is orthogonal to the basal plane. Hence, the elastic tensor can only be completely specified when the lattice vectors are expressed in a given coordinate system. To avoid confusion, we present the elastic tensor in two ways. First, the elastic tensor is presented for the exact choice of lattice vectors as presented on the Materials Project webpage. This is consistent with the cif-file of the "conventional standard" structure, which can also be downloaded from the Materials Project webpage. Elastic tensors can also be expressed in a standard format according to the IEEE standard. The standardized IEEE-format specifies the precise choice of lattice vectors in a coordinate system and thereby unambiguously defines the components of the elastic tensor [\[1\]](elasticity.md#references). In most cases, the elastic tensors in the POSCAR-format and the IEEE-format are identical. When the elastic tensor in POSCAR-format and IEEE-format are not identical however, they are related by a rotation. Note that IEEE tensors can be obtained using the get\_ieee\_tensor method for any of the subclasses of `pymatgen.analysis.elasticity.tensors.TensorBase` (which include ElasticTensor and PiezoTensor).
