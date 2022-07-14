@@ -116,6 +116,18 @@ $$
 \end{matrix}}\right] \quad
 $$
 
+$$
+\boldsymbol{\epsilon} =
+\left[{\begin{matrix}
+0 \\
+0\\
+0 \\
+2\delta \\
+0 \\
+0 \\
+\end{matrix}}\right] \quad
+$$
+
 &#x20;
 
 The stress tensor, $$\boldsymbol{S}$$, is then obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are relaxed. Six deformation gradients $$\boldsymbol{F}$$ (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six deformation modes, 4 different default magnitudes of deformation are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\mathbf{S}$$, is calculated, allowing for relaxation of the ionic degrees of freedom. Note that in this work, conventional unit cells, obtained using `pymatgen.symmetry.SpacegroupAnalyzer.get_conventional_standard_structure` are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).

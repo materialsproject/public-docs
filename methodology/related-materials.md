@@ -90,6 +90,10 @@ with MPRester() as mpr:
     print('Distance between Ca(CoS2)2-spinel and Si(CdO2)2-spinel: {:.4f}'.format(np.linalg.norm(v_spinel_caco2s4 - v_spinel_sicd2O4)))
 ```
 
+## StructureMatcher
+
+Another tool that is used to group materials is the [StructureMatcher](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L292). There are multiple comparators (for example: [SpinComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L135), [ElementComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L176), etc.) that can be used to determine how to make comparisons between structures when determining their similarity.
+
 ## References
 
 \[1]: N. E. R. Zimmermann, D. Winston, K. A. Persson, A. Jain, in preparation (2018)
