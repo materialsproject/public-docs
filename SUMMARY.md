@@ -30,6 +30,7 @@
   * [Electronic Structure](methodology/electronic-structure.md)
   * [Equations of State](methodology/equations-of-state.md)
   * [Thermodynamic Stability](methodology/thermodynamic-stability.md)
+  * [Optical absorption spectra](methodology/materials-methodology/optical-absorption-spectra.md)
   * [Calculation Details](methodology/calculation-details/README.md)
     * [GGA+U Calculations](methodology/calculation-details/gga+u-calculations.md)
     * [Pseudopotentials](methodology/calculation-details/pseudopotentials.md)
