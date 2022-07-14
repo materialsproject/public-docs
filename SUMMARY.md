@@ -32,6 +32,7 @@
 
 ## Apps
 
+* [Pourbaix App](apps/pourbaix-app.md)
 * [Catalysis Explorer](apps/catalysis-explorer.md)
 * [MOF Explorer](apps/mof-explorer/README.md)
   * [Downloading the Data](apps/mof-explorer/downloading-the-data.md)
