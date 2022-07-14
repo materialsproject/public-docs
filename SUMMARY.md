@@ -51,7 +51,7 @@
     * [Background](apps/explorer-apps/battery-explorer/background.md)
     * [Tutorial](apps/explorer-apps/battery-explorer/tutorial.md)
     * [FAQ](apps/explorer-apps/battery-explorer/faq.md)
-  * [Synthesis Explorer](apps/explore-and-search-apps/synthesis-explorer/README.md)
+  * [Synthesis Explorer](apps/synthesis-explorer.md)
     * [Background](apps/explore-and-search-apps/synthesis-explorer/background.md)
     * [Tutorial](apps/explore-and-search-apps/synthesis-explorer/tutorial.md)
     * [FAQ](apps/explore-and-search-apps/synthesis-explorer/faq.md)
