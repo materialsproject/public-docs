@@ -1,24 +1,30 @@
 # Frequently Asked Questions (FAQ)
 
-## Problems Signing In
+## How do I sign in to the Materials Project?
 
-Here are some issues people have encountered when trying to sign in the main [Materials Project](https://materialsproject.org/) website, and their solutions:
+You can login to the Materials Project either using an existing social identity provider (currently GitHub, Google, Facebook, Microsoft or Amazon) or via an email link.
 
-*   **I want to log in with my social identity provider (Google/Facebook/Yahoo), but I can’t.**
+{% hint style="info" %}
+Be aware, your Materials Project account is linked to both your email address and the method that you log in. If you log in via a different method, this will be registered as a new account.
+{% endhint %}
+
+Here are some issues people have encountered when trying to sign in the [Materials Project](https://materialsproject.org/) website, and their solutions:
+
+*   **I want to log in with my social identity provider (GitHub/Google/Facebook/Microsoft/Amazon), but I can’t.**
 
     Ensure that your password for your provider is correct (go to their site and log in there), ensure that you have a full name set on that account, and ensure that you allow Materials Project to see your basic profile info (name and email address).
 
-    You also may be behind a firewall that doesn’t allow Google/Facebook/Yahoo. In that case, use our email-based option as a fallback.
+    You also may be behind a firewall that doesn’t allow GitHub/Google/Facebook/Microsoft/Amazon. In that case, use our email based option instead.
 *   **I appear to sign in OK (the popup goes away), but then I remain on the sign-in screen.**
 
     It may take a few seconds, depending on your connection, to actually get logged in. This is because we have an external identity provider verify your email address so that we don’t have to store any passwords on our servers.
 
-    You may also have an older browser that won’t work well with our website at all. The latest version of Mozilla Firefox, Google Chrome, or Microsoft Edge will work well. Old versions of Internet Explorer do not work well at all.
+    You may also have an older browser that won’t work well with our website at all. The latest version of Mozilla Firefox, Google Chrome, or Microsoft Edge will work well. Older versions of Internet Explorer will not work.
 *   **I tried using the email option several times but haven’t received a login** link.
 
-    We currently don’t do any “deep” validation of email addresses, so if it “looks right”, i.e. you mistype [_myname@gmail.com_](mailto:myname@gmail.com) as _myname@**gmali**.com_, we will still try to send to the wrong address. We plan on implementing such protection soon, but in the meantime, double-check what you type in before submitting.
+    We currently don’t do any validation of your email addresses, so if it “looks right”, i.e. you mistype [_myname@gmail.com_](mailto:myname@gmail.com) as _myname@**gmali**.com_, we will still try to send to the wrong address. Also check your "Spam" or "Junk" folder in case the login email has been flagged.
 
-    Also, there is a known issue with Tencent @qq.com addresses, where Tencent throttles delivery and you might not get an email within a reasonable amount of time. Please consider using an alternative to your @qq.com address for login.
+    There is a known issue with Tencent @qq.com addresses, where Tencent throttles delivery and you might not get an email within a reasonable amount of time. Please consider using an alternative to your @qq.com address for login.
 
 ## How do I cite Materials Project?
 
