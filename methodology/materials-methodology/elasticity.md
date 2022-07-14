@@ -75,10 +75,10 @@ $$
 \hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i  \quad i=1,2,3 .
 $$
 
-The deformation gradient $$\boldsymbol{F}$$ is obtained by solving &#x20;
+The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Lagrangian strain $$\boldsymbol{E}$$,
 
 $$
-\boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right),
+\boldsymbol{\epsilon} =  \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right),
 $$
 
 ​where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Six strain states are applied, namely&#x20;
