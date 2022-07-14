@@ -67,6 +67,7 @@
     * [Version History](apps/mof-explorer/version-history.md)
     * [How to Cite](apps/mof-explorer/how-to-cite.md)
     * [Additional Details](apps/mof-explorer/additional-details/README.md)
+* [Explore Contributed Data](apps/explore-contributed-data.md)
 * [Analysis Apps](apps/analysis-apps/README.md)
   * [Phase Diagram](apps/analysis-apps/phase-diagram/README.md)
     * [Background](apps/analysis-apps/phase-diagram/background.md)
@@ -92,7 +93,8 @@
 * [API Endpoint Documentation](downloading-data/api-endpoint-documentation/README.md)
   * [Summary](downloading-data/api-endpoint-documentation/summary.md)
   * [Materials](downloading-data/api-endpoint-documentation/materials.md)
+* [Download Contributed Data](downloading-data/download-contributed-data.md)
 
 ## Uploading Data
 
-* [What is MPContribs?](uploading-data/what-is-mpcontribs.md)
+* [Contribute Data](uploading-data/what-is-mpcontribs.md)

@@ -67,6 +67,24 @@ A `material_id` might change in rare instances, such as the removal of the `mvc-
 
 If a `material_id` _does_ change, we ensure a redirect on the website is always in place, and the new `material_id` can also be found programmatically with the API using the `get_material_id_from_task_id()` function. This way, any publications or research that reference an older `material_id` are still valid, and the relevant data can still be retrieved.
 
+## What is MPContribs?
+
+**MPContribs** provides a platform and advanced programming interface (API) to contribute computational as well as experimental data to Materials Project. Data on MPContribs is collectively maintained as annotations to existing MP materials (or formulas and chemical systems), and automatically exposed to over 200,000 MP users. Contributed data is automatically shown on MP's materials details pages or its disambiguation pages for formulas and chemical systems. A dedicated landing page is provided for each MPContribs project which can be used to reference the dataset in journal publications through Digital Object Identifiers (DOIs) provided by MP in collaboration with the DOE Office of Scientific and Technological Information ([OSTI](https://www.osti.gov/)). The MPContribs [python client](https://pypi.org/project/mpcontribs-client/) can be used to programmatically retrieve, upload and modify contributed data.
+
+Continue with the following sections in MP's documentation to learn more:&#x20;
+
+* [Explore Contributed Data](apps/explore-contributed-data.md)
+* [Download Contributed Data](downloading-data/download-contributed-data.md)
+* [Contribute your own Data](uploading-data/what-is-mpcontribs.md)
+
+The table below lists the various MPContribs portals currently available. When you explore data or consider contributing your data to MP, please pick the portal that best aligns with it.
+
+|  MPContribs  |          [https://contribs.materialsproject.org](https://contribs.materialsproject.org/)          | Datasets that don't fall under the purview of the other portals.                                                                |
+| :----------: | :-----------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| MPContribsML |                [https://ml.materialsproject.org](https://ml.materialsproject.org/)                | Benchmark datasets for Machine Learning.                                                                                        |
+| MPContribsLS |      [https://lightsources.materialsproject.org](https://lightsources.materialsproject.org/)      | Datasets from beam lines at X-Ray light sources (NSLS-II, ALS, etc.).                                                           |
+| MPContribsWS | [https://workshop-contribs.materialsproject.org](https://workshop-contribs.materialsproject.org/) | [Refractive index](https://refractiveindex.info/) data uploaded during [MP's workshop](https://workshop.materialsproject.org/). |
+
 ## What does \_\_\_\_\_\_ mean?
 
 Consult our glossary here:
