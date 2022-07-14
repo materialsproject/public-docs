@@ -11,17 +11,41 @@ Elasticity is considered a reversible process. When the force is removed, the ma
 
 For small deformations, most elastic materials exhibit linear elasticity and can be described by a linear relation between the stress and strain. These relationships are quantified with **elastic constants** like the **elasticity tensor **_****_ and its inverse quantity, the **compliance tensor**, as part of the theory of **linear elasticity.** These tensors can be used to calculate numbers such as the **bulk modulus, shear modulus, Young's modulus, and Poisson's ratio,** which are especially useful to describe the elastic behavior of isotropic materials.
 
-It is beyond the scope of this documentation to explain this theory, but if this concept is new to readers, a good place to start is to learn about [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's\_law). Readers with mathematical backgrounds are referred to ["Physical properties of crystals: their representation by tensors and matrices" by J.F. Nye](https://books.google.com/books?id=ugwql-uVB44C).
+It is beyond the scope of this documentation to explain this theory, but if this concept is new to you, a good place to start is to learn about [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's\_law). Readers with mathematical backgrounds are referred to ["Physical properties of crystals: their representation by tensors and matrices" by J.F. Nye](https://books.google.com/books?id=ugwql-uVB44C).
 
-The Materials Project predicts elastic tensors for over ten thousand materials. These are available via the Materials Project website and for direct download via the Materials Project API.
+The Materials Project predicts elastic constants for over ten thousand materials. These are available via the Materials Project website and for direct download via the Materials Project API.
 
 ## Methodology
 
-The elastic constants from the Materials Project (MP) are calculated from first principles Density Functional Theory (DFT). The process is started by performing an accurate structural relaxation for each structure, to a state of approximately zero stress. Subsequently, perturbations are applied to the lattice vectors and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full 6x6 elastic tensor. From this, aggregate properties such as Voigt and Reuss bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy.
+The elastic constants from the Materials Project (MP) are calculated from first-principles Density Functional Theory (DFT). For a material, the process is started by performing an accurate structural relaxation, to a state of approximately zero stress. Subsequently, the relaxed structure is strained by changing its lattice vectors (magnitude and angle) and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full elastic tensor. From this, aggregate properties such as Voigt, Reuss, and Hill bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy. For example, the $$6\times6$$ Voigt matrix should be positive definite to ensure mechanical stability of a material.
+
+### Voigt notation
+
+Formally, the elastic tensor, $$\hat{\boldsymbol{C}}$$, is a forth-order tensor with 81 components:
+
+$$
+\boldsymbol{\sigma} = \hat{\boldsymbol{C}}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = \hat{C}_{ijkl} \epsilon_{kl} ,
+$$
+
+where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in Voigt notation under the transformation $$11 \mapsto 1, 22 \mapsto 2, 33 \mapsto 3, 23 \mapsto 4, 13 \mapsto 5, 12 \mapsto 6$$. With this, the above linear elastic relationship can be expressed as&#x20;
+
+$$
+\boldsymbol{S} = \boldsymbol{C}\boldsymbol{E}.
+$$
+
+In indicial notation, this is
+
+###
 
 ### Formalism
 
-The relaxed lattice vectors $$\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3\}$$ __ are taken and these are deformed according to each of the 6 deformation gradients $$\mathbf{F}$$ as shown in the equations below. These 6 deformation gradients are applied one-by-one to the relaxed structure so that only one independent deformation is considered each time. For each of the 6 deformation modes, 4 different default magnitudes of deformation are applied: $$\delta_{1} \in \{-0.01, -0.005, +0.005, +0.01\}$$ (pertaining to non shear-modes) and $$\delta_2 \in \{ -0.06, -0.03, +0.03, +0.06 \}$$ (pertaining to shear-modes). __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\mathbf{S}$$, is calculated, allowing for relaxation of the ionic degrees of freedom. Note that in this work, conventional unit cells, obtained using `pymatgen.symmetry.SpacegroupAnalyzer.get_conventional_standard_structure` are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).
+The lattice vectors $$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure are taken and the structure is deformed according to a deformation gradient $$\boldsymbol{F}$$:&#x20;
+
+$$
+\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i  \quad i=1,2,3 .
+$$
+
+The stress tensor, $$\boldsymbol{S}$$, is then obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are relaxed. Six deformation gradients $$\boldsymbol{F}$$ (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six deformation modes, 4 different default magnitudes of deformation are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. __ This leads to a total of 24 deformed structures, for which the stress tensor, $$\mathbf{S}$$, is calculated, allowing for relaxation of the ionic degrees of freedom. Note that in this work, conventional unit cells, obtained using `pymatgen.symmetry.SpacegroupAnalyzer.get_conventional_standard_structure` are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).
 
 $$
 \boldsymbol{F}=

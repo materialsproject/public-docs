@@ -1,12 +1,6 @@
----
-description: >-
-  Description of the density functional theory (DFT) pseudopotentials used in
-  MOF calculation results displayed on the Materials Project (MP) website.
----
+# Pseudopotentials
 
-# Psuedopotentials
-
-In all cases, the VASP 5.4 PBE projector-augmented wave (PAW) pseudopotentials were used to carry out the DFT calculations. In general, the [VASP-recommended](https://www.vasp.at/wiki/index.php/Available\_PAW\_potentials) PAW PBE potentials were adopted except for `Li`, `Eu_3`, `Yb_3`, and `W_sv`. The full list of pseudopotentials is shown below:
+For solid state materials, the VASP 5.4 PBE projector-augmented wave (PAW) pseudopotentials were used to carry out the DFT calculations. In general, the [VASP-recommended](https://www.vasp.at/wiki/index.php/Available\_PAW\_potentials) PAW PBE potentials were adopted except for `Li`, `Eu_3`, `Yb_3`, and `W_sv`. The full list of pseudopotentials is shown below:
 
 | Element | VASP 5.4 Pseudopotentials |
 | ------- | ------------------------- |
