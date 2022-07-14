@@ -125,6 +125,21 @@ with MPRester("your_api_key_here") as mpr:
     ph_dos = mpr.get_phonon_dos_by_material_id("mp-149")
 ```
 
+## XAS
+
+### XAS for TiO2 element O K edge:&#x20;
+
+```python
+from mp_api import MPRester
+from emmet.core.xas import Edge, XASDoc, Type
+
+with MPRester("your_api_key_here") as mpr:
+    xas = mpr.xas.search_xas_docs(formula = "TiO2", 
+                                    absorbing_element = 'Ti', 
+                                    edge = Edge.K)
+
+```
+
 ## Charge Density
 
 ### Charge density for silicon (mp-149)
