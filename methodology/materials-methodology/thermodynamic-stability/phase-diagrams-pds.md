@@ -2,6 +2,7 @@
 description: >-
   A description of the methodology for constructing and interpreting
   compositional phase diagrams as used on the Materials Project (MP) website.
+  These are available as part of the Phase Diagram app.
 ---
 
 # Phase Diagrams (PDs)
