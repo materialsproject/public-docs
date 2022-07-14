@@ -21,13 +21,21 @@ The elastic constants from the Materials Project (MP) are calculated from first-
 
 ### Voigt notation
 
-Formally, the elastic tensor, $$\boldsymbol{C}$$, is a forth-order tensor with 81 components:
+Formally, the elastic tensor, $$\hat{\boldsymbol{C}}$$, is a forth-order tensor with 81 components:
 
 $$
-\boldsymbol{\sigma} = \boldsymbol{C}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = C_{ijkl} \epsilon_{kl} ,
+\boldsymbol{\sigma} = \hat{\boldsymbol{C}}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = \hat{C}_{ijkl} \epsilon_{kl} ,
 $$
 
-where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor and thus we represent them in Voigt notation under the transformation&#x20;
+where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in Voigt notation under the transformation $$11 \mapsto 1, 22 \mapsto 2, 33 \mapsto 3, 23 \mapsto 4, 13 \mapsto 5, 12 \mapsto 6$$. With this, the above linear elastic relationship can be expressed as&#x20;
+
+$$
+\boldsymbol{S} = \boldsymbol{C}\boldsymbol{E}.
+$$
+
+In indicial notation, this is
+
+###
 
 ### Formalism
 
