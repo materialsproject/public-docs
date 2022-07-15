@@ -1,18 +1,24 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
-* [Getting Involved](getting-involved.md)
-  * [Potential Collaborators](getting-involved/potential-collaborators.md)
-* [Getting Help](getting-help.md)
-* [Database Versions](database-versions.md)
-* [MPContribs](mpcontribs.md)
-* [Changes](changes/README.md)
+* [Frequently Asked Questions (FAQ)](frequently-asked-questions/README.md)
+  * [Glossary of Terms](frequently-asked-questions/glossary-of-terms.md)
+* [Changes and Updates](changes/README.md)
+  * [Database Versions](changes/database-versions.md)
   * [Website Changelog](changes/website-changelog.md)
-* [Community Resources](community-resources.md)
-* [Glossary of Terms](glossary-of-terms.md)
-* [Code of Conduct](code-of-conduct.md)
-* [Credit](credit.md)
+* [Documentation Credit](documentation-credit.md)
+
+## Community
+
+* [Getting Help](community/getting-help.md)
+* [Getting Involved](community/getting-involved/README.md)
+  * [Potential Collaborators](community/getting-involved/potential-collaborators.md)
+* [Community Resources](community/community-resources.md)
+* [Code of Conduct](community/code-of-conduct.md)
+
+## Services
+
+* [MPContribs](services/mpcontribs.md)
 
 ## Methodology
 
@@ -53,7 +59,7 @@
 ## Apps
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
-  * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
+  * [Materials Explorer](apps/explore-and-search-apps/materials-explorer/README.md)
     * [Tutorial](apps/explore-and-search-apps/materials-explorer/tutorial.md)
   * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
     * [Background](apps/explore-and-search-apps/molecules-explorer/background.md)

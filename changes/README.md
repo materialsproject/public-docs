@@ -4,7 +4,7 @@ description: >-
   database, and API.
 ---
 
-# Changes
+# Changes and Updates
 
 The Materials Project is an active, academic research project. Changes are common as new research methods become available, and the quality and kind of data we present changes, and also as a result of organizational needs. This page summarizes major changes in different aspects of the Materials Project.
 
@@ -13,6 +13,14 @@ The Materials Project is an active, academic research project. Changes are commo
 This documentation will continue to be improved. New documentation is currently being written for each of the Materials Project "apps". Some pages may be blank until this is completed.
 
 ## Previous Changes
+
+### Database
+
+The Materials Project database is constantly evolving as new and better calculations become available, both as a result of new features and better methods, and also as errors or problems are identified and fixed.
+
+{% content-ref url="../data-production/data-builders.md" %}
+[data-builders.md](../data-production/data-builders.md)
+{% endcontent-ref %}
 
 ### Website
 
@@ -36,10 +44,6 @@ The Materials Project documentation has gone through several iterations, powered
 The current documentation is also available via GitHub at [https://github.com/materialsproject/public-docs](https://github.com/materialsproject/public-docs). Edits and improvements from external users are very welcome, please submit a "pull request" with any suggest change or use the "Edit in GitHub" button on the relevant page.
 
 The previous MkDocs documentation is [still available](https://github.com/materialsproject/docs) for the historical record, and the older MediaWiki documentation are currently offline but available on request. However, the current version of the documentation should contain all necessary information including historical information. An effort has been made to ensure URLs remain the same during the transition from the previous MkDocs-powered documentation to the new GitBook-powered documentation.
-
-### Database
-
-The Materials Project database is constantly evolving as new and better calculations become available, both as a result of new features and better methods, and also as errors or problems are identified and fixed. See [Database Versions](../database-versions.md) for more information.
 
 ### API
 

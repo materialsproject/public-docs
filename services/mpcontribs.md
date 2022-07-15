@@ -8,9 +8,9 @@ description: Introduction to MP's contribution platform MPContribs
 
 See below for a list of [current MPContribs deployments](mpcontribs.md#deployments) and an overview of its [concepts](mpcontribs.md#undefined). Continue with the following sections in MP's documentation to learn more:&#x20;
 
-* [Explore Contributed Data](apps/explore-contributed-data.md)
-* [Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
-* [Contribute your own Data](uploading-data/what-is-mpcontribs.md)
+* [Explore Contributed Data](../apps/explore-contributed-data.md)
+* [Download Contributed Data](../downloading-data/query-and-download-contributed-data.md)
+* [Contribute your own Data](../uploading-data/what-is-mpcontribs.md)
 
 ## Deployments
 
@@ -37,10 +37,10 @@ Any MP account can create (or be an owner of) a maximum of 3 projects at any tim
 
 By default, projects are set to private, i.e. only visible to owners and their collaborators. Each individual contribution in a project is set to public by default and thus automatically released to the public when the project is published. Since the public/private flag can be controlled for each contribution individually, some contributions in a project can be kept private even if the project is public. The public/private state of a project and its contributions can be changed/reverted at any time.
 
-A single contribution constitutes a small blob of data assigned and linked to the according MP material through identifiers such as MP's [materials IDs](frequently-asked-questions.md#what-is-a-task\_id-and-what-is-a-material\_id-and-how-do-they-differ), formulas or chemical systems. In addition to these identifiers, each individual contribution can contain the following four components:
+A single contribution constitutes a small blob of data assigned and linked to the according MP material through identifiers such as MP's [materials IDs](../frequently-asked-questions/#what-is-a-task\_id-and-what-is-a-material\_id-and-how-do-they-differ), formulas or chemical systems. In addition to these identifiers, each individual contribution can contain the following four components:
 
-* A **data** component containing hierarchically organized key-value data (think nested dictionaries). In its flattened format, this component can contain a maximum of 50 keys/fields each of which becomes a **column** in the overview table on the [project landing pages](apps/explore-contributed-data.md). Nested fields in the data dictionary are organized as nested columns on the landing page table. Any data types included in the data component become queryable, filterable and sortable using a wide variety of operators. See the [API documentation](mpcontribs.md#deployments) for any MPContribs deployment for a generic list of available filters.&#x20;
+* A **data** component containing hierarchically organized key-value data (think nested dictionaries). In its flattened format, this component can contain a maximum of 50 keys/fields each of which becomes a **column** in the overview table on the [project landing pages](../apps/explore-contributed-data.md). Nested fields in the data dictionary are organized as nested columns on the landing page table. Any data types included in the data component become queryable, filterable and sortable using a wide variety of operators. See the [API documentation](mpcontribs.md#deployments) for any MPContribs deployment for a generic list of available filters.&#x20;
 
 
 
-see the section for [contributing data](uploading-data/what-is-mpcontribs.md) for more information.
+see the section for [contributing data](../uploading-data/what-is-mpcontribs.md) for more information.

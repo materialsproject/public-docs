@@ -21,7 +21,7 @@ You can verify the current database version powering the website on the footer o
 This will be the first release with our new website and API. It does not contain any new data but is built using our new database building methods and is largely consistent with the previous database release. Some changes exist to the previous release due to improvements to detection of multi-anion systems leading to changes in the applied formation energy corrections.
 
 {% hint style="warning" %}
-Be aware, database version v2021.11.10 onwards is _only_ available on the new Materials Project website and API. The [legacy website](https://legacy.materialsproject.org) and [legacy API](downloading-data/differences-between-new-and-legacy-api.md) are frozen to the v2021.05.13 database release.
+Be aware, database version v2021.11.10 onwards is _only_ available on the new Materials Project website and API. The [legacy website](https://legacy.materialsproject.org) and [legacy API](../downloading-data/differences-between-new-and-legacy-api.md) are frozen to the v2021.05.13 database release.
 {% endhint %}
 
 ## v2021.05.13

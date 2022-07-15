@@ -21,7 +21,7 @@ This section will discuss how to construct phase diagrams from DFT-calculated en
 
 ### Acquiring thermodynamic data
 
-
+TODO
 
 ### Calculating formation energy
 
@@ -45,53 +45,29 @@ Typically, formation energies are **normalized** on a per-atom basis by dividing
 
 #### The convex hull approach
 
-
-
-$$
-\eqalign{G(T,P,N_{Li},N_{Fe},N_{O}) &= H(T,P,N_{Li},N_{Fe},N_{O}) - TS(T,P,N_{Li},N_{Fe},N_{O})\cr &= \eqalign{E(T,P,N_{Li},N_{Fe},N_{O}) + PV(T,P,N_{Li},N_{Fe},N_{O})\cr - TS(T,P,N_{Li},N_{Fe},N_{O}}}
-$$
+TODO
 
 #### Evaluating thermodyanmic stability
 
-![Figure 2: Illustration of various thermodynamic stability metrics, reproduced from Bartel \[1\].#](../../../.gitbook/assets/10853\_2022\_6915\_Fig1\_HTML.webp)
+![Figure 2: Illustration of various thermodynamic stability metrics, reproduced from Bartel \[1\].](../../../.gitbook/assets/10853\_2022\_6915\_Fig1\_HTML.webp)
 
 #### Visualizing the phase diagram
 
-
+TODO
 
 ### Grand potential phase diagram
 
+TODO
+
 In many scientific applications, the phase equilibria of interest is not that of a closed system, but rather one which is open to a particular element. For instance, synthesis might be carried out in flowing Argon gas at a particular temperature, which would mean the system is open to gaseous elements such as oxygen. Other experiments may be carried out in air, which essentially serves as an infinite reservoir of atmospheric elements such as oxygen, nitrogen and others.
 
-In environments that are open to a particular element (say oxygen), the relevant control variable is the chemical potential of that element, $\mu\_{O}$. The relevant thermodynamic potential to study phase equilibria in an open system is the grand potential, which is defined as the following for an $\ce{Li-Fe-O}$ system that is open with respect to oxygen:
+In environments that are open to a particular element (say oxygen), the relevant control variable is the chemical potential of that element, $\mu\_{O}$. The relevant thermodynamic potential to study phase equilibria in an open system is the grand potential, which is defined as the following for an $\ce{Li-Fe-O}$ system that is open with respect to oxygen.
 
-$$
-\eqalign{\phi(T,P,N_{Li},N_{Fe},\mu_{O}) &= G(T,P,N_{Li},N_{Fe},\mu_{O}) - \mu_ON_O(T,P,N_{Li},N_{Fe},\mu_{O})\cr &= \eqalign{E(T,P,N_{Li},N_{Fe},\mu_{O}) - TS(T,P,N_{Li},N_{Fe},N_{O})\cr - \mu_ON_O(T,P,N_{Li},N_{Fe},\mu_{O})}}
-$$
 
-where the $PV$ term is again ignored.
-
-Normalizing with respect to $\ce{Li-Fe}$ composition and dropping the explicit expression of the functional dependence of $E$, $S$, and $N\_{O}$ on the right-hand side henceforth for brevity, we can obtain
-
-$$\bar{\phi}(T,P,x_{Li},x_{Fe},\mu_{O}) = \frac{E-TS-\mu_ON_O}{N_{Li} + N_{Fe}}$$
-
-where $x\_i = \frac{N\_i}{N\_{Li}+N\_{Fe\}}$ is the fraction of component $i$ in $\ce{Li-Fe}$ composition space.
-
-To formally introduce temperature into ab initio phase stability calculations, one would usually need to take into account all the relevant excitations (e.g. vibrational, configurational, and electronic) that contribute to entropy. However, for systems where phase equilibria changes takes place primarily between solid phases with absorption or loss of as gas, a few simplifying assumptions can be made that allow us to obtain a useful approximate phase diagram with less effort. In such reactions, the reaction entropy is dominated by the entropy of the gas, and the effect of temperature is mostly captured by changes in the chemical potential of the gas. Since the $TS$ term is the entropy contribution of the condensed system, it can be neglected compared to the entropy effect of the gas, and the expression for $\bar{\phi}$ simplifies to:
-
-$$\bar{\phi} = \frac{E-\mu_ON_O}{N_{Li} + N_{Fe}}$$
-
-Using the above assumption, the effect of temperature and partial pressure can be fully captured in a single chemical potential variable, with a more negative value corresponding to higher temperatures or lower partial pressures. The chemical potential is then treated as an external variable to obtain a grand potential phase diagram under a particular condition by taking the convex hull of $\bar{\phi}$ for all phases and projecting the stable nodes into the $\ce{Li-Fe}$ composition space.
 
 ## **Accuracy of Calculated Phase Diagrams**
 
-A compositional phase diagram is&#x20;
-
-!\[Experimental Li-Fe-O Phase Diagram]\(/img/phase-diagram/Li-Fe-O\_exp.png "Experimental Li-Fe-O Phase Diagram")
-
-_Figure 4: Experimental Li-Fe-O Phase Diagram_
-
-_Figure 4_ shows the experimentally determined phase diagram for the $\ce{Li-Fe-O}$ system at 673K.\[^5] Even though the experimental phase diagram is at a much higher temperature, we can see that our calculated phase diagram reproduces the features very well. The phases $\ce{Li2O}$, $\ce{Fe3O4}$, $\ce{Fe2O3}$, $\ce{LiFeO2}$, $\ce{Li5FeO4}$ are stable in both the experimental diagram and our calculated phase diagram. The only additional phase in our calculated diagram is $\ce{FeO}$, which is well known to be difficult to obtain in stoichiometric proportion under normal conditions. Our calculations correctly reproduce the $\ce{FeO}$ formation enthalpy to within experimental accuracy, and our calculated phase diagram is fully consistent with known experimental thermochemical data along the $\ce{Fe-O}$ line at 1 atm and 298K.
+**TODO**
 
 In general, we can expect that compositional phase diagrams comprising of predominantly solid phases to be reproduced fairly well by our calculations. However, it should be noted that there are inherent limitations in accuracy in the DFT calculated energies. Furthermore, our calculated phase diagrams are at 0 K and 0 atm, and differences with non-zero temperature phase diagrams are to be expected.
 

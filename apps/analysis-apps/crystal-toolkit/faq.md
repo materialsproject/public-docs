@@ -10,4 +10,4 @@ Any input file format supported by [pymatgen](https://pymatgen.org). This includ
 This is a known issue in some instances, where transformations may time out for certain larger crystal structures or combinations of inputs. Any transformation taking longer than 30 seconds will time out.
 {% endhint %}
 
-Please ask on the [Materials Project forum](../../../getting-help.md) if this is a problem for you. We are improving this functionality over time. For advanced users, all transformations are also available for use via [pymatgen](https://pymatgen.org).
+Please ask on the [Materials Project forum](../../../community/getting-help.md) if this is a problem for you. We are improving this functionality over time. For advanced users, all transformations are also available for use via [pymatgen](https://pymatgen.org).
