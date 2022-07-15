@@ -4,7 +4,7 @@ description: >-
   documentation.
 ---
 
-# Credit
+# Documentation Credit
 
 The Materials Project documentation is a collaborative effort between Materials Project staff, contributors, and researchers including graduate students, postdocs and members of the Materials Project community.
 

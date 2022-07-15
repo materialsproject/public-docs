@@ -42,7 +42,7 @@ Citations are appropriate wherever Materials Project data, methods or output are
 How to Cite Materials Project
 {% endembed %}
 
-There is a canonical Materials Project citation, and additional citations for specific properties or tools. See also the [Database Versions](../changes/database-versions.md) page for information on how to cite a specific database version.
+There is a canonical Materials Project citation, and additional citations for specific properties or tools. See also the [Database Versions](database-versions.md) page for information on how to cite a specific database version.
 
 ## Where do the material properties shown on Materials Project come from?
 
@@ -56,7 +56,7 @@ Typically, there are two sets of lattice parameters reported. Lattice parameters
 
 If the lattice parameters are very different to what you expect, check the setting first!
 
-Some systematic errors are also present. These will typically be an over-estimation of 1–3% for most crystals. Layered crystals will also typically have significant error in the interlayer distances since van der Waals interactions are not well-described by the simulation methods (PBE) used by Materials Project. These systematic errors will be improved as Materials Project switches to user newer simulation methods (r2SCAN). See [Calculation Details](../methodology/calculation-details/) for more information.
+Some systematic errors are also present. These will typically be an over-estimation of 1–3% for most crystals. Layered crystals will also typically have significant error in the interlayer distances since van der Waals interactions are not well-described by the simulation methods (PBE) used by Materials Project. These systematic errors will be improved as Materials Project switches to user newer simulation methods (r2SCAN). See [Calculation Details](methodology/calculation-details/) for more information.
 
 ## Why is the band gap different to what I expect?
 
@@ -71,7 +71,7 @@ The Materials Project presents the data it generates in two ways:
 1. As individual calculations. These are always the same, and as far as possible Materials Project tries to ensure all historical calculations remain available. Typically, only advanced users will access information about individual calculations.
 2. As aggregated information. This is information generated from a combination of individual calculations. This information is what is presented on the public "material details" pages, and is what most users will access. As new, improved calculations are performed, this aggregated information can change.
 
-The Materials Project periodically updates this aggregated information in the form of new database releases. See [Database Versions](../changes/database-versions.md) for information on the latest database releases.
+The Materials Project periodically updates this aggregated information in the form of new database releases. See [Database Versions](database-versions.md) for information on the latest database releases.
 
 {% hint style="warning" %}
 If performing scientific research with Materials Project data, make sure to cite the database version from which the data was retrieved. See [How to Cite](https://materialsproject.org/about/cite) for more information.&#x20;
@@ -111,4 +111,4 @@ Consult our glossary here:
 [glossary-of-terms.md](glossary-of-terms.md)
 {% endcontent-ref %}
 
-If a term is used in Materials Project but is not listed, [let us know](../community/getting-help.md) and we will add it.
+If a term is used in Materials Project but is not listed, [let us know](getting-help.md) and we will add it.

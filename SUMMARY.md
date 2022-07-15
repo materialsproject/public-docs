@@ -1,24 +1,24 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Frequently Asked Questions (FAQ)](frequently-asked-questions/README.md)
-  * [Glossary of Terms](frequently-asked-questions/glossary-of-terms.md)
+* [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
+  * [Glossary of Terms](glossary-of-terms.md)
 * [Changes and Updates](changes/README.md)
-  * [Database Versions](changes/database-versions.md)
+  * [Database Versions](database-versions.md)
   * [Website Changelog](changes/website-changelog.md)
-* [Documentation Credit](documentation-credit.md)
+* [Documentation Credit](credit.md)
 
 ## Community
 
-* [Getting Help](community/getting-help.md)
-* [Getting Involved](community/getting-involved/README.md)
-  * [Potential Collaborators](community/getting-involved/potential-collaborators.md)
-* [Community Resources](community/community-resources.md)
-* [Code of Conduct](community/code-of-conduct.md)
+* [Getting Help](getting-help.md)
+* [Getting Involved](getting-involved.md)
+  * [Potential Collaborators](getting-involved/potential-collaborators.md)
+* [Community Resources](community-resources.md)
+* [Code of Conduct](code-of-conduct.md)
 
 ## Services
 
-* [MPContribs](services/mpcontribs.md)
+* [MPContribs](mpcontribs.md)
 
 ## Methodology
 
