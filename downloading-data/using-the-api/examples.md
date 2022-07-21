@@ -144,6 +144,8 @@ with MPRester("your_api_key_here") as mpr:
 
 ### Charge density for silicon (mp-149)
 
+2022-07-21: This endpoint is not open to the public yet. Please send a email request to be granted access permissions to heavy.api.use@materialsproject.org.
+
 ```python
 from mp_api import MPRester
 
