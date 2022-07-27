@@ -128,8 +128,6 @@ Different choices of lattice vectors with respect to a Cartesian coordinate syst
 
 ### Derived elastic properties
 
-\[mjwen continue from here]
-
 From the elastic tensor defined above, a number of aggregate and derived properties is calculated. These properties are all available on the Materials Project webpage and are shown in the below Table. We report Voigt, Reuss and Voigt-Reuss-Hill [\[2\]](elasticity.md#references) bounds on the bulk and shear moduli for polycrystalline materials. Finally, the elastic anisotropy index [\[3\]](elasticity.md#references) and isotropic Poisson ratio are reported.
 
 | Property                                | Unit         | Description                                                                                                          | Equation                                                                                                                    |
