@@ -48,6 +48,7 @@
   * [Suggested Substrates](methodology/suggested-substrates.md)
   * [Related Materials](methodology/related-materials.md)
   * [Optical absorption spectra](methodology/materials-methodology/optical-absorption-spectra.md)
+  * [Alloys](methodology/materials-methodology/methodology/alloys.md)
 * [Molecules Methodology](methodology/molecules-methodology.md)
 * [MOF Methodology](methodology/mof-methodology/README.md)
   * [Calculation Parameters](apps/mof-explorer/calculation-parameters/README.md)
