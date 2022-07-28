@@ -20,7 +20,7 @@ There are several APIs offered by the Materials Project:
 [differences-between-new-and-legacy-api.md](differences-between-new-and-legacy-api.md)
 {% endcontent-ref %}
 
-To use the API, you can use any client that can make HTTP requests (e.g. GET, POST). However, we recommend and support an official Python client. **This is the best way to interact with the Materials Project API.** Using the official Python client allows full integratoin with Materials Project software like _pymatgen_.
+To use the API, you can use any client that can make HTTP requests (e.g. GET, POST). However, we recommend and support an official Python client. **This is the best way to interact with the Materials Project API.** Using the official Python client allows full integration with Materials Project software like _pymatgen_.
 
 {% content-ref url="using-the-api/" %}
 [using-the-api](using-the-api/)
