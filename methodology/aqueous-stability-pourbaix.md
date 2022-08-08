@@ -155,10 +155,8 @@ Beverskog and Puigdomenech (1997): Beverskog and Puigdomenech, Corr. Sci. (1997)
 
 ### Authors
 
-\- Sai Jayaraman
-
-\- Arunima K. Singh
-
-\- Rebecca Stern
-
-\- Eric Sivonxay
+* Sai Jayaraman
+* Arunima K. Singh
+* Rebecca Stern
+* Eric Sivonxay
+* Ryan Kingsbury
