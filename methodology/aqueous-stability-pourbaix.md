@@ -124,6 +124,7 @@ Beverskog and Puigdomenech (1997): Beverskog and Puigdomenech, Corr. Sci. (1997)
 ### Known Issues
 
 * There is a trade off in the construction of the Pourbaix diagrams given the available data, and they are currently constructed to favor accuracy of oxides, meaning that it is not uncommon to see less accurate results in the reducing (low E) region where hydrides are typically observed.
+* We recently discovered an error for `IrO4[-2]` due to a typo in one of the original data sources. Prior to August 2022, the charge and formula for this species were incorrectly listed in our dataset as -1 and `IrO4[-1]`, respectively, while the energy value was correct. This error has been corrected in the ion data used by the [new API](../downloading-data/differences-between-new-and-legacy-api.md) and [website](../changes/#website). However, note that the legacy Materials Project website and API will still have the incorrect charge for this species.
 
 ### References
 
