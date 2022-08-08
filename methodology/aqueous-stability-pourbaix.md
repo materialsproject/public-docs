@@ -109,14 +109,7 @@ For detailed information on the formalism and its applications see reference 2.\
 
 ### Literature References for Ions
 
-
-
-The free energies of ions in the aqueous phase have been taken from standard references/recent publications.
-
-The acronyms which show up on the tool-tips associated with the aqueous ions, and their corresponding references are as follows.
-
-\
-
+The free energies of ions in the aqueous phase have been taken from standard references and recent publications:
 
 NBS Tables: NBS Thermodynamic tables.\[^4]
 
