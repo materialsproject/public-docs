@@ -23,10 +23,9 @@ Experimentally determining Pourbaix Diagrams is painstaking work, as we need not
 
 The Materials Project offers a very convenient and powerful database of materials properties which has been used to generate Pourbaix diagrams in a high-throughput manner.
 
-This manual outlines the usage of the Pourbaix App to calculate Pourbaix diagrams, and the thermodynamic formalism underlying the app.\
+This manual outlines the usage of the Pourbaix App to calculate Pourbaix diagrams, and the thermodynamic formalism underlying the app.
 
-
-### Thermodynamic Formalism of Pourbaix Diagrams 
+### Thermodynamic Formalism of Pourbaix Diagrams
 
 To calculate a Pourbaix diagram, free energies of the solid phases, and of the aqueous ions is required.
 
@@ -44,14 +43,11 @@ The basic idea behind this scheme is that, if we have a reference energy for an 
 
 The better the solid is represented by DFT, the more transferable the reference aqueous energy becomes.
 
-We therefore prefer to choose simple chemical systems (primarily binaries with an uncomplicated electronic structure) as representative solids.\
-
+We therefore prefer to choose simple chemical systems (primarily binaries with an uncomplicated electronic structure) as representative solids.
 
 For an aqueous ion i at standard state conditions (e.g., room temperature, atmospheric pressure, and $$10^{-6}~\textup{M}$$ concentration) using a representative solid s, we define the chemical potential as:
 
-!\[Pourbaix Reference Energies]\(img/pourbaix-app/Ion\_ref\_energy.png)
-
-\_Figure 1: Schematic to reference experimental aqueous ion energies to DFT data\_
+![ Schematic to reference experimental aqueous ion energies to DFT data.](../.gitbook/assets/Ion\_ref\_energy.png)
 
 $$
 \begin{align} \mu_{i(aq)}^0 &= \mu_{i(aq)}^{0,{\rm exp}} + \left[\Delta g_s^{0,{\rm DFT}} - \Delta g_s^{0,{\rm exp}}\right]  \ & = \mu_{i(aq)}^{0,{\rm exp}} + \Delta\mu_s^{0, {\rm DFT - exp}} \end{align}
