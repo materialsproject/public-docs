@@ -12,7 +12,7 @@ Contributed data from MPContribs projects are included in the materials details 
 
 ![Main page of the default MPContribs deployment at https://contribs.materialsproject.org](<../.gitbook/assets/Screen Shot 2022-07-28 at 3.34.55 PM.png>)
 
-The main page of an MPContribs deployment contains an entry for every contributed dataset/project with their titles linking to their respective landing pages. Each entry also includes the project's publication status, its authors, and statistics about their contents. A search box is provided to filter project titles, authors, and descriptions by keywords and reduce the list accordingly.
+The main page of an MPContribs deployment contains an entry for every contributed dataset/project with their titles linking to their respective landing pages. Each entry also includes the project's publication status, its authors, and statistics about their contents. A search box is provided to filter project titles, authors, and descriptions by keywords and reduce the list accordingly. The dropdowns in the column headers can be used to filter the list of projects by values in each column.
 
 ![MPContribs interface to search across all contributions and display results in list and card form](https://lh4.googleusercontent.com/1aijY5cGF3ipCxb3EOSE09VhdozSqTUkTfQpv-k-ixE9qkuKGqUG9kMhqIH9OViBYkWxv\_DJvrzXP0hFJydHtfJSboLYY\_emQcUVNIyYWw5v1BeTElToSHxvGP0X8pxh0bFaXzden4k)
 
