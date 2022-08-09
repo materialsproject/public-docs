@@ -1,5 +1,10 @@
 # Website Changelog
 
+#### 2022-08-09 (f2aa3e0a)
+
+* Resolved a bug with "MOF Explorer" detail pages not loading.
+* We are investigating a known issue with the "Crystal Toolkit" app.
+
 #### 2022-07-28 (e7527896)
 
 * Added "Alloy Systems" section to the material details pages.
