@@ -43,7 +43,7 @@ with MPRester("your_api_key_here") as mpr:
                               band_gap=(0.5, 1.0))
 ```
 
-**Note that by default ALL available property data within `MPDataEntry` objects will be populated.** If one is only interested in a few properties, limiting what data is returned will speed up data retrieval. Pass a list of the fields you are interested in to `fields` to accomplish this. For example, if we were only interested in `material_id`, `band_gap`, and `volume` for the materials from the above query, we could instead use:
+**Note that by default ALL available property data within `MPDataDoc` objects will be populated.** If one is only interested in a few properties, limiting what data is returned will speed up data retrieval. Pass a list of the fields you are interested in to `fields` to accomplish this. For example, if we were only interested in `material_id`, `band_gap`, and `volume` for the materials from the above query, we could instead use:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
@@ -54,7 +54,7 @@ with MPRester("your_api_key_here") as mpr:
                                       "volume"])
 ```
 
-Now, only the `material_id`, `band_gap`, and `volume` attributes of the returned `MPDataEntry` objects will be populated. A list of available fields that were not requested will be returned in the `fields_not_requested` parameter.
+Now, only the `material_id`, `band_gap`, and `volume` attributes of the returned `MPDataDoc` objects will be populated. A list of available fields that were not requested will be returned in the `fields_not_requested` parameter.
 
 ```python
 example_doc = docs[0]
