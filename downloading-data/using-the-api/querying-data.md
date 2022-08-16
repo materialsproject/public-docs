@@ -8,21 +8,14 @@ description: >-
 
 There are two main ways of querying Materials Project data. The first is through a specific **Materials Project ID (e.g. mp-149)**, and the second is through **property filters (e.g. band gap less than 0.5 eV).**
 
-Most material property data is available as **summary data** for a specific material. **To query summary data with a single Materials Project ID** use the generic `get_data_by_id` function:
+Most material property data is available as **summary data** for a specific material. **To query summary data with a Materials Project ID** use the generic `get_data_by_id` function:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
     doc = mpr.summary.get_data_by_id("mp-149")
 ```
 
-**For multiple Materials Project IDs** the `search` method should be used and is much faster:
-
-```python
-with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(material_ids=["mp-149", "mp-13", "mp-22526"])
-```
-
-The above returns `MPDataEntry` objects with data accessible through their attributes. For example, the Material ID and formula can be obtained for a particular document with:
+The above returns a `MPDataEntry` object with data accessible through its attributes. For example, the Material ID and formula can be obtained with:
 
 ```python
 mpid = doc.material_id
@@ -66,8 +59,6 @@ volume = example_doc.volume          # a volume
 example_doc.fields_not_requested     # list of unrequested fields
 ```
 
-
-
 ### Other Data&#x20;
 
 Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **For a complete list of endpoints see the** [**main API page on the website.**](https://next-gen.materialsproject.org/api)&#x20;
@@ -101,16 +92,16 @@ In addition to the `get_data_by_id` and `search` functions, there are a small nu
 
 {% tabs %}
 {% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/core/client.py#L820-L883" %}
-Generic `get_data_by_id` method
+{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/core/client.py#L696-L758" %}
+Generic `get_data_by_id` method.
 {% endembed %}
 
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/materials.py#L59-L184" %}
-Materials search method
+{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/routes/summary.py#L17-L272" %}
+Summary search method.
 {% endembed %}
 
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/summary.py#L34-L293" %}
-Summary search method
+{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/routes/materials.py#L43-L146" %}
+Materials search method.
 {% endembed %}
 {% endtab %}
 {% endtabs %}

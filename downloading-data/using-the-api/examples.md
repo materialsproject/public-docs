@@ -14,7 +14,10 @@ from mp_api.client import MPRester
 with MPRester("your_api_key_here") as mpr:
     structure = mpr.get_structure_by_material_id("mp-149")
     
-    # -- General search alternative:
+    # -- General search alternatives:
+    docs = mpr.summary.search(material_ids=["mp-149"], fields=["structure"])
+    structure = docs[0].structure
+    
     doc = mpr.summary.get_data_by_id("mp-149", fields=["structure"])
     structure = doc.structure
 ```
@@ -27,7 +30,11 @@ from mp_api.client import MPRester
 with MPRester("your_api_key_here") as mpr: 
     task_ids = mpr.get_task_ids_associated_with_material_id("mp-149")
     
-    # -- General search alternative:
+    # -- General search alternatives:
+    docs = mpr.materials.search(material_ids=["mp-149"], fields=["calc_types"])
+    task_ids = docs[0].calc_types.keys()
+    task_types = docs[0].calc_types.values()
+    
     doc = mpr.materials.get_data_by_id("mp-149", fields=["calc_types"])
     task_ids = doc.calc_types.keys()
     task_types = doc.calc_types.values()
