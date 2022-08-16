@@ -9,7 +9,7 @@ description: API query examples with the MPRester client.
 ### Structure data for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     structure = mpr.get_structure_by_material_id("mp-149")
@@ -22,7 +22,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Calculation (task) IDs for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr: 
     task_ids = mpr.get_task_ids_associated_with_material_id("mp-149")
@@ -36,7 +36,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Band gaps for all materials containing _only_ Si and O
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     docs = mpr.summary.search(chemsys="Si-O", 
@@ -47,7 +47,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Chemical formulas for all materials containing _at least_ Si and O
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     docs = mpr.summary.search(elements=["Si", "O"], 
@@ -58,7 +58,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Stable materials (on the hull) with large band gaps (>3eV)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     docs = mpr.summary.search(band_gap=(3,None),
@@ -78,7 +78,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Band structures for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 from emmet.core.electronic_structure import BSPathType
 
 with MPRester("your_api_key_here") as mpr:
@@ -98,7 +98,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Density of states for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     dos = mpr.get_dos_by_material_id("mp-149")
@@ -109,7 +109,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Band structure for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     ph_bs = mpr.get_phonon_bandstructure_by_material_id("mp-149")
@@ -118,7 +118,7 @@ with MPRester("your_api_key_here") as mpr:
 ### Density of states for silicon (mp-149)
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 from emmet.core.electronic_structure import BSPathType
 
 with MPRester("your_api_key_here") as mpr:
@@ -130,7 +130,7 @@ with MPRester("your_api_key_here") as mpr:
 ### XAS for TiO2 element O K edge:&#x20;
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 from emmet.core.xas import Edge, XASDoc, Type
 
 with MPRester("your_api_key_here") as mpr:
@@ -147,7 +147,7 @@ with MPRester("your_api_key_here") as mpr:
 2022-07-21: This endpoint is not open to the public yet. Please send a email request to be granted access permissions to heavy.api.use@materialsproject.org.
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     chgcar = mpr.get_charge_density_from_material_id("mp-149")
