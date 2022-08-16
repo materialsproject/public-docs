@@ -21,8 +21,8 @@ with MPRester("your_api_key_here") as mpr:
 
 {% tabs %}
 {% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/core/client.py#L760-L796" %}
-`_search` method.
+{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/core/client.py#L885-L922" %}
+`_search` method
 {% endembed %}
 {% endtab %}
 {% endtabs %}
