@@ -59,6 +59,8 @@ volume = example_doc.volume          # a volume
 example_doc.fields_not_requested     # list of unrequested fields
 ```
 
+
+
 ### Other Data&#x20;
 
 Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **For a complete list of endpoints see the** [**main API page on the website.**](https://next-gen.materialsproject.org/api)&#x20;
@@ -92,16 +94,16 @@ In addition to the `get_data_by_id` and `search` functions, there are a small nu
 
 {% tabs %}
 {% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/core/client.py#L696-L758" %}
-Generic `get_data_by_id` method.
+{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/core/client.py#L820-L883" %}
+Generic `get_data_by_id` method
 {% endembed %}
 
-{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/routes/summary.py#L17-L272" %}
-Summary search method.
+{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/materials.py#L59-L184" %}
+Materials search method
 {% endembed %}
 
-{% embed url="https://github.com/materialsproject/api/blob/main/src/mp_api/routes/materials.py#L43-L146" %}
-Materials search method.
+{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/summary.py#L34-L293" %}
+Summary search method
 {% endembed %}
 {% endtab %}
 {% endtabs %}
