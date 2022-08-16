@@ -23,7 +23,7 @@ python setup.py
 The **MPRester** client can then be imported and instantiated. It is preferred to use Python's `with` context manager for session management:
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     #do stuff with mpr...
