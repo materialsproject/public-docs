@@ -9,7 +9,7 @@ In addition the `search`, an alternative approach to querying data is with the u
 The code below is an example illustrating the difference in querying for data from the summary endpoint with volume criteria using `search` and `_search`:
 
 ```python
-from mp_api import MPRester
+from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     # -- Using 'search'
