@@ -20,6 +20,18 @@ with MPRester("your_api_key_here") as mpr:
     structure = mpr.get_structure_by_material_id("mp-149")
 ```
 
+### Find all Materials Project IDs for entries with dielectric data
+
+```python
+from mp_api.client import MPRester
+from emmet.core.summary import HasProps
+
+with MPRester("your_api_key_here") as mpr: 
+
+    docs = mpr.summary.search(has_props = [HasProps.dielectric], fields=["material_id"])
+    mpids = [doc.material_id for doc in docs]
+```
+
 ### Calculation (task) IDs and types for silicon (mp-149)
 
 ```python
