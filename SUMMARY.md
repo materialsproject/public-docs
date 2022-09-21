@@ -56,7 +56,6 @@
     * [Density Functionals](apps/mof-explorer/calculation-parameters/density-functionals.md)
     * [Pseudopotentials](apps/mof-explorer/calculation-parameters/psuedopotentials.md)
     * [DFT Workflow](apps/mof-explorer/calculation-parameters/dft-workflow.md)
-* [Page Moved](methodology/gga-plus-u.md)
 
 ## Apps
 
