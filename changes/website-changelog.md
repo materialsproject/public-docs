@@ -1,5 +1,10 @@
 # Website Changelog
 
+#### Pending Changes
+
+* Fix an incorrect unit label for elasticity data on the new website. Thank you to Serge Maalouf for reporting.
+  * Data returned from the API was correct and unaffected by this error.
+
 #### 2022-08-09 (f2aa3e0a)
 
 * Resolved a bug with "MOF Explorer" detail pages not loading.
