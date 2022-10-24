@@ -4,11 +4,13 @@
 
 * Fix an incorrect unit label for elasticity data on the new website. Thank you to Serge Maalouf for reporting.
   * Data returned from the API was correct and unaffected by this error.
+* We are investigating an issue with displaying "task detail" pages.
 
 #### 2022-08-09 (f2aa3e0a)
 
 * Resolved a bug with "MOF Explorer" detail pages not loading.
-* We are investigating a known issue with the "Crystal Toolkit" app.
+* We are investigating an issue with the "Crystal Toolkit" app.
+  * This was resolved.
 
 #### 2022-07-28 (e7527896)
 
