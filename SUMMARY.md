@@ -123,6 +123,7 @@
   * [Deprecated Materials](downloading-data/using-the-api/deprecated-materials.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Query and Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
+* [Troubleshooting API Issues](downloading-data/troubleshooting-api-issues.md)
 
 ## Uploading Data
 
