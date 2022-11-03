@@ -4,7 +4,9 @@
 
 * Fix an incorrect unit label for elasticity data on the new website. Thank you to Serge Maalouf for reporting.
   * Data returned from the API was correct and unaffected by this error.
-* We are investigating an issue with displaying "task detail" pages.
+* Fix for insufficient precision in reporting atomic co-ordinates of some materials. Kindly reported by Branton Campbell for the entry `mp-1106336`.
+  * Data returned from the API was correct and unaffected by this error.
+* An issue with displaying "task detail" pages is resolved.
 
 #### 2022-08-09 (f2aa3e0a)
 
