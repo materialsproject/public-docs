@@ -1,6 +1,6 @@
 # Website Changelog
 
-#### Pending Changes
+#### 2022-12-02 (13f229ed)
 
 * Fix an incorrect unit label for elasticity data on the new website. Thank you to Serge Maalouf for reporting.
   * Data returned from the API was correct and unaffected by this error.
