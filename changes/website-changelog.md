@@ -1,5 +1,11 @@
 # Website Changelog
 
+#### 2022-12-16 (7ca3bcd3)
+
+* Fix issue with API query, see [here](https://matsci.org/t/rest-query-returned-with-error-status-code-500/45793).
+* better integration of MPRester and MPContribs API python clients.\
+  **Please upgrade to `mp-api==0.30.5` and `mpcontribs-client==5.0.4`**
+
 #### 2022-12-02 (13f229ed)
 
 * Fix an incorrect unit label for elasticity data on the new website. Thank you to Serge Maalouf for reporting.
