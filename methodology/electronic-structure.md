@@ -1,3 +1,9 @@
+---
+description: >-
+  How electronic band structures and density of states are calculated on the
+  Materials Project (MP) website.
+---
+
 # Electronic Structure
 
 ## Calculation Details
