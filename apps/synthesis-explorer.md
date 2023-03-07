@@ -18,6 +18,6 @@ Here are the articles in this section:
 [tutorial.md](explore-and-search-apps/synthesis-explorer/tutorial.md)
 {% endcontent-ref %}
 
-{% content-ref url="explore-and-search-apps/synthesis-explorer/faq.md" %}
-[faq.md](explore-and-search-apps/synthesis-explorer/faq.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
