@@ -1,3 +1,7 @@
+---
+description: Obtaining the charge density shown on the Materials Project (MP) website.
+---
+
 # Charge Density
 
 Charge density data is obtained directly from the CHGCAR files that are output by our static DFT calculations. For more detailed information about this data [see the VASP wiki](https://www.vasp.at/wiki/index.php/CHGCAR).
