@@ -1,3 +1,7 @@
+---
+description: How diffraction patterns are calculated on the Materials Project (MP) website.
+---
+
 # Diffraction Patterns
 
 ## Introduction
