@@ -90,11 +90,11 @@ with MPRester("your_api_key") as mpr:
 
 #### GGA/GGA+U/R2SCAN
 
-Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API is from the home chemical system phase diagram for the material (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).&#x20;
+Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API for a given material is from its home chemical system phase diagram (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).&#x20;
 
-**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams for different chemical system.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
+**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams of different chemical system.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
 
-For more details on the correction scheme and its logic, see the Energy Corrections section or the original publication [\[4\]](phase-diagrams-pds.md#references).
+For more details on the correction scheme and its logic, see the [Energy Corrections](thermodynamic-stability/) section or the original publication [\[4\]](phase-diagrams-pds.md#references).
 
 ```python
 from mp_api.client import MPRester
