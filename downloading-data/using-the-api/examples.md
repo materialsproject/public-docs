@@ -164,3 +164,28 @@ from mp_api.client import MPRester
 with MPRester("your_api_key_here") as mpr:
     chgcar = mpr.get_charge_density_from_material_id("mp-149")
 ```
+
+## Phase Diagram
+
+### Phase diagram for the Li-Fe-O chemical system
+
+```python
+from mp_api.client import MPRester
+from emmet.core.thermo import ThermoType
+
+with MPRester("your_api_key_here") as mpr:
+    
+    # -- GGA/GGA+U/R2SCAN mixed phase diagram
+    pd = mpr.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
+                                                   thermo_type=ThermoType.GGA_GGA_U_R2SCAN")
+    
+    # -- GGA/GGA+U mixed phase diagram
+    pd = mpr.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
+                                                   thermo_type=ThermoType.GGA_GGA_U")
+                                                   
+    # -- R2SCAN only phase diagram
+    pd = mpr.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
+                                                   thermo_type=ThermoType.R2SCAN")
+   
+    
+```

@@ -1,8 +1,7 @@
 ---
 description: >-
   A description of the methodology for constructing and interpreting
-  compositional phase diagrams as used on the Materials Project (MP) website.
-  These are available as part of the Phase Diagram app.
+  compositional phase diagrams from the Materials Project (MP) website and API.
 ---
 
 # Phase Diagrams (PDs)
@@ -18,10 +17,6 @@ In this section, we will describe the theory/methodology behind the calculation 
 ## Methodology
 
 This section will discuss how to construct phase diagrams from DFT-calculated energies. This is exact process done by the Materials Project (MP) for computing formation energies, thermodynamic stability, and phase diagrams. This methodology has been implemented in Python within the **pymatgen** package. Please see [#code-pymatgen](phase-diagrams-pds.md#code-pymatgen "mention")for brief examples of how to build phase diagrams on your own.
-
-### Acquiring thermodynamic data
-
-TODO
 
 ### Calculating formation energy
 
@@ -45,33 +40,83 @@ Typically, formation energies are **normalized** on a per-atom basis by dividing
 
 #### The convex hull approach
 
-TODO
+To construct a phase diagram, one needs to compare the relative thermodynamic stability of phases belonging to the system using an appropriate free energy model. For an isothermal, isobaric, closed system, the relevant thermodynamic potential is the Gibbs free energy, $$G$$, which can be expressed as a Legendre transform of the enthalpy, $$H$$, and internal energy, $$E$$, as follows:
 
-#### Evaluating thermodyanmic stability
+$$
+\eqalign{G(T,P,N_{Li},N_{Fe},N_{O}) &= H(T,P,N_{Li},N_{Fe},N_{O}) - TS(T,P,N_{Li},N_{Fe},N_{O})\cr &= \eqalign{E(T,P,N_{Li},N_{Fe},N_{O}) + PV(T,P,N_{Li},N_{Fe},N_{O})\cr - TS(T,P,N_{Li},N_{Fe},N_{O}}}
+$$
+
+where $$T$$ is the temperature of the system, $$S$$ is the entropy of the system, $$P$$ is the pressure of the system, $$V$$ is the volume of the system, and $$N_i$$ is the number of atoms of species $$i$$ in the system.
+
+For systems comprising primarily of condensed phases, the $$PV$$ term can be neglected and at 0K, the expression for $$G$$ simplifies to just $$E$$. Normalizing $$E$$ with respect to the total number of particles in the system, we obtain $$\bar{E}(0,P,x_{Li},x_{Fe},x_O)$$. By taking the convex hull [\[2\]](phase-diagrams-pds.md#references) of $$E$$ for all phases belonging to the M-component system and projecting the stable nodes into the $$(M-1)$$- dimension composition space, one can obtain the 0 K phase diagram for the closed system at constant pressure. The convex hull of a set of points is the smallest convex set containing the points. For instance, to construct a 0 K, closed $$Li-Fe-O$$ system phase diagram, the convex hull is taken on the set of points in $$(\bar{E},x_{Li},x_{Fe})$$ space with $$x_O$$ being related to the other composition variables by $$x_O = 1 - x_{Li} - x_{Fe}$$.
+
+#### Evaluating thermodynamic stability
 
 ![Figure 2: Illustration of various thermodynamic stability metrics, reproduced from Bartel \[1\].](../../../.gitbook/assets/10853\_2022\_6915\_Fig1\_HTML.webp)
 
-#### Visualizing the phase diagram
+_Figure 2_ is an example of a calculated binary A-X phase diagram at 0 K and 0 atm. Binary phase diagrams show the complete convex hull for the system, where the y-axis is the formation energy per atom and the x-axis is the composition.
 
-TODO
-
-### Grand potential phase diagram
-
-TODO
-
-In many scientific applications, the phase equilibria of interest is not that of a closed system, but rather one which is open to a particular element. For instance, synthesis might be carried out in flowing Argon gas at a particular temperature, which would mean the system is open to gaseous elements such as oxygen. Other experiments may be carried out in air, which essentially serves as an infinite reservoir of atmospheric elements such as oxygen, nitrogen and others.
-
-In environments that are open to a particular element (say oxygen), the relevant control variable is the chemical potential of that element, $\mu\_{O}$. The relevant thermodynamic potential to study phase equilibria in an open system is the grand potential, which is defined as the following for an $\ce{Li-Fe-O}$ system that is open with respect to oxygen.
-
-
+The blue lines show the convex hull construction, which connects stable phases (circles). Unstable phases will always appear above the convex hull line (squares); one measure of the thermodynamic stability of an arbitrary compound is its distance from the convex hull line ($$\Delta E_d$$), which predicts the decomposition energy of that phase into the most stable phases.
 
 ## **Accuracy of Calculated Phase Diagrams**
 
-**TODO**
-
 In general, we can expect that compositional phase diagrams comprising of predominantly solid phases to be reproduced fairly well by our calculations. However, it should be noted that there are inherent limitations in accuracy in the DFT calculated energies. Furthermore, our calculated phase diagrams are at 0 K and 0 atm, and differences with non-zero temperature phase diagrams are to be expected.
 
-For grand potential phase diagrams, further approximations are made as to the entropic contributions.[^2](https://doi.org/10.1016/j.elecom.2010.01.010) They are therefore expected to be less accurate, but nonetheless provide useful insights on general trends.
+For grand potential phase diagrams, further approximations are made as to the entropic contributions [\[2\]](phase-diagrams-pds.md#references). They are therefore expected to be less accurate, but nonetheless provide useful insights on general trends.
+
+## Code (pymatgen)
+
+While the Materials Project website has a phase diagram app ([https://materialsproject.org/phasediagram](https://materialsproject.org/phasediagram)), and `PhaseDiagram` objects can also be obtained directly from the API ([#phase-diagram](../../../downloading-data/using-the-api/examples.md#phase-diagram "mention")), two code snippets are provided below that show how to use the API and pymatgen to construct and plot your own phase diagrams with Python.&#x20;
+
+#### GGA/GGA+U
+
+Constructing mixed GGA/GGA+U phase diagrams **can be done directly with the corrected `ComputedStructureEntry` objects from the API.**&#x20;
+
+```python
+from mp_api.client import MPRester
+from pymatgen.analysis.phase_diagram import PhaseDiagram, PDPlotter
+
+with MPRester("your_api_key") as mpr:
+
+    # Obtain only corrected GGA and GGA+U ComputedStructureEntry objects
+    entries = mpr.get_entries_in_chemsys(elements=["Li", "Fe", "O"], 
+                                         additional_criteria={"thermo_types": ["GGA_GGA+U"]}) 
+    # Construct phase diagram
+    pd = PhaseDiagram(entries)
+    
+    # Plot phase diagram
+    PDPlotter(pd).get_plot()
+```
+
+#### GGA/GGA+U/R2SCAN
+
+Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API is from the home chemical system phase diagram for the material (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).&#x20;
+
+**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams for different chemical system.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
+
+For more details on the correction scheme and its logic, see the Energy Corrections section or the original publication [\[4\]](phase-diagrams-pds.md#references).
+
+```python
+from mp_api.client import MPRester
+from pymatgen.analysis.phase_diagram import PhaseDiagram, PDPlotter
+from pymatgen.entries.mixing_scheme import MaterialsProjectDFTMixingScheme
+
+with MPRester("your_api_key") as mpr:
+
+    # Obtain GGA, GGA+U, and r2SCAN ComputedStructureEntry objects
+    entries = mpr.get_entries_in_chemsys(elements=["Li", "Fe", "O"], 
+                                         additional_criteria={"thermo_types": ["GGA_GGA+U", "R2SCAN"]}) 
+    
+    # Apply corrections locally with the mixing scheme
+    scheme = MaterialsProjectDFTMixingScheme()
+    corrected_entries = scheme.process_entries(entries)
+    
+    # Construct phase diagram
+    pd = PhaseDiagram(corrected_entries)
+    
+    # Plot phase diagram
+    PDPlotter(pd).get_plot()
+```
 
 ## Citations
 
@@ -95,7 +140,5 @@ For grand potential phase diagrams, further approximations are made as to the en
 
 \[3]: [https://dx.doi.org/10.1145/235815.235821](https://dx.doi.org/10.1145/235815.235821)
 
-## Code (pymatgen)
-
-TODO
+\[4] Kingsbury, R.S., Rosen, A.S., Gupta, A.S. _et al._ A flexible and scalable scheme for mixing computed formation energies from different levels of theory. _npj Comput Mater_ 8, 195 (2022). [https://doi.org/10.1038/s41524-022-00881-w](https://doi.org/10.1038/s41524-022-00881-w)
 

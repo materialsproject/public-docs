@@ -13,8 +13,8 @@ The **Phase Diagram App** allows a user to create and visualize compositional ph
 
 The methodology behind thermodynamic energy calculations, phase diagram construction, and chemical potential diagram construction has been extensively discussed in the Methodology section of the MP Docs. See the links below:
 
-{% content-ref url="../../../methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability.md" %}
-[thermodynamic-stability.md](../../../methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability.md)
+{% content-ref url="../../../methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/" %}
+[thermodynamic-stability](../../../methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/)
 {% endcontent-ref %}
 
 {% content-ref url="../../../methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds.md" %}

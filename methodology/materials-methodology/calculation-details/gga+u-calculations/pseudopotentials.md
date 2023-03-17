@@ -1,7 +1,5 @@
 ---
-description: >-
-  Desciption of the density functional theory (DFT) pseudopotentials used in the
-  Materials Project (MP) database.
+description: Desciption of the pseudopotentials used in the GGA and GGA+U calculations.
 ---
 
 # Pseudopotentials
