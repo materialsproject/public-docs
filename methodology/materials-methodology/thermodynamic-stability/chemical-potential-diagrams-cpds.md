@@ -26,7 +26,7 @@ For more information on this specific implementation of the algorithm, please ci
 
 ![Two dimensional (2-D) chemical potential diagram for the V-S chemical system. Energies are DFT-calculated energies directly acquired from MP database.](<../../../.gitbook/assets/Screen Shot 2022-07-14 at 3.50.18 PM.png>)
 
-![Three dimensional (3-D) chemical potential diagram for the V-S-O chemical system. Energies are DFT-calculated energies directly acquired from MP database.](<../../../.gitbook/assets/image (2) (1).png>)
+![Three dimensional (3-D) chemical potential diagram for the V-S-O chemical system. Energies are DFT-calculated energies directly acquired from MP database.](<../../../.gitbook/assets/image (2) (3).png>)
 
 ### Relationship to predominance diagrams
 

@@ -1,2 +1,0 @@
-# Materials Explorer
-

@@ -49,7 +49,7 @@
   * [Dielectric Constants](methodology/dielectricity.md)
   * [Equations of State (EOS)](methodology/equations-of-state.md)
   * [X-ray Absorption Spectra (XAS)](methodology/x-ray-absorption-spectra.md)
-  * [Surface Energies](methodology/surface-energies.md)
+  * [Surface Energies](methodology/materials-methodology/surface-energies.md)
   * [Grain Boundaries](methodology/grain-boundaries.md)
   * [Charge Density](methodology/materials-methodology/charge-density.md)
   * [Suggested Substrates](methodology/suggested-substrates.md)
@@ -67,7 +67,7 @@
 ## Apps
 
 * [Explore and Search Apps](apps/explorer-apps/README.md)
-  * [Materials Explorer](apps/explore-and-search-apps/materials-explorer/README.md)
+  * [Materials Explorer](apps/explorer-apps/materials-explorer.md)
     * [Tutorial](apps/explore-and-search-apps/materials-explorer/tutorial.md)
   * [Molecules Explorer](apps/explore-and-search-apps/molecules-explorer/README.md)
     * [Tutorial](apps/explore-and-search-apps/molecules-explorer/tutorial.md)

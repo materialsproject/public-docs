@@ -8,7 +8,7 @@ description: How magnetic properties are calculated on the Materials Project (MP
 
 The magnetic behavior of a material is a complex and rich research area. The Materials Project currently only addresses a narrow aspect of the magnetism of materials: the magnitude and ordering of atomic magnetic moments in a crystal structure, at zero temperature.
 
-At present, Materials Project only considers _**** collinear magnetic order_ which means that atomic magnetic moments are represented by scalar values and not vectors.
+At present, Materials Project only considers _collinear magnetic order_ which means that atomic magnetic moments are represented by scalar values and not vectors.
 
 ## Methodology
 

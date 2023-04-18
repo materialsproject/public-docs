@@ -10,7 +10,7 @@ description: >-
 
 A **phase diagram** is a calculation of the _thermodynamic phase equilibria_ of multicomponent systems. It is an important tool in materials science for revealing 1) thermodynamic stability of compounds, 2) predicted equilibrium chemical reactions, and 3) processing conditions for synthesizing materials. However, the experimental determination of a phase diagram is an extremely time-consuming process, requiring careful synthesis and characterization of all phases in a chemical system.
 
-Computational modeling tools, such as the density functional theory (DFT) methods used by the Materials Project, can accelerate compositional phase diagram construction significantly. By calculating the energies of all known compounds in a given chemical system (e.g. the lithium/iron/oxygen chemical system, Li-Fe-O), we can determine the phase diagram for that system at a temperature of $$T=0$$ K and pressure of $$P=0$$ **** atm. Furthermore, for systems comprised of predominantly solid phases open with respect to a gaseous element, approximations can be made as to the finite temperature and pressure phase diagrams.
+Computational modeling tools, such as the density functional theory (DFT) methods used by the Materials Project, can accelerate compositional phase diagram construction significantly. By calculating the energies of all known compounds in a given chemical system (e.g. the lithium/iron/oxygen chemical system, Li-Fe-O), we can determine the phase diagram for that system at a temperature of $$T=0$$ K and pressure of $$P=0$$ atm. Furthermore, for systems comprised of predominantly solid phases open with respect to a gaseous element, approximations can be made as to the finite temperature and pressure phase diagrams.
 
 In this section, we will describe the theory/methodology behind the calculation of compositional phase diagrams.
 
@@ -92,7 +92,7 @@ with MPRester("your_api_key") as mpr:
 
 Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API for a given material is from its home chemical system phase diagram (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).&#x20;
 
-**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams of different chemical system.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
+**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams of different chemical systems.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
 
 For more details on the correction scheme and its logic, see the [Energy Corrections](thermodynamic-stability/) section or the original publication [\[4\]](phase-diagrams-pds.md#references).
 

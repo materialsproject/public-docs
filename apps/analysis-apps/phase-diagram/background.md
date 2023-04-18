@@ -40,7 +40,7 @@ Phase diagrams are created by **chemical system** (i.e., a collection of element
 {% hint style="warning" %}
 **Warning**
 
-Phase diagrams can only be plotted for chemical systems containing **1-4 elements**. It is still possible to create phase diagrams for 5 or more elements, but this feature is only currently available in **** _pymatgen_.
+Phase diagrams can only be plotted for chemical systems containing **1-4 elements**. It is still possible to create phase diagrams for 5 or more elements, but this feature is only currently available in _pymatgen_.
 {% endhint %}
 
 ### Visualization Viewer
