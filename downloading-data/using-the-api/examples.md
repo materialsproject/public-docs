@@ -69,7 +69,7 @@ with MPRester("your_api_key_here") as mpr:
     mpid_formula_dict = {doc.material_id: doc.pretty_formula for doc in docs}
 ```
 
-### Stable materials (on the hull) with large band gaps (>3eV)
+### Stable materials (on the GGA/GGA+U hull) with large band gaps (>3eV)
 
 ```python
 from mp_api.client import MPRester
