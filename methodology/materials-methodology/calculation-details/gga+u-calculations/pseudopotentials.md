@@ -1,10 +1,14 @@
 ---
-description: Desciption of the pseudopotentials used in the GGA and GGA+U calculations.
+description: Description of the pseudo-potentials used in the GGA and GGA+U calculations.
 ---
 
-# Pseudopotentials
+# Pseudo-potentials
 
-Pseudopotentials are used to reduce computation time by replacing the full electron system in the coulombic potential by a system only taking explicitly into account the "valence" electrons (i.e., the electrons participating into bonding) but in a pseudopotential. This approach not only reduces the electron number but also the energy cutoff necessary (this is critical in plane-wave based computations). All computations in the materials project have been performed using a specific type of very efficient pseudopotentials: the projector augmented wave (PAW) pseudopotentials. [\[1\]](pseudopotentials.md#references) We used the library of PAW pseudopotentials provided by VASP but for a given element there are often several possibilities in the VASP library. This wiki presents how the choices between the different pseudopotential options were made.
+{% hint style="info" %}
+On 2023-05-02, we changed the Yb PSP in _all_ VASP input sets from `Yb_2` to `Yb_3` as `Yb_2` gives incorrect thermodynamics for most systems with Yb3+. See [pymatgen#2968](https://github.com/materialsproject/pymatgen/issues/2968) for details. We are also recomputing all Yb compounds in MP and for an upcoming database release highlighting this change.
+{% endhint %}
+
+Pseudopotentials are used to reduce computation time by replacing the full electron system in the Coulombic potential by a system only taking explicitly into account the "valence" electrons (i.e., the electrons participating into bonding) but in a pseudopotential. This approach not only reduces the electron number but also the energy cutoff necessary (this is critical in plane-wave based computations). All computations in the materials project have been performed using a specific type of very efficient pseudopotentials: the projector augmented wave (PAW) pseudopotentials. [\[1\]](pseudopotentials.md#references) We used the library of PAW pseudopotentials provided by VASP but for a given element there are often several possibilities in the VASP library. This wiki presents how the choices between the different pseudopotential options were made.
 
 ## The strategy
 
@@ -20,7 +24,7 @@ Finally, as we had energies for elements and binary oxides, we compared binary o
 
 $$\text{B, C, N, O, F}$$
 
-Usually they have three pseudopotentials: a soft \_s, a hard \_h, and a standard. The standard is recommended by VASP and will be used for all. The hard have extremely high cut-offs (700 eV)
+Usually, they have three pseudopotentials: a soft \_s, a hard \_h, and a standard. The standard is recommended by VASP and will be used for all. The hard ones have extremely high cut-offs (700 eV)
 
 ### alkali and alkali-earth
 
@@ -42,7 +46,7 @@ The table below indicates our choices. Basically, we chose all high e- pseudopot
 
 ### d-elements, transition metals
 
-The table below shows the details on the psp choices. All high e- psp have been chosen except for Pd which had convergences problem with the high e- psp in PdO.
+The table below shows the details on the PSP choices. All high e- PSPs have been chosen except for Pd which had convergences problem with the high e- PSP in PdO.
 
 | element | options            | VASP             | Low elec: oxide form\_enth (exp-comp) eV per fu | High elec: oxide form\_enth (exp-comp) eV per fu | High e- conv. Stats              | our choice | rem                                                           |
 | ------- | ------------------ | ---------------- | ----------------------------------------------- | ------------------------------------------------ | -------------------------------- | ---------- | ------------------------------------------------------------- |

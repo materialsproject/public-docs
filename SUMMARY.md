@@ -28,7 +28,7 @@
     * [GGA/GGA+U Calculations](methodology/materials-methodology/calculation-details/gga+u-calculations/README.md)
       * [Parameters and Convergence](methodology/materials-methodology/calculation-details/gga+u-calculations/parameters-and-convergence.md)
       * [Hubbard U Values](methodology/materials-methodology/calculation-details/gga+u-calculations/hubbard-u-values.md)
-      * [Pseudopotentials](methodology/materials-methodology/calculation-details/gga+u-calculations/pseudopotentials.md)
+      * [Pseudo-potentials](methodology/materials-methodology/calculation-details/gga+u-calculations/pseudopotentials.md)
     * [r2SCAN Calculations](methodology/materials-methodology/calculation-details/r2scan-calculations/README.md)
       * [Parameters and Convergence](methodology/materials-methodology/calculation-details/r2scan-calculations/parameters-and-convergence.md)
       * [Pseudopotentials](methodology/materials-methodology/calculation-details/r2scan-calculations/pseudopotentials.md)
