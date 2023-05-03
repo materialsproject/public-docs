@@ -1,18 +1,20 @@
 ---
-description: Description of the pseudo-potentials used in the GGA and GGA+U calculations.
+description: >-
+  Description of the pseudo-potentials (PSP) used in the GGA and GGA+U
+  calculations.
 ---
 
 # Pseudo-potentials
 
 {% hint style="info" %}
-On 2023-05-02, we changed the Yb PSP in _all_ VASP input sets from `Yb_2` to `Yb_3` as `Yb_2` gives incorrect thermodynamics for most systems with Yb3+. See [pymatgen#2968](https://github.com/materialsproject/pymatgen/issues/2968) for details. We are also recomputing all Yb compounds in MP and for an upcoming database release highlighting this change.
+On 2023-05-02, we changed the Yb PSP in _all_ VASP input sets from `Yb_2` to `Yb_3` as `Yb_2` gives incorrect thermodynamics for most systems with Yb3+. See [pymatgen#2968](https://github.com/materialsproject/pymatgen/issues/2968) for details. We are also recomputing all Yb compounds in MP for an upcoming database release. The release notes will highlight this change.
 {% endhint %}
 
-Pseudopotentials are used to reduce computation time by replacing the full electron system in the Coulombic potential by a system only taking explicitly into account the "valence" electrons (i.e., the electrons participating into bonding) but in a pseudopotential. This approach not only reduces the electron number but also the energy cutoff necessary (this is critical in plane-wave based computations). All computations in the materials project have been performed using a specific type of very efficient pseudopotentials: the projector augmented wave (PAW) pseudopotentials. [\[1\]](pseudopotentials.md#references) We used the library of PAW pseudopotentials provided by VASP but for a given element there are often several possibilities in the VASP library. This wiki presents how the choices between the different pseudopotential options were made.
+Pseudopotentials are used to reduce computation time by replacing the full electron system in the Coulombic potential by a system only taking explicitly into account the "valence" electrons (i.e., the electrons participating into bonding) but in a pseudopotential. This approach not only reduces the electron number but also the energy cutoff necessary (this is critical in plane-wave-based computations). All computations in the materials project have been performed using a specific type of very efficient pseudopotentials: the projector augmented wave (PAW) pseudopotentials. [\[1\]](pseudopotentials.md#references) We used the library of PAW pseudopotentials provided by VASP but for a given element there are often several possibilities in the VASP library. This wiki presents how the choices between the different pseudopotential options were made.
 
 ## The strategy
 
-As a test set, we ran all elements and binary oxides present in the ICSD with the available PAW pseudopotentials. As it is difficult to test for all properties (structural, electronic, etc...), we chose to be inclusive and to select the pseudopotential (psp) with the largest number of electrons (high e) EXCEPT if convergence issues were seen on our test set, or if previous experience excluded a specific pseudopotential. We also excluded pseudopotentials with too large an energy cutoff.
+As a test set, we ran all elements and binary oxides present in the ICSD with the available PAW pseudopotentials. As it is difficult to test for all properties (structural, electronic, etc...), we chose to be inclusive and to select the pseudopotential with the largest number of electrons (high e) **except** if convergence issues were seen on our test set, or if previous experience excluded a specific pseudopotential. We also excluded pseudopotentials with too large an energy cutoff.
 
 We also compared to recommendations from the VASP manual present in [1](https://www.vasp.at/wiki/index.php/Available\_PAW\_potentials).
 
@@ -20,7 +22,7 @@ Finally, as we had energies for elements and binary oxides, we compared binary o
 
 ## Pseudopotential comments and choice
 
-### 1st row elements
+### 1st-row elements
 
 $$\text{B, C, N, O, F}$$
 
@@ -28,7 +30,7 @@ Usually, they have three pseudopotentials: a soft \_s, a hard \_h, and a standar
 
 ### alkali and alkali-earth
 
-The table below indicates our choices. Basically, we chose all high e- pseudopotentials except for Na where we excluded Na\_sv due to its very high cutoff (700 eV).
+The table below indicates our choices. Basically, we chose all high e- pseudopotentials except for Na where we excluded `Na_sv` due to its very high cutoff (700 eV).
 
 | element | options            | VASP   | Low elec: oxide form\_enth (exp-comp) eV per fu | High elec: oxide form\_enth (exp-comp) eV per fu | High e- conv. Stats | our choice | rem                                                                                                  |
 | ------- | ------------------ | ------ | ----------------------------------------------- | ------------------------------------------------ | ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- |
@@ -85,11 +87,11 @@ The table below shows the details on the PSP choices. All high e- PSPs have been
 
 Si, P, Cl, S will be used in their standard form (not hard) as suggested by VASP manual.
 
-The Al\_h psp was found to be definitely wrong in terms of band structure. There were "ghost" states found in the DOS.
+The `Al_h` psp was found to be definitely wrong in terms of band structure. There were "ghost" states found in the DOS.
 
-Pb is interesting as the high e- psp shows significantly higher error in formation energies. We kept the high e- psp (Pb\_d), but it might be interesting to study this a little more. One hypothesis relies on a recent result showing that lead oxide formation energies need the use of spin-orbit coupling to be accurate. [\[2\]](pseudopotentials.md#references) Our computations do not include any relativistic corrections for valence electrons. However, spin-orbit coupling is taken into account during the psp construction. This would explain why a psp with more core electrons (treated indirectly with spin-orbit coupling) would give more accurate results than a psp with fewer electrons.
+Pb is interesting as the high e- psp shows significantly higher error in formation energies. We kept the high e- psp (`Pb_d`), but it might be interesting to study this a little more. One hypothesis relies on a recent result showing that lead oxide formation energies need the use of spin-orbit coupling to be accurate. [\[2\]](pseudopotentials.md#references) Our computations do not include any relativistic corrections for valence electrons. However, spin-orbit coupling is taken into account during the psp construction. This would explain why a psp with more core electrons (treated indirectly with spin-orbit coupling) would give more accurate results than a psp with fewer electrons.
 
-Bi\_d shows a convergence problem, so the decision on Bi has been postponed to further analysis.
+`Bi_d` shows a convergence problem, so the decision on Bi has been postponed to further analysis.
 
 Finally, Po and At, while referred to in the VASP manual, are not present in the VASP PAW library.
 
@@ -117,7 +119,7 @@ These are probably the most problematic to use as pseudopotentials. Here is what
 
 In summary, the pseudopotentials can either include or not include f electrons; how accurate including them or not is depends on the nature of the bonding for each particular system (localized or not).
 
-What we found is that convergence issues are often seen for high electron psp (e.g., Pr, Nd, Sm). Also, some pseudopotentials (e.g., Er\_2, Eu\_2) freeze too many electrons and therefore have issues with oxidation states that make one of the frozen electron participate in bonding (e.g., Eu2O3, Er2O3). Finally, there is a major problem with Tb. Only Tb\_3 exists but Tb is known to also form Tb4+ compounds (e.g., TbO2). For those Tb4+ compounds, this psp is likely to be extremely wrong. There is currently no fix for this except waiting for someone to develop a PAW Tb\_4 psp.
+What we found is that convergence issues are often seen for high electron psp (e.g., Pr, Nd, Sm). Also, some pseudopotentials (e.g., `Er_2`, `Eu_2`) freeze too many electrons and therefore have issues with oxidation states that make one of the frozen electron participate in bonding (e.g., Eu2O3, Er2O3). Finally, there is a major problem with Tb. Only `Tb_3` exists but Tb is known to also form Tb4+ compounds (e.g., TbO2). For those Tb4+ compounds, this psp is likely to be extremely wrong. There is currently no fix for this except waiting for someone to develop a PAW `Tb_4` psp.
 
 | element | options          | VASP | Low elec: oxide form\_enth (exp-comp) eV per fu | High elec: oxide form\_enth (exp-comp) eV per fu | High e- conv. Stats                  | our choice | rem                                                                                                              |
 | ------- | ---------------- | ---- | ----------------------------------------------- | ------------------------------------------------ | ------------------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -141,7 +143,7 @@ What we found is that convergence issues are often seen for high electron psp (e
 
 U, Ac, Th, Pa, Np, Pu, Am
 
-Following vasp suggestion, we decided to use the standard (and not the soft) version for all those pseudopotentials.
+Following VASP suggestion, we decided to use the standard (and not the soft) version for all those pseudopotentials.
 
 ## Citation
 
