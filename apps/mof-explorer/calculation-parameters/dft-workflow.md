@@ -6,7 +6,9 @@ description: >-
 
 # DFT Workflow
 
-If you wish to run a QMOF-compatible workflow, we currently recommend using [QuAcc](https://github.com/arosen93/quacc), which has a QMOF "recipe" available at `from quacc.recipes.vasp.qmof`. The QMOF workflow can be run via the following code-block:
+If you wish to run a QMOF-compatible workflow, we currently recommend using [QuAcc](https://github.com/arosen93/quacc), which has a QMOF "recipe" available at `from quacc.recipes.vasp.qmof`.
+
+First, install QuAcc via `pip install quacc[vasp]`. The QMOF workflow can be run via the following code-block after the setup process is completed:
 
 ```python
 import covalent as ct
