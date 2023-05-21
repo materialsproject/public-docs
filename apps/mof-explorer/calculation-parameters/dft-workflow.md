@@ -6,21 +6,25 @@ description: >-
 
 # DFT Workflow
 
-If you wish to run a QMOF-compatible workflow, we currently recommend using [QuAcc](https://github.com/arosen93/quacc), which has a QMOF "recipe" available at `from quacc.recipes.vasp.qmof import QMOFRelaxJob`. The QMOF workflow can be run via the following code-block:
+If you wish to run a QMOF-compatible workflow, we currently recommend using [QuAcc](https://github.com/arosen93/quacc), which has a QMOF "recipe" available at `from quacc.recipes.vasp.qmof`. The QMOF workflow can be run via the following code-block:
 
-```
+```python
+import covalent as ct
 from ase.io import read
-from jobflow.managers.local import run_locally
-
-from quacc.recipes.vasp.qmof import QMOFRelaxJob
+from quacc.recipes.vasp.qmof import qmof_relax_job
 
 # Read a MOF CIF
 mof = read("mymof.cif")
 
 # Make a QMOF-compatible job with on-the-fly error handling
-job = QMOFRelaxJob().make(mof)
+workflow = ct.lattice(qmof_relax_job)
 
-# Run the job locally, with all output data stored in a convenient schema
-response = run_locally(job, create_folders=True)
+# Dispatch the workflow to the Covalent server
+# with the Atoms object as the input
+dispatch_id = ct.dispatch(workflow)(mof)
+
+# Fetch the result from the server, if present
+result = ct.get_result(dispatch_id)
+print(result)
 ```
 
