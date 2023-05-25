@@ -12,10 +12,8 @@ description: API query examples with the MPRester client.
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
-
     docs = mpr.summary.search(material_ids=["mp-149"], fields=["structure"])
     structure = docs[0].structure
-    
     # -- Shortcut for a single Materials Project ID:
     structure = mpr.get_structure_by_material_id("mp-149")
 ```
@@ -26,9 +24,10 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 from emmet.core.summary import HasProps
 
-with MPRester("your_api_key_here") as mpr: 
-
-    docs = mpr.summary.search(has_props = [HasProps.dielectric], fields=["material_id"])
+with MPRester("your_api_key_here") as mpr:
+    docs = mpr.summary.search(
+        has_props = [HasProps.dielectric], fields=["material_id"]
+    )
     mpids = [doc.material_id for doc in docs]
 ```
 
@@ -38,11 +37,9 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr: 
-
     docs = mpr.materials.search(material_ids=["mp-149"], fields=["calc_types"])
     task_ids = docs[0].calc_types.keys()
-    task_types = docs[0].calc_types.values()
-    
+    task_types = docs[0].calc_types.values() 
     # -- Shortcut for a single Materials Project ID:
     task_ids = mpr.get_task_ids_associated_with_material_id("mp-149")
 ```
@@ -53,8 +50,9 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(chemsys="Si-O", 
-                              fields=["material_id", "band_gap"])
+    docs = mpr.summary.search(
+        chemsys="Si-O", fields=["material_id", "band_gap"]
+    )
     mpid_bgap_dict = {doc.material_id: doc.band_gap for doc in docs}
 ```
 
@@ -64,9 +62,12 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(elements=["Si", "O"], 
-                              fields=["material_id", "band_gap"])
-    mpid_formula_dict = {doc.material_id: doc.pretty_formula for doc in docs}
+    docs = mpr.summary.search(
+        elements=["Si", "O"], fields=["material_id", "band_gap", "formula_pretty"]
+    )
+    mpid_formula_dict = {
+        doc.material_id: doc.formula_pretty for doc in docs
+    }
 ```
 
 ### Stable materials (on the GGA/GGA+U hull) with large band gaps (>3eV)
@@ -75,15 +76,15 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(band_gap=(3,None),
-                              is_stable=True, 
-                              fields=["material_id"])
+    docs = mpr.summary.search(
+        band_gap=(3, None), is_stable=True, fields=["material_id"]
+    )
     stable_mpids = [doc.material_id for doc in docs]
     
     ## -- Alternative directly using energy above hull:
-    docs = mpr.summary.search(band_gap=(3,None),
-                              energy_above_hull=(0,0),
-                              fields=["material_id"])
+    docs = mpr.summary.search(
+        band_gap=(3, None), energy_above_hull=(0, 0), fields=["material_id"]
+    )
     stable_mpids = [doc.material_id for doc in docs]
 ```
 
