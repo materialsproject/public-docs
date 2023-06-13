@@ -1,5 +1,7 @@
 ---
-description: The VASP specifics
+description: >-
+  Description of the density functional theory (DFT) parameters used in MOF
+  calculation results displayed on the Materials Project (MP) website.
 ---
 
 # DFT Parameters

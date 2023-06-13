@@ -1,3 +1,7 @@
+---
+description: Guidance for conduct within the Materials Project (MP) organization.
+---
+
 # Code of Conduct
 
 The Materials Project does not have a unified code of conduct at present since it is a joint, collaborative effort, and different aspects of the Materials Project, such as its different open-source codes, are led and maintained by different individuals at different institutions.

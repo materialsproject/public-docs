@@ -1,3 +1,7 @@
+---
+description: Methods for downloading data from the Materials Project (MP) database.
+---
+
 # How do I download the Materials Project database?
 
 The Materials Project is an open resource, with data freely available for all. This includes making its data as easy to download as possible including in bulk. Typically, downloading data manually can be slow and tedious, so we provide an API [(Application Programming Interface)](https://en.wikipedia.org/wiki/API) so that data can be downloaded using popular programming languages.

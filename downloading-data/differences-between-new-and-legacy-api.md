@@ -1,3 +1,7 @@
+---
+description: Comparison between the old (legacy) and new Materials Project (MP) APIs.
+---
+
 # Differences between new and legacy API
 
 A summary of differences between the new and legacy API can be found in the table below. For more detailed information on differences regarding the Python API client, please see the [Legacy API Users](using-the-api/legacy-api-users.md) section.
@@ -12,5 +16,5 @@ A summary of differences between the new and legacy API can be found in the tabl
 | **Data Updates**                                     | Will receive new data updates included latest and most accurate data                       | Will be frozen at database release v2021.03.13                                            |
 | **API Key**                                          | [Available here ](https://next-gen.materialsproject.org/api#api-key)                       | Available at [legacy.materialsproject.org/open](https://legacy.materialsproject.org/open) |
 | **Python client installation**                       | `pip install mp-api` (may be available in _pymatgen_ at a later date)                      | `pip install pymatgen`                                                                    |
-| **Python client import code**                        | `from mp_api import MPRester`                                                              | `from pymatgen.ext.matproj import MPRester`                                               |
+| **Python client import code**                        | `from mp_api.client import MPRester`                                                       | `from pymatgen.ext.matproj import MPRester`                                               |
 | **MPContribs integration for user contributed data** | Yes                                                                                        | No                                                                                        |

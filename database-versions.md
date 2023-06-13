@@ -1,3 +1,7 @@
+---
+description: A changelog of Materials Project (MP) database releases.
+---
+
 # Database Versions
 
 This page contains a summary of major changes for each version of the Materials Project database.
@@ -11,6 +15,10 @@ Database versions are labelled via the date they become generally available to t
 {% hint style="info" %}
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
+
+## v2022.10.28
+
+This database build incorporates Materials Project’s (R2)SCAN calculations as pre-release data. The default fields returned by the website and API will remain unchanged from the previous release at the GGA(+U) level of theory, but the (R2)SCAN data is now available for advanced users. Either see the “Pre-release Data” section of a relevant material details page, generate an R2(SCAN) phase diagram with the Phase Diagram app, or access the data via the thermo API endpoint. This database release also incorporates several new perovskite materials from a collaboration with Zachary Bare, University of Colorado.
 
 ## v2021.11.10
 

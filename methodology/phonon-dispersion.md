@@ -1,3 +1,9 @@
+---
+description: >-
+  How phonon dispersion and phonon band structures are calculated/visualized on
+  the Materials Project (MP) website.
+---
+
 # Phonon Dispersion
 
 ## Introduction
@@ -11,7 +17,7 @@ There are different methods to calculate the vibrational spectra from first-prin
 In the density functional perturbation theory formalism the derivatives of the total energy with respect to a perturbation are directly obtained from the self-consistency loop [\[1\]](phonon-dispersion.md#references) For a generic point **q** in the Brillouin zone the phonon frequencies $$\omega_{\mathbf{q},m}$$ and eigenvectors $$U_m(\mathbf{q}\kappa'\beta)$$ are obtained by solving of the generalized eigenvalue problem
 
 $$
-\sum_{\kappa'\beta}\widetilde{C}_{\kappa\alpha,\kappa'\beta}(\mathbf{q})U*m(\mathbf{q}\kappa'\beta) = M_{\kappa}\omega^2_{\mathbf{q},m}U_m(\mathbf{q}\kappa\alpha)
+\sum_{\kappa'\beta}\widetilde{C}_{\kappa\alpha,\kappa'\beta}(\mathbf{q})U_m(\mathbf{q}\kappa'\beta) = M_{\kappa}\omega^2_{\mathbf{q},m}U_m(\mathbf{q}\kappa\alpha)
 $$
 
 where $$\kappa$$ labels the atoms in the cell, $$\alpha$$ and $$\beta$$ are cartesian coordinates and $$\widetilde{C}_{\kappa\alpha,\kappa'\beta}(\mathbf{q})$$ are the interatomic force constants in reciprocal space, which are related to the second derivatives of the energy with respect to atomic displacements. These values have been obtained by performing a Fourier interpolation of those calculated on a regular grid of **q**-points obtained with DFPT.

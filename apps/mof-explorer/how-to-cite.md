@@ -9,7 +9,7 @@ description: Please appropriately cite our work if you find it useful!
 If you use the MOF Explorer in your work, please cite the following two references:
 
 1. A.S. Rosen, S.M. Iyer, D. Ray, Z. Yao, A. Aspuru-Guzik, L. Gagliardi, J.M. Notestein, R.Q. Snurr. "Machine Learning the Quantum-Chemical Properties of Metal–Organic Frameworks for Accelerated Materials Discovery", _Matter_, **4**, 1578-1597 (2021). DOI: [10.1016/j.matt.2021.02.015](https://doi.org/10.1016/j.matt.2021.02.015).
-2. A.S. Rosen, V. Fung, P. Huck, C.T. O'Donnell, M.K. Horton, D.G. Truhlar, K.A. Persson, J.M. Notestein, R.Q. Snurr. "High-Throughput Predictions of Metal–Organic Framework Electronic Properties: Theoretical Challenges, Graph Neural Networks, and Data Exploration," _ChemRxiv_ (2021). DOI: [10.26434/chemrxiv-2021-6cs91](https://doi.org/10.26434/chemrxiv-2021-6cs91).
+2. A.S. Rosen, V. Fung, P. Huck, C.T. O'Donnell, M.K. Horton, D.G. Truhlar, K.A. Persson, J.M. Notestein, R.Q. Snurr. "High-Throughput Predictions of Metal–Organic Framework Electronic Properties: Theoretical Challenges, Graph Neural Networks, and Data Exploration,"  _npj Comput. Mat.,_ **8**, 112 (2022). DOI: [10.1038/s41524-022-00796-6](https://doi.org/10.1038/s41524-022-00796-6).
 
 Ref. 1 describes the original release of the Quantum MOF (QMOF) Database, which at the time of publication consisted of PBE-computed properties for \~14,000 MOFs. This is the primary reference for the QMOF Database.
 

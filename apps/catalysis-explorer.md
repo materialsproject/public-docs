@@ -1,3 +1,0 @@
-# Catalysis Explorer
-
-To do.

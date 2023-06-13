@@ -1,3 +1,0 @@
-# Surface Energies
-
-To do.
