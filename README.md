@@ -26,6 +26,6 @@ The Materials Project is a public, collaborative project, offered free of charge
 
 ### Errors
 
-If you notice an error or omission, please let us know at [our user forum located at matsci.org/materials-project](https://matsci.org/materials-project) or directly via [feedback@materialsproject.org](mailto:feedback@materialsproject.org).
+If you notice an error or omission, please let us know at [our user forum located at matsci.org/materials-project](https://matsci.org/materials-project).
 
 The Materials Project documentation is a living document and always a work in progress.

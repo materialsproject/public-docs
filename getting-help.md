@@ -12,6 +12,4 @@ All questions are welcome here! See our category at [https://matsci.org/material
 
 ### Contact
 
-We have an email address at [feedback@materialsproject.org](mailto:feedback@materialsproject.org).
-
-Enquiries via email are always welcome, but please consider using the [forum](https://matsci.org/materials-project) first: if questions or feedback are asked in a public setting, it allows others to benefit from seeing the answer too, and allows more people to participate in the conversation.
+Please reach out to us on the [forum](https://matsci.org/materials-project): if questions or feedback are asked in a public setting, it allows others to benefit from seeing the answer too, and allows more people to participate in the conversation.
