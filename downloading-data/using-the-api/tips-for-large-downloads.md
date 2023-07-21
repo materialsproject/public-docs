@@ -2,7 +2,7 @@
 description: Tips for download large datasets from the API
 ---
 
-# Tips for large downloads
+# Tips for Large Downloads
 
 The Materials Project API imposes rate limits on requests starting at 25/second. If you are blocked by our servers, please contact **support@materialsproject.org**.&#x20;
 
