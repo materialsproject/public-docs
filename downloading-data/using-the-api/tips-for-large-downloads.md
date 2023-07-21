@@ -28,5 +28,6 @@ The Materials Project API imposes rate limits on requests starting at 25/second.
     with MPRester("your_api_key_here") as mpr:
         docs = mpr.summary.search(fields=["material_id", "volume", "elements"])
     ```
+4. **For large, long-running, or frequently duplicated queries, we ask that you make a local copy and retrieve the data using the API only once.** This will speed up your own analyses and also avoid unnecessary loads on the Materials Project servers.
 
 We are currently in the process of developing additional tools for users to download extremely large datasets more easily. If you have further questions, please contact **support@materialsproject.org** specifying in detail the issue you are facing and listing the steps you have taken to try to resolve the issue.
