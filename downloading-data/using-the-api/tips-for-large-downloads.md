@@ -13,7 +13,7 @@ The Materials Project API imposes rate limits on requests starting at 25/second.
     with MPRester("your_api_key_here") as mpr:
         docs = mpr.summary.search(material_ids=["mp-149", "mp-13", "mp-22526"])
     ```
-2.  **Use the has\_props property to find which materials have data for specific properties.** One source of wasted queries occurs when data is requested for materials that are either nonexistent or do not contain the property of interest. You should instead first determine what materials have the data you are looking for. For example, below is a query to get all of the material ID values for entries that have dielectric and density of states data:\
+2.  **Before requesting data, use the has\_props key to find which materials have data for your desired property.** One source of wasted queries occurs when data is requested for materials that are either nonexistent or do not contain the property of interest. You should instead first determine what materials have the data you are looking for. For example, below is a query to get all of the material ID values for entries that have dielectric and density of states data:\
 
 
     ```python
