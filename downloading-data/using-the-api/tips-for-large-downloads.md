@@ -1,5 +1,5 @@
 ---
-description: Tips for download large datasets from the API
+description: Tips for downloading large data sets from the API
 ---
 
 # Tips for Large Downloads
