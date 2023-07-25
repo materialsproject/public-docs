@@ -138,7 +138,7 @@ During deployment of the new v2019.11 database, there was temporary issue with g
 ## v2019.05
 
 * Introduced a new `deprecated` field to materials. By default the website and API only search for materials that are not deprecated: {“deprecated”: false}.
-* Deprecated 15,000 and added 3,600 new materials. We will be recomputing the deprecated materials to fill these spaces back up. Some of these new relaxations may end up matching current materials, so the total number of materials is not guaranteed to be the same as in V2019.02.
+* Deprecated 15,000 and added 3,600 new materials. We will be recomputing the deprecated materials to fill these spaces back up. Some of these new relaxations may end up matching current materials, so the total number of materials is not guaranteed to be the same as in V2019.02. This also affects downstream properties. Most notably, \~3k elastic tensors associated with the deprecated materials have been removed from the database and are no longer accessible.
 * Fixed an issue with sandboxes not properly building the whole hull. Previously, only the sandboxed chemical systems were being recalculated for energy\_above\_hull searches
 
 ## v2019.02
