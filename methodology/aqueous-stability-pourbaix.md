@@ -47,7 +47,11 @@ In an aqueous environment, many chemical and electrochemical reactions are enabl
 
 For all gaseous elements, the experimentally determined entropic contribution at 298 K is added to the DFT/corrected energy of the element as follows:
 
-![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.27.39.png>)
+<div align="center">
+
+<img src="../.gitbook/assets/Screen Shot 2022-07-14 at 17.27.39.png" alt="">
+
+</div>
 
 This is implemented for the following elements: O2, F2, Cl2, Br2, Hg
 
