@@ -16,7 +16,7 @@ We are in the process of providing VASP output files for our calculations in the
 
 ### parsed data
 
-The `parsed` bucket contains objects that MP generates by parsing the VASP output files. The objects form the basis for our builder pipelines which create the derived high-level data collections served through the MP API and website. All S3 objects in this bucket are serialized `pymatgen` or `emmet` python objects and stored as gzip-compressed JSON files for each MP ID (i.e. `<prefix>/<mp-id>.json.gz`).
+The [`parsed` bucket ](https://materialsproject-parsed.s3.amazonaws.com/index.html)contains objects that MP generates by parsing the VASP output files. The objects form the basis for our builder pipelines which create the derived high-level data collections served through the MP API and website. All S3 objects in this bucket are serialized `pymatgen` or `emmet` python objects and stored as gzip-compressed JSON files for each MP ID (i.e. `<prefix>/<mp-id>.json.gz`).
 
 | prefix            |  # objects  |     size    |
 | ----------------- | :---------: | :---------: |
@@ -30,7 +30,7 @@ The `parsed` bucket contains objects that MP generates by parsing the VASP outpu
 
 ### build data
 
-The `build` bucket contains the high-level derived data that comprises the source for the collections available through the [MP API](https://api.materialsproject.org/) as well as pre-built objects and images for efficient visualization on the website.
+The [`build` bucket](https://materialsproject-build.s3.amazonaws.com/index.html) contains the high-level derived data that comprises the source for the collections available through the [MP API](https://api.materialsproject.org/) as well as pre-built objects and images for efficient visualization on the website.
 
 The collections and pre-built objects are versioned by the database release date and individual documents provided as gzip-compressed JSON files. Images are stored in PNG format. Use the `ls` command for the AWS CLI to list the categories available under each prefix (see [download section](aws-opendata.md#explore-and-download-data) below).
 
