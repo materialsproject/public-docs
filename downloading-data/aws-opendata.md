@@ -44,7 +44,7 @@ The collections and pre-built objects are versioned by the database release date
 
 We eventually aim to integrate all available data into the `mp-api` python client for improved convenience and efficiency. However, all data in MP's OpenData buckets can always be downloaded directly using the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-Start by listing the contents for the bucket and prefix you're interested in, using the format
+Start by exploring the contents of the bucket you're interested in, by either navigating to the bucket's web interface (e.g. [https://materialsproject-parsed.s3.amazonaws.com/index.html](https://materialsproject-parsed.s3.amazonaws.com/index.html)) or using the CLI's `ls` command:
 
 ```sh
 aws ls --no-sign-request s3://<bucket>/<prefix>/[<version>]/
