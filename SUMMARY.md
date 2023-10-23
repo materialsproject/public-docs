@@ -12,6 +12,7 @@
 
 * [Getting Help](getting-help.md)
 * [Getting Involved](getting-involved.md)
+  * [Contributor Guide](community/getting-involved/contributor-guide.md)
   * [Potential Collaborators](getting-involved/potential-collaborators.md)
 * [Community Resources](community-resources.md)
 * [Code of Conduct](code-of-conduct.md)
@@ -56,7 +57,7 @@
   * [Related Materials](methodology/related-materials.md)
   * [Optical absorption spectra](methodology/materials-methodology/optical-absorption-spectra.md)
   * [Alloys](methodology/materials-methodology/alloys.md)
-* [Molecules Methodology](methodology/molecules-methodology/README.md)
+* [Molecules Methodology](methodology/molecules-methodology.md)
   * [Overview](methodology/molecules-methodology/overview.md)
   * [Calculation Details](methodology/molecules-methodology/calculation-details.md)
   * [Atomic Partial Charges](methodology/molecules-methodology/atomic-partial-charges.md)

@@ -8,7 +8,7 @@ The Materials Project would not be the resource it is today without the sustaine
 
 There are several ways to get involved:
 
-* If you are a software developer, you can join us on GitHub at [https://github.com/materialsproject](https://github.com/materialsproject). Improvements ("pull requests") and bug reports are welcome.
+* If you are a software developer, please refer to the [Contributor Guide](community/getting-involved/contributor-guide.md).
 * If you are a domain expert, you can join the discussion and help answer questions of less experienced users in our forum at [https://matsci.org/materials-project](https://matsci.org/materials-project).
 * If you are a domain expert, you can also notify us of errors, either in our public forum or via email at [feedback@materialsproject.org](mailto:feedback@materialsproject.org). Please check our [FAQ](frequently-asked-questions.md) first to ensure that this error is not already known; some common issues arise from a misunderstanding of the data that Materials Project offers.
 * If you generate data, either experimental or computational, you can use our contribution platform [MPContribs](mpcontribs.md) to upload and link your data to the relevant material on Materials Project. This helps us by being able to offer a more complete and helpful resource, and also helps improve the discoverability of your own research by making it available to a wider audience. All uploaded data is credited to the original authors, and will have links to the appropriate publications.
