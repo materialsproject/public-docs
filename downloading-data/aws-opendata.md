@@ -34,11 +34,11 @@ The [`build` bucket](https://materialsproject-build.s3.amazonaws.com/index.html)
 
 The collections and pre-built objects are versioned by the database release date and individual documents provided as gzip-compressed JSON files. Images are stored in PNG format. Use the `ls` command for the AWS CLI to list the categories available under each prefix (see [download section](aws-opendata.md#explore-and-download-data) below).
 
-| prefix         | version       | # objects |   size   |
-| -------------- | ------------- | :-------: | :------: |
-| `/collections` | `/2022-10-28` |   3.5 M   |  11.1 GB |
-| `/objects`     | `/2022-10-28` |     IN    | PROGRESS |
-| `/images`      | N/A           |    200k   |   58 GB  |
+| prefix         | version       | # objects |   size  |
+| -------------- | ------------- | :-------: | :-----: |
+| `/collections` | `/2022-10-28` |   3.5 M   | 11.1 GB |
+| `/objects`     | `/2022-10-28` |    289k   | 55.9 GB |
+| `/images`      | N/A           |    200k   |  58 GB  |
 
 ## Explore & Download Data
 
