@@ -57,7 +57,7 @@
   * [Related Materials](methodology/related-materials.md)
   * [Optical absorption spectra](methodology/materials-methodology/optical-absorption-spectra.md)
   * [Alloys](methodology/materials-methodology/alloys.md)
-* [Molecules Methodology](methodology/molecules-methodology.md)
+* [Molecules Methodology](methodology/molecules-methodology/README.md)
   * [Overview](methodology/molecules-methodology/overview.md)
   * [Calculation Details](methodology/molecules-methodology/calculation-details.md)
   * [Atomic Partial Charges](methodology/molecules-methodology/atomic-partial-charges.md)

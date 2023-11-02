@@ -22,13 +22,14 @@ In MPcules, we use both the physical and the chemical definitions, but for most 
 
 The original molecule dataset included in the Materials Project, developed through the Electrolyte Genome project as part of the Joint Center for Energy Storage Research (JCESR), was focused on developing next-generation electrolytes for batteries. As such, the Electrolyte Genome and the original Molecules Explorer were narrowly focused on molecular electrochemical properties.
 
-We have since expanded our molecular dataset, considering a larger set of molecules and a more diverse set of properties - not just electrochemical, but thermodynamic, electronic, vibrational, and more. Here, we primarily describe this new database, which we call the Materials Project for Molecules or "MPcules". This section mainly describes the methods used to generate the MPcules database. For further details regarding MPcules, please see our recent publication:
+We have since expanded our molecular dataset, considering a larger set of molecules and a more diverse set of properties - not just electrochemical, but thermodynamic, electronic, vibrational, and more. Here, we primarily describe this new database, which we call the Materials Project for Molecules or "MPcules". This section mainly describes the methods used to generate the MPcules database. For further details regarding MPcules, please see our recent publication:\[1]
 
-\<TODO: add reference to MPcules paper when ready>
+{% embed url="https://doi.org/10.1039/D3DD00153A" %}
 
-For information about the Electrolyte Genome project and the legacy molecules data on the Materials Project, see \[1] and \[2].
+For information about the Electrolyte Genome project and the legacy molecules data on the Materials Project, see \[2] and \[3].
 
 ## References:
 
-1. Qu, X., Jain, A., Rajput, N.N., Cheng, L., Zhang, Y., Ong, S.P., Brafman, M., Maginn, E., Curtiss, L.A. and Persson, K.A., 2015. The Electrolyte Genome project: A big data approach in battery materials discovery. _Computational Materials Science_, _103_, pp.56-67.
-2. Cheng, L., Assary, R.S., Qu, X., Jain, A., Ong, S.P., Rajput, N.N., Persson, K. and Curtiss, L.A., 2015. Accelerating electrolyte discovery for energy storage with high-throughput screening. _The journal of physical chemistry letters_, _6_(2), pp.283-291.
+1. Spotte-Smith, E.W.C., Cohen, O.A., Blau, S.M., Munro, J.M., Yang, R., Guha, R.D., Patel, H.D., Vijay, S., Huck, P., Kingsbury, R., Horton, M.K., Persson, K.A., 2023. A database of molecular properties integrated in the Materials Project. _Digital Discovery_.
+2. Qu, X., Jain, A., Rajput, N.N., Cheng, L., Zhang, Y., Ong, S.P., Brafman, M., Maginn, E., Curtiss, L.A. and Persson, K.A., 2015. The Electrolyte Genome project: A big data approach in battery materials discovery. _Computational Materials Science_, _103_, pp.56-67.
+3. Cheng, L., Assary, R.S., Qu, X., Jain, A., Ong, S.P., Rajput, N.N., Persson, K. and Curtiss, L.A., 2015. Accelerating electrolyte discovery for energy storage with high-throughput screening. _The journal of physical chemistry letters_, _6_(2), pp.283-291.
