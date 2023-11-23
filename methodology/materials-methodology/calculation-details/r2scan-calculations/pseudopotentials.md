@@ -1,10 +1,10 @@
 ---
-description: Desciption of the pseudopotentials used in the r2SCAN related calculations.
+description: Description of the pseudopotentials used in the r2SCAN related calculations.
 ---
 
 # Pseudopotentials
 
-All calculations used pseudopotentials from the “PBE PAW datasets version 54” set released in September 2015; a list of the specific POTCAR symbols used for each element is provided below. Although these pseudopotentials were developed for use with the PBE functional, their use with SCAN is common practice because no SCAN-specific pseudopotentials are available for use in VASP.
+All calculations used pseudopotentials from the "PBE PAW datasets version 54" set released in September 2015; a list of the specific POTCAR symbols used for each element is provided below. Although these pseudopotentials were developed for use with the PBE functional, their use with SCAN is common practice because no SCAN-specific pseudopotentials are available for use in VASP.
 
 | Element | POTCAR symbol |
 | ------- | ------------- |
@@ -94,7 +94,7 @@ All calculations used pseudopotentials from the “PBE PAW datasets version 54�
 | W       | W\_sv         |
 | Xe      | Xe            |
 | Y       | Y\_sv         |
-| Yb      | Yb\_2         |
+| Yb      | Yb\_3         |
 | Zn      | Zn            |
 | Zr      | Zr\_sv        |
 
