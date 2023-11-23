@@ -16,6 +16,12 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2023.11.1
+
+* Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`.&#x20;
+* Conversion electrode data added alongside existing insertion electrode data.
+* \~10k new materials added, with \~5k deprecated. This includes a temporary deprecation of all compounds containing `Yb` while they are being re-run. This is in response to pseudopotential issues identified which were providing incorrect energies.
+
 ## v2022.10.28
 
 This database build incorporates Materials Project’s (R2)SCAN calculations as pre-release data. The default fields returned by the website and API will remain unchanged from the previous release at the GGA(+U) level of theory, but the (R2)SCAN data is now available for advanced users. Either see the “Pre-release Data” section of a relevant material details page, generate an R2(SCAN) phase diagram with the Phase Diagram app, or access the data via the thermo API endpoint. This database release also incorporates several new perovskite materials from a collaboration with Zachary Bare, University of Colorado.
