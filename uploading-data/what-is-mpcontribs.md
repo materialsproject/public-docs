@@ -160,8 +160,8 @@ columns_map = {
     "energy": {"name": "energy", "unit":"eV/atom", "description": "Formation Energy"},
     "polarization": {"name": "polarization", "unit": "µC/cm²", "description": "..."}},
     "max_distance": {"name": "distance|max", "unit": "Å", "description": "..."},
-    "polar_icsd": {"name": "nonpolar.icsd", "unit": "", "description": "..."},
-    "polar_spacegroup": {"name": "nonpolar.spacegroup", "description": "..."}}
+    "polar_icsd": {"name": "polar.icsd", "unit": "", "description": "..."},
+    "polar_spacegroup": {"name": "polar.spacegroup", "description": "..."}}
 }
 columns = {col["name"]: col.get("unit") for col in columns_map.values()}
 client.init_columns(columns)
