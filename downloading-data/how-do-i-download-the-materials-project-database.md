@@ -14,7 +14,7 @@ There are several APIs offered by the Materials Project:
 
 * **The main API**, giving access to all data primarily generated or maintained by the Materials Project. This API has been in active development over 2020–2022 and is now ready for use by external users.
 * **The legacy API**, which gives access to the same category of data, and was developed over the period 2011–2020. This API is still the one used by most users but will not see the addition of new data or features.
-* **The MPContribs API**, which gives access to user-contributed data that is also accessible on the Materials Project.
+* **The** [**MPContribs API**](../mpcontribs.md), which gives access to user-contributed data that is also accessible on the Materials Project.
 
 {% content-ref url="differences-between-new-and-legacy-api.md" %}
 [differences-between-new-and-legacy-api.md](differences-between-new-and-legacy-api.md)
