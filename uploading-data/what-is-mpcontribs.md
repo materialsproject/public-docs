@@ -225,6 +225,7 @@ for record in main.to_dict("records"):
 client.submit_contributions(contributions)
 client.init_columns(columns) # shouldn't be needed but ensures all columns appear
 # client.delete_contributions()  # remove all contributions from project
+client.make_public()
 ```
 
 ### API Docs Page
