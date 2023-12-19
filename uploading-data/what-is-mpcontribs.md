@@ -145,7 +145,7 @@ structures = {
     for path in Path("structures").glob("*.cif")
 }
 attachments = defaultdict(list)
-for path in Path("test/attachments").rglob("*"):
+for path in Path("attachments").rglob("*"):
     if path.is_file():
         attachments[path.parent.name].append(path)
 ```
