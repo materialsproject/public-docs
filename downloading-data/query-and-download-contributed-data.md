@@ -9,10 +9,8 @@ description: >-
 ## Interactively
 
 {% hint style="danger" %}
-Under Construction
+Under Construction. We are working on enabling CSV/JSON download buttons for entire projects or specific queries. The downloads will also function as versioned snapshots for each project.
 {% endhint %}
-
-project download buttons, query-specific downloads, versioned snapshots
 
 ## Programmatically
 
