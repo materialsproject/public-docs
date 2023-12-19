@@ -16,7 +16,7 @@ Under Construction. We are working on creating interactive interfaces that enabl
 
 #### Quickstart
 
-[Create a project](https://contribs.materialsproject.org/contribute), install [`mpcontribs-client`](https://pypi.org/project/mpcontribs-client/), and set the `MPCONTRIBS_API_KEY` environment variable to the API key shown on the [profile page](https://profile.materialsproject.org) or your [dashboard](https://materialsproject.org/dashboard). The following code snippet outlines the general process of adding data to your project. See the next section for step-by-step instructions.
+Read the [concepts section](../mpcontribs.md#concepts), [Create a project](https://contribs.materialsproject.org/contribute), install [`mpcontribs-client`](https://pypi.org/project/mpcontribs-client/), and set the `MPCONTRIBS_API_KEY` environment variable to the API key shown on the [profile page](https://profile.materialsproject.org) or your [dashboard](https://materialsproject.org/dashboard). The following code snippet outlines the general process of adding data to your project. See the next section for step-by-step instructions.
 
 ```python
 from mpcontribs.client import Client
