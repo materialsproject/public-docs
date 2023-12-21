@@ -154,6 +154,7 @@ for path in Path("attachments").rglob("*"):
 
 * Use dot (`.`) notation to group/nest columns up to 4 levels deep. Most non-alphanumeric characters are disallowed (including underscores and spaces) to encourage better data organization by grouping columns and using short, readable, and type-able column names. Use a good description to explain column names, and use the pipe (`|`) character to indicate conditions for a column (e.g. `max`, `300K`, ...) where nesting might not be desired. Falling back on CamelCase is also an option for column naming.
 * The column unit can either be an empty string (`""`) to indicate a dimensionless number, a string representing a unit supported by [pint](https://pint.readthedocs.io/), or `None` to indicate that the column values are not numerical.
+* To remove keys from the `other` field, explicitly set those keys to `None` in`update_project()`
 
 ```python
 columns_map = {
@@ -165,6 +166,10 @@ columns_map = {
 }
 columns = {col["name"]: col.get("unit") for col in columns_map.values()}
 client.init_columns(columns)
+other = unflatten({
+    col["name"]: col["description"] for col in columns_map.values()
+}, splitter="dot")
+client.update_project({"other": other})
 ```
 
 **Prepare the list of contributions.**
