@@ -36,7 +36,7 @@ Because official MP codes are highly interdependent, their development is coordi
 
 ### External Tools and Third-Party Codes
 
-Many external or third-party developed codes are built to interoperate with the official MP codes above. An overview of these is available on the Software Ecosystem page (TODO link to [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page)
+Many external or third-party developed codes are built to interoperate with the official MP codes above. An overview of these is available on the [Software Ecosystem page](mp-community-software-ecosystem.md).
 
 ## How to Contribute
 
@@ -133,12 +133,6 @@ We suggest using `crystaltoolkit` , which we built to make it easy to create web
 Check the README file, which is displayed on the main page of each GitHub repository. We do our best to list the currently active maintainers of each repository there
 
 **TODO - can/should we make this a policy?**
-
-### I've already developed a tool that ties into the MP ecosystem. How can I let people know about it?
-
-We would love to include your tool in our list on the **TODO - link to** [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page) page!&#x20;
-
-**TODO - how would people request this? A PR? Where?**
 
 ### Getting Credit for your Work
 
