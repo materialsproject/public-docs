@@ -14,6 +14,7 @@
 * [Getting Involved](getting-involved.md)
   * [Contributor Guide](community/getting-involved/contributor-guide.md)
   * [Potential Collaborators](getting-involved/potential-collaborators.md)
+  * [MP Community Software Ecosystem](community/getting-involved/mp-community-software-ecosystem.md)
 * [Community Resources](community-resources.md)
 * [Code of Conduct](code-of-conduct.md)
 

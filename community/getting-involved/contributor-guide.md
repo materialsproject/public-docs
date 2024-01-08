@@ -1,12 +1,12 @@
 ---
-description: How to get new code into MP repos
+description: How to get new code into Materials Project repositories.
 ---
 
 # Contributor Guide
 
 ## Purpose of this Guide
 
-This guide aims to facilitate the process of contributing to any Materials Project (MP) open source repositories. It offers high-level instructions and guidelines for those who wish to contribute to MP, regardless of the size of the contribution. Whether you're fixing a bug, improving docs, or proposing a new feature, this guide is for you. All contributions are welcome and appreciated!
+This guide aims to facilitate the process of contributing to any [Materials Project (MP) open source repositories](https://github.com/materialsproject). It offers high-level instructions and guidelines for those who wish to contribute to MP, regardless of the size of the contribution. Whether you're fixing a bug, improving docs, or proposing a new feature, this guide is for you. All contributions are welcome and appreciated!
 
 This guide is a work in progress and will be updated as necessary to reflect changes in MP's practices. If you have any suggestions, don't hesitate to open an issue or a pull request!
 
@@ -36,7 +36,7 @@ Because official MP codes are highly interdependent, their development is coordi
 
 ### External Tools and Third-Party Codes
 
-Many external or third-party developed codes are built to interoperate with the official MP codes above. An overview of these is available on the Software Ecosystem page (TODO link to [Andrew Rosen](http://127.0.0.1:5000/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page)
+Many external or third-party developed codes are built to interoperate with the official MP codes above. An overview of these is available on the Software Ecosystem page (TODO link to [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page)
 
 ## How to Contribute
 
@@ -136,7 +136,7 @@ Check the README file, which is displayed on the main page of each GitHub reposi
 
 ### I've already developed a tool that ties into the MP ecosystem. How can I let people know about it?
 
-We would love to include your tool in our list on the **TODO - link to** [Andrew Rosen](http://127.0.0.1:5000/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page) page!&#x20;
+We would love to include your tool in our list on the **TODO - link to** [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page) page!&#x20;
 
 **TODO - how would people request this? A PR? Where?**
 
@@ -146,5 +146,5 @@ We value community contributions and want to do our best to provide appropriate 
 
 * Submit a PR to be added to the lists of contributors for a specific code. For example, see&#x20;
 * All MP codes support [`duecredit`](https://github.com/duecredit/duecredit/), which provides function decorators to associate publications with specific functions, classes and modules. You are welcome to include these decorators in your contributions where applicable (e.g. when you re-implement code from a paper, or use parameters from a paper, or contribute code you've created and published about). If in doubt, better to add citations than to not have them.
-* If you have developed an external tool that uses one or more MP codes, we invite you to submit it for inclusion on the **TODO - link to** [Andrew Rosen](http://127.0.0.1:5000/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page
+* If you have developed an external tool that uses one or more MP codes, we invite you to submit it for inclusion on the **TODO - link to** [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page
 * For `pymatgen` add-ons, submit a PR to be added to the [addons page](https://matsci.org/)
