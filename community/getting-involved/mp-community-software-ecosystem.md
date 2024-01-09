@@ -23,6 +23,7 @@ All listed programs must use one of the primary [Materials Project-hosted codes]
 {% endhint %}
 
 * [AMSET](https://github.com/hackingmaterials/amset): AMSET is a package for calculating electronic transport properties from first-principles calculations.
+* [automatminer](https://github.com/hackingmaterials/automatminer): An automatic engine for predicting materials properties.
 * [CHGNet](https://github.com/CederGroupHub/chgnet): Pretrained universal neural network potential for charge-informed atomistic modeling
 * [Doped](https://github.com/SMTG-Bham/doped): doped is a python package for setting up, parsing and analysing ab-initio defect calculations.
 * [IFermi](https://github.com/fermisurfaces/IFermi): Fermi surface generation, analysis and visualisation.&#x20;
@@ -44,6 +45,8 @@ All listed programs must use one of the primary [Materials Project-hosted codes]
 * [ShakeNBreak](https://github.com/SMTG-Bham/ShakeNBreak): Defect structure-searching employing chemically-guided bond distortions
 * [SMACT](https://github.com/WMD-group/SMACT): Python package to aid materials design and informatics
 * [smol](https://github.com/CederGroupHub/smol): Statistical Mechanics on Lattices
+* [sumo](https://github.com/SMTG-Bham/sumo): Heavyweight plotting tools for ab initio calculations
+* [surfaxe](https://github.com/SMTG-Bham/surfaxe): Dealing with slabs for first principles calculations of surfaces
 *   [WFacer](https://github.com/CederGroupHub/WFacer): Modulated automation of cluster expansion based on atomate2 and Jobflow
 
     \
