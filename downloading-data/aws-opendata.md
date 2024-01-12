@@ -4,11 +4,11 @@ description: MP data is also available through the AWS OpenData Program.
 
 # AWS OpenData
 
-In an effort to make data downloads much faster for our users and take pressure off our servers, we are making a growing list of our data products available through the [AWS OpenData Program](https://aws.amazon.com/opendata).
+In an effort to make our data as accessible as possible (FAIR principle) as well as significantly improve data downloads and take pressure off our servers, we are making a growing list of our data products available through the [AWS OpenData Program](https://aws.amazon.com/opendata). Also see the entries for MP-managed data on the [AWS OpenData Registry](https://registry.opendata.aws/materials-project/) or the [AWS Data Exchange](https://aws.amazon.com/marketplace/pp/prodview-hc3sh3u5ukiya).
 
 ## Overview
 
-MP data is organized in 3 buckets named `materialsproject-{raw,parsed,build}`.
+MP data is organized in 3 buckets named `materialsproject-{raw,parsed,build}`. Note that the particular organization of our data in these buckets is still in flux and can change without notice as we integrate them into our cloud infrastructure.
 
 ### raw data
 
@@ -47,13 +47,13 @@ We eventually aim to integrate all available data into the `mp-api` python clien
 Start by exploring the contents of the bucket you're interested in, by either navigating to the bucket's web interface (e.g. [https://materialsproject-parsed.s3.amazonaws.com/index.html](https://materialsproject-parsed.s3.amazonaws.com/index.html)) or using the CLI's `ls` command:
 
 ```sh
-aws ls --no-sign-request s3://<bucket>/<prefix>/[<version>]/
+aws s3 ls --no-sign-request s3://<bucket>/<prefix>/[<version>]/
 
 # examples
-aws ls --no-sign-request s3://materialsproject-parsed/
-aws ls --no-sign-request s3://materialsproject-build/
-aws ls --no-sign-request s3://materialsproject-build/collections/2022-10-28/
-aws ls --no-sign-request s3://materialsproject-build/images/
+aws s3 ls --no-sign-request s3://materialsproject-parsed/
+aws s3 ls --no-sign-request s3://materialsproject-build/
+aws s3 ls --no-sign-request s3://materialsproject-build/collections/2022-10-28/
+aws s3 ls --no-sign-request s3://materialsproject-build/images/
 ```
 
 All objects for a prefix can be downloaded, using the format
@@ -75,3 +75,5 @@ aws s3 cp --no-sign-request \
     s3://materialsproject-parsed/bandstructures/mp-1.json.gz \
     mp-bandstructures/mp-1.json.gz
 ```
+
+You can also use S3Select for more fine-grained queries of the objects in our buckets. Details to follow.
