@@ -31,8 +31,7 @@ client = Client(apikey="your-api-key-here", project="carrier_transport")
 client.available_query_params()  # print list of available query parameters
 query = {"formula__contains": "Au", "data__PF__p__value__lt": 10}
 fields = ["identifier", "formula", "data.metal", "data.S.n.value"]
-
-client.query_contributions(
+data = client.query_contributions(
     query=query, fields=fields, sort="-data.S.n.value", paginate=True
 )
 ```
@@ -42,5 +41,5 @@ By default, `paginate` is `False` which will only retrieve the first page of res
 If entire projects or large subsets of contributed data are downloaded for later use, it is often more efficient to use the `client.download_contributions()` function. It also takes a `query` as argument and downloads all results as `json.gz` files behind the scenes. Only locally missing data is downloaded when `download_contributions` is run and contributions are loaded from disk. This function always retrieves all fields included in the `data` component, so the `fields` argument is not available/needed. Additional components (i.e. `structures`, `tables`, and `attachments`) can be included in the downloads through the `include` argument:
 
 ```graphql
-client.download_contributions(query=query, include=["tables"])
+data = client.download_contributions(query=query, include=["tables"])
 ```
