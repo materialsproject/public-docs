@@ -13,10 +13,10 @@ from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     # -- Using 'search'
-    docs = mpr.summary.search(volume=(3,10))
+    docs = mpr.materials.summary.search(volume=(3,10))
     
     # -- Using '_search'
-    docs = mpr.summary._search(volume_min=3, volume_max=10)
+    docs = mpr.materials.summary._search(volume_min=3, volume_max=10)
 ```
 
 {% tabs %}
