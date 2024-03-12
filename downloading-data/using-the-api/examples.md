@@ -70,6 +70,19 @@ with MPRester("your_api_key_here") as mpr:
     }
 ```
 
+### Material IDs for all ternary oxides with the form ABC3
+
+```python
+from mp_api.client import MPRester
+
+with MPRester("your_api_key_here") as mpr:
+    docs = mpr.materials.summary.search(
+        chemsys="O-*-*", formula="ABC3",
+        fields=["material_id"]
+    )
+    mpids = [doc.material_id for doc in docs]
+```
+
 ### Stable materials (on the GGA/GGA+U hull) with large band gaps (>3eV)
 
 ```python
