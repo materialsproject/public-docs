@@ -191,15 +191,15 @@ with MPRester("your_api_key_here") as mpr:
     
     # -- GGA/GGA+U/R2SCAN mixed phase diagram
     pd = mpr.materials.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
-                                                   thermo_type=ThermoType.GGA_GGA+U_R2SCAN")
+                                                   thermo_type=ThermoType.GGA_GGA_U_R2SCAN)
     
     # -- GGA/GGA+U mixed phase diagram
     pd = mpr.materials.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
-                                                   thermo_type=ThermoType.GGA_GGA+U")
+                                                   thermo_type=ThermoType.GGA_GGA_U)
                                                    
     # -- R2SCAN only phase diagram
     pd = mpr.materials.thermo.get_phase_diagram_from_chemsys(chemsys="Li-Fe-O", 
-                                                   thermo_type=ThermoType.R2SCAN")
+                                                   thermo_type=ThermoType.R2SCAN)
    
     
 ```
