@@ -21,7 +21,8 @@ Read the [concepts section](../mpcontribs.md#concepts), [Create a project](https
 ```python
 from mpcontribs.client import Client
 client = Client(project="my_test_project")
-client.init_columns({"a": "eV", "b.c": None, "b.d": ""})
+columns = {"a": "eV", "b.c": None, "b.d": ""}
+client.init_columns(columns)
 contributions = [{
     "identifier": "mp-4",
     "data": {
@@ -33,6 +34,7 @@ contributions = [{
     "attachments": [`pathlib.Path`, `mpcontribs.client.Attachment`, ...]
 }]
 client.submit_contributions(contributions)
+client.init_columns(columns) # shouldn't be needed but ensures all columns appear
 ```
 
 #### Step-by-step instructions
