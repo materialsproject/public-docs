@@ -15,7 +15,7 @@ As an alternative, the package can also be installed from [its code repository](
 ```bash
 git clone https://github.com/materialsproject/api
 cd api
-python setup.py
+pip install -e .
 ```
 
 **An API key is needed in order to use the client.** This is a unique key provided to each Materials Project account. Your API key can be found on your [profile dashboard page](https://next-gen.materialsproject.org/dashboard) or the main [API page](https://next-gen.materialsproject.org/api) once logged in.
