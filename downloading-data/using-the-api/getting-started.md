@@ -29,12 +29,4 @@ with MPRester("your_api_key_here") as mpr:
     #do stuff with mpr...
 ```
 
-See the following sections for details on how to query different types of data.
-
-{% tabs %}
-{% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/client.py#L41-L978" %}
-MPRester client code
-{% endembed %}
-{% endtab %}
-{% endtabs %}
+See the following sections for details on how to query different types of data. Documentation for `MPRester`'s classes and methods can be found [here](https://materialsproject.github.io/api/).
