@@ -18,11 +18,3 @@ with MPRester("your_api_key_here") as mpr:
     # -- Using '_search'
     docs = mpr.materials.summary._search(volume_min=3, volume_max=10)
 ```
-
-{% tabs %}
-{% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/core/client.py#L885-L922" %}
-`_search` method
-{% endembed %}
-{% endtab %}
-{% endtabs %}

@@ -8,7 +8,7 @@ description: >-
 
 Materials Project data can be queried through a specific (list of) [**Materials Project ID(s)**](../../frequently-asked-questions.md#what-is-a-task\_id-and-what-is-a-material\_id-and-how-do-they-differ), and/or through **property filters (e.g. band gap less than 0.5 eV).**
 
-Most material property data is available as **summary data** for a specific material. **To query summary data with Materials Project IDs** the `search` method should be used:
+Most material property data is available as [**summary data**](https://materialsproject.github.io/api/\_autosummary/mp\_api.client.routes.materials.summary.html#module-mp\_api.client.routes.materials.summary) for a specific material. **To query summary data with Materials Project IDs** the `search` method should be used:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
@@ -38,7 +38,7 @@ with MPRester("your_api_key_here") as mpr:
                               band_gap=(0.5, 1.0))
 ```
 
-> **_NOTE:_**  The `available_fields` property for APIs other than **summary** is meant to refer to the data available from the endpoint, not necessarily which fields you can use to query that data with via `search()`. See the API-specific `search()` kwargs for details on which parameters can be used for filtering queries.
+> _**NOTE:**_ The `available_fields` property for APIs other than **summary** is meant to refer to the data available from the endpoint, not necessarily which fields you can use to query that data with via `search()`. See the API-specific `search()` kwargs for details on which parameters can be used for filtering queries.
 
 **Note that by default ALL available property data within `MPDataDoc` objects will be populated.** If one is only interested in a few properties, limiting what data is returned will speed up data retrieval. Pass a list of the fields you are interested in to `fields` to accomplish this. For example, if we were only interested in `material_id`, `band_gap`, and `volume` for the materials from the above query, we could instead use:
 
@@ -63,11 +63,11 @@ volume = example_doc.volume          # a volume
 example_doc.fields_not_requested     # list of unrequested fields
 ```
 
-### Other Data&#x20;
+### Other Data
 
-Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **For a complete list of endpoints see the** [**main API page on the website.**](https://next-gen.materialsproject.org/api)&#x20;
+Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **For a complete list of endpoints see the** [**main API page on the website**](https://next-gen.materialsproject.org/api) **or consult the** [**code documentation**](https://materialsproject.github.io/api)**.**
 
-For example, the `initial_structures` used in calculations producing data for a specific material can only be found in the `materials` endpoint. To obtain the `initial_structures` for `mp-149`, the same `search` function can be used:
+For example, the `initial_structures` used in calculations producing data for a specific material can only be found in the `materials` [endpoint](https://materialsproject.github.io/api/\_autosummary/mp\_api.client.routes.materials.materials.html#module-mp\_api.client.routes.materials.materials). To obtain the `initial_structures` for `mp-149`, the same `search` function can be used:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
@@ -93,16 +93,4 @@ The same querying procedure shown above can be applied to most endpoints. See [a
 
 ### Convenience Functions
 
-In addition to `search` function, there are a small number of top level convenience functions for frequently made queries. These aim to provide a simpler interface, and make use of `search` under the hood. A couple examples of common queries include obtaining the structure or density of states of a particular material. **These convenience functions are illustrated in the** [**examples section**](examples.md)**.**&#x20;
-
-{% tabs %}
-{% tab title="Relevant Code Links" %}
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/materials.py#L59-L184" %}
-Materials search method
-{% endembed %}
-
-{% embed url="https://github.com/materialsproject/api/blob/main/mp_api/client/routes/summary.py#L34-L293" %}
-Summary search method
-{% endembed %}
-{% endtab %}
-{% endtabs %}
+In addition to `search` function, there are a small number of top level convenience functions for frequently made queries. These aim to provide a simpler interface, and make use of `search` under the hood. A couple examples of common queries include obtaining the structure or density of states of a particular material. **These convenience functions are illustrated in the** [**examples section**](examples.md)**.**
