@@ -8,7 +8,7 @@ The Materials Project is an open resource, with data freely available for all. T
 
 The Materials Project API defines a standardized manner in which the Materials Project database can be accessed by its users. The API is typically used by scientific researchers who need to retrieve large amounts of data to support their research.
 
-For technical users, this is a REST API, meaning that it uses standard HTTP methods for communication, while conforming to the while conforming to the [representational state transfer](https://en.wikipedia.org/wiki/Representational\_state\_transfer) architecture style of software.
+For technical users, this is a REST API, meaning that it uses standard HTTP methods for communication, while conforming to the [representational state transfer](https://en.wikipedia.org/wiki/Representational\_state\_transfer) architecture style of software.
 
 There are several APIs offered by the Materials Project:
 
