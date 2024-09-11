@@ -224,6 +224,8 @@ for record in main.to_dict("records"):
     attms = attachments.get(identifier)
     if attms:
         contrib["attachments"].from_list(attms)
+        
+    contributions.append(contrib)
 ```
 
 **Submit the contributions and publish the project** when ready.
