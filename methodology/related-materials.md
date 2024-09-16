@@ -94,13 +94,11 @@ Another tool that is used to group materials is the [StructureMatcher](https://g
 
 ## References
 
-\[1]: N. E. R. Zimmermann, D. Winston, K. A. Persson, A. Jain, in preparation (2018)
+\[1]: Zimmermann, N. E. R. and Jain, A.,  Local structure order parameters and site fingerprints for quantification of coordination environment and crystal structure similarity, _**RSC Adv.**_, 2020,**10**, 6063-6081
 
-\[2]: 10.3389/fmats.2017.00034
+\[2]: Zimmermann NER, Horton MK, Jain A and Haranczyk M (2017) Assessing Local Structure Motifs Using Order Parameters for Motif Recognition, Interstitial Identification, and Diffusion Path Characterization. _Front. Mater._4:34. doi: 10.3389/fmats.2017.00034
 
-\[3]: H. Pan, J. Dagdelen, N. E. R. Zimmermann, A. Jain, in preparation (2018)
-
-\[4]: Pan, H., Ganose, A. M., Horton, M., Aykol, M., Persson, K. A., Zimmermann, N. E., & Jain, A. (2021). Benchmarking coordination number prediction algorithms on inorganic crystal structures. _Inorganic chemistry_, _60_(3), 1590-1603.
+\[3]: Pan, H., Ganose, A. M., Horton, M., Aykol, M., Persson, K. A., Zimmermann, N. E., & Jain, A. (2021). Benchmarking coordination number prediction algorithms on inorganic crystal structures. _Inorganic chemistry_, _60_(3), 1590-1603.
 
 ## Authors
 
