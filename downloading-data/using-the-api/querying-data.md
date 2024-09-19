@@ -12,14 +12,15 @@ Most material property data is available as [**summary data**](https://materials
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(material_ids=["mp-149", "mp-13", "mp-22526"])
+    docs = mpr.materials.summary.search(
+        material_ids=["mp-149", "mp-13", "mp-22526"]
+    )
 ```
 
 The above returns a list of `MPDataDoc` objects with data accessible through their attributes. For example, the Material ID and formula can be obtained for a particular document with:
 
 ```python
 example_doc = docs[0]
-
 mpid = example_doc.material_id
 formula = example_doc.formula_pretty
 ```
@@ -27,15 +28,16 @@ formula = example_doc.formula_pretty
 A list of available property fields can be obtained by examining one of these objects, or from the `MPRester` with:
 
 ```python
-list_of_available_fields = mpr.summary.available_fields
+list_of_available_fields = mpr.materials.summary.available_fields
 ```
 
 **To query summary data with property filters** use the `search` function as well. Filters for each of the fields in `available_fields` can be passed to it. For example, below is a query to find materials containing `Si` and `O` that have a band gap greater than `0.5 eV` but less then `1.0 eV`.
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(elements=["Si", "O"], 
-                              band_gap=(0.5, 1.0))
+    docs = mpr.materials.summary.search(
+        elements=["Si", "O"], band_gap=(0.5, 1.0)
+    )
 ```
 
 > _**NOTE:**_ The `available_fields` property for APIs other than **summary** is meant to refer to the data available from the endpoint, not necessarily which fields you can use to query that data with via `search()`. See the API-specific `search()` kwargs for details on which parameters can be used for filtering queries.
@@ -44,22 +46,19 @@ with MPRester("your_api_key_here") as mpr:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.summary.search(elements=["Si", "O"], 
-                              band_gap=(0.5, 1.0),
-                              fields=["material_id", 
-                                      "band_gap", 
-                                      "volume"])
+    docs = mpr.materials.summary.search(
+        elements=["Si", "O"], band_gap=(0.5, 1.0),
+        fields=["material_id", "band_gap", "volume"]
+    )
 ```
 
 Now, only the `material_id`, `band_gap`, and `volume` attributes of the returned `MPDataDoc` objects will be populated. A list of available fields that were not requested will be returned in the `fields_not_requested` parameter.
 
 ```python
 example_doc = docs[0]
-
 mpid = example_doc.material_id       # a Materials Project ID
 formula = example_doc.formula_pretty # a formula
 volume = example_doc.volume          # a volume
-
 example_doc.fields_not_requested     # list of unrequested fields
 ```
 
@@ -71,7 +70,9 @@ For example, the `initial_structures` used in calculations producing data for a 
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.materials.search(material_ids=["mp-149"], fields=["initial_structures"])
+    docs = mpr.materials.materials.search(
+        material_ids=["mp-149"], fields=["initial_structures"]
+    )
 
 example_doc = docs[0]
 initial_structures = example_doc.initial_structures
@@ -81,9 +82,10 @@ Below is another example which uses property filters:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.materials.search(elements=["Si", "O"], 
-                                band_gap=(0.5, 1.0),
-                                fields=["initial_structures"])
+    docs = mpr.materials.materials.search(
+        elements=["Si", "O"], band_gap=(0.5, 1.0),
+        fields=["initial_structures"]
+    )
                                               
 example_doc = docs[0]
 initial_structures = example_doc.initial_structures
