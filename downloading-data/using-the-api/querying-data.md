@@ -70,7 +70,7 @@ For example, the `initial_structures` used in calculations producing data for a 
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.materials.materials.search(
+    docs = mpr.materials.search(
         material_ids=["mp-149"], fields=["initial_structures"]
     )
 
@@ -82,8 +82,8 @@ Below is another example which uses property filters:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
-    docs = mpr.materials.materials.search(
-        elements=["Si", "O"], band_gap=(0.5, 1.0),
+    docs = mpr.materials.search(
+        elements=["Si", "O"], num_sites=(0, 10),
         fields=["initial_structures"]
     )
                                               
