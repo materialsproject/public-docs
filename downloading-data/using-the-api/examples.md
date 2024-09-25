@@ -37,7 +37,8 @@ with MPRester("your_api_key_here") as mpr:
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr: 
-    docs = mpr.materials.summary.search(material_ids=["mp-149"], fields=["calc_types"])
+    # use core rester
+    docs = mpr.materials.search(material_ids=["mp-149"], fields=["calc_types"])
     task_ids = docs[0].calc_types.keys()
     task_types = docs[0].calc_types.values() 
     # -- Shortcut for a single Materials Project ID:
@@ -155,7 +156,7 @@ with MPRester("your_api_key_here") as mpr:
 
 ## XAS
 
-### XAS for TiO2 element O K edge:&#x20;
+### XAS for TiO2 element O K edge:
 
 ```python
 from mp_api.client import MPRester
