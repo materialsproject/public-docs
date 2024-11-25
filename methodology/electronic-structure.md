@@ -14,7 +14,7 @@ We first run a static (SCF) calculation with a uniform (Monkhorst Pack or $$\Gam
 
 ### Line-mode Band Structure
 
-The line-mode NSCF calculation is run with k-points chosen along high-symmetry lines within the Brillouin zone of the material. Currently, three conventions for choosing this k-path are used, and follow the methodologies by Curtarolo et al. [\[1\]](electronic-structure.md#references), Hinuma et al. [\[2\]](electronic-structure.md#references), and Munro et al. [\[3\]](electronic-structure.md#references) Code for generating the k-paths can be found within [pymatgen](https://pymatgen.org/pymatgen.symmetry.bandstructure.html?highlight=highsymmkpath#pymatgen.symmetry.bandstructure.HighSymmKpath).
+The line-mode NSCF calculation is run with k-points chosen along high-symmetry lines within the Brillouin zone of the material. Currently, three conventions for choosing this k-path are used, and follow the methodologies by Curtarolo et al. [\[1\]](electronic-structure.md#references), Hinuma et al. [\[2\]](electronic-structure.md#references), and Munro et al. [\[3\]](electronic-structure.md#references) Code for generating the k-paths can be found within [pymatgen](https://pymatgen.org/pymatgen.symmetry.html#pymatgen.symmetry.bandstructure.HighSymmKpath).
 
 The Setyawan-Curtarolo band structure data is displayed on the website by default with full lines for spin-up and dashed lines for spin-down. For insulators, the band gap is computed according to the band structure. The nature of the gap (direct or undirect) as well as the k-points involved in the band gap transition are displayed. The VBM and CBMs are displayed for insulators as well by purple dots. Note that the website might not show all bands included in the calculation. These can be obtained by by downloaded the band structure data from the [API](../downloading-data/using-the-api/).
 
@@ -30,9 +30,9 @@ The band gap listed for a given material is chosen from one of its calculations.
 
 ## Accuracy of Band Structures
 
-**Note**: T_he term 'band gap' in this section generally refers to the fundamental gap, not the optical gap. The difference between these quantities is reported to be small in semiconductors but significant in insulators._ [\[4\]](electronic-structure.md#references)
+**Note**: &#x54;_&#x68;e term 'band gap' in this section generally refers to the fundamental gap, not the optical gap. The difference between these quantities is reported to be small in semiconductors but significant in insulators._ [\[4\]](electronic-structure.md#references)
 
-![](../.gitbook/assets/band\_gaps.png)
+![](../.gitbook/assets/band_gaps.png)
 
 &#x20;_Figure 1: Experimental versus computed band gaps for 237 compounds in an internal test. The computed gaps are underestimated by an average factor of 1.6, and the residual error even after accounting for this shift is significant (MAE of 0.6 eV). We thank M. Chan for her assistance in compiling this data._
 
