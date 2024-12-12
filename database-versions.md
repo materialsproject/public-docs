@@ -16,6 +16,19 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2024.12.12
+
+* Transition in document schemas for the `tasks`  collection:
+  * Part of forward-looking transition from `atomate` to `atomate2`workflow orchestration package
+  * Previous: `emmet.core.vasp.task_valid.TaskDocument`
+  * Current: `emmet.core.tasks.TaskDoc`
+  * Accessing fields is slightly different with `TaskDoc` (ex: each `Calculation` in `calcs_reversed` is no longer accessed like a dict, but as a `Calculation`  object), but `TaskDoc` should be fully backwards compatible with operations on `TaskDocument`.
+  * `TaskDoc` has some advantages over `TaskDocument`, such as dynamically updating `task_type`, `run_type`, and `calc_type`. This would avoid long-term errors such as noted below for certain NSCF calculations, or noted issues with incorrectly parsing r²SCAN meta-GGA calcs as  (PBE) GGA
+* 21,144 `tasks` were incorrectly assigned a `task_type` of `NSCF Uniform`  when they were really `NSCF Line.` `NSCF Uniform` tasks are used to calculate DOSes, `NSCF Line`tasks are used to generate band structure scans. These and associated properties in `materials/summary` (band gaps, DOS, etc.) have been corrected.
+* 39,374 materials were mistakenly assigned a DOS from a deprecated `NSCF Uniform` task. These have been corrected  and removed
+* The current set of 2,047 GNoME-originated materials has been deprecated in preparation for a release of about 120,000 GNoME materials
+* While the XAS data has not changed, be sure to update to the newest version of `pymatgen` to avoid issues parsing certain XAS tasks
+
 ## v2023.11.1
 
 * Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`.&#x20;
@@ -42,7 +55,7 @@ You can see details of each correction that has been applied by inspecting the `
 
 We realize that this change may be disruptive to ongoing work, and want to assure you that the historical corrections are still available in pymatgen if needed. They may be recovered by manually reprocessing `ComputedEntry` using the legacy `MaterialsProjectCompatibility` class. An example notebook demonstrating how to do this available [on matgenb 25](https://github.com/materialsvirtuallab/matgenb/blob/3dc1e275f0a9ceadc032d83d71601676530d736e/notebooks/2021-5-12-Explanation%20of%20Corrections.ipynb).
 
-Below we summarize the most significant changes associated with the new `MaterialsProject2020Compatibility` correction scheme. For complete details and documentation, please refer to [this manuscript 32](https://chemrxiv.org/articles/preprint/A\_Framework\_for\_Quantifying\_Uncertainty\_in\_DFT\_Energy\_Corrections/14593476).
+Below we summarize the most significant changes associated with the new `MaterialsProject2020Compatibility` correction scheme. For complete details and documentation, please refer to [this manuscript 32](https://chemrxiv.org/articles/preprint/A_Framework_for_Quantifying_Uncertainty_in_DFT_Energy_Corrections/14593476).
 
 **1. Refitted corrections for legacy species**\
 Corrections applied to oxygen compounds, diatomic gases, and transition metal oxides and fluorides have been refit using more up to date DFT calculations and a larger compilation of computed and experimental formation enthalpy data.
@@ -51,7 +64,7 @@ Corrections applied to oxygen compounds, diatomic gases, and transition metal ox
 We have added corrections for Br, I, Se, Si, Sb, and Te, which did not previously have energy corrections. As a result, formation energies for materials containing these species will generally be lower than they were previously.
 
 **3. Diatomic gas corrections moved to compounds**\
-Previously, corrections for H, F, Cl, and N were applied to the elements. One consequence of this was that polymorphs of H2, N2, Cl2 and F2 were _always_assigned a zero energy above hull, even if some polymorphs were higher in energy. This made interpretation of these values confusing. With this release, energy corrections are applied to the material (e.g., LiH) and not the element. This also means that unstable polymorphs of diatomic gases will now have non-zero `e_above_hull`
+Previously, corrections for H, F, Cl, and N were applied to the elements. One consequence of this was that polymorphs of H2, N2, Cl2 and F2 were _alway&#x73;_&#x61;ssigned a zero energy above hull, even if some polymorphs were higher in energy. This made interpretation of these values confusing. With this release, energy corrections are applied to the material (e.g., LiH) and not the element. This also means that unstable polymorphs of diatomic gases will now have non-zero `e_above_hull`
 
 **4. Oxidation state based corrections**\
 Our build process now estimates the likely oxidation states of each species in a material, and uses this information to intelligently apply corrections to anionic species only when their estimated oxidation state is negative. For example, in the compound `MoCl3O`, estimated oxidation states for both Cl and O are negative, so both anions receive corrections.
@@ -61,7 +74,7 @@ Our algorithms are not always successful in predicting the oxidation state. When
 If this affects your work, you can manually assign oxidation states by populating the `oxidation_states` key of the `.data` attribute of any `ComputedEntry` and then reprocessing the data using `MaterialsProject2020Compatibility`.
 
 **5. Uncertainty Quantification**\
-We now compute the estimated uncertainty associated with the energy corrections on a material. Uncertainties reflect the measured uncertainty in the underlying experimental data that we use to determine the corrections, as well as uncertainty associated with the fitting procedure itself. This information enables new methods of assessing phase stability, as described in [this manuscript 32](https://chemrxiv.org/articles/preprint/A\_Framework\_for\_Quantifying\_Uncertainty\_in\_DFT\_Energy\_Corrections/14593476)
+We now compute the estimated uncertainty associated with the energy corrections on a material. Uncertainties reflect the measured uncertainty in the underlying experimental data that we use to determine the corrections, as well as uncertainty associated with the fitting procedure itself. This information enables new methods of assessing phase stability, as described in [this manuscript 32](https://chemrxiv.org/articles/preprint/A_Framework_for_Quantifying_Uncertainty_in_DFT_Energy_Corrections/14593476)
 
 **A Note for API and MPRester Users**
 
