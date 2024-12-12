@@ -25,8 +25,13 @@ The **MPRester** client can then be imported and instantiated. It is preferred t
 ```python
 from mp_api.client import MPRester
 
+# Option One: Pass your API key directly as an argument.
 with MPRester("your_api_key_here") as mpr:
-    #do stuff with mpr...
+    # do stuff with mpr...
+
+# Option Two: Use the `PMG_MAPI_KEY` environment variable.
+# export PMG_MAPI_KEY="your_api_key_here"
+with MPRester() as mpr:
 ```
 
 See the following sections for details on how to query different types of data. Documentation for `MPRester`'s classes and methods can be found [here](https://materialsproject.github.io/api/).
