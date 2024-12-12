@@ -16,7 +16,7 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
-## v2024.12.12
+## v2024.11.14 (live since 12/12/2024 \~noon)
 
 * Transition in document schemas for the `tasks`  collection:
   * Part of forward-looking transition from `atomate` to `atomate2`workflow orchestration package
