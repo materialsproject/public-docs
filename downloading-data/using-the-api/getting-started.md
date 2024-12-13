@@ -29,8 +29,8 @@ from mp_api.client import MPRester
 with MPRester("your_api_key_here") as mpr:
     # do stuff with mpr...
 
-# Option Two: Use the `PMG_MAPI_KEY` environment variable.
-# export PMG_MAPI_KEY="your_api_key_here"
+# Option Two: Use the `MP_API_KEY` environment variable:
+# export MP_API_KEY="your_api_key_here"
 with MPRester() as mpr:
 ```
 
