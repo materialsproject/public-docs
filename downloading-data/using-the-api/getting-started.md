@@ -10,7 +10,7 @@ The **MPRester** is a Python client provided by the Materials Project for easily
 pip install mp_api
 ```
 
-As an alternative, the package can also be installed from [its code repository](https://github.com/materialsproject/api):&#x20;
+As an alternative, the package can also be installed from [its code repository](https://github.com/materialsproject/api):
 
 ```bash
 git clone https://github.com/materialsproject/api
@@ -25,12 +25,13 @@ The **MPRester** client can then be imported and instantiated. It is preferred t
 ```python
 from mp_api.client import MPRester
 
-# Option One: Pass your API key directly as an argument.
+# Option 1: Pass your API key directly as an argument.
 with MPRester("your_api_key_here") as mpr:
     # do stuff with mpr...
 
-# Option Two: Use the `MP_API_KEY` environment variable:
+# Option 2: Use the `MP_API_KEY` environment variable:
 # export MP_API_KEY="your_api_key_here"
+# Note: You can also configure your API key through pymatgen
 with MPRester() as mpr:
 ```
 
