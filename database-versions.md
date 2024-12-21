@@ -16,7 +16,35 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
-## v2024.11.14 (live since 12/12/2024 \~noon)
+## v2024.12.18
+
+This version went live on December 20th, 2024 at about 11pm Pacific.
+
+Major updates include the addition of r2SCAN calculations and improvements to thermodynamic data handling.
+
+**New Content:**
+
+* Added 15,483 GNoME-originated materials calculated using r2SCAN. We remind our users that the GNoME structures are licensed BY-NC (non-commerical purposes). Explicitly accepting theBY-NC license is now required to access the GNoME dataset in the Materials/GNoME explorers and the API. A further release of an additional \~100k GNoME materials is in preparation.
+
+**Core Changes:**
+
+* Modified the `run_type`requirement for the definition of a valid material (`emmet-core`[622f2e3](https://github.com/materialsproject/emmet/commit/622f2e3035b9bcf66bccc653af03618a0d7d84b9)):
+  * **Previously**: A material was required to have at least one `GGA(+U)`calculation
+  * **Now**: MP accepts materials with only r2SCAN calculations, as going forward MP will be prioritizing r2SCAN workflows
+  * This change restored 736 previously deprecated materials&#x20;
+
+**Thermodynamic Data Updates:**
+
+* New hierarchy for `thermo`data presentation:&#x20;
+  * Affects Materials Explorer and `MPRester().summary` endpoint&#x20;
+  * Resolves display issues on the Materials Explorer for 586 materials with valid thermodynamic data that were found to have failed to generate thermodynamic stability data using MP's [GGA/GGA+U/r2SCAN Mixing scheme](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/gga-gga+u-r2scan-mixing)
+  * These values were not passed through to the `summary` endpoint as a strict `thermo_type`of `GGA_GGA+U_R2SCAN`was required
+  * New preference order for `thermo_type:`` ``GGA_GGA+U_R2SCAN`> `r2SCAN`> `GGA_GGA+U`
+  * The `thermo_type`for a material can be found on the material's Material Detail Page under Properties in the Thermodynamic Stability tab
+
+## v2024.11.14
+
+This version went live on December 12th, 2024 around noon Pacific.
 
 * Transition in document schemas for the `tasks`  collection:
   * Part of forward-looking transition from `atomate` to `atomate2`workflow orchestration package
