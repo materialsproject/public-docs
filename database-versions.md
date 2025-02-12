@@ -16,6 +16,23 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.02.12
+
+This version went live on February 12th, 2025 at about 4pm Pacific.
+
+#### New Content
+
+* Added 1,073 ytterbium (Yb) compounds recalculated using the Yb\_3 pseudo-potential
+
+#### Electronic Structure Data Updates
+
+* Improved consistency of magnetic ordering assignment for structures in the electronic structure and summary collections
+
+#### Battery Explorer/Electrode Collection Updates
+
+* Fixed data loss issue from v2024.12.18 release, restoring missing entries in the electrodes collection as reported on [MatSci](https://matsci.org/t/what-did-the-2024-12-update-bring-to-battery-explorer/60284/1)
+* Resolved upstream builder dependencies that caused the initial data loss
+
 ## v2024.12.18
 
 This version went live on December 20th, 2024 at about 11pm Pacific.
@@ -39,7 +56,7 @@ Major updates include the addition of r2SCAN calculations and improvements to th
   * Affects Materials Explorer and `MPRester().summary` endpoint&#x20;
   * Resolves display issues on the Materials Explorer for 586 materials with valid thermodynamic data that were found to have failed to generate thermodynamic stability data using MP's [GGA/GGA+U/r2SCAN Mixing scheme](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/gga-gga+u-r2scan-mixing)
   * These values were not passed through to the `summary` endpoint as a strict `thermo_type`of `GGA_GGA+U_R2SCAN`was required
-  * New preference order for `thermo_type:`` ``GGA_GGA+U_R2SCAN`> `r2SCAN`> `GGA_GGA+U`
+  * New preference order for `thermo_type: GGA_GGA+U_R2SCAN`> `r2SCAN`> `GGA_GGA+U`
   * The `thermo_type`for a material can be found on the material's Material Detail Page under Properties in the Thermodynamic Stability tab
 
 ## v2024.11.14
