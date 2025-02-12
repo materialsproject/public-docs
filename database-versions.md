@@ -22,7 +22,8 @@ This version went live on February 12th, 2025 at about 4pm Pacific.
 
 #### New Content
 
-* Added 1,073 ytterbium (Yb) compounds recalculated using the Yb\_3 pseudo-potential
+* Added 1,073 ytterbium (Yb) materials recalculated using the Yb\_3 pseudo-potential and re-relaxed with r2SCAN
+* Added \~30 new hybrid inorganic/organic formate perovskites
 
 #### Electronic Structure Data Updates
 
