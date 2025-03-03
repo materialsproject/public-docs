@@ -16,6 +16,18 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.02.12.post
+
+This version went live on February 28th, 2025 at about 6:30pm Pacific.
+
+This is a patch release addressing localized data issues.
+
+#### Elasticity Collection Updates
+
+* Fixed an input validation error in the elasticity builder's task document processing, emmet [#767](https://github.com/materialsproject/emmet/pull/1199)
+* Resolved tensor fitting failures for 2,484 compounds (approximately 28% increase in valid tensors)
+* Reduced number of entries with unreasonable elastic moduli ([MatSci forum issue](https://matsci.org/t/unreasonable-elastic-moduli/61426))
+
 ## v2025.02.12
 
 This version went live on February 12th, 2025 at about 4pm Pacific.
