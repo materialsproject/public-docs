@@ -15,7 +15,7 @@ The similarity between two structures _i_ and _j_ is assessed on the basis of lo
 
 ## Near-neighbor finding
 
-We use a novel method called [CrystalNN](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/local\_env.py#L3751) to find near(est) neighbors in periodic structures. While the method will be introduced shortly [\[3\]](related-materials.md#references), it is already available through the python package [pymatgen](https://github.com/materialsproject/pymatgen). A benchmarking framework has been developed to evaluate CrystallNN and compare it to other near-neighbor finding algorithms [\[4\]](related-materials.md#references).
+We use a novel method called [CrystalNN](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/local_env.py#L3751) to find near(est) neighbors in periodic structures. While the method will be introduced shortly [\[3\]](related-materials.md#references), it is already available through the python package [pymatgen](https://github.com/materialsproject/pymatgen). A benchmarking framework has been developed to evaluate CrystallNN and compare it to other near-neighbor finding algorithms [\[4\]](related-materials.md#references).
 
 ## Site Fingerprints
 
@@ -90,13 +90,13 @@ with MPRester() as mpr:
 
 ## StructureMatcher
 
-Another tool that is used to group materials is the [StructureMatcher](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L292). There are multiple comparators (for example: [SpinComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L135), [ElementComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure\_matcher.py#L176), etc.) that can be used to determine how to make comparisons between structures when determining their similarity.
+Another tool that is used to group materials is the [StructureMatcher](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure_matcher.py#L292). There are multiple comparators (for example: [SpinComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure_matcher.py#L135), [ElementComparator](https://github.com/materialsproject/pymatgen/blob/master/pymatgen/analysis/structure_matcher.py#L176), etc.) that can be used to determine how to make comparisons between structures when determining their similarity.
 
 ## References
 
 \[1]: Zimmermann, N. E. R. and Jain, A.,  Local structure order parameters and site fingerprints for quantification of coordination environment and crystal structure similarity, _**RSC Adv.**_, 2020,**10**, 6063-6081
 
-\[2]: Zimmermann NER, Horton MK, Jain A and Haranczyk M (2017) Assessing Local Structure Motifs Using Order Parameters for Motif Recognition, Interstitial Identification, and Diffusion Path Characterization. _Front. Mater._4:34. doi: 10.3389/fmats.2017.00034
+\[2]: Zimmermann NER, Horton MK, Jain A and Haranczyk M (2017) Assessing Local Structure Motifs Using Order Parameters for Motif Recognition, Interstitial Identification, and Diffusion Path Characterization. _Front. Mater._&#x34;:34. doi: 10.3389/fmats.2017.00034
 
 \[3]: Pan, H., Ganose, A. M., Horton, M., Aykol, M., Persson, K. A., Zimmermann, N. E., & Jain, A. (2021). Benchmarking coordination number prediction algorithms on inorganic crystal structures. _Inorganic chemistry_, _60_(3), 1590-1603.
 

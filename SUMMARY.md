@@ -6,7 +6,7 @@
 * [Changes and Updates](changes/README.md)
   * [Database Versions](database-versions.md)
   * [Website Changelog](changes/website-changelog.md)
-* [Documentation Credit](credit.md)
+* [Documentation Credit](documentation-credit.md)
 
 ## Community
 
