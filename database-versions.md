@@ -16,6 +16,32 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.02.12.post1
+
+This version went live on March 21st, 2025 at about 12:00pm Pacific.
+
+This is a patch release addressing localized data issues.
+
+#### Property Origins field
+
+A bug was reported regarding the origins field for certain types of tasks (mp\_api [#960](https://github.com/materialsproject/api/issues/960)). The dielectric, piezoelectric, and absorption collections were affected by this bug, which was then propagated to the aggregate origins field in the summary collection.\
+\
+This bug only impacted the mapping of task IDs in the origins fields for the affected collections. No changes were made to the underlying data for these collections.
+
+#### Elasticity Collection Updates
+
+Further sanity checks were applied to deprecate additional documents (290 new deprecations) with unreasonable elastic moduli:
+
+* Any documents with elastic moduli (bulk or shear) values outside the range of -100 GPa to 800 GPa were deprecated
+* Any documents that failed either of the following elastic modulus requirements were also deprecated:
+  * KR <= KVRH <= KV
+  * GR <= GVRH <= GV
+
+A backlog issue regarding inconsistencies in how deprecated elasticity documents were displayed in the Materials Explorer interface was also addressed
+
+* Deprecated elasticity documents will no longer appear in the Materials Explorer search interface
+* The deprecated documents can still be retrieved via the mp\_api client
+
 ## v2025.02.12.post
 
 This version went live on February 28th, 2025 at about 6:30pm Pacific.
