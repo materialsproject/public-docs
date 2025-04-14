@@ -18,7 +18,7 @@ cd api
 pip install -e .
 ```
 
-**An API key is needed in order to use the client.** This is a unique key provided to each Materials Project account. Your API key can be found on your [profile dashboard page](https://next-gen.materialsproject.org/dashboard) or the main [API page](https://next-gen.materialsproject.org/api) once logged in.
+**An API key is needed in order to use the client.** This is a unique key provided to each Materials Project account. Your API key can be found on your [profile dashboard page](https://next-gen.materialsproject.org/dashboard) once logged in.
 
 The **MPRester** client can then be imported and instantiated. It is preferred to use Python's `with` context manager for session management:
 
@@ -33,6 +33,7 @@ with MPRester("your_api_key_here") as mpr:
 # export MP_API_KEY="your_api_key_here"
 # Note: You can also configure your API key through pymatgen
 with MPRester() as mpr:
+    # do stuff with mpr ...
 ```
 
 See the following sections for details on how to query different types of data. Documentation for `MPRester`'s classes and methods can be found [here](https://materialsproject.github.io/api/).

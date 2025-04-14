@@ -137,11 +137,8 @@
   * [Tips for Large Downloads](downloading-data/using-the-api/tips-for-large-downloads.md)
   * [Examples](downloading-data/using-the-api/examples.md)
   * [Advanced Usage](downloading-data/using-the-api/advanced-usage.md)
-  * [Legacy API Users](downloading-data/using-the-api/legacy-api-users.md)
-  * [Deprecated Materials](downloading-data/using-the-api/deprecated-materials.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Query and Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
-* [Troubleshooting API Issues](downloading-data/troubleshooting-api-issues.md)
 * [AWS OpenData](downloading-data/aws-opendata.md)
 
 ## Uploading Data

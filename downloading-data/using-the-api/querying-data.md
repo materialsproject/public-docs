@@ -6,9 +6,9 @@ description: >-
 
 # Querying Data
 
-Materials Project data can be queried through a specific (list of) [**Materials Project ID(s)**](../../frequently-asked-questions.md#what-is-a-task\_id-and-what-is-a-material\_id-and-how-do-they-differ), and/or through **property filters (e.g. band gap less than 0.5 eV).**
+Materials Project data can be queried through a specific (list of) [**Materials Project ID(s)**](../../frequently-asked-questions.md#what-is-a-task_id-and-what-is-a-material_id-and-how-do-they-differ), and/or through **property filters (e.g. band gap less than 0.5 eV).**
 
-Most material property data is available as [**summary data**](https://materialsproject.github.io/api/\_autosummary/mp\_api.client.routes.materials.summary.html#module-mp\_api.client.routes.materials.summary) for a specific material. **To query summary data with Materials Project IDs** the `search` method should be used:
+Most material property data is available as [**summary data**](https://materialsproject.github.io/api/_autosummary/mp_api.client.routes.materials.summary.SummaryRester.html#mp_api.client.routes.materials.summary.SummaryRester.search) for a specific material. **To query summary data with Materials Project IDs** the `search` method should be used:
 
 ```python
 with MPRester("your_api_key_here") as mpr:
@@ -31,7 +31,7 @@ A list of available property fields can be obtained by examining one of these ob
 list_of_available_fields = mpr.materials.summary.available_fields
 ```
 
-**To query summary data with property filters** use the `search` function as well. Filters for each of the fields in `available_fields` can be passed to it. For example, below is a query to find materials containing `Si` and `O` that have a band gap greater than `0.5 eV` but less then `1.0 eV`.
+**To query summary data with property filters** use the `search` function as well. For example, below is a query to find materials containing `Si` and `O` that have a band gap greater than `0.5 eV` but less then `1.0 eV`.
 
 ```python
 with MPRester("your_api_key_here") as mpr:
@@ -40,7 +40,7 @@ with MPRester("your_api_key_here") as mpr:
     )
 ```
 
-> _**NOTE:**_ The `available_fields` property for APIs other than **summary** is meant to refer to the data available from the endpoint, not necessarily which fields you can use to query that data with via `search()`. See the API-specific `search()` kwargs for details on which parameters can be used for filtering queries.
+> _**NOTE:**_ The `available_fields` attribute is meant to refer to the data available from the endpoint, not necessarily which fields you can use to query that data via `search()`. See the `search()` docstrings [the client docs](https://materialsproject.github.io/api/_autosummary/mp_api.client.routes.html) for supported arguments. The section on [Advanced Usage](advanced-usage.md) might be helpful here, too.
 
 **Note that by default ALL available property data within `MPDataDoc` objects will be populated.** If one is only interested in a few properties, limiting what data is returned will speed up data retrieval. Pass a list of the fields you are interested in to `fields` to accomplish this. For example, if we were only interested in `material_id`, `band_gap`, and `volume` for the materials from the above query, we could instead use:
 
@@ -64,9 +64,9 @@ example_doc.fields_not_requested     # list of unrequested fields
 
 ### Other Data
 
-Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **For a complete list of endpoints see the** [**main API page on the website**](https://next-gen.materialsproject.org/api) **or consult the** [**code documentation**](https://materialsproject.github.io/api)**.**
+Not all Materials Project data for a given material can be obtained from the summary API endpoint. To access the remaining data, other endpoints must be used. **Consult the** [**client docs**](https://materialsproject.github.io/api/_autosummary/mp_api.client.routes.html) **for a complete list of available endpoints/routes.**
 
-For example, the `initial_structures` used in calculations producing data for a specific material can only be found in the `materials` [endpoint](https://materialsproject.github.io/api/\_autosummary/mp\_api.client.routes.materials.materials.html#module-mp\_api.client.routes.materials.materials). To obtain the `initial_structures` for `mp-149`, the same `search` function can be used:
+For example, the `initial_structures` used in calculations producing data for a specific material can only be found in the `materials` [endpoint](https://materialsproject.github.io/api/_autosummary/mp_api.client.routes.materials.materials.html#module-mp_api.client.routes.materials.materials). To obtain the `initial_structures` for `mp-149`, the same `search` function can be used:
 
 ```python
 with MPRester("your_api_key_here") as mpr:

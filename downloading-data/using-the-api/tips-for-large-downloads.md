@@ -6,7 +6,7 @@ description: Tips for downloading large data sets from the API
 
 The Materials Project API imposes rate limits on requests starting at 25/second. Below are a few tips for downloading large datasets quickly without hitting the limit:
 
-1.  **To get data for multiple materials, pass query parameter values as lists where available**. For example, avoid looping over material ID values and using `get_data_by_id` for each individual material. Instead, pass the materials as a list in the `search` method:\
+1.  **To get data for multiple materials, pass query parameter values as lists where available**. For example, avoid looping over material ID values and instead pass the materials as a list in the `search` method:\
 
 
     ```python
@@ -30,6 +30,7 @@ The Materials Project API imposes rate limits on requests starting at 25/second.
     ```python
     with MPRester("your_api_key_here") as mpr:
         docs = mpr.materials.summary.search(
+            material_ids=["mp-149", "mp-13", "mp-22526"],
             fields=["material_id", "volume", "elements"]
         )
     ```
@@ -44,4 +45,4 @@ The Materials Project API imposes rate limits on requests starting at 25/second.
         # save docs to file ...
     ```
 
-We are currently in the process of developing additional tools for users to download extremely large datasets more easily. If you have further questions, please contact **support@materialsproject.org** specifying in detail the issue you are facing and listing the steps you have taken to try to resolve the issue.
+We are currently in the process of developing additional tools for users to download extremely large datasets more easily. If you have further questions, please consult [our forum](https://matsci.org/materials-project) for existing solutions and/or post a question specifying in detail the issue you are facing and listing the steps you have taken to try to resolve the issue.
