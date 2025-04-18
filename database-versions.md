@@ -16,6 +16,15 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.04.10
+
+This version went live on April 18th, 2025 at about 2:15pm Pacific
+
+**New Content:**
+
+* Added 30,00 GNoME-originated materials calculated using r2SCAN
+* The Kingsbury Lab at Princeton University has contributed 1133 calculations (mixture of PBEsol and rSCAN calculations)
+
 ## v2025.02.12.post1
 
 This version went live on March 21st, 2025 at about 12:00pm Pacific.
