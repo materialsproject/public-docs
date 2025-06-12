@@ -18,7 +18,7 @@ You can verify the current database version powering the website on the footer o
 
 ## v2025.06.09
 
-[This version went live on June X, 2025 at about x:xx Pacific.](#user-content-fn-1)[^1]
+This version went live on June 11, 2025 at about 10:15pm Pacific.
 
 [**New Content:**](#user-content-fn-1)[^1]
 
