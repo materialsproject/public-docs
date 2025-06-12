@@ -16,6 +16,15 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.06.09
+
+[This version went live on June X, 2025 at about x:xx Pacific.](#user-content-fn-1)[^1]
+
+[**New Content:**](#user-content-fn-1)[^1]
+
+* Migrated [schema](https://github.com/materialsproject/emmet/blob/bcc362a4e375d7a8366c6b611cd57aac672ade13/emmet-core/emmet/core/phonon.py#L805) of legacy phonon data computed with density functional perturbation theory (DFPT) for \~1,500 materials, for consistency with new phonon workflows in atomate2
+* New schema allows for efficient storage of phonon band structures and densities of states (DOSes) with parquet
+
 ## v2025.04.10
 
 This version went live on April 18th, 2025 at about 2:15pm Pacific
@@ -270,3 +279,5 @@ During deployment of the new v2019.11 database, there was temporary issue with g
 * Fixed incorrect calculation and display of polycrystalline dielectric constants
 * Fixed labeling of all materials as high-pressure. Note we’re parsing ICSD tags for this labeling so while some materials may not conventionally be considered high-pressure, a single matching ICSD entry can tag a material as such. We would love to hear comments on how we could better tag high-pressure materials
 * Begun enforcing the symmetry of the structure on piezo tensors. In general, this reduces the expected piezo value.
+
+[^1]: 
