@@ -18,6 +18,12 @@
 * [Community Resources](community-resources.md)
 * [Code of Conduct](code-of-conduct.md)
 
+***
+
+* [Collaborations](collaborations/README.md)
+  * [MatBench](collaborations/matbench.md)
+  * [MatPES](collaborations/matpes.md)
+
 ## Services
 
 * [MPContribs](mpcontribs.md)
