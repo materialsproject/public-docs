@@ -32,7 +32,7 @@ This version went live on April 18th, 2025 at about 2:15pm Pacific
 **New Content:**
 
 * Added 30,00 GNoME-originated materials calculated using r2SCAN
-* The Kingsbury Lab at Princeton University has contributed 1133 calculations (mixture of PBEsol and rSCAN calculations)
+* The Kingsbury Lab at Princeton University has contributed 1133 calculations (mixture of PBEsol and r2SCAN calculations)
 
 ## v2025.02.12.post1
 
