@@ -35,7 +35,7 @@ $$
 
 ## Structure Distance/Dissimilarity
 
-Finally, structure similarity is determined by the distance, _d_, between two structure fingerprints $$v_{i}^{struct}$$ and$$v_{j}^{struct}$$:
+Finally, structure dissimilarity is determined by the distance, _d_, between two structure fingerprints $$v_{i}^{struct}$$ and$$v_{j}^{struct}$$:
 
 $$
 d = || \mathbf{v}_{i}^\text{struct} - \mathbf{v}_{j}^\text{struct} ||
@@ -43,49 +43,64 @@ $$
 
 A small distance value indicates high similarity between two structures, whereas a large distance (>1) suggests that the structures are very dissimilar," The spinel example below gives an approximate threshold up to which **distance you can still consider two structures to be similar (0.9)**," Anything beyond 0.9 is most certainly not the same structure prototype.
 
+The following function may also be used to convert this distance metric to a similarity value between 0 and 1:
+
+$$
+s = e^{-|| \mathbf{v}_{i}^\text{struct} - \mathbf{v}_{j}^\text{struct} ||}
+$$
+
+This similariy metric, s, is positively correlated with the similarity between the structures and can be easily converted to a percentage.&#x20;
+
 ## Examples
 
-* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. $$\text{GaAs}$$ ([mp-2534](https://materialsproject.org/materials/mp-2534/)) $$ightarrow$$ _d_ = 0
-* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. rocksalt ([mp-22862](https://materiahttps/materialsproject.org/materials/mp-5827/lsproject.org/materials/mp-22862/)) $$ightarrow$$ _d_ = 3.5724
-* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. perfect $$\text{CaTiO}_3$$ perovskite ([mp-5827](https://materialsproject.org/materials/mp-5827/)) $$ightarrow$$ _d_ = 3.5540
-* Rocksalt ([mp-22862](https://materialsproject.org/materials/mp-22862/)) vs. perfect $$\text{CaTiO}_3$$ perovskite ([mp-5827](https://materialsproject.org/materials/mp-5827/)) $$ightarrow$$ _d_ = 2.7417
-* $$\text{Ca(CoS}_2\text{)}_2$$-spinel ([mvc-12728](https://materialsproject.org/materials/mvc-12728/)) vs. $$\text{Si(CdO}_2\text{)}_2$$-spinel ([mp-560842](https://materialsproject.org/materials/mp-560842/)) $$ightarrow$$ _d_ = 0.8877
+* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. $$\text{GaAs}$$ ([mp-2534](https://materialsproject.org/materials/mp-2534/)) $$\rightarrow$$ _d_ = 0
+* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. rocksalt ([mp-22862](https://materiahttps/materialsproject.org/materials/mp-5827/lsproject.org/materials/mp-22862/)) $$\rightarrow$$ _d_ = 3.5724
+* Diamond ([mp-66](https://materialsproject.org/materials/mp-66/)) vs. perfect $$\text{CaTiO}_3$$ perovskite ([mp-5827](https://materialsproject.org/materials/mp-5827/)) $$\rightarrow$$ _d_ = 3.5540
+* Rocksalt ([mp-22862](https://materialsproject.org/materials/mp-22862/)) vs. perfect $$\text{CaTiO}_3$$ perovskite ([mp-5827](https://materialsproject.org/materials/mp-5827/)) $$\rightarrow$$ _d_ = 2.7417
+* $$\text{Ca(CoS}_2\text{)}_2$$-spinel ([mp-1408976](https://next-gen.materialsproject.org/materials/mp-1408976?material_ids=mp-1408976)) vs. $$\text{Si(CdO}_2\text{)}_2$$-spinel ([mp-560842](https://materialsproject.org/materials/mp-560842/)) $$\rightarrow$$ _d_ = 0.8877
 
 Below is a python code snippet that allows you to quickly reproduce above results," You will need to install [pymatgen](https://github.com/materialsproject/pymatgen) and [matminer](https://github.com/hackingmaterials/matminer) for this to work," Both are easily accessible via the [Python Package Index](https://pypi.python.org/pypi).
 
 ```python
 import numpy as np
-from mp_api import MPRester
+from mp_api.client import MPRester
 from matminer.featurizers.site import CrystalNNFingerprint
 from matminer.featurizers.structure import SiteStatsFingerprint
 
 with MPRester() as mpr:
 
-    # Get structures.
+    # Get structures
     diamond = mpr.get_structure_by_material_id("mp-66")
     gaas = mpr.get_structure_by_material_id("mp-2534")
     rocksalt = mpr.get_structure_by_material_id("mp-22862")
     perovskite = mpr.get_structure_by_material_id("mp-5827")
-    spinel_caco2s4 = mpr.get_structure_by_material_id("mvc-12728")
+    spinel_caco2s4 = mpr.get_structure_by_material_id("mp-1408976")
     spinel_sicd2O4 = mpr.get_structure_by_material_id("mp-560842")
 
-    # Calculate structure fingerprints.
-    ssf = SiteStatsFingerprint(
-        CrystalNNFingerprint.from_preset('ops', distance_cutoffs=None, x_diff_weight=0),
-        stats=('mean', 'std_dev', 'minimum', 'maximum'))
-    v_diamond = np.array(ssf.featurize(diamond))
-    v_gaas = np.array(ssf.featurize(gaas))
-    v_rocksalt = np.array(ssf.featurize(rocksalt))
-    v_perovskite = np.array(ssf.featurize(perovskite))
-    v_spinel_caco2s4 = np.array(ssf.featurize(spinel_caco2s4))
-    v_spinel_sicd2O4 = np.array(ssf.featurize(spinel_sicd2O4))
+# Calculate structure fingerprints
+ssf = SiteStatsFingerprint(
+    CrystalNNFingerprint.from_preset('ops', distance_cutoffs=None, x_diff_weight=0),
+    stats=('mean', 'std_dev', 'minimum', 'maximum'))
+v_diamond = np.array(ssf.featurize(diamond))
+v_gaas = np.array(ssf.featurize(gaas))
+v_rocksalt = np.array(ssf.featurize(rocksalt))
+v_perovskite = np.array(ssf.featurize(perovskite))
+v_spinel_caco2s4 = np.array(ssf.featurize(spinel_caco2s4))
+v_spinel_sicd2O4 = np.array(ssf.featurize(spinel_sicd2O4))
 
-    # Print out distance between structures.
-    print('Distance between diamond and GaAs: {:.4f}'.format(np.linalg.norm(v_diamond - v_gaas)))
-    print('Distance between diamond and rocksalt: {:.4f}'.format(np.linalg.norm(v_diamond - v_rocksalt)))
-    print('Distance between diamond and perovskite: {:.4f}'.format(np.linalg.norm(v_diamond - v_perovskite)))
-    print('Distance between rocksalt and perovskite: {:.4f}'.format(np.linalg.norm(v_rocksalt - v_perovskite)))
-    print('Distance between Ca(CoS2)2-spinel and Si(CdO2)2-spinel: {:.4f}'.format(np.linalg.norm(v_spinel_caco2s4 - v_spinel_sicd2O4)))
+# Print out distance between structures
+print('Distance between diamond and GaAs: {:.4f}'.format(np.linalg.norm(v_diamond - v_gaas)))
+print('Distance between diamond and rocksalt: {:.4f}'.format(np.linalg.norm(v_diamond - v_rocksalt)))
+print('Distance between diamond and perovskite: {:.4f}'.format(np.linalg.norm(v_diamond - v_perovskite)))
+print('Distance between rocksalt and perovskite: {:.4f}'.format(np.linalg.norm(v_rocksalt - v_perovskite)))
+print('Distance between Ca(CoS2)2-spinel and Si(CdO2)2-spinel: {:.4f}'.format(np.linalg.norm(v_spinel_caco2s4 - v_spinel_sicd2O4)))
+    
+# Print out structure similarity percentages
+print('Diamond and GaAs Similarity: {:.2f}%'.format(np.exp(-np.linalg.norm(v_diamond - v_gaas)) * 100))
+print('Diamond and rocksalt Similarity: {:.2f}%'.format(np.exp(-np.linalg.norm(v_diamond - v_rocksalt)) * 100))
+print('Diamond and perovskite Similarity: {:.2f}%'.format(np.exp(-np.linalg.norm(v_diamond - v_perovskite)) * 100))
+print('Rocksalt and perovskite Similarity: {:.2f}%'.format(np.exp(-np.linalg.norm(v_rocksalt - v_perovskite)) * 100))
+print('Ca(CoS2)2-spinel and Si(CdO2)2-spinel Similarity: {:.2f}%'.format(np.exp(-np.linalg.norm(v_spinel_caco2s4 - v_spinel_sicd2O4)) * 100))
 ```
 
 ## StructureMatcher
