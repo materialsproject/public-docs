@@ -18,6 +18,29 @@ with MPRester("your_api_key_here") as mpr:
     structure = mpr.get_structure_by_material_id("mp-149")
 ```
 
+### Querying ICSD ID
+
+For structures tagged with at least one ICSD entry, the simplest way to query structure with ICSD ID is this:&#x20;
+
+```python
+from mp_api.client import MPRester
+
+with MPRester("your_api_key_here") as mpr:
+    mp_docs = mpr.materials.summary.search(fields=["material_id", "database_IDs"])
+
+icsd_to_mpid = {}
+for mp_doc in mp_docs:
+    mpid = str(mp_doc.material_id)
+    for icsd_id in mp_doc.database_IDs.get("icsd",[]):
+        if icsd_id not in icsd_to_mpid:
+            icsd_to_mpid[icsd_id] = []
+        icsd_to_mpid[icsd_id].append(mpid)
+```
+
+Then the keys of `icsd_to_mpid` will be all ICSD IDs currently matched to at least one entry in MP, and its values  will be the MP IDs which structurally match to that ICSD ID.
+
+> _**NOTE:**_ Not every ICSD entry is included in Materials Project - some of them we’re working on adding, others we do not plan to add (e.g., if they are disordered with a complex disordering ratio). Furthermore, many ICSD entries can structure match to the same MP ID. We use the pymatgen StructureMatcher to determine structural similarity
+
 ### Find all Materials Project IDs for entries with dielectric data
 
 ```python
@@ -133,6 +156,24 @@ with MPRester("your_api_key_here") as mpr:
     dos = mpr.get_dos_by_material_id("mp-149")
 ```
 
+### VASP Input Parameters (e.g. NELECT)
+
+To get `NELECT` (or any other INCAR parameters) is by getting the `task_id` for the entry and then querying the tasks endpoint directly.
+
+Suppose you want the value of `NELECT` for `mp-149`:
+
+```python
+from mp_api.client import MPRester
+
+with MPRester("your_api_key_here") as mpr:
+    summary_doc = mpr.materials.summary.search(material_ids=["mp-149"])[0]
+    task_id = str(summary_doc.dos.total["1"].task_id)
+    task_doc = mpr.materials.tasks.search(task_ids=[task_id])[0]
+print(task_doc.input.parameters.get("NELECT"))
+```
+
+> _**NOTE:**_ Be aware that the POTCARs we use in calculations has changed over time, the value of `NELECT` _is not always determined_ by the `MPRelaxSet`. If a DOS was generated with r2SCAN, then the right set to use is `MPScanRelaxSet`. The method above circumvents this by letting you directly retrieve the value of `NELECT`.
+
 ## Phonons
 
 ### Band structure for silicon (mp-149)
@@ -225,4 +266,8 @@ with MPRester() as mpr:
     si_o_prov = mpr.materials.provenance.search(material_ids=si_o_mpids)
 amorphous_si_o2_mpids = [doc.material_id.string for doc in si_o_prov if any("amorphous" in tag.lower() for tag in doc.tags)]
 ```
+
+
+
+
 
