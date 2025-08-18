@@ -267,7 +267,53 @@ with MPRester() as mpr:
 amorphous_si_o2_mpids = [doc.material_id.string for doc in si_o_prov if any("amorphous" in tag.lower() for tag in doc.tags)]
 ```
 
+### Searching by Crystal Prototype: Example — Perovskite
 
+Searching for materials by formula (e.g., `ABC₃`) can miss important structure types like perovskites with non-standard formulas (e.g., Cs₃Sb₂I₉). Instead, you can search by **crystal prototype** or structure type using the Materials Project API.
+
+#### 1. Search by Robocrystallographer Description
+
+Robocrystallographer generates structure descriptions, including the term "perovskite" for relevant materials:
+
+{% code overflow="wrap" %}
+```python
+from mp_api.client import MPRester with MPRester() as mpr: robocrys_docs = mpr.materials.robocrys.search(keywords=["perovskite"]) robo_perov_mpids = [doc.material_id for doc inrobocrys_docs]
+```
+{% endcode %}
+
+***
+
+#### 2. Search by Provenance Tags and Remarks
+
+Many materials have "perovskite" in their tags or remarks fields:
+
+{% code overflow="wrap" %}
+```python
+with MPRester(use_document_model=False) as mpr: prov_docs = mpr.materials.provenance.search( fields=["material_id", "remarks", "tags"] ) possible_perov = [ doc.get("material_id") for doc in prov_docs ifany("perovskite" in tag.lower() for tag in (doc.get("tags", []) + doc.get("remarks", []))) ]
+```
+{% endcode %}
+
+***
+
+#### 3. Combine Results
+
+Merge both lists for a comprehensive set of perovskite materials:
+
+{% code overflow="wrap" %}
+```python
+likely_perovskite_mpids = list(set(robo_perov_mpids).union(possible_perov))
+```
+{% endcode %}
+
+***
+
+#### 4. (Optional) Fetch Structures
+
+{% code overflow="wrap" %}
+```python
+with MPRester() as mpr: summaries = mpr.materials.summary.search( material_ids=likely_perovskite_mpids[:10] ) for summary in summaries: print(summary.formula_pretty, summary.material_id)
+```
+{% endcode %}
 
 
 

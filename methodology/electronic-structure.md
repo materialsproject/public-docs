@@ -30,7 +30,7 @@ The band gap listed for a given material is chosen from one of its calculations.
 
 ## Accuracy of Band Structures
 
-**Note**: &#x54;_&#x68;e term 'band gap' in this section generally refers to the fundamental gap, not the optical gap. The difference between these quantities is reported to be small in semiconductors but significant in insulators._ [\[4\]](electronic-structure.md#references)
+**Note**: _The term 'band gap' in this section generally refers to the fundamental gap, not the optical gap. The difference between these quantities is reported to be small in semiconductors but significant in insulators._ [\[4\]](electronic-structure.md#references)
 
 ![](../.gitbook/assets/band_gaps.png)
 
@@ -53,6 +53,100 @@ The errors in DFT band gaps obtained from calculations can be attributed to two 
 Of these contributions, (2) is generally regarded to be the larger and more important contribution to the error. It can be partly addressed by a variety of techniques such as the GW approximation but typically at high computational cost.
 
 Strategies to improve band gap prediction at moderate to low computational cost now been developed by several groups, including Chan and Ceder (delta-sol),[\[6\]](electronic-structure.md#references) Heyd et al. (hybrid functionals) [\[7\]](electronic-structure.md#references), and Setyawan et al. (empirical fits) [\[8\]](electronic-structure.md#references). (These references also contain additional data regarding the accuracy of DFT band gaps.) The Materials Project may employ such methods in the future in order to more quantitatively predict band gaps. For the moment, computed band gaps should be interpreted with caution.
+
+## Materials Displaying Unexpected 0 eV Band Gaps
+
+It is not uncommon to encounter materials on the Materials Project (MP) that are listed with a 0 eV band gap, even though they were previously reported (or expected) to be insulating or semiconducting. This can be surprising, especially if earlier MP data or published literature reported a nonzero band gap.
+
+This section explains **why a 0 eV band gap might appear**, how to **determine if it is limitation of DFT, or a parsing artifact**, and how to **recompute or validate the band gap** using MP’s API and `pymatgen`.
+
+***
+
+### Why Might a Material Show a 0 eV Band Gap?
+
+* **Database and Parsing Updates:** The MP team periodically improves its calculation methods and data parsing. In late 2024, MP changed how band gaps are parsed and stored, leading to updates in many materials’ reported band gaps.
+* **Task Type Corrections:** Sometimes, the type of calculation used to determine the band gap is corrected in the database, which can change the reported value.
+* **Ambiguities in Band Edge Detection:** Automated methods for detecting the conduction band minimum (CBM) and valence band maximum (VBM) can sometimes fail, especially for materials with complex density of states (DOS) near the Fermi level.
+* **Numerical Artifacts:** In rare cases, bugs or limitations in the parsing code or the underlying calculation (e.g., Fermi level placement) can result in an incorrect 0 eV gap.
+
+***
+
+### How to Check if a 0 eV gap is from DFT or a parsing artifact
+
+#### 1. Look Up the Material’s Calculation Tasks
+
+Check which calculation (task) was used to determine the band gap. The MP API provides task IDs for band structure and DOS calculations.
+
+{% code overflow="wrap" %}
+```python
+from mp_api.client import MPRester
+
+with MPRester() as mpr:
+    summ_doc = mpr.materials.summary.search(material_ids=["mp-1211100"])[0]
+
+print("Band structure task:", getattr(summ_doc.bandstructure, "latimer_munro", None)) 
+print("DOS task:", getattr(summ_doc.dos, "latimer_munro", None))
+```
+{% endcode %}
+
+#### 2. Recompute the Band Gap from DOS
+
+The most robust way to check the band gap is to recompute it from the DOS:
+
+{% code overflow="wrap" %}
+```python
+from mp_api.client import MPRester
+
+with MPRester() as mpr:
+    dos = mpr.materials.electronic_structure_dos.get_dos_from_task_id('mp-1776854') 
+print("Band gap from DOS:", dos.get_gap()) # Output: e.g., 5.84 eV
+```
+{% endcode %}
+
+#### 3. Recompute the Band Gap from Band Structure
+
+In some cases, the band structure object may have an incorrect Fermi level. You can reconstruct it using the VBM from the DOS:
+
+{% code overflow="wrap" %}
+```python
+from mp_api.client import MPRester
+
+from pymatgen.electronic_structure.bandstructure import BandStructure
+
+with MPRester() as mpr:
+    band_struct = mpr.materials.electronic_structure_bandstructure.get_bandstructure_from_task_id("mp-1776854")
+    dos =  mpr.materials.electronic_structure_dos.get_dos_from_task_id("mp-1776854")
+ 
+cbm, vbm = dos.get_cbm_vbm()
+
+bs_corrected = BandStructure( [k.frac_coords for k in bs.kpoints], band_struct.bands, band_struct.lattice_rec, vbm, band_struct.labels_dict, structure=band_struct.structure )
+
+print("Band gap from corrected band structure:", bs_corrected.get_gap()) # Output: e.g., ~6.14 eV
+```
+{% endcode %}
+
+***
+
+### Common Causes and Solutions
+
+| Cause                             | What to Do                                      |
+| --------------------------------- | ----------------------------------------------- |
+| **Physical Metal/Semimetal**      | 0 eV is correct                                 |
+| **Parsing Artifact or Bug**       | Recompute from DOS or band structure (see code) |
+| **Database Update/Method Change** | Check release notes/changelog                   |
+| **Missing Calculations/Data**     | Data may not be available for this material     |
+
+***
+
+### Additional Notes
+
+* Not all materials have band structure or DOS data available. If the API returns `None` for these, the calculation has not been performed.
+* As of now, the raw VASP output files are not publicly available, but the MP team is working on making these accessible.
+* For more details, see the [Materials Project changelog](https://next-gen.materialsproject.org/changelog)
+
+***
+
+**If you continue to see unexpected 0 eV band gaps, or if you have evidence that a material should be insulating, consider reporting the issue on the** [**Materials Project forum**](https://matsci.org/)**.**
 
 ## Citation
 
