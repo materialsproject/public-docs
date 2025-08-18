@@ -44,6 +44,7 @@
     * [Energy Corrections](methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/README.md)
       * [Anion and GGA/GGA+U Mixing](methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/anion-and-gga-gga+u-mixing.md)
       * [GGA/GGA+U/r2SCAN Mixing](methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/gga-gga+u-r2scan-mixing.md)
+      * [Adding Energy Corrections to Custom Entries](methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/adding-energy-corrections-to-custom-entries.md)
     * [Phase Diagrams (PDs)](methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds.md)
     * [Chemical Potential Diagrams (CPDs)](methodology/materials-methodology/thermodynamic-stability/chemical-potential-diagrams-cpds.md)
     * [Finite Temperature Estimation](methodology/materials-methodology/thermodynamic-stability/finite-temperature-estimation.md)

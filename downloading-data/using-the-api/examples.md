@@ -204,3 +204,25 @@ with MPRester("your_api_key_here") as mpr:
    
     
 ```
+
+## Querying amorphous materials
+
+There are some caveats with representing amorphous structures as small ordered unit cells, and the resulting structures may be phase separated or not representative of a true amorphous phase. Nevertheless, the Materials Project has "amorphous" entries for some compositions, which can be queried and filtered.\
+\
+The following is an example of how to obtain the Materials Project IDs for all SiO2 "amorphous" solids:
+
+```python
+from mp_api.client import MPRester
+from pymatgen.core import Composition
+
+target_composition = Composition({"Si": 1, "O": 2})
+with MPRester() as mpr:
+    si_o_mpids = [
+        doc.material_id
+        for doc in mpr.materials.search(chemsys="Si-O", fields = ["material_id","composition_reduced"])
+        if doc.composition_reduced == target_composition
+    ]
+    si_o_prov = mpr.materials.provenance.search(material_ids=si_o_mpids)
+amorphous_si_o2_mpids = [doc.material_id.string for doc in si_o_prov if any("amorphous" in tag.lower() for tag in doc.tags)]
+```
+
