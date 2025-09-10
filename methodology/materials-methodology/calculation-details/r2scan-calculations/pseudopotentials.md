@@ -48,7 +48,7 @@ All calculations used pseudopotentials from the "PBE PAW datasets version 54" se
 | Kr      | Kr            |
 | La      | La            |
 | Li      | Li\_sv        |
-| Lu      | Lu            |
+| Lu      | Lu\_3         |
 | Mg      | Mg\_pv        |
 | Mn      | Mn\_pv        |
 | Mo      | Mo\_pv        |
