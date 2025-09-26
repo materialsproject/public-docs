@@ -16,6 +16,17 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2025.09.25
+
+This version went live on Sept. 25, 2025 at about 5:30pm Pacific
+
+#### Insertion Electrode Collection Corrections
+
+Fixed filtering errors that incorrectly excluded GGA+U entries and included r2SCAN entries when building the insertion electrode collection. These corrections:
+
+* Added \~1,200  insertion electrode documents
+* Ensured all data in the collection now comes from the same thermodynamic hull (GGA\_GGA+U)
+
 ## v2025.06.09
 
 This version went live on June 11, 2025 at about 10:15pm Pacific.
