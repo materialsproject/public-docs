@@ -10,9 +10,9 @@ The Battery Explorer app, just like the Materials Explorer app, provides a searc
 
 On the left tab on the app, users can choose to filter query results by composition and working ion,  as well as battery properties such as average voltage or capacity.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-07-14 at 2.16.42 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-07-14 at 2.16.42 PM.png>)
 
-![](<../../../.gitbook/assets/Screen Shot 2022-07-14 at 2.17.30 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-07-14 at 2.17.30 PM.png>)
 
 ### Visualization Viewer
 
