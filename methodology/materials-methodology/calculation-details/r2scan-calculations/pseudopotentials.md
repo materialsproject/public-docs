@@ -4,7 +4,7 @@ description: Description of the pseudopotentials used in the r2SCAN related calc
 
 # Pseudopotentials
 
-All calculations used pseudopotentials from the "PBE PAW datasets version 54" set released in September 2015; a list of the specific POTCAR symbols used for each element is provided below. Although these pseudopotentials were developed for use with the PBE functional, their use with SCAN is common practice because no SCAN-specific pseudopotentials are available for use in VASP. These POTCARs are selected in the \[MPScanRelaxSet]\([https://github.com/materialsproject/pymatgen/blob/bd29947130c497af7e25888bed7016bf898bed2c/src/pymatgen/io/vasp/MPSCANRelaxSet.yaml#L31](https://github.com/materialsproject/pymatgen/blob/bd29947130c497af7e25888bed7016bf898bed2c/src/pymatgen/io/vasp/MPSCANRelaxSet.yaml#L31)) in pymatgen.
+All calculations used pseudopotentials from the "PBE PAW datasets version 54" set released in September 2015; a list of the specific POTCAR symbols used for each element is provided below. Although these pseudopotentials were developed for use with the PBE functional, their use with SCAN is common practice because no SCAN-specific pseudopotentials are available for use in VASP. These POTCARs are selected in the [MPScanRelaxSet](https://github.com/materialsproject/pymatgen/blob/bd29947130c497af7e25888bed7016bf898bed2c/src/pymatgen/io/vasp/MPSCANRelaxSet.yaml#L31) in pymatgen.
 
 | Element | TITEL                     |
 | ------- | ------------------------- |
