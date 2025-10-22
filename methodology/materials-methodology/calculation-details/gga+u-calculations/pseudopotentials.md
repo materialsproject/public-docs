@@ -24,7 +24,9 @@ Finally, as we had energies for elements and binary oxides, we compared binary o
 
 ### Summary
 
-The PBE GGA and PBE+U calculations in the Materials Project use older pseudopotentials, some of which are no longer distributed by VASP. In particular, the Li, Pd, Gd, Ge, Eu, Na, Ce POTCARs, from a 2006 release, are no longer distributed by VASP. The rest of the POTCARs listed below come from a [2010 release](https://vasp.at/wiki/Available_pseudopotentials#LDA_\(2010\),_PW91_\(2006\)_and_PBE_\(2010\)_PAW_potentials) which is still distributed by VASP. These POTCARs are selected by the [MPRelaxSet](https://github.com/materialsproject/pymatgen/blob/821893487db356bc4d2b5414de592c2abc32a261/src/pymatgen/io/vasp/MPRelaxSet.yaml#L84) in pymatgen.
+The PBE GGA and PBE+U calculations in the Materials Project use older pseudopotentials, some of which are no longer distributed by VASP. In particular, the Ce, Eu, Gd, Ge, Li, Mg, and Na POTCARs come from a pre-March 2002 release, and are no longer distributed by VASP. The rest of the POTCARs listed below can be approximated by the POTCARs in[ the PBE 2010 release](https://vasp.at/wiki/Available_pseudopotentials#LDA_\(2010\),_PW91_\(2006\)_and_PBE_\(2010\)_PAW_potentials), which is still distributed by VASP.
+
+These POTCARs are selected by the [MPRelaxSet](https://github.com/materialsproject/pymatgen/blob/821893487db356bc4d2b5414de592c2abc32a261/src/pymatgen/io/vasp/MPRelaxSet.yaml#L84) in pymatgen.
 
 | Element | TITEL                     |
 | ------- | ------------------------- |
