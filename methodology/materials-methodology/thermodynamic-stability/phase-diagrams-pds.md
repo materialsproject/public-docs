@@ -52,7 +52,7 @@ For systems comprising primarily of condensed phases, the $$PV$$ term can be neg
 
 #### Evaluating thermodynamic stability
 
-![Figure 2: Illustration of various thermodynamic stability metrics, reproduced from Bartel \[1\].](../../../.gitbook/assets/10853\_2022\_6915\_Fig1\_HTML.webp)
+![Figure 2: Illustration of various thermodynamic stability metrics, reproduced from Bartel \[1\].](../../../.gitbook/assets/10853_2022_6915_Fig1_HTML.webp)
 
 _Figure 2_ is an example of a calculated binary A-X phase diagram at 0 K and 0 atm. Binary phase diagrams show the complete convex hull for the system, where the y-axis is the formation energy per atom and the x-axis is the composition.
 
@@ -138,7 +138,7 @@ with MPRester("your_api_key") as mpr:
 
 \[2] V. Raghavan, Fe-Li-O Phase Diagram, ASM Alloy Phase Diagrams Center, P. Villars, editor-in-chief; H. Okamoto and K. Cenzual, section editors; [http://www1.asminternational.org/AsmEnterprise/APD](http://www1.asminternational.org/AsmEnterprise/APD), ASM International, Materials Park, OH, 2006.&#x20;
 
-\[3]: [https://dx.doi.org/10.1145/235815.235821](https://dx.doi.org/10.1145/235815.235821)
+\[3] C. Bradford Barber, David P. Dobkin, and H. Huhdanpaa, ACM Trans. Mathematical Software (TOMS), vol. 22, pp. 469 - 483, yr. 1996. ([DOI](https://dx.doi.org/10.1145/235815.235821))
 
 \[4] Kingsbury, R.S., Rosen, A.S., Gupta, A.S. _et al._ A flexible and scalable scheme for mixing computed formation energies from different levels of theory. _npj Comput Mater_ 8, 195 (2022). [https://doi.org/10.1038/s41524-022-00881-w](https://doi.org/10.1038/s41524-022-00881-w)
 
