@@ -87,7 +87,7 @@ Matminer is developed by the [Hacking Materials group](https://hackingmaterials.
 
 Automatminer is developed by the [Hacking Materials group](https://hackingmaterials.lbl.gov), led by Alex Dunn.
 
-### References:
+## References:
 
 \[1] A. Dunn, Q. Wang, A. Ganose, D. Dopp, and A. Jain, npj Computational Materials 6 (2020) ([DOI](https://doi.org/10.1038/s41524-020-00406-3))
 

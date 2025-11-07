@@ -4,7 +4,7 @@ description: With Janosh Riebesell of Alpha Lee's and Kristin Persson's groups
 
 # Matbench Discovery
 
-[Matbench Discovery](https://matbench-discovery.materialsproject.org/) is a platform and framework for evaluation for machine learning models simulating high-throughput materials discovery. See its documentation for an overview of the methods used to assess ML models.
+[Matbench Discovery](https://matbench-discovery.materialsproject.org/) is a platform and framework for evaluation for machine learning models simulating high-throughput materials discovery. See its documentation and paper \[1] for an overview of the methods used to assess ML models.
 
 ## References
 

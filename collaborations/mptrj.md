@@ -4,7 +4,7 @@ The Materials Project contains a large set of relaxation data across its entire 
 
 The collected dataset is called _MPtrj_ in the [CHGNet](https://chgnet.lbl.gov/)  \[1]. Subsets of MPtrj were used in the earlier universal machine learning interatomic potentials (MLIPs) [M3GNet](https://matgl.ai/) \[2] and later ones such as MACE-MP-0 \[3].
 
-The original MPtrj dataset is hosted on MPContribs ([explorer](https://next-gen.materialsproject.org/contribs/projects/MPtrj_2022_9)) ([bulk download](https://s3.us-east-1.amazonaws.com/materialsproject-contribs/MPtrj_2022_9/MPtrj-2022.9_full.parquet)) with a parquet format bulk download. An example notebook for working with parquet data is also [available](https://s3.us-east-1.amazonaws.com/materialsproject-contribs/MatPES_2025_1/working_with_parquet_data.ipynb).
+**\[WIP]** The original MPtrj dataset is hosted on MPContribs ([explorer](https://next-gen.materialsproject.org/contribs/projects/MPtrj_2022_9)) ([bulk download](https://s3.us-east-1.amazonaws.com/materialsproject-contribs/MPtrj_2022_9/MPtrj-2022.9_full.parquet)) with a parquet format bulk download. An example notebook for working with parquet data is also [available](https://s3.us-east-1.amazonaws.com/materialsproject-contribs/MatPES_2025_1/working_with_parquet_data.ipynb).
 
 ### References
 

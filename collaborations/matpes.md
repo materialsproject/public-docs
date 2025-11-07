@@ -18,7 +18,7 @@ The full dataset can be[ downloaded from MPContribs](https://materialsproject-co
 
 In a similar vein, Kuner _et al._ \[2] sought to expand both the size and chemistries chosen in an r<sup>2</sup>SCAN dataset, and used an active learning method to explore under-sampled regions of the potential energy surface. The resultant Materials Project active learning of off-equilibrium structures (MP-ALOE) dataset contains \~900,000 r<sup>2</sup>SCAN calculations which are compatible with MatPES.
 
-MP-ALOE will similarly be available on MPContribs (explorer) (bulk download). \[TBD]
+**\[WIP]** MP-ALOE will similarly be available on MPContribs (explorer) (bulk download).
 
 ## References:
 
