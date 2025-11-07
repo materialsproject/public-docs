@@ -283,7 +283,7 @@ from mp_api.client import MPRester
 from pymatgen.core import Composition
 
 target_composition = Composition({"Si": 1, "O": 2})
-with MPRester() as mpr:
+with MPRester("your_api_key_here") as mpr:
     si_o_mpids = [
         doc.material_id
         for doc in mpr.materials.search(chemsys="Si-O", fields = ["material_id","composition_reduced"])
@@ -303,7 +303,10 @@ Robocrystallographer generates structure descriptions, including the term "perov
 
 {% code overflow="wrap" %}
 ```python
-from mp_api.client import MPRester with MPRester() as mpr: robocrys_docs = mpr.materials.robocrys.search(keywords=["perovskite"]) robo_perov_mpids = [doc.material_id for doc inrobocrys_docs]
+from mp_api.client import MPRester
+with MPRester("your_api_key_here") as mpr:
+    robocrys_docs = mpr.materials.robocrys.search(keywords=["perovskite"])
+robo_perov_mpids = [doc.material_id for doc in robocrys_docs])
 ```
 {% endcode %}
 
@@ -315,7 +318,11 @@ Many materials have "perovskite" in their tags or remarks fields:
 
 {% code overflow="wrap" %}
 ```python
-with MPRester(use_document_model=False) as mpr: prov_docs = mpr.materials.provenance.search( fields=["material_id", "remarks", "tags"] ) possible_perov = [ doc.get("material_id") for doc in prov_docs ifany("perovskite" in tag.lower() for tag in (doc.get("tags", []) + doc.get("remarks", []))) ]
+with MPRester("your_api_key_here",use_document_model=False) as mpr:
+    prov_docs = mpr.materials.provenance.search( fields=["material_id", "remarks", "tags"] ) possible_perov = [
+    doc.get("material_id") for doc in prov_docs
+    if any("perovskite" in tag.lower() for tag in (doc.get("tags", []) + doc.get("remarks", []))) 
+]
 ```
 {% endcode %}
 
@@ -335,11 +342,27 @@ likely_perovskite_mpids = list(set(robo_perov_mpids).union(possible_perov))
 
 #### 4. (Optional) Fetch Structures
 
-{% code overflow="wrap" %}
+<pre class="language-python" data-overflow="wrap"><code class="lang-python">with MPRester("your_api_key_here") as mpr:
+    summaries = mpr.materials.summary.search(material_ids=likely_perovskite_mpids)
+<strong>for summary in summaries:
+</strong><strong>    print(summary.formula_pretty, summary.material_id)
+</strong></code></pre>
+
+## Querying specialized calculations like DFPT
+
+MP contains specialized calculations to compute various materials properties. Sometimes it's of interest to find those calculations. A full list of valid such "task types" are given in our builder software, [emmet](https://github.com/materialsproject/emmet/blob/6b2b8492edfcab6e81f29b5eda1eb938d0724160/emmet-core/emmet/core/vasp/calc_types/enums.py#L87).
+
+**DFPT outputs and data only exist for parts of our database.** The following code snippet will take only relevant task (single DFT calculation) data from our database and check to see if it’s a DFPT calculation:&#x20;
+
 ```python
-with MPRester() as mpr: summaries = mpr.materials.summary.search( material_ids=likely_perovskite_mpids[:10] ) for summary in summaries: print(summary.formula_pretty, summary.material_id)
+from mp_api.client import MPRester
+
+with MPRester("your_api_key_here",use_document_model=False,monty_decode=False) as mpr:
+    tasks = mpr.materials.tasks.search(fields=["task_id","task_type"])
+    
+dfpt_tasks = {
+    task["task_id"] for task in tasks if task["task_type"] in {"DFPT", "DFPT Dielectric"}
+}
 ```
-{% endcode %}
 
-
-
+`dfpt_tasks` will contain a set of task IDs which you can then query like `mpr.materials.tasks.search(task_ids=dfpt_tasks)`
