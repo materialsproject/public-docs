@@ -366,3 +366,87 @@ dfpt_tasks = {
 ```
 
 `dfpt_tasks` will contain a set of task IDs which you can then query like `mpr.materials.tasks.search(task_ids=dfpt_tasks)`
+
+### Identifying Materials with Specific Structural Dimensionalities
+
+Though the Materials Project does not store structure dimension as a formal property, it is possible to  categorize entries by their structure dimension (1D, 2D, and 3D) by parsing [robocrystallographer](https://hackingmaterials.lbl.gov/robocrystallographer/index.html) analyses, which are generated for most materials in the Materials Project.
+
+#### Finding Materials by Dimension in a Chemical System
+
+Here's an example for the Mo-S system. Note how separate queries are used to retrieve material documents and robocrystallographer entries. These two entities must be associated with each other manually.
+
+```python
+from mp_api.client import MPRester
+
+chemsys = "Mo-S"
+with MPRester("your_api_key") as mpr:
+    mat_docs = mpr.materials.search(chemsys=chemsys, fields=["material_id","structure"])
+    robo_docs = mpr.materials.robocrys.search_docs(material_ids=[doc.material_id for doc in mat_docs])
+
+mpid_to_structure = {doc.material_id.string: doc.structure for doc in mat_docs}
+structures_by_dim = {"1D": {}, "2D": {}, "3D": {}}
+int_to_word = {1: "one", 2: "two"}
+
+for doc in robo_docs:
+    for i in range(1, 3):
+        if f"{int_to_word[i]}-dimensional" in doc.description.lower():
+            dim = i
+            break
+        else:
+            dim = 3
+    structures_by_dim[f"{dim}D"][doc.material_id.string] = {
+        "structure": mpid_to_structure[doc.material_id.string],
+        "description": doc.description,
+    }
+```
+
+#### Searching for All Dimensional Forms
+
+To find chemical systems with materials existing in all three forms (1D, 2D, and 3D):
+
+```python
+from mp_api.client import MPRester
+from collections import defaultdict
+
+with MPRester("your_api_key") as mpr:
+    mat_docs = mpr.materials.search(fields=['composition', 'material_id'])
+    robo_docs = mpr.materials.robocrys.search_docs()
+
+description_by_mpid = {doc.material_id: doc.description for doc in robo_docs}
+formula_to_mpids = defaultdict(list)
+
+for doc in mat_docs:
+    formula = doc.composition.reduced_formula
+    mpid = doc.material_id
+    formula_to_mpids[formula].append(mpid)
+
+mpid_to_dim = {}
+int_to_word = {1: "one", 2: "two"}
+
+for mpid, desc in description_by_mpid.items():
+    for i in range(1, 3):
+        if f"{int_to_word[i]}-dimensional" in desc.lower():
+            mpid_to_dim[mpid] = f"{i}D"
+            break
+        else:
+            mpid_to_dim[mpid] = "Other"
+
+results = {}
+for formula, mpids in formula_to_mpids.items():
+    dim_to_mpids = {"1D": [], "2D": [], "Other": []}
+    for mpid in mpids:
+        if mpid in mpid_to_dim:
+            dim = mpid_to_dim[mpid]
+            dim_to_mpids[dim].append(mpid)
+    if all(dim_to_mpids[d] for d in ["1D", "2D", "Other"]):
+        results[formula] = dim_to_mpids
+
+for i, (formula, dims) in enumerate(results.items(), 1):
+    print(f"{i}- Chemical system: {formula}")
+    for dim in ["1D", "2D", "Other"]:
+        mpids = dims[dim]
+        print(f"   - {len(mpids)} {dim} structures:")
+        for mpid in mpids:
+            print(f"       - {mpid}")
+    print()
+```
