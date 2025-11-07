@@ -20,9 +20,11 @@
 
 ***
 
-* [Collaborations](collaborations/README.md)
+* [ML / AI applications](collaborations/README.md)
   * [MatBench](collaborations/matbench.md)
-  * [MatPES](collaborations/matpes.md)
+  * [Matbench Discovery](collaborations/matbench-discovery.md)
+  * [MPtrj](collaborations/mptrj.md)
+  * [r2SCAN datasets](collaborations/matpes.md)
 
 ## Services
 
