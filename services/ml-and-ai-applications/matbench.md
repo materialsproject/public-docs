@@ -19,7 +19,7 @@ consistent techniques, it is an ideal source of training and benchmarking data.
 
 [Matbench](https://matbench.materialsproject.org) is a Materials Project effort offering diverse datasets available specifically for training, benchmarking, and evaluating machine learning models. These datasets aim to fill a similar purpose within the materials science field as ImageNet did for the development of computer vision algorithms. These Matbench datasets have been [curated, cleaned and standardized](https://doi.org/10.1038/s41524-020-00406-3) specifically for ML applications.
 
-<figure><img src="../.gitbook/assets/matbench_logo_with_text.png" alt="" width="254"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/matbench_logo_with_text.png" alt="" width="254"><figcaption></figcaption></figure>
 
 Matbench consists of data sourced both from the Materials Project and also from external sources with:
 
@@ -28,7 +28,7 @@ Matbench consists of data sourced both from the Materials Project and also from 
 * Data with and without structural information
 * A variety of electronic, thermal, thermodynamic, and mechanical properties
 
-<figure><img src="../.gitbook/assets/datasets_breakdown.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/datasets_breakdown.png" alt="" width="375"><figcaption></figcaption></figure>
 
 The datasets are available through a variety of means:
 
@@ -55,7 +55,7 @@ Along with the [leaderboard](https://matbench.materialsproject.org/), the matben
 * [Per-task leaderboards](https://matbench.materialsproject.org/Leaderboards%20Per-Task/matbench_v0.1_matbench_dielectric/) for non-general purpose or specialized algorithms
 * Full citation info and statistics for all submissions
 
-<figure><img src="../.gitbook/assets/matbench_comp.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/matbench_comp.png" alt="" width="563"><figcaption></figcaption></figure>
 
 See [this dedicated site](https://matbench.materialsproject.org) for more information on the leaderboard and the current best-performing algorithms.
 
@@ -73,9 +73,9 @@ others developed externally.
 * access to MatBench datasets and other datasets
 * create your own datasets with access to multiple online repositories, such as Materials Project, AFLOW, and the Materials Data Facility
 
-<figure><img src="../.gitbook/assets/mm_pipe.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mm_pipe.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/mm_featurization (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mm_featurization (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Matminer is developed by the [Hacking Materials group](https://hackingmaterials.lbl.gov).
 
@@ -83,7 +83,7 @@ Matminer is developed by the [Hacking Materials group](https://hackingmaterials.
 
 [Automatminer](https://hackingmaterials.lbl.gov/automatminer/) is a fully-automatic engine for predicting materials properties. It automatically determines the appropriate feature sets to apply, generates features and applies feature reduction routines, and searches a large space of ML models and hyperparameters to determine the optimal machine learning pipeline for the problem. Automatminer can be trained and deployed entirely without human tuning, and requires as few as 10 lines of code to train a full pipeline.
 
-<figure><img src="../.gitbook/assets/amm_pipe (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/amm_pipe (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Automatminer is developed by the [Hacking Materials group](https://hackingmaterials.lbl.gov), led by Alex Dunn.
 

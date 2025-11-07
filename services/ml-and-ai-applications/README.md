@@ -4,7 +4,7 @@ description: >-
   collaborators' data and tools can help with the development of new ML methods.
 ---
 
-# ML / AI applications
+# ML & AI applications
 
 _These pages are under active development as we improve the quality of our documentation on ML applications and ML-dataset accessibility._
 

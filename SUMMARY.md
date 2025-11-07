@@ -18,17 +18,14 @@
 * [Community Resources](community-resources.md)
 * [Code of Conduct](code-of-conduct.md)
 
-***
-
-* [ML / AI applications](collaborations/README.md)
-  * [MatBench](collaborations/matbench.md)
-  * [Matbench Discovery](collaborations/matbench-discovery.md)
-  * [MPtrj](collaborations/mptrj.md)
-  * [r2SCAN datasets](collaborations/matpes.md)
-
 ## Services
 
 * [MPContribs](mpcontribs.md)
+* [ML & AI applications](services/ml-and-ai-applications/README.md)
+  * [MatBench](services/ml-and-ai-applications/matbench.md)
+  * [Matbench Discovery](services/ml-and-ai-applications/matbench-discovery.md)
+  * [MPtrj](services/ml-and-ai-applications/mptrj.md)
+  * [r2SCAN datasets](services/ml-and-ai-applications/matpes.md)
 
 ## Methodology
 
