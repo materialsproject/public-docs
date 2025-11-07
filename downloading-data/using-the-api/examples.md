@@ -154,6 +154,12 @@ from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     dos = mpr.get_dos_by_material_id("mp-149")
+    
+# Use pymatgen's features to normalize the DOS
+normalized_dos = dos.get_normalized()
+
+# or use the associated structure in the DOS
+norm_vol = dos.structure.volume
 ```
 
 ### VASP Input Parameters (e.g. NELECT)
@@ -173,6 +179,26 @@ print(task_doc.input.parameters.get("NELECT"))
 ```
 
 > _**NOTE:**_ Be aware that the POTCARs we use in calculations has changed over time, the value of `NELECT` _is not always determined_ by the `MPRelaxSet`. If a DOS was generated with r2SCAN, then the right set to use is `MPScanRelaxSet`. The method above circumvents this by letting you directly retrieve the value of `NELECT`.
+
+### Get task-id associated with DOS (mp-149)
+
+The task-id can indicate what functional was used to generate the DOS.
+
+```psl
+with MPRester() as mpr:
+    # get all electronic structure info:
+    estruct_doc = mpr.materials.electronic_structure.search(material_ids=["mp-149"])[0]
+
+    # Inspect task IDs associated with the electronic structure document
+    print(f"DOS task ID = {estruct_doc.dos.total['1'].task_id}")
+    print(f"Band structure task ID = {estruct_doc.task_id}")
+
+    # Retrieve the task corresponding to the electronic DOS:
+    dos_task = mpr.materials.tasks.search(task_ids=[estruct_doc.dos.total["1"].task_id])[0]
+
+print(dos_task.task_id,dos_task.calc_type)
+
+```
 
 ## Phonons
 
