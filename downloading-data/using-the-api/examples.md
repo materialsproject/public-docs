@@ -194,7 +194,7 @@ with MPRester() as mpr:
     print(f"Band structure task ID = {estruct_doc.task_id}")
 
     # Retrieve the task corresponding to the electronic DOS:
-    dos_task = mpr.materials.tasks.search(task_ids=[estruct_doc.dos.total["1"].task_id])[0]
+    dos_task = mpr.materials.tasks.search(task_ids=[estruct_doc.dos.total[Spin.up].task_id])[0]
 
 print(dos_task.task_id,dos_task.calc_type)
 
