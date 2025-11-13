@@ -169,11 +169,12 @@ To get `NELECT` (or any other INCAR parameters) is by getting the `task_id` for 
 Suppose you want the value of `NELECT` for `mp-149`:
 
 ```python
+from pymatgen.electronic_structure.core import Spin
 from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr:
     summary_doc = mpr.materials.summary.search(material_ids=["mp-149"])[0]
-    task_id = str(summary_doc.dos.total["1"].task_id)
+    task_id = str(summary_doc.dos.total[Spin.up].task_id)
     task_doc = mpr.materials.tasks.search(task_ids=[task_id])[0]
 print(task_doc.input.parameters.get("NELECT"))
 ```
@@ -185,12 +186,14 @@ print(task_doc.input.parameters.get("NELECT"))
 The task-id can indicate what functional was used to generate the DOS.
 
 ```psl
+from pymatgen.electronic_structure.core import Spin
+
 with MPRester() as mpr:
     # get all electronic structure info:
     estruct_doc = mpr.materials.electronic_structure.search(material_ids=["mp-149"])[0]
 
     # Inspect task IDs associated with the electronic structure document
-    print(f"DOS task ID = {estruct_doc.dos.total['1'].task_id}")
+    print(f"DOS task ID = {estruct_doc.dos.total[Spin.up].task_id}")
     print(f"Band structure task ID = {estruct_doc.task_id}")
 
     # Retrieve the task corresponding to the electronic DOS:
