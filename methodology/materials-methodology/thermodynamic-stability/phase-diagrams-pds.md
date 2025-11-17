@@ -22,7 +22,7 @@ This section will discuss how to construct phase diagrams from DFT-calculated en
 
 The formation energy, $$\Delta E_f$$, is the energy change upon reacting to form a phase of interest from its constituent components. The components typically used are the constituent elements. For a phase composed of $$N$$ components indexed by $$i$$, the formation energy can be calculated as follows:
 
-$$\Delta E_f  = E - \sum_i^N{n_i\mu_i}$$
+$$\Delta E_f = E - \sum_i^N{n_i\mu_i}$$
 
 where $$E$$ is the total energy of the phase of interest, $$n_i$$is the total number of moles of component $$i$$, and $$\mu_i$$ is the total energy of component $$i$$. **Note** that $$\mu_i$$is often referred to as the chemical potential of the component, however, this is only rigorously true when working with Gibbs free energies, $$G$$.
 
@@ -31,7 +31,7 @@ where $$E$$ is the total energy of the phase of interest, $$n_i$$is the total nu
 
 For barium titanate, BaTiO$$_3$$, the formation energy would be calculated as:
 
-$$\Delta E_f (BaTiO_3) = E(BaTiO_3) - 1*\mu_{Ba} - 1*\mu_{Ti} - 3*\mu_{O}$$&#x20;
+$$\Delta E_f (BaTiO_3) = E(BaTiO_3) - 1*\mu_{Ba} - 1*\mu_{Ti} - 3*\mu_{O}$$
 {% endhint %}
 
 Typically, formation energies are **normalized** on a per-atom basis by dividing by the number of atoms in 1 mole of formula. For example, for BaTiO$$_3$$, the normalized per-atom formation energy would be calculated by dividing the $$E_f$$ above by _5 atoms._
@@ -66,11 +66,11 @@ For grand potential phase diagrams, further approximations are made as to the en
 
 ## Code (pymatgen)
 
-While the Materials Project website has a phase diagram app ([https://materialsproject.org/phasediagram](https://materialsproject.org/phasediagram)), and `PhaseDiagram` objects can also be obtained directly from the API ([#phase-diagram](../../../downloading-data/using-the-api/examples.md#phase-diagram "mention")), two code snippets are provided below that show how to use the API and pymatgen to construct and plot your own phase diagrams with Python.&#x20;
+While the Materials Project website has a phase diagram app ([https://materialsproject.org/phasediagram](https://materialsproject.org/phasediagram)), and `PhaseDiagram` objects can also be obtained directly from the API ([#phase-diagram](../../../downloading-data/using-the-api/examples.md#phase-diagram "mention")), two code snippets are provided below that show how to use the API and pymatgen to construct and plot your own phase diagrams with Python.
 
 #### GGA/GGA+U
 
-Constructing mixed GGA/GGA+U phase diagrams **can be done directly with the corrected `ComputedStructureEntry` objects from the API.**&#x20;
+Constructing mixed GGA/GGA+U phase diagrams **can be done directly with the corrected `ComputedStructureEntry` objects from the API.**
 
 ```python
 from mp_api.client import MPRester
@@ -90,9 +90,9 @@ with MPRester("your_api_key") as mpr:
 
 #### GGA/GGA+U/R2SCAN
 
-Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API for a given material is from its home chemical system phase diagram (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).&#x20;
+Constructing a mixed GGA/GGA+U/R2SCAN phase diagram **requires corrections to be reapplied locally.** This is because the corrected `ComputedStructureEntry` object obtained from the thermodynamic data endpoint of the API for a given material is from its home chemical system phase diagram (i.e. `Si-O` for SiO2, or `Li-Fe-O` for Li2FeO3).
 
-**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams of different chemical systems.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.&#x20;
+**Unlike the previous GGA/GGA+U only mixing scheme, the updated scheme does not guarantee the same correction to an entry in phase diagrams of different chemical systems.** In other words, the energy correction applied to the entry for silicon (mp-149) in the Si-O phase diagram is not guaranteed to be the same for the one in the Si-O-P phase diagram.
 
 For more details on the correction scheme and its logic, see the [Energy Corrections](thermodynamic-stability/) section or the original publication [\[4\]](phase-diagrams-pds.md#references).
 
@@ -121,13 +121,13 @@ with MPRester("your_api_key") as mpr:
 ## Citations
 
 {% hint style="info" %}
-### Methodology (I)
+#### Methodology (I)
 
 [S. P. Ong, L. Wang, B. Kang, G. Ceder., The Li-Fe-P-O2 Phase Diagram from First Principles Calculations, Chemistry of Materials, vol. 20, Mar. 2008, pp. 1798-1807.](https://doi.org/10.1021/cm702327g)
 {% endhint %}
 
 {% hint style="info" %}
-### Methodology (II)
+#### Methodology (II)
 
 [S.P. Ong, A. Jain, G. Hautier, B. Kang, and G. Ceder, Thermal stabilities of delithiated olivine MPO4 (M=Fe, Mn) cathodes investigated using first principles calculations, Electrochemistry Communications, vol. 12, 2010, pp. 427-430](https://doi.org/10.1016/j.elecom.2010.01.010).
 {% endhint %}
@@ -136,9 +136,8 @@ with MPRester("your_api_key") as mpr:
 
 \[1] Bartel, C.J. Review of computational approaches to predict the thermodynamic stability of inorganic solids. _J Mater Sci_ **57,** 10475–10498 (2022).[ https://doi.org/10.1007/s10853-022-06915-4](https://doi.org/10.1007/s10853-022-06915-4)
 
-\[2] V. Raghavan, Fe-Li-O Phase Diagram, ASM Alloy Phase Diagrams Center, P. Villars, editor-in-chief; H. Okamoto and K. Cenzual, section editors; [http://www1.asminternational.org/AsmEnterprise/APD](http://www1.asminternational.org/AsmEnterprise/APD), ASM International, Materials Park, OH, 2006.&#x20;
+\[2] V. Raghavan, Fe-Li-O Phase Diagram, ASM Alloy Phase Diagrams Center, P. Villars, editor-in-chief; H. Okamoto and K. Cenzual, section editors; [http://www1.asminternational.org/AsmEnterprise/APD](http://www1.asminternational.org/AsmEnterprise/APD), ASM International, Materials Park, OH, 2006.
 
 \[3] C. Bradford Barber, David P. Dobkin, and H. Huhdanpaa, ACM Trans. Mathematical Software (TOMS), vol. 22, pp. 469 - 483, yr. 1996. ([DOI](https://dx.doi.org/10.1145/235815.235821))
 
 \[4] Kingsbury, R.S., Rosen, A.S., Gupta, A.S. _et al._ A flexible and scalable scheme for mixing computed formation energies from different levels of theory. _npj Comput Mater_ 8, 195 (2022). [https://doi.org/10.1038/s41524-022-00881-w](https://doi.org/10.1038/s41524-022-00881-w)
-

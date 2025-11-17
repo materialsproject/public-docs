@@ -28,10 +28,9 @@ Briefly, for each ion, a reference solid is chosen, and the correction term is c
 
 For an aqueous ion i at standard state conditions (e.g., room temperature, atmospheric pressure, and 10^−6 M concentration) using a representative solid s, we define the chemical potential as:
 
-\
+\\
 
-
-![Figure 1: Schematic to reference experimental aqueous ion energies to DFT data](../.gitbook/assets/free\_energy.png)
+![Figure 1: Schematic to reference experimental aqueous ion energies to DFT data](../.gitbook/assets/free_energy.png)
 
 ![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.26.35.png>)
 
@@ -47,11 +46,7 @@ In an aqueous environment, many chemical and electrochemical reactions are enabl
 
 For all gaseous elements, the experimentally determined entropic contribution at 298 K is added to the DFT/corrected energy of the element as follows:
 
-<div align="center">
-
-<img src="../.gitbook/assets/Screen Shot 2022-07-14 at 17.27.39.png" alt="">
-
-</div>
+<div align="center"><img src="../.gitbook/assets/Screen Shot 2022-07-14 at 17.27.39.png" alt=""></div>
 
 This is implemented for the following elements: O2, F2, Cl2, Br2, Hg
 
@@ -59,7 +54,7 @@ This is implemented for the following elements: O2, F2, Cl2, Br2, Hg
 
 In an aqueous environment, O2 and H2 in their gaseous states are in equilibrium with water through the reaction
 
-![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.32.45 (2).png>)
+![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.32.45 (1).png>)
 
 Hence, the hydrogen energy is corrected such that the experimental free energy of formation of H2O is reproduced.
 
@@ -91,17 +86,17 @@ This section briefly demonstrates an elemental Pourbaix diagram, a multi-element
 
 Figure 2 shows the elemental Pourbaix diagram for Fe. The default concentration of ions is 10−8 M, but can be varied using the "Concentration" slider above the diagram.
 
-![Figure 2: Pourbaix diagram for elemental Fe.](../.gitbook/assets/Fe\_pourbaix.png)
+![Figure 2: Pourbaix diagram for elemental Fe.](../.gitbook/assets/Fe_pourbaix.png)
 
 The two orange lines are the hydrogen reduction line, and the line denoting water oxidation to O2. These are clearly labeled in Figure 3. These lines show the stability region of H2O. For example, water is unstable below the H2 line, and so, hydrogen gas evolves at the cathode at conditions below this line. Similarly, above the O2 line, oxygen gas is evolved at the anode.
 
-![Figure 3: Orange lines are the water oxidation and reduction lines in the Pourbaix diagram.](../.gitbook/assets/Fe\_Lines\_marked.png)
+![Figure 3: Orange lines are the water oxidation and reduction lines in the Pourbaix diagram.](../.gitbook/assets/Fe_Lines_marked.png)
 
 ### Multi-elemental Pourbaix diagram
 
 The stability of multiple-elements in aqueous environments is predicted using multi-elemental Pourbaix diagrams like the one shown in Figure 4. The composition slider bar can be seen above the plot. Here, the small white bar separating the two colors can be clicked on and dragged to change the ratio of Fe to Cr. This may, or may not have any effect on the Pourbaix diagram. More information about how multi-elemental Pourbaix diagrams vary as a function of composition can be found elsewhere.\[[3](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-3-e21700c5589a153a93175166fc253adf)]
 
-![Figure 4: Multi-elemental Fe-Cr Pourbaix diagram at a composition of 18% Cr, 82% Fe.](../.gitbook/assets/FeCr\_pourbaix.png)
+![Figure 4: Multi-elemental Fe-Cr Pourbaix diagram at a composition of 18% Cr, 82% Fe.](../.gitbook/assets/FeCr_pourbaix.png)
 
 For an n-element diagram, there are n coexisting phases. Note that these can be any mixture of solid, and aqueous phases. So, for the two-element diagram shown in Figure 4, there are two coexisting phases in each domain. As mentioned above, domains shaded blue indicate purely solid domains. For multi-elemental diagrams, shaded domains indicate those in which purely solid phases coexist.
 
@@ -109,7 +104,7 @@ For an n-element diagram, there are n coexisting phases. Note that these can be 
 
 Figure 5 shows the Gibbs free energy of Fe2O3, as a scatter plot, superimposed over the Pourbaix diagram of Fe. For a material with more than one non H and O elements, the ratio of these elements is fixed to the ratio of elements of the material but the concentration of ions can be varied similar to the single- and multi-element Pourbaix diagrams.
 
-![Figure 5: Electrochemical stability map of Fe2O3 (mp-24972).](../.gitbook/assets/Fe2O3\_stability\_map.png)
+![Figure 5: Electrochemical stability map of Fe2O3 (mp-24972).](../.gitbook/assets/Fe2O3_stability_map.png)
 
 A color bar is shown above the electrochemical stability maps. Note that Gibbs free energies larger than 1 eV/atom are not marked in the map. Stable and unstable phase energies can be found in the table to the right of the electrochemical stability map.
 
@@ -117,8 +112,7 @@ A color bar is shown above the electrochemical stability maps. Note that Gibbs f
 
 The free energies of ions in the aqueous phase have been taken from standard references/recent publications. The acronyms which show up on the tool-tips associated with the aqueous ions, and their corresponding references are as follows.
 
-NBS Tables: NBS Thermodynamic tables.[4](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-4-e21700c5589a153a93175166fc253adf) M. Pourbaix (1974): Atlas of Electrochemical Equilibria in Aqueous Solutions. [5](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-5-e21700c5589a153a93175166fc253adf) Barin Knacke Kubaschewski: Thermochemical Properties of Inorganic Substances [6](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-6-e21700c5589a153a93175166fc253adf) Barner and Scheuerman (1978): Handbook of thermochemical data for compounds and aqueous species [7](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-7-e21700c5589a153a93175166fc253adf) Beverskog and Puigdomenech (1997): Beverskog and Puigdomenech, Corr. Sci. (1997) [8](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-8-e21700c5589a153a93175166fc253adf)\
-
+NBS Tables: NBS Thermodynamic tables.[4](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-4-e21700c5589a153a93175166fc253adf) M. Pourbaix (1974): Atlas of Electrochemical Equilibria in Aqueous Solutions. [5](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-5-e21700c5589a153a93175166fc253adf) Barin Knacke Kubaschewski: Thermochemical Properties of Inorganic Substances [6](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-6-e21700c5589a153a93175166fc253adf) Barner and Scheuerman (1978): Handbook of thermochemical data for compounds and aqueous species [7](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-7-e21700c5589a153a93175166fc253adf) Beverskog and Puigdomenech (1997): Beverskog and Puigdomenech, Corr. Sci. (1997) [8](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fn-8-e21700c5589a153a93175166fc253adf)\\
 
 ## Authors
 
@@ -140,6 +134,6 @@ Eric Sivonxay
 6. Thermochemical Properties of Inorganic Substances, I. Barin, O. Knacke, and O. Kubaschewski, Springer-Verlag, Berlin (1977) [↩](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-6-e21700c5589a153a93175166fc253adf)
 7. Handbook of thermochemical data for compounds and aqueous species, H. E. Barner, and R. V. Scheuerman, Wiley, New York, 1978 [↩](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-7-e21700c5589a153a93175166fc253adf)
 8. Revised Pourbaix diagrams for Ni at 25-300^oC, B. Beverskog and I. Puigdomenech, Corr. Sci., 39, 969-980 (1997) [↩](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-7-e21700c5589a153a93175166fc253adf)
-9. &#x20;[https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-8-e21700c5589a153a93175166fc253adf](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-8-e21700c5589a153a93175166fc253adf)
+9. [https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-8-e21700c5589a153a93175166fc253adf](https://github.com/materialsproject/docs/blob/e39711bcaa6a8f5d23258ade81f183e8c8df9476/docs/user-guide/pourbaix-tool.md#user-content-fnref-8-e21700c5589a153a93175166fc253adf)
 
-\
+\\
