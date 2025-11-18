@@ -101,3 +101,5 @@ filtered_mp_ids = pq.read_table(
     ]
 )["material_id"]
 ```
+
+If the user is more familiar with `pandas` or wishes to use it after the fact, every `pyarrow` table can be converted to a `pandas` object like: `filtered_mp_ids.to_pandas()`, in this last example.
