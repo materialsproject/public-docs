@@ -103,3 +103,18 @@ filtered_mp_ids = pq.read_table(
 ```
 
 If the user is more familiar with `pandas` or wishes to use it after the fact, every `pyarrow` table can be converted to a `pandas` object like: `filtered_mp_ids.to_pandas()`, in this last example.
+
+# Parquet datasets
+
+For very large data structures, it is often impossible to efficiently store the data as a single parquet file.
+A parquet dataset can then be used to represent high-level metadata of multiple parquet files.
+MP's `tasks` collection, in the `parsed` [bucket](https://materialsproject-parsed.s3.amazonaws.com/index.html#core/tasks/) is a parquet dataset.
+The API client, `mp_api`, has tools to retrieve this data in its entirety and paginate through it in a memory-efficient way:
+```python
+from mp_api.client import MPRester
+
+with MPRester("your_api_key") as mpr:
+    tasks = mpr.materials.tasks.search()
+```
+The full `tasks` collection requires >10 GB of on-disk space even in an efficient parquet representation.
+The client query above will download all tasks to your machine and allow you to load them into memory as they are requested.
