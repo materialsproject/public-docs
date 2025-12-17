@@ -14,7 +14,7 @@ $$
 \mu^*(T) \approx \mu(T_0, p_0) + k_B T[1 - S(T)/k_B + \ln(p/p_0)]
 $$
 
-We use the NIST JANAF thermochemical tables for oxygen \[2], which provide entropies _S(T)_ measured at _p_=0.1 MPa, and reference ensemble conditions at room temperature: _T_<sub>_0_</sub>=298.15 K  and  _p_<sub>_0_</sub> = 0.21 atm \[1]. Using a spline fit of _T(μ\*)_, we can invert this relationship reliably for a large range of temperatures.&#x20;
+We use the NIST JANAF thermochemical tables for oxygen \[2], which provide entropies _S(T)_ measured at _p_=0.1 MPa, and reference ensemble conditions at room temperature: _T_<sub>_0_</sub>=298.15 K  and  _p_<sub>_0_</sub> = 0.21 atm \[1]. Using a spline fit of _T(μ\*)_, we can invert this relationship reliably for a large range of temperatures. 
 
 #### Examples
 

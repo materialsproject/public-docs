@@ -147,6 +147,6 @@ A. Jain, G. Hautier, C. J. Moore, S. P. Ong, C. C. Fischer, T. Mueller, K. A. Pe
 
 ## References
 
-\[1]: P.E. Blöchl, Physical Review B 50, 17953-17979 (1994).&#x20;
+\[1]: P.E. Blöchl, Physical Review B 50, 17953-17979 (1994). 
 
 \[2]: R. Ahuja, A. Blomqvist, P. Larsson, P. Pyykkö, and P. Zaleski-Ejgierd, Physical Review Letters 106, 1-4 (2011).

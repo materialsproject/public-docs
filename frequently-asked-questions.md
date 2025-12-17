@@ -86,7 +86,7 @@ The Materials Project presents the data it generates in two ways:
 The Materials Project periodically updates this aggregated information in the form of new database releases. See [Database Versions](database-versions.md) for information on the latest database releases.
 
 {% hint style="warning" %}
-If performing scientific research with Materials Project data, make sure to cite the database version from which the data was retrieved. See [How to Cite](https://materialsproject.org/about/cite) for more information.&#x20;
+If performing scientific research with Materials Project data, make sure to cite the database version from which the data was retrieved. See [How to Cite](https://materialsproject.org/about/cite) for more information. 
 {% endhint %}
 
 ## What is a "task\_id" and what is a "material\_id" and how do they differ?

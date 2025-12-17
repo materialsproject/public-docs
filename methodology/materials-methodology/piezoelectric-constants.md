@@ -8,7 +8,7 @@ The piezoelectric constants from the Materials Project (MP) are calculated from 
 
 ![](../../.gitbook/assets/Cubic\_pic1.png)
 
-&#x20;_Figure 1: longitudinal piezoelectric modulus-surface for a cubic compound, showing the maximum response in the <111> family of directions._
+ _Figure 1: longitudinal piezoelectric modulus-surface for a cubic compound, showing the maximum response in the <111> family of directions._
 
 ## Formalism
 
@@ -42,7 +42,7 @@ For elastic properties, which are based on a tensor of order 4, isotropic Voigt 
 
 ![](../../.gitbook/assets/Ortho\_1.png)
 
-&#x20;_Figure 2: longitudinal piezoelectric modulus-surface for an orthorhombic compound._
+ _Figure 2: longitudinal piezoelectric modulus-surface for an orthorhombic compound._
 
 ## DFT parameters
 
@@ -50,7 +50,7 @@ The first-principles results presented in this work are performed using the proj
 
 ![](../../.gitbook/assets/Piezomain.png)
 
-&#x20;_Figure 3: A graphical representation of the piezoelectric dataset, currently containing over 900 materials. A series of concentric circles indicate constant values of the maximum longitudinal piezoelectric modulus,_ $$e_{ij,max}$$_. The compounds are broken up according to the crystal system and the different point group symmetry-classes considered in this work. See the paper_ [_A database to enable discovery and design of piezoelectric materials_](http://www.nature.com/articles/sdata201553) _for details._
+ _Figure 3: A graphical representation of the piezoelectric dataset, currently containing over 900 materials. A series of concentric circles indicate constant values of the maximum longitudinal piezoelectric modulus,_ $$e_{ij,max}$$_. The compounds are broken up according to the crystal system and the different point group symmetry-classes considered in this work. See the paper_ [_A database to enable discovery and design of piezoelectric materials_](http://www.nature.com/articles/sdata201553) _for details._
 
 ## Crystal symmetry
 
@@ -58,7 +58,7 @@ The crystal symmetry and in particular the point group dictates the symmetry of 
 
 ![](../../.gitbook/assets/Piezo\_wiki\_fig.png)
 
-&#x20;_Figure 4: Piezoelectric tensors and symmetry classes considered in this work. Typical representations of the longitudinal piezoelectric modulus in 3D are also shown for each crystal point group. Note that depending on the components of the piezoelectric tensor, the surface representation can differ from those shown here. See the paper_ [_A database to enable discovery and design of piezoelectric materials_](http://www.nature.com/articles/sdata201553) _for details._
+ _Figure 4: Piezoelectric tensors and symmetry classes considered in this work. Typical representations of the longitudinal piezoelectric modulus in 3D are also shown for each crystal point group. Note that depending on the components of the piezoelectric tensor, the surface representation can differ from those shown here. See the paper_ [_A database to enable discovery and design of piezoelectric materials_](http://www.nature.com/articles/sdata201553) _for details._
 
 ## Citation
 

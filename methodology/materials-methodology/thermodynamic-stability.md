@@ -28,7 +28,7 @@ The accuracy of calculated reaction energies depends on the chemical system inve
 
 ![](../../.gitbook/assets/FormE\_errors.png)
 
-&#x20;_Figure 1: Errors in Calculated Formation Energies for 413 binaries in the Kubaschewski Tables. Energies are normalized to per mol atom._
+ _Figure 1: Errors in Calculated Formation Energies for 413 binaries in the Kubaschewski Tables. Energies are normalized to per mol atom._
 
 To provide a quantitative indicator of the error we may expect from the reaction calculator, we have computed the reaction energies of 413 binaries in the Kubaschewski Tables formed with Group V, VI and VII anions. Figure 1 shows the errors in the calculated formation energies (compared to the experimental values) for these compounds. The mean absolute error (MAE) is around 14 kJ mol$$^{-1}$$. 75% of the calculated formation energies are within 20 kJ mol$$^{-1}$$. We also found that compounds of certain elements tend to have larger errors. For example, $$\text{Bi}$$, $$\text{Co}$$, $$\text{Pb}$$, $$\text{Eu}$$, $$\text{U}$$, $$\text{Tl}$$ and $$\text{W}$$ compounds often have errors larger than 20 kJ mol$$^{-1}$$.
 

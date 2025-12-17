@@ -10,7 +10,7 @@ While the Materials Project has historically focused on materials, we also calcu
 
 A "molecule" is typically defined as two or more atoms that are chemically bound. When we use the term "molecule", we also include single atoms (e.g. the hydrogen atom, H) and monatomic ions (e.g. fluoride, F-), because these species can be important for calculating certain properties like metal binding energies.
 
-Molecules are distinguished on the basis of their chemical formulas, charge, and spin multiplicities. For instance, we could write "3O2" to refer to neutral diatomic oxygen (O2) in the triplet ground state. Beyond this simple definition, one can either distinguish between molecules using the idea of potential energy surfaces (PES) or else using the idea of chemical bonding.&#x20;
+Molecules are distinguished on the basis of their chemical formulas, charge, and spin multiplicities. For instance, we could write "3O2" to refer to neutral diatomic oxygen (O2) in the triplet ground state. Beyond this simple definition, one can either distinguish between molecules using the idea of potential energy surfaces (PES) or else using the idea of chemical bonding. 
 
 If a molecule is defined as a local minimum on a PES (the physical definition of a molecule), then every unique PES minimum obtained by a geometry optimization calculation (in terms of interatomic distances, angles, dihredrals, etc.) is a distinct molecule. It is worth noting that this physical definition is used by the Materials Project to differentiate materials.
 

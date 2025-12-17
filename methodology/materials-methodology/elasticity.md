@@ -8,10 +8,10 @@ description: How elastic constants are calculated on the Materials Project (MP) 
 
 Elasticity describes a material's ability to resist deformations (i.e. size and shape) when subjected to external forces. This can be thought about in two, complementary ways:
 
-* &#x20;how much force is required to deform (stretch or compress) a material by a certain amount;
-* &#x20;how much a material will deform (stretch or compress) when a certain amount of external forces is applied to that material.&#x20;
+*  how much force is required to deform (stretch or compress) a material by a certain amount;
+*  how much a material will deform (stretch or compress) when a certain amount of external forces is applied to that material. 
 
-Elasticity is considered a reversible process. When the force is removed, the material returns to its original size and shape. This is only true up to a point: if a material is deformed too much, then it will be permanently changed.&#x20;
+Elasticity is considered a reversible process. When the force is removed, the material returns to its original size and shape. This is only true up to a point: if a material is deformed too much, then it will be permanently changed. 
 
 For small deformations, most elastic materials exhibit linear elasticity and can be described by a linear relation between the stress and strain. These relationships are quantified with **elastic constants** like the **elasticity tensor** and its inverse quantity, the **compliance tensor**, as part of the theory of **linear elasticity.** These tensors can be used to calculate numbers such as the **bulk modulus, shear modulus, Young's modulus, and Poisson's ratio,** which are especially useful to describe the elastic behavior of isotropic materials.
 
@@ -21,7 +21,7 @@ The Materials Project predicts elastic constants for over ten thousand materials
 
 ## Methodology
 
-### Overview&#x20;
+### Overview 
 
 The elastic constants from the Materials Project (MP) are calculated from first-principles Density Functional Theory (DFT). For a material, the process is started by performing an accurate structural relaxation, to a state of approximately zero stress. Subsequently, the relaxed structure is strained by changing its lattice vectors (magnitude and angle) and the resulting stress tensor is calculated from DFT, while allowing for relaxation of the ionic degrees of freedom. Finally, constitutive relations from linear elasticity, relating stress and strain, are employed to fit the full elastic tensor. From this, aggregate properties such as Voigt, Reuss, and Hill bounds on the bulk and shear moduli are derived. Multiple consistency checks are performed on all the calculated data to ensure its reliability and accuracy. For example, the $$6\times6$$ Voigt elastic matrix should be positive definite to ensure mechanical stability of a material.
 
@@ -33,7 +33,7 @@ $$
 \boldsymbol{\sigma} = \boldsymbol{C}\boldsymbol{\epsilon} \quad \quad  \sigma_{ij} = C_{ijkl} \epsilon_{kl} ,
 $$
 
-where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively, and $$i,j,k,l$$ are Cartesian indices, taking values $$x$$, $$y$$, and $$z$$. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in [Voigt notation](https://en.wikipedia.org/wiki/Voigt\_notation) under the transformation $$xx \mapsto 1, yy \mapsto 2, zz \mapsto 3, yz \mapsto 4, xz \mapsto 5, xy \mapsto 6$$. For example, the strain transforms like $$\epsilon_1 = \epsilon_{xx}, \epsilon_2 = \epsilon_{yy}, \epsilon_3 = \epsilon_{zz}, \epsilon_4 = \epsilon_{yz},  \epsilon_5 = \epsilon_{xz},  \epsilon_6 = \epsilon_{xy}$$, and the elastic tensor transforms like $$C_{xxxx} \mapsto C_{11}, C_{xxyy} \mapsto C_{12}, .....$$Then the above linear elastic relationship can be expressed as&#x20;
+where $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ are the second-order stress and strain tensors, respectively, and $$i,j,k,l$$ are Cartesian indices, taking values $$x$$, $$y$$, and $$z$$. Both $$\boldsymbol{\sigma}$$ and $$\boldsymbol{\epsilon}$$ symmetric tensor, and we can represent them in [Voigt notation](https://en.wikipedia.org/wiki/Voigt\_notation) under the transformation $$xx \mapsto 1, yy \mapsto 2, zz \mapsto 3, yz \mapsto 4, xz \mapsto 5, xy \mapsto 6$$. For example, the strain transforms like $$\epsilon_1 = \epsilon_{xx}, \epsilon_2 = \epsilon_{yy}, \epsilon_3 = \epsilon_{zz}, \epsilon_4 = \epsilon_{yz},  \epsilon_5 = \epsilon_{xz},  \epsilon_6 = \epsilon_{xy}$$, and the elastic tensor transforms like $$C_{xxxx} \mapsto C_{11}, C_{xxyy} \mapsto C_{12}, .....$$Then the above linear elastic relationship can be expressed as 
 
 $$
 \left[
@@ -69,11 +69,11 @@ C_{16} & C_{26} & C_{36} & C_{46} & C_{56} & C_{66} \\
 \right]
 $$
 
-The elastic tensor in Voigt notation is a $$6\times6$$ symmetric matrix, indicating that the elastic tensor has 21 independent components.&#x20;
+The elastic tensor in Voigt notation is a $$6\times6$$ symmetric matrix, indicating that the elastic tensor has 21 independent components. 
 
 ### Formalism
 
-With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then he stress tensor, $$\boldsymbol{\sigma}$$, is obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are allowed to relax. Six strain states (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six strain states, 4 different default magnitudes strains are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. This leads to a total of 24 deformed structures, for which the stress tensor, $$\boldsymbol{\sigma}$$, is calculated. The obtained set of 24 stresses and strains are then used in a linear fitting to compute the elastic tensor. Note that conventional unit cells, obtained using pymatgen `SpacegroupAnalyzer`, are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells).&#x20;
+With the lattice vectors$$\{\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3\}$$ of the relaxed structure, a material is first deformed according to $$\hat {\boldsymbol{a}}_i = \boldsymbol{F} \boldsymbol{a}_i, ( i=1,2,3)$$. The deformation gradient $$\boldsymbol{F}$$ is obtained by solving the equation for Green-Lagrange strain $$\boldsymbol{E}$$​, namely $$\boldsymbol{\epsilon} = \boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F} - \boldsymbol{I} \right)$$, where $$\boldsymbol{I}$$ is the identify matrix and the superscript denotes matrix transpose. Then he stress tensor, $$\boldsymbol{\sigma}$$, is obtained from DFT calculation for the deformed structure with the new lattice vectors $$\{ \hat{\boldsymbol{a}}_1 ,\hat{\boldsymbol{a}}_2, \hat{\boldsymbol{a}}_3\}$$. In the DFT calculation, the lattice vectors are fixed, but the ionic degree of freedoms are allowed to relax. Six strain states (listed below) are applied one by one to the initial relaxed structure so that only one independent deformation is considered each time. For each of the six strain states, 4 different default magnitudes strains are applied: $$\delta \in \{-0.01, -0.005, +0.005, +0.01\}$$. This leads to a total of 24 deformed structures, for which the stress tensor, $$\boldsymbol{\sigma}$$, is calculated. The obtained set of 24 stresses and strains are then used in a linear fitting to compute the elastic tensor. Note that conventional unit cells, obtained using pymatgen `SpacegroupAnalyzer`, are employed for all elastic constant calculations. In our experience, these cells typically yield more accurate and better converged elastic constants than primitive cells, at the cost of more computational time. We suspect this has to do with the fact that unit cells often exhibit higher symmetries and simpler Brillouin zones than primitive cells (an example is face centered cubic cells). 
 
 $$
 \boldsymbol{\epsilon}=
@@ -158,7 +158,7 @@ To obtain accurate elastic constants from DFT, a well-converged stress tensor is
 | Density of k-points (pra)      | 7,000     | 1,000         |
 | Pseudo potential               | GGA-PBE   | GGA-PBE       |
 
-&#x20;&#x20;
+  
 
 ![Visualization of the current elastic-property database, consisting of over 1,100 metals and inorganic compounds. This map shows the shear and bulk moduli, together with isotropic Poisson ratio and volume-per-atom. See the paper \[Charting the complete elastic properties of inorganic crystalline compounds\](http://www.nature.com/articles/sdata20159) for details.](../../.gitbook/assets/Data\_figure\_11\_22.png)
 
@@ -184,7 +184,7 @@ Thanks to Maarten de Jong for the initial version of this page.
 2. Hill, R. The elastic behaviour of a crystalline aggregate. Proceedings of the Physical Society. Section A 65, 349 (1952).
 3. Ranganathan, S. I. & Ostoja-Starzewski, M. Universal elastic anisotropy index. Physical Review Letters 101, 055504 (2008).
 4. Blochl, P. E. Projector augmented-wave method. Phys. Rev. B 50, 17953{17979 (1994).
-5. Kresse, G. & Joubert, D. From ultrasoft pseudopotentials to the projector augmented-wave method. Phys. Rev. B59, 1758{1775 (1999).&#x20;
+5. Kresse, G. & Joubert, D. From ultrasoft pseudopotentials to the projector augmented-wave method. Phys. Rev. B59, 1758{1775 (1999). 
 6. Kresse, G. & Hafner, J. Ab initio molecular dynamics for liquid metals. Phys. Rev. B 47, 558{561 (1993).
 7. Kresse, G. & Furthmuller, J. Efficffient iterative schemes for ab initio total-energy calculations using a plane-wave basis set. Phys. Rev. B 54, 11169{11186 (1996).
 8. Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient approximation made simple. Physical Review Letters 77, 3865 (1996).

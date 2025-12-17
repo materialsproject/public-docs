@@ -59,7 +59,7 @@ If you are
 
 ### Configure Visualization
 
-The phase diagram viewer can be configured&#x20;
+The phase diagram viewer can be configured 
 
 ![](<../../../.gitbook/assets/Screen Shot 2022-07-14 at 4.25.25 PM.png>)
 

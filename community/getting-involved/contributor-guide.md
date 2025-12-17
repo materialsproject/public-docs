@@ -14,7 +14,7 @@ This guide is a work in progress and will be updated as necessary to reflect cha
 
 ## The Materials Project Software Ecosystem
 
-MP consists of several interconnected parts, each serving a specific purpose that together enable high-throughput computations.&#x20;
+MP consists of several interconnected parts, each serving a specific purpose that together enable high-throughput computations. 
 
 ### Official Materials Project Codes
 
@@ -28,7 +28,7 @@ The following lower-level codes provide additional critical functions, but most 
 * **custodian** \[[docs](https://materialsproject.github.io/custodian/)]\[[repo](https://github.com/materialsproject/custodian)]**:** Just in time (JIT) job management software that provides automated, on the fly error correction to calculations as they are running. Many workflows (particularly VASP and Q-Chem) are designed to work closely with `custodian`, although use of custodian is not required.
 * **jobflow** \[[docs](https://materialsproject.github.io/jobflow/)]\[[repo](https://github.com/materialsproject/jobflow)]**:** A library for writing and executing workflows. Jobflow defines the base `Job`, `Flow`, and `Maker` classes that are used in `atomate2` to define computational workflow steps.
 * **fireworks** \[[docs](https://materialsproject.github.io/fireworks/)]\[[repo](https://github.com/materialsproject/fireworks)]: A software for managing execution of computational workflows, particularly suited for high-performance computing (HPC) environments with queueing systems. Instructions for setting up FireWorks for use with `atomate2` can be found [here](https://materialsproject.github.io/jobflow/install\_fireworks.html). `atomate2` workflows can also be run without FireWorks.
-* **emmet** \[[docs](https://materialsproject.github.io/emmet/)]\[[repo](https://github.com/materialsproject/emmet/)]**:** Defines structured schemas for storing outputs of different types of calculations performed by the Materials Project team. These comprise both code-specific schemas (e.g., for a VASP relaxation) and code-agnostic schemas (e.g., for any periodic solid material). `emmet` also uses maggma's `Builder` to define data processing pipelines that build the Materials Project database.&#x20;
+* **emmet** \[[docs](https://materialsproject.github.io/emmet/)]\[[repo](https://github.com/materialsproject/emmet/)]**:** Defines structured schemas for storing outputs of different types of calculations performed by the Materials Project team. These comprise both code-specific schemas (e.g., for a VASP relaxation) and code-agnostic schemas (e.g., for any periodic solid material). `emmet` also uses maggma's `Builder` to define data processing pipelines that build the Materials Project database. 
 * **maggma** \[[docs](https://materialsproject.github.io/maggma/)]\[[repo](https://github.com/materialsproject/maggma)]**:** A framework for building modular data pipelines. maggma's `Store` and `Builder` classes provide a unified interface for accessing and transforming data. `atomate2` uses `Store` to save workflow results into a database or file, and `emmet` uses `Builder` to define the pipelines for processing Materials Project data.
 * **crystaltoolkit** \[[docs](https://docs.crystaltoolkit.org/index.html)]\[[repo](https://github.com/materialsproject/crystaltoolkit)]**:** A web app framework that makes it easy for developers to create interactive web apps for materials science data, based on [plot.ly dash](https://dash.plotly.com/).
 
@@ -63,7 +63,7 @@ As you work on a contribution, the best ways to communicate with project maintai
 
 * **GitHub Issues**: If you've found a problem or want to propose an idea, open an issue in the relevant repo. This is the first place to go if you need help with something. **Please don't submit how-to and support questions via issues, use GitHub Discussions instead (see below).**
 * **Pull Request Comments**: If you want to discuss a specific change proposed in a pull request, use the PR's comments. This allows all discussions about a change to be kept in one place which is easily referenced later.
-* **GitHub Discussions**: For more general discussions, use GitHub Discussions. This can be a great place to announce your intent to develop a new feature, ask for feedback on a proposal, discuss a new out-there idea, or get help with a problem.&#x20;
+* **GitHub Discussions**: For more general discussions, use GitHub Discussions. This can be a great place to announce your intent to develop a new feature, ask for feedback on a proposal, discuss a new out-there idea, or get help with a problem. 
 
 Remember, it's okay to ask for help and feedback! We all started somewhere, and the MP community is there to help.
 
@@ -138,7 +138,7 @@ Check the README file, which is displayed on the main page of each GitHub reposi
 
 We value community contributions and want to do our best to provide appropriate credit. Some of the ways you can get visible credit for your work include
 
-* Submit a PR to be added to the lists of contributors for a specific code. For example, see&#x20;
+* Submit a PR to be added to the lists of contributors for a specific code. For example, see 
 * All MP codes support [`duecredit`](https://github.com/duecredit/duecredit/), which provides function decorators to associate publications with specific functions, classes and modules. You are welcome to include these decorators in your contributions where applicable (e.g. when you re-implement code from a paper, or use parameters from a paper, or contribute code you've created and published about). If in doubt, better to add citations than to not have them.
 * If you have developed an external tool that uses one or more MP codes, we invite you to submit it for inclusion on the **TODO - link to** [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page
 * For `pymatgen` add-ons, submit a PR to be added to the [addons page](https://matsci.org/)

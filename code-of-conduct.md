@@ -8,7 +8,7 @@ The Materials Project does not have a unified code of conduct at present since i
 
 However, as guidance, we refer all contributors to the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code\_of\_conduct/) for setting expectations for each other. Text from the Contributor Covenant is copied below.
 
-We have set up the [conduct@materialsproject.org](mailto:conduct@materialsproject.org) email address for any issues involving inappropriate conduct.&#x20;
+We have set up the [conduct@materialsproject.org](mailto:conduct@materialsproject.org) email address for any issues involving inappropriate conduct. 
 
 ### Our Pledge <a href="#our-pledge" id="our-pledge"></a>
 

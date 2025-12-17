@@ -49,7 +49,7 @@ $$
 s = e^{-|| \mathbf{v}_{i}^\text{struct} - \mathbf{v}_{j}^\text{struct} ||}
 $$
 
-This similariy metric, s, is positively correlated with the similarity between the structures and can be easily converted to a percentage.&#x20;
+This similariy metric, s, is positively correlated with the similarity between the structures and can be easily converted to a percentage. 
 
 ## Examples
 

@@ -18,6 +18,6 @@ Information regarding calculation parameters, convergence, and pseudopotential c
 [pseudopotentials.md](pseudopotentials.md)
 {% endcontent-ref %}
 
-## References&#x20;
+## References 
 
 \[1] R. Kingsbury, A. S. Gupta, C. J. Bartel, J. M. Munro, S. Dwaraknath, M. Horton, and K. A. Persson Phys. Rev. Materials 6, 013801 (2022)

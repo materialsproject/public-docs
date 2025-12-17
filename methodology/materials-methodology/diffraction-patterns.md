@@ -1,3 +1,0 @@
-# Diffraction Patterns
-
-To do.

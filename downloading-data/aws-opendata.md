@@ -4,7 +4,7 @@ description: MP data is also available through the AWS OpenData Program.
 
 # AWS OpenData
 
-In an effort to make our data as accessible as possible (FAIR principle) as well as significantly improve data downloads and take pressure off our servers, we are making a growing list of our data products available through the [AWS OpenData Program](https://aws.amazon.com/opendata). Also see the entries for MP-managed data on the [AWS OpenData Registry](https://registry.opendata.aws/materials-project/) or the [AWS Data Exchange](https://aws.amazon.com/marketplace/pp/prodview-hc3sh3u5ukiya). Usage of all data provided through our API or directly through OpenData is subject to our [terms](https://materialsproject.org/about/terms).&#x20;
+In an effort to make our data as accessible as possible (FAIR principle) as well as significantly improve data downloads and take pressure off our servers, we are making a growing list of our data products available through the [AWS OpenData Program](https://aws.amazon.com/opendata). Also see the entries for MP-managed data on the [AWS OpenData Registry](https://registry.opendata.aws/materials-project/) or the [AWS Data Exchange](https://aws.amazon.com/marketplace/pp/prodview-hc3sh3u5ukiya). Usage of all data provided through our API or directly through OpenData is subject to our [terms](https://materialsproject.org/about/terms). 
 
 ## Overview
 
