@@ -1,4 +1,4 @@
-# Table of contents
+c# Table of contents
 
 * [Introduction](README.md)
 * [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)
@@ -148,7 +148,8 @@
   * [Legacy API data](downloading-data/using-the-api/legacy-api-data.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Query and Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
-* [AWS OpenData](downloading-data/aws-opendata.md)
+* [AWS OpenData](downloading-data/aws-opendata/README.md)
+  * [Working with parquet](downloading-data/aws-opendata/working_with_parquet.md)
 
 ## Uploading Data
 
