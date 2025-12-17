@@ -20,7 +20,7 @@ with MPRester("your_api_key_here") as mpr:
 
 ### Querying ICSD ID
 
-For structures tagged with at least one ICSD entry, the simplest way to query structure with ICSD ID is this:&#x20;
+For structures tagged with at least one ICSD entry, the simplest way to query structure with ICSD ID is this: 
 
 ```python
 from mp_api.client import MPRester
@@ -355,7 +355,7 @@ likely_perovskite_mpids = list(set(robo_perov_mpids).union(possible_perov))
 
 MP contains specialized calculations to compute various materials properties. Sometimes it's of interest to find those calculations. A full list of valid such "task types" are given in our builder software, [emmet](https://github.com/materialsproject/emmet/blob/6b2b8492edfcab6e81f29b5eda1eb938d0724160/emmet-core/emmet/core/vasp/calc_types/enums.py#L87).
 
-**DFPT outputs and data only exist for parts of our database.** The following code snippet will take only relevant task (single DFT calculation) data from our database and check to see if it’s a DFPT calculation:&#x20;
+**DFPT outputs and data only exist for parts of our database.** The following code snippet will take only relevant task (single DFT calculation) data from our database and check to see if it’s a DFPT calculation: 
 
 ```python
 from mp_api.client import MPRester

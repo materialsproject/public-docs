@@ -14,7 +14,7 @@ The DOS indicates the full DOS by default but projections along atoms or orbital
 
 ![](../../.gitbook/assets/band\_gaps.png)
 
-&#x20;_Figure 1: Experimental versus computed band gaps for 237 compounds in an internal test. The computed gaps are underestimated by an average factor of 1.6, and the residual error even after accounting for this shift is significant (MAE of 0.6 eV). We thank M. Chan for her assistance in compiling this data._
+ _Figure 1: Experimental versus computed band gaps for 237 compounds in an internal test. The computed gaps are underestimated by an average factor of 1.6, and the residual error even after accounting for this shift is significant (MAE of 0.6 eV). We thank M. Chan for her assistance in compiling this data._
 
 Density functional theory is formulated to calculate ground state properties. Although the band structure involves excitations of electrons to unoccupied states, the Kohn-Sham energies used in solving the DFT equations are often interpreted to correspond to electron energy levels in the solid.
 

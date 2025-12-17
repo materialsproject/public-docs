@@ -66,7 +66,7 @@ example_doc.fields_not_requested     # list of unrequested fields
 
 ### Determine which functional was used to relax structures
 
-The Materials Project contains structures relaxed with the PBE, PBE+U, and r<sup>2</sup>scan functionals. To determine which functional was used to calculation a given property, use the `origins` field of the summary documents, which points to the DFT calculation that generated a given property. You can include the `origins` field when searching for materials of interest, and use it to identify the `task_id`. Then, you can find the thermo document with the same `task_id` and use `run_type` to identify the functional. A run\_type of `GGA` indicates a PBE GGA calculations, `GGA_U` indicates a PBE+U calculation, and `r2SCAN` indicates an r<sup>2</sup>scan calculation.&#x20;
+The Materials Project contains structures relaxed with the PBE, PBE+U, and r<sup>2</sup>scan functionals. To determine which functional was used to calculation a given property, use the `origins` field of the summary documents, which points to the DFT calculation that generated a given property. You can include the `origins` field when searching for materials of interest, and use it to identify the `task_id`. Then, you can find the thermo document with the same `task_id` and use `run_type` to identify the functional. A run\_type of `GGA` indicates a PBE GGA calculations, `GGA_U` indicates a PBE+U calculation, and `r2SCAN` indicates an r<sup>2</sup>scan calculation. 
 
 ```
 from mp_api.client import MPRester

@@ -1,6 +1,6 @@
 # Tutorial
 
-In this section, we present several ways to navigate through the Battery Explorer.&#x20;
+In this section, we present several ways to navigate through the Battery Explorer. 
 
 The Battery Explorer app allows users to filter candidate battery materials using chemical formula/composition, as well as properties such as maximum volume change, average voltage, capacity, stability etc.
 

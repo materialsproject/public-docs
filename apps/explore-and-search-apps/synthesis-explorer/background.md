@@ -1,10 +1,10 @@
 # Background
 
-The materials synthesis recipes came from scientific literature through text mining and natural language processing approaches\[1].&#x20;
+The materials synthesis recipes came from scientific literature through text mining and natural language processing approaches\[1]. 
 
 ![Schematic representation of synthesis “recipes” extraction pipeline from reference 1](<../../../.gitbook/assets/image (2) (1).png>)
 
-The synthesis recipes can be searched by the target material formula, precursor material  formula, keywords (eg. ball-milled, impurities) and synthesis procedures (eg. synthesis type, performed operations, heating temperature etc.). Each entry gives the information about the target and precursors materials, the reaction equation, the synthesis procedure and the link to the source publication.&#x20;
+The synthesis recipes can be searched by the target material formula, precursor material  formula, keywords (eg. ball-milled, impurities) and synthesis procedures (eg. synthesis type, performed operations, heating temperature etc.). Each entry gives the information about the target and precursors materials, the reaction equation, the synthesis procedure and the link to the source publication. 
 
 ## References
 

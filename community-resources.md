@@ -16,7 +16,7 @@ description: >-
 
 ## Past MP Workshop Materials
 
-To increase open access for the scientific the community, recordings and materials from the Materials Project Workshops are released publicly.&#x20;
+To increase open access for the scientific the community, recordings and materials from the Materials Project Workshops are released publicly. 
 
 [MP Workshop Python Primer](https://www.youtube.com/watch?v=nO0vvZpyDEA\&list=PLTjFYVNE7LTiJBX4IYu_XY3C5kRUZLnn6)
 
@@ -26,5 +26,5 @@ To increase open access for the scientific the community, recordings and materia
 
 [2020 MP Workshop Bilibili Recordings](https://www.bilibili.com/video/BV1Uz4y1f7L5/)
 
-[2019 MP Workshop Youtube Recordings](https://www.youtube.com/watch?v=a6Zsbu1xpGo\&list=PLTjFYVNE7LThQriSxXUIr_Wkg9tUcoax5)&#x20;
+[2019 MP Workshop Youtube Recordings](https://www.youtube.com/watch?v=a6Zsbu1xpGo\&list=PLTjFYVNE7LThQriSxXUIr_Wkg9tUcoax5) 
 

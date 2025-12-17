@@ -8,6 +8,6 @@ Atomic partial spins can be defined similarly to atomic partial charges for mole
 
 ## References
 
-1. &#x20;Mulliken, R.S., 1955. Electronic population analysis on LCAO–MO molecular wave functions. I. _The Journal of chemical physics_, _23_(10), pp.1833-1840.
+1.  Mulliken, R.S., 1955. Electronic population analysis on LCAO–MO molecular wave functions. I. _The Journal of chemical physics_, _23_(10), pp.1833-1840.
 2. Glendening, E.D., Badenhoop, J.K., Reed, A.E., Carpenter, J.E., Bohmann, J.A., Morales, C.M., Karafiloglou, P., Landis, C.R., Weinhold, F., 2018. _NBO 7.0_. Theoretical Chemistry Institute, University of Wisconsin, Madison.
 3. Glendening, E.D., Landis, C.R. and Weinhold, F., 2012. Natural bond orbital methods. _Wiley interdisciplinary reviews: computational molecular science_, _2_(1), pp.1-42.

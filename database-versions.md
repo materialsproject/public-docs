@@ -116,12 +116,12 @@ Major updates include the addition of r2SCAN calculations and improvements to th
 * Modified the `run_type`requirement for the definition of a valid material (`emmet-core`[622f2e3](https://github.com/materialsproject/emmet/commit/622f2e3035b9bcf66bccc653af03618a0d7d84b9)):
   * **Previously**: A material was required to have at least one `GGA(+U)`calculation
   * **Now**: MP accepts materials with only r2SCAN calculations, as going forward MP will be prioritizing r2SCAN workflows
-  * This change restored 736 previously deprecated materials&#x20;
+  * This change restored 736 previously deprecated materials 
 
 **Thermodynamic Data Updates:**
 
-* New hierarchy for `thermo`data presentation:&#x20;
-  * Affects Materials Explorer and `MPRester().summary` endpoint&#x20;
+* New hierarchy for `thermo`data presentation: 
+  * Affects Materials Explorer and `MPRester().summary` endpoint 
   * Resolves display issues on the Materials Explorer for 586 materials with valid thermodynamic data that were found to have failed to generate thermodynamic stability data using MP's [GGA/GGA+U/r2SCAN Mixing scheme](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/gga-gga+u-r2scan-mixing)
   * These values were not passed through to the `summary` endpoint as a strict `thermo_type`of `GGA_GGA+U_R2SCAN`was required
   * New preference order for `thermo_type: GGA_GGA+U_R2SCAN`> `r2SCAN`> `GGA_GGA+U`
@@ -144,7 +144,7 @@ This version went live on December 12th, 2024 around noon Pacific.
 
 ## v2023.11.1
 
-* Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`.&#x20;
+* Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`. 
 * Conversion electrode data added alongside existing insertion electrode data.
 * \~10k new materials added, with \~5k deprecated. This includes a temporary deprecation of all compounds containing `Yb` while they are being re-run. This is in response to pseudopotential issues identified which were providing incorrect energies.
 

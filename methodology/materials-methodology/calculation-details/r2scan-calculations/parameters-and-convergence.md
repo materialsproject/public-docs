@@ -12,7 +12,7 @@ We use the projector-augmented wave (PAW) or modeling core electrons with an ene
 
 ### Convergence
 
-Plane-wave energy cutoff and k-point density settings were selected such that formation energies converged within approximately 1 meV/atom for a benchmark set of 21 materials and were selected to be conservatively high [\[2\]](parameters-and-convergence.md#references):&#x20;
+Plane-wave energy cutoff and k-point density settings were selected such that formation energies converged within approximately 1 meV/atom for a benchmark set of 21 materials and were selected to be conservatively high [\[2\]](parameters-and-convergence.md#references): 
 
 | Formula  | Spacegroup | Materials Project ID |
 | -------- | ---------- | -------------------- |

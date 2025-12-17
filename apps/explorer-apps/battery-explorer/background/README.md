@@ -2,7 +2,7 @@
 
 ## Components
 
-### Search&#x20;
+### Search 
 
 The Battery Explorer app, just like the Materials Explorer app, provides a search bar where one can search by chemical formula (eg. "CoO2") or by chemical system (eg. "Fe-P-O"). The user can also click on the periodic table to add elements to the search.
 

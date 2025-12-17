@@ -17,19 +17,19 @@
 
 For example, "mp-5229" which will load the structure shown in [https://materialsproject.org/materials/mp-5229](https://materialsproject.org/materials/mp-5229).
 
-&#x20;![Step 2 screenshot](https://images.tango.us/public/screenshot\_b2d44451-e4cc-4977-827a-bbfe1851273d.png?crop=focalpoint\&fit=crop\&fp-x=0.7101\&fp-y=0.4912\&fp-z=2.6652\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
+ ![Step 2 screenshot](https://images.tango.us/public/screenshot\_b2d44451-e4cc-4977-827a-bbfe1851273d.png?crop=focalpoint\&fit=crop\&fp-x=0.7101\&fp-y=0.4912\&fp-z=2.6652\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
 
 #### 3. Click on Search
 
 This loads the crystal structure into the app.
 
-&#x20;![Step 3 screenshot](https://images.tango.us/public/screenshot\_57ccca19-185a-4c55-b35f-286c5bb1f248.png?crop=focalpoint\&fit=crop\&fp-x=0.8385\&fp-y=0.4912\&fp-z=2.8841\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
+ ![Step 3 screenshot](https://images.tango.us/public/screenshot\_57ccca19-185a-4c55-b35f-286c5bb1f248.png?crop=focalpoint\&fit=crop\&fp-x=0.8385\&fp-y=0.4912\&fp-z=2.8841\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
 
 #### 4. Use the drop down to list available transformations
 
 Not all transformations will be applicable to all materials.
 
-&#x20;![Step 4 screenshot](https://images.tango.us/public/screenshot\_645e1d8d-fad3-4be4-91dc-95b30d00502a.png?crop=focalpoint\&fit=crop\&fp-x=0.3534\&fp-y=0.5035\&fp-z=1.2975\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
+ ![Step 4 screenshot](https://images.tango.us/public/screenshot\_645e1d8d-fad3-4be4-91dc-95b30d00502a.png?crop=focalpoint\&fit=crop\&fp-x=0.3534\&fp-y=0.5035\&fp-z=1.2975\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
 
 #### 5. Select "Make a slab"
 
@@ -39,7 +39,7 @@ Not all transformations will be applicable to all materials.
 
 Options directly map to those available in pymatgen. For this example, this maps to [`SlabTransformation`](https://pymatgen.org/pymatgen.transformations.advanced\_transformations.html#pymatgen.transformations.advanced\_transformations.SlabTransformation).
 
-All options have additional explanations available by hovering over the label.&#x20;
+All options have additional explanations available by hovering over the label. 
 
 ![Step 6 screenshot](https://images.tango.us/public/screenshot\_050ccf93-5a30-403b-af80-f76c555f2a1d.png?crop=focalpoint\&fit=crop\&fp-x=0.1715\&fp-y=0.5093\&fp-z=2.7180\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
 
@@ -47,7 +47,7 @@ All options have additional explanations available by hovering over the label.&#
 
 Applying the transformation might take several seconds.
 
-&#x20;![Step 7 screenshot](https://images.tango.us/public/screenshot\_93e0a9e2-6588-4cb9-8c5e-52b1c952cf6f.png?crop=focalpoint\&fit=crop\&fp-x=0.1520\&fp-y=0.2307\&fp-z=2.9568\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
+ ![Step 7 screenshot](https://images.tango.us/public/screenshot\_93e0a9e2-6588-4cb9-8c5e-52b1c952cf6f.png?crop=focalpoint\&fit=crop\&fp-x=0.1520\&fp-y=0.2307\&fp-z=2.9568\&w=1200\&mark-w=0.2\&mark-pad=0\&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n\&ar=2356%3A1712)
 
 #### 8. Rotate the crystal structure to see the transformation applied
 

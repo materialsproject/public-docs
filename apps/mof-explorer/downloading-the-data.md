@@ -8,7 +8,7 @@ description: How to download the data available on https://materialsproject.org/
 
 The recommended way of downloading much of the data underlying the QMOF Database is at the following Figshare repository: [https://doi.org/10.6084/m9.figshare.13147324](https://doi.org/10.6084/m9.figshare.13147324). The data on Figshare includes DFT-optimized geometries (in XYZ and CIF format) and several tabulated properties, such as energies, partial atomic charges (DDEC6, CM5, Bader), bond orders (DDEC6), atomic spin densities (DDEC6, Bader), magnetic moments, band gaps, and more. For reproducibility purposes, we recommend noting the version of the QMOF Database you have used. Note that a mirror of the QMOF Database made to be interoperable with the Materials Project is available on [MPContribs](https://contribs.materialsproject.org/projects/qmof), which can be queried with the [MPContribs API](https://contribs-api.materialsproject.org) if desired.
 
-Additional files and properties beyond those hosted on Figshare (e.g. VASP inputs and outputs, density of states, charge densities) can be obtained from NOMAD and Globus, as described in more detail below.&#x20;
+Additional files and properties beyond those hosted on Figshare (e.g. VASP inputs and outputs, density of states, charge densities) can be obtained from NOMAD and Globus, as described in more detail below. 
 
 ### Downloading the VASP Files
 

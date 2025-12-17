@@ -32,7 +32,7 @@ $$
 n=\sqrt{\epsilon^\infty_{poly}}
 $$
 
-where $$\epsilon_{poly}^\infty$$ is the average of the eigenvalues of the electronic contribution to the dielectric tensor. It should be noted this equation for the refractive index assumes the material is non-magnetic.&#x20;
+where $$\epsilon_{poly}^\infty$$ is the average of the eigenvalues of the electronic contribution to the dielectric tensor. It should be noted this equation for the refractive index assumes the material is non-magnetic. 
 
 ## DFT Parameters
 
@@ -42,7 +42,7 @@ Piezoelectricity calculations use the same DFPT methodology with a tighter param
 
 ## Benchmarking
 
-We see that in most cases, it is possible to predict the dielectric constant of materials with a relative deviation of less than +/−25% from experimental values at room temperature. Including local field effects gives the smallest mean absolute relative deviation ( MARD= 16.2 % for GGA). Furthermore, we note a tendency to overestimate rather than underestimate the dielectric constant relative to experiments, which is a well-known effect of DFPT [\[17,18,19\]](dielectricity.md#references) for the electronic contribution. Although it has often been related to the band gap underestimation problem of DFT, DFPT is a ground state theory and hence, the dielectric constant should, in principle, be described exactly [\[20\]](dielectricity.md#references). In fact, as described by various authors, the problem is likely linked to the exchange-correlation functional [\[21-26\]](dielectricity.md#references). Specifically, the exchange correlation functional has been found to depend on polarization but the actual dependence formula is, unfortunately, not known [\[27,28\]](dielectricity.md#references). Additionally, the validity of GGA depends on the charge density varying slowly—an assumption that may be broken when an external electric field is applied [\[30\]](dielectricity.md#references).&#x20;
+We see that in most cases, it is possible to predict the dielectric constant of materials with a relative deviation of less than +/−25% from experimental values at room temperature. Including local field effects gives the smallest mean absolute relative deviation ( MARD= 16.2 % for GGA). Furthermore, we note a tendency to overestimate rather than underestimate the dielectric constant relative to experiments, which is a well-known effect of DFPT [\[17,18,19\]](dielectricity.md#references) for the electronic contribution. Although it has often been related to the band gap underestimation problem of DFT, DFPT is a ground state theory and hence, the dielectric constant should, in principle, be described exactly [\[20\]](dielectricity.md#references). In fact, as described by various authors, the problem is likely linked to the exchange-correlation functional [\[21-26\]](dielectricity.md#references). Specifically, the exchange correlation functional has been found to depend on polarization but the actual dependence formula is, unfortunately, not known [\[27,28\]](dielectricity.md#references). Additionally, the validity of GGA depends on the charge density varying slowly—an assumption that may be broken when an external electric field is applied [\[30\]](dielectricity.md#references). 
 
 ## Citation
 

@@ -1,6 +1,6 @@
 # Adding Energy Corrections to Custom Entries
 
-To use the outputs of custom DFT calculations in conjunction with the entries from the Materials Project ([provided the custom calculations are run with the same settings](../../../calculation-details/)) , a [series of corrections ](gga-gga+u-r2scan-mixing.md)have to applied to the outputs of the calculation:&#x20;
+To use the outputs of custom DFT calculations in conjunction with the entries from the Materials Project ([provided the custom calculations are run with the same settings](../../../calculation-details/)) , a [series of corrections ](gga-gga+u-r2scan-mixing.md)have to applied to the outputs of the calculation: 
 
 ```python
 from pymatgen.io.vasp import Vasprun
