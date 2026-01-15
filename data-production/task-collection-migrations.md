@@ -307,7 +307,7 @@ def patch_output_structure(doc: CoreTaskDoc):
         else None
     )
 
-    if len(doc.output.outcar["magnetization"]) != 0:
+    if doc.output.outcar["magnetization"] is not None:
         magmoms = [m["tot"] for m in doc.output.outcar["magnetization"]]
         doc.output.structure.add_site_property("magmom", magmoms)
 
