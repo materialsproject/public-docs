@@ -1,4 +1,4 @@
-c# Table of contents
+# Table of contents
 
 * [Introduction](README.md)
 * [Frequently Asked Questions (FAQ)](frequently-asked-questions.md)

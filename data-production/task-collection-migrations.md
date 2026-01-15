@@ -5,7 +5,7 @@ DISCLAIMER: Make backups, or generate copies, of any applicable collections/data
 {% endhint %}
 
 {% hint style="info" %}
-Given the wide range of possible outputs from DFT workflows,  this set of migrations should not be considered exhaustive. 
+Given the wide range of possible outputs from DFT workflows, this set of migrations should not be considered exhaustive.
 
 These migrations are the steps that were taken by the Materials Project staff to migrate MP's core task document collection.
 {% endhint %}
@@ -17,7 +17,7 @@ The schema of the task documents generated during calculation parsing has change
 A few simple field re-names and type coercions were necessary during the transition from `TaskDocument` to `TaskDoc` that require no client-side data manipulations. These operations can be safely applied prior to migrating to `TaskDoc` to make the process smoother. These operations can also be applied to an existing `TaskDoc` collection.
 
 * Migration of Potcar Symbols for `orig_inputs`
-  * During the process of updating the `CalculationInput` class in `emmet-core`, a number of inconsistencies were found for the `potcar` field of `orig_inputs`  (ref: [emmet PR comment](https://github.com/materialsproject/emmet/pull/1226#issuecomment-2836069648)). These updates will address those inconsistencies:
+  * During the process of updating the `CalculationInput` class in `emmet-core`, a number of inconsistencies were found for the `potcar` field of `orig_inputs` (ref: [emmet PR comment](https://github.com/materialsproject/emmet/pull/1226#issuecomment-2836069648)). These updates will address those inconsistencies:
 
 <pre class="language-python"><code class="lang-python">from pymongo import UpdateMany
 
@@ -44,7 +44,7 @@ A few simple field re-names and type coercions were necessary during the transit
 </code></pre>
 
 * Migration of `has_vasp_completed`
-  * The transition from `atomate` to `atomate2` resulted in the `has_vasp_completed` field changing from a boolean to an enumeration. These operations will correct any  mis-typed fields:
+  * The transition from `atomate` to `atomate2` resulted in the `has_vasp_completed` field changing from a boolean to an enumeration. These operations will correct any mis-typed fields:
 
 ```python
 from pymongo import UpdateMany
@@ -85,14 +85,14 @@ ops = [
 ]
 ```
 
-The preceding operations can be executed individually, or concatenated and executed all at once. Consult the MongoDB [bulk write documentation](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/crud/bulk-write/) for examples of executing bulk writes.  
+The preceding operations can be executed individually, or concatenated and executed all at once. Consult the MongoDB [bulk write documentation](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/crud/bulk-write/) for examples of executing bulk writes.
 
 #### Client-Side Migrations
 
 The following migrations involve more complicated manipulations and can have long run times depending on the size of the source tasks collection.
 
-* Migration of `TaskDocument`  to `TaskDoc` 
-  * The following `create_new_taskdoc` function can be used to transform a `TaskDocument` into a document with the `TaskDoc` schema. Coordination of database operations in this situation are highly dependent on the execution environment and are thus left to the user. 
+* Migration of `TaskDocument` to `TaskDoc`
+  * The following `create_new_taskdoc` function can be used to transform a `TaskDocument` into a document with the `TaskDoc` schema. Coordination of database operations in this situation are highly dependent on the execution environment and are thus left to the user.
 
 ```python
 from collections import abc
@@ -194,9 +194,7 @@ def create_new_taskdoc(task_document):
 
 This is a multi-step process that should be done in order
 
-
-
-1. Flattening `calcs_reversed` 
+1. Flattening `calcs_reversed`
    * Prior to `atomate2` , workflows would output multiple calculations into a single directory, leading to the need for a field like `calcs_reversed` that would allow for parsing multiple calculations in a single directory into a single task document. `atomate2` has done away with this and now even for complex, multi-step workflows each individual calculation has its own output directory. Extracting the individual calculations from `calcs_reversed` is straightforward:
 
 ```python
@@ -234,9 +232,7 @@ for doc in source_collection.aggregate(pipeline):
 target_collection.insert_many(batch_insert)
 ```
 
-If the `source_collection` -> `target_collection`  pattern is followed, also be sure to copy all documents from `source_collection` with `len(calcs_reversed) == 1`  and set the `calcs_reversed` field equal to `calcs_reversed[0]` . 
-
-
+If the `source_collection` -> `target_collection` pattern is followed, also be sure to copy all documents from `source_collection` with `len(calcs_reversed) == 1` and set the `calcs_reversed` field equal to `calcs_reversed[0]` .
 
 2. "Parsing" extracted entries from `calcs_reversed`
    * The `calcs_reversed` entries from step 1 will need to be transformed into their own `TaskDoc` documents:
@@ -287,7 +283,7 @@ for doc in docs:
 target_collection.insert_many(batch_insert)
 ```
 
-3. Flattened "`TaskDoc`" to `CoreTaskDoc` 
+3. Flattened "`TaskDoc`" to `CoreTaskDoc`
    * Another core difference in `CoreTaskDoc` is the removal of the calculation's "trajectory" (energies/forces tracked across the ionic steps in the calculation: [ionic\_steps](https://github.com/materialsproject/emmet/blob/6b2b8492edfcab6e81f29b5eda1eb938d0724160/emmet-core/emmet/core/vasp/calculation.py#L620)) from the database entries to be stored externally. The size of the `ionic_steps` field can vary drastically across calculations and was found to be a major contributor to the on-disk storage size of MP's core task collection. See a full discussion here: emmet PR [#1232](https://github.com/materialsproject/emmet/pull/1232).
    * This snippet uses pyarrow to store the trajectories as parquet files as part of a pyarrow Dataset. Alternative storage formats can be substituted in as well
 
@@ -299,6 +295,24 @@ from emmet.core.tasks import CoreTaskDoc
 from emmet.core.trajectory import Trajectory
 from emmet.core.vasp.calc_types import RunType, TaskType
 from emmet.core.vasp.calculation import Calculation
+
+
+def patch_output_structure(doc: CoreTaskDoc):
+    """
+    Patch magmoms into final structure for documents parsed with older methods
+    """
+    mag_density = (
+        doc.output.outcar["total_magnetization"] / doc.output.structure.volume
+        if doc.output.outcar["total_magnetization"]
+        else None
+    )
+
+    if len(doc.output.outcar["magnetization"]) != 0:
+        magmoms = [m["tot"] for m in doc.output.outcar["magnetization"]]
+        doc.output.structure.add_site_property("magmom", magmoms)
+
+    doc.output.mag_density = mag_density
+
 
 core_task_doc_collection: Collection
 
@@ -361,8 +375,16 @@ for doc in task_docs_with_flattened_calcs_reversed:
     doc["output"] = cr.output
     doc["input"] = cr.input
     doc["task_id"] = task_id
-    td = CoreTaskDoc(**doc).model_dump()
-    docs.append(td)
+    td = CoreTaskDoc(**doc)
+    
+    if td.output.outcar is not None:
+        # Documents that were migrated to TaskDoc
+        # from TaskDocument will likely be missing
+        # some site properties on the final output 
+        # structure that can be patched
+        patch_output_structure(td)
+        
+    docs.append(td.model_dump())
 
     traj_schema = pa.schema(
         arrowize(Trajectory).fields
@@ -393,4 +415,4 @@ A dedicated method is available in `emmet-core` for constructing a list of `Traj
 This may be a viable alternative to the loop above depending on the input data.
 {% endhint %}
 
-Depending on the size of the source tasks collection, this process can be time and cpu intensive and may need additional batch processing logic. 
+Depending on the size of the source tasks collection, this process can be time and cpu intensive and may need additional batch processing logic.
