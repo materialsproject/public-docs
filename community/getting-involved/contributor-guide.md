@@ -73,7 +73,7 @@ Official Materials Project codes implement the [Contributor Covenant code of con
 
 **TODO - need a link over "these guidelines" (need new PR to implement this)**
 
-### ## Contribution Workflow
+#### Contribution Workflow
 
 Materials Project codes are hosted on GitHub and generally follow the [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) development model. If you're unfamiliar with this process, refer to GitHub [docs](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests) for more information. Briefly, the steps are:
 
@@ -86,7 +86,7 @@ Materials Project codes are hosted on GitHub and generally follow the [GitHub Fl
 7. **Push to Your Fork**: Push your changes to your fork.
 8. **Open a Pull Request (PR)**: Open a PR against the **upstream** repo you're contributing to. We encourage you to do so EARLY - well before your code is highly developed or even working. You can use the Draft status  to show that your PR is not ready for review yet, but having it open allows you to receive feedback from project maintainers and other community stakeholders. You can always mark it as ready for review later.
 
-### ## Code Quality Guidelines
+#### Code Quality Guidelines
 
 Each Materials Project repository adheres to similar code format, testing, and documentation requirements. Although the specifics may vary slightly from repository to repository, the general requirements are as follows:
 
@@ -112,27 +112,21 @@ GitHub Issues for bugs and Discussions for Q\&A (see [#communication](contributo
 
 ### How do I add a new workflow? (link to atomate)
 
-See this tutorial in the `atomate2` documentation! Note that all new workflows should go into `atomate2` rather than the legacy version of `atomate` (a.k.a., atomate 1).
-
-**TODO - add link to atomate2 workflow tutorial**
+See [this guide](https://github.com/materialsproject/atomate2/blob/main/docs/user/key_concepts_overview.md) in the `atomate2` documentation! Note that all new workflows should go into `atomate2` rather than the legacy version of `atomate` (a.k.a., atomate 1). More tutorials for running and analyzing the outputs of `atomate2` workflow can be found [here](https://github.com/materialsproject/atomate2/tree/main/tutorials).
 
 ### How do I support a new code in pymatgen?
 
 See this tutorial in the `pymatgen`documentation. You can also draw inspiration from similar PRs. The most recent new code support was parsing AIRSS (ab-initio random structure search) results implemented in [pymatgen#2625](https://github.com/materialsproject/pymatgen/pull/2625).
 
-**TODO develop tutorial and add link to pymatgen**
+Alternatively, you can add input/output parsing or analysis tools as separate add-on packages using the `pymatgen.io` and `pymatgen.analysis` namespaces. See [this template](https://github.com/materialsproject/pymatgen-addon-template) to get started, as well as the [`pymatgen-io-validation`](https://github.com/materialsproject/pymatgen-io-validation) toolkit developed with this template to validate MP calculations.
 
 ### How do I make a web app to share my data?
 
-We suggest using `crystaltoolkit` , which we built to make it easy to create web apps for materials science. We have a [growing list of example apps on GitHub](https://github.com/materialsproject/crystaltoolkit/tree/main/crystal\_toolkit/apps/examples) like this simple starter for rendering an [interactive 3d crystal structure](https://github.com/materialsproject/crystaltoolkit/blob/main/crystal\_toolkit/apps/examples/basic\_hello\_structure\_interactive.py). You can find a simple tutorial here.
-
-**TODO - link to crystaltoolkit tutorial**
+We suggest using `crystaltoolkit` , which we built to make it easy to create web apps for materials science. We have a [growing list of example apps on GitHub](https://github.com/materialsproject/crystaltoolkit/tree/main/crystal_toolkit/apps/examples) like this simple starter for rendering an [interactive 3d crystal structure](https://github.com/materialsproject/crystaltoolkit/blob/main/crystal_toolkit/apps/examples/basic_hello_structure_interactive.py). You can find a simple guide [here](https://docs.crystaltoolkit.org/first_component.html).
 
 ### How do I know who maintains XXX code?
 
 Check the README file, which is displayed on the main page of each GitHub repository. We do our best to list the currently active maintainers of each repository there
-
-**TODO - can/should we make this a policy?**
 
 ### Getting Credit for your Work
 
@@ -140,5 +134,11 @@ We value community contributions and want to do our best to provide appropriate 
 
 * Submit a PR to be added to the lists of contributors for a specific code. For example, see 
 * All MP codes support [`duecredit`](https://github.com/duecredit/duecredit/), which provides function decorators to associate publications with specific functions, classes and modules. You are welcome to include these decorators in your contributions where applicable (e.g. when you re-implement code from a paper, or use parameters from a paper, or contribute code you've created and published about). If in doubt, better to add citations than to not have them.
-* If you have developed an external tool that uses one or more MP codes, we invite you to submit it for inclusion on the **TODO - link to** [Andrew Rosen](https://app.gitbook.com/u/PihNiauyChYUErunmjh9dJYvgal1 "mention") ecosystem page
+* If you have developed an external tool that uses one or more MP codes, we invite you to submit it for inclusion on the [ecosystem page](community/getting-involved/mp-community-software-ecosystem.md)
 * For `pymatgen` add-ons, submit a PR to be added to the [addons page](https://matsci.org/)
+
+### Can I suggest new structures for MP?
+
+Yes! New structures, especially ones from validated experimental databases, are always welcome suggestions. The team *may* choose to perform DFT geometry optimizations, electronic band structure, etc. calculations for these suggested structures.
+
+MP cannot perform calculations on behalf of external users. We encourage those in need of help performing MP-style workflows to try [`atomate2`](https://materialsproject.github.io/atomate2/).
