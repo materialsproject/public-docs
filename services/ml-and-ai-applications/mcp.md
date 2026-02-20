@@ -43,7 +43,7 @@ pip install -e '.[mcp]'
 
 In the following, ensure you have `$MP_API_KEY` set as an environment variable. Assume these commands are run from the `mp_api` directory.
 
-The following setup guides are in alphabetical order.
+The following setup guides are in alphabetical order. These specific examples have been tested by the Materials Project staff and should not be construed as an endorsement of any particular architecture, model, corporation, etc.
 
 ### Anthropic Claude Desktop
 
@@ -70,5 +70,4 @@ fastmcp install gemini-cli $(pwd)/mp_api/mcp/server.py --project $(pwd) --python
 ```console
 mkdir .codex
 printf "[mcp_servers.materials_project_mcp]\ntype = \"command\"\ncommand = \"uv\"\nargs = [\n  \"run\",\n  \"--extra\",\n  \"mcp\",\n  \"--directory\",\n  \"$(pwd)\",\n  \"python\",\n  \"-m\",\n  \"mp_api.mcp.server\",\n]\nenv = {\"MP_API_KEY\" = \"$MP_API_KEY\"}" > .codex/config.toml
-fastmcp install gemini-cli $(pwd)/mp_api/mcp/server.py --project $(pwd) --python 3.12 --env MP_API_KEY=$MP_API_KEY
 ```
