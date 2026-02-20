@@ -73,7 +73,7 @@ mkdir .codex
 printf "[mcp_servers.materials_project_mcp]\ntype = \"command\"\ncommand = \"uv\"\nargs = [\n  \"run\",\n  \"--extra\",\n  \"mcp\",\n  \"--directory\",\n  \"$(pwd)\",\n  \"python\",\n  \"-m\",\n  \"mp_api.mcp.server\",\n]\nenv = {\"MP_API_KEY\" = \"$MP_API_KEY\"}" > .codex/config.toml
 ```
 
-If you instead want to use the MCP with your Codex environemnt generally, append to the configuration file at your home:
+If you instead want to use the MCP with your Codex environment generally, append to the configuration file at your home:
 ```console
 printf "\n[mcp_servers.materials_project_mcp]\ntype = \"command\"\ncommand = \"uv\"\nargs = [\n  \"run\",\n  \"--extra\",\n  \"mcp\",\n  \"--directory\",\n  \"$(pwd)\",\n  \"python\",\n  \"-m\",\n  \"mp_api.mcp.server\",\n]\nenv = {\"MP_API_KEY\" = \"$MP_API_KEY\"}" >> ~/.codex/config.toml
 ```
