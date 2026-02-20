@@ -26,6 +26,7 @@
   * [Matbench Discovery](services/ml-and-ai-applications/matbench-discovery.md)
   * [MPtrj](services/ml-and-ai-applications/mptrj.md)
   * [r2SCAN datasets](services/ml-and-ai-applications/matpes.md)
+  * [MP + LLMs (MCP)](services/ml-and-ai-applications/mcp.md)
 
 ## Methodology
 
