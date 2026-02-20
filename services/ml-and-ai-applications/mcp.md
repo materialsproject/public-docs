@@ -67,7 +67,13 @@ fastmcp install gemini-cli $(pwd)/mp_api/mcp/server.py --project $(pwd) --python
 
 ### OpenAI Codex
 
+To modify only the local directory and therefore only access the MCP once in the API client code directory, run this code block:
 ```console
 mkdir .codex
 printf "[mcp_servers.materials_project_mcp]\ntype = \"command\"\ncommand = \"uv\"\nargs = [\n  \"run\",\n  \"--extra\",\n  \"mcp\",\n  \"--directory\",\n  \"$(pwd)\",\n  \"python\",\n  \"-m\",\n  \"mp_api.mcp.server\",\n]\nenv = {\"MP_API_KEY\" = \"$MP_API_KEY\"}" > .codex/config.toml
+```
+
+If you instead want to use the MCP with your Codex environemnt generally, append to the configuration file at your home:
+```console
+printf "\n[mcp_servers.materials_project_mcp]\ntype = \"command\"\ncommand = \"uv\"\nargs = [\n  \"run\",\n  \"--extra\",\n  \"mcp\",\n  \"--directory\",\n  \"$(pwd)\",\n  \"python\",\n  \"-m\",\n  \"mp_api.mcp.server\",\n]\nenv = {\"MP_API_KEY\" = \"$MP_API_KEY\"}" >> ~/.codex/config.toml
 ```
