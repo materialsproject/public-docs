@@ -149,8 +149,17 @@
   * [Legacy API data](downloading-data/using-the-api/legacy-api-data.md)
 * [Differences between new and legacy API](downloading-data/differences-between-new-and-legacy-api.md)
 * [Query and Download Contributed Data](downloading-data/query-and-download-contributed-data.md)
-* [AWS OpenData](downloading-data/aws-opendata/README.md)
-  * [Working with parquet](downloading-data/aws-opendata/working_with_parquet.md)
+* [AWS Open Data](downloading-data/aws-opendata/README.md)
+  * [Legacy json Data on AWS Open Data](downloading-data/aws-opendata/working_with_parquet.md)
+
+***
+
+* [Materials Project Data Lakehouse](materials-project-data-lakehouse/README.md)
+  * [Supported Data Products](materials-project-data-lakehouse/supported-data-products.md)
+  * [Access-controlled Data](materials-project-data-lakehouse/access-controlled-data.md)
+  * [Arrow, Parquet, and OTFs](materials-project-data-lakehouse/arrow-parquet-and-otfs.md)
+  * [Arrow Datasets & the MPDataset Interface](materials-project-data-lakehouse/arrow-datasets.md)
+  * [Leveraging External Query Engines](materials-project-data-lakehouse/leveraging-external-query-engines.md)
 
 ## Uploading Data
 

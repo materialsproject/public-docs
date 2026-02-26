@@ -1,29 +1,28 @@
 ---
 description: >-
-  An introduction on how to interact with the parquet format data
-  hosted on the Materials Project AWS OpenData buckets.
+  An introduction on how to interact with the json format data hosted on the
+  Materials Project AWS Open Data buckets.
 ---
 
-<it>To run the examples in this section, it will help to use a python environment with `pandas`, `s3fs`, and `pyarrow` installed</it>
+# Legacy json Data on AWS Open Data
 
-# Structured vs. unstructured data
+{% hint style="info" %}
+All json format data products stored in the buckets of Materials Project's OpenData repositories are considered 'legacy' and candidates for migration to cloud-native data formats. Consult the documentation for [MP's active data products](../../materials-project-data-lakehouse/) for updated usage patterns. &#x20;
+{% endhint %}
 
-Much of the raw simulation data that the Materials Project (MP) uses to build up material properties is in plain text format.
-This is simply because the software used in scientific applications (e.g., VASP, Quantum Espresso, etc.) predates modern data structure standards.
+To run the examples in this section, it will help to use a python environment with `pandas`  and `s3fs` installed
 
-When the extended MP universe began to explore performing high-throughput materials simulations in the early late 2000s, it became clear very quickly that interacting with plain text files would not be practical.
-`pymatgen` was built around the idea of using JSON to structure raw simulation input and output: all VASP-related objects in pymatgen have a `to_dict` and `from_dict` method to make round-tripping from JSON possible.
-JSON was chosen partly because it is very simple, compatible with python-native dictionaries, and because it forms the document structure of MongoDB, which was selected for use in orchestrating MP's workflows.
+## Structured vs. unstructured data
 
-While JSON is supported by many languages, it is not well-suited to data streaming nor for partial retrieval of data.
-[JSON lines](https://jsonlines.org/) (`.jsonl`) is one attempt to allow for streaming of JSON data.
-Each line of a JSONL file contains a new JSON object.
-Much of MP's data up to mid-2025 has been distributed as JSONL for this reason.
+Much of the raw simulation data that the Materials Project (MP) uses to build up material properties is in plain text format. This is simply because the software used in scientific applications (e.g., VASP, Quantum Espresso, etc.) predates modern data structure standards.
 
-# Worked example: JSON
+When the extended MP universe began to explore performing high-throughput materials simulations in the early late 2000s, it became clear very quickly that interacting with plain text files would not be practical. `pymatgen` was built around the idea of using JSON to structure raw simulation input and output: all VASP-related objects in pymatgen have a `to_dict` and `from_dict` method to make round-tripping from JSON possible. JSON was chosen partly because it is very simple, compatible with python-native dictionaries, and because it forms the document structure of MongoDB, which was selected for use in orchestrating MP's workflows.
 
-Let's look at the `manifest.jsonl` file which represents the high-level metadata of MP's `summary` data collection.
-This file is located on MP's OpenData `build` [bucket](https://materialsproject-build.s3.amazonaws.com/index.html#collections/):
+While JSON is supported by many languages, it is not well-suited to data streaming nor for partial retrieval of data. [JSON lines](https://jsonlines.org/) (`.jsonl`) is one attempt to allow for streaming of JSON data. Each line of a JSONL file contains a new JSON object. Much of MP's data up to mid-2025 has been distributed as JSONL for this reason.
+
+## Worked example: JSON
+
+Let's look at the `manifest.jsonl` file which represents the high-level metadata of MP's `summary` data collection. This file is located on MP's OpenData `build` [bucket](https://materialsproject-build.s3.amazonaws.com/index.html#collections/):
 
 ```python
 import pandas as pd
@@ -36,15 +35,9 @@ print(summary_metadata.columns)
 >>> ['band_gap', 'density', 'deprecated', 'e_electronic', 'e_total', 'energy_above_hull', 'formation_energy_per_atom', 'formula_pretty', 'last_updated', 'material_id', 'nelements', 'sourced_from_path', 'symmetry_number', 'task_ids', 'theoretical', 'total_magnetization']
 ```
 
-Suppose we wanted to retrieve all materials in MP with a band gap between 0.1 and 1.0 eV, and a hull energy less than 0.05 eV/atom.
-To do this with the `manifest.jsonl.gz` file, we would need to download the entire file and then filter using the `pandas.DataFrame` shown above.
-In reality, the only columns we need to do that filtering are: `band_gap`, `material_id`, and `energy_above_hull`.
+Suppose we wanted to retrieve all materials in MP with a band gap between 0.1 and 1.0 eV, and a hull energy less than 0.05 eV/atom. To do this with the `manifest.jsonl.gz` file, we would need to download the entire file and then filter using the `pandas.DataFrame` shown above. In reality, the only columns we need to do that filtering are: `band_gap`, `material_id`, and `energy_above_hull`.
 
-Suppose now that we did not have the `manifest.jsonl` file, and needed to extract the same information from the entire summary collection.
-We would have to:
-    1. Iterate over all JSONL files in the `summary` bucket
-    2. Download each JSONL file in its entirety
-    3. Save only the material IDs of those materials matching our filters
+Suppose now that we did not have the `manifest.jsonl` file, and needed to extract the same information from the entire summary collection. We would have to: 1. Iterate over all JSONL files in the `summary` bucket 2. Download each JSONL file in its entirety 3. Save only the material IDs of those materials matching our filters
 
 ```python
 import pandas as pd
@@ -63,58 +56,3 @@ for nelements in range(1,10):
         except Exception:
             continue
 ```
-
-# Apache Arrow / Parquet
-
-Apache [Arrow](https://arrow.apache.org/docs/) and [parquet](https://parquet.apache.org/docs/) have more recently emerged as cloud-friendly storage technologies for (mostly-)columnar data.
-These allow for partial retrieval of only subsets of data, either by explicitly returning a relevant set of columns, or by reading the metadata of a file to allow for pre-filtering.
-Most of MP's data will be migrated to parquet datasets and files as we modernize our data schemas. 
-
-Thus the same example as before would look like this using a parquet dataset for the `summary` collection:
-
-```python
-import pandas as pd
-
-filtered_mp_ids = pd.read_parquet(
-    "s3://materialsproject-build/collections/xxxx-xx-xx/summary.parquet",
-    columns = ["material_id"],
-    filters = [
-        ("band_gap",">",0.1),
-        ("band_gap","<",1.0),
-        ("energy_above_hull","<",0.05),
-    ]
-).material_id
-```
-
-To directly use `pyarrow` rather than `pandas`:
-
-```python
-import pyarrow.parquet as pq
-
-filtered_mp_ids = pq.read_table(
-    "s3://materialsproject-build/collections/xxxx-xx-xx/summary.parquet",
-    columns = ["material_id"],
-    filters = [
-        ("band_gap",">",0.1),
-        ("band_gap","<",1.0),
-        ("energy_above_hull","<",0.05),
-    ]
-)["material_id"]
-```
-
-If the user is more familiar with `pandas` or wishes to use it after the fact, every `pyarrow` table can be converted to a `pandas` object like: `filtered_mp_ids.to_pandas()`, in this last example.
-
-# Parquet datasets
-
-For very large data structures, it is often impossible to efficiently store the data as a single parquet file.
-A parquet dataset can then be used to represent high-level metadata of multiple parquet files.
-MP's `tasks` collection, in the `parsed` [bucket](https://materialsproject-parsed.s3.amazonaws.com/index.html#core/tasks/) is a parquet dataset.
-The API client, `mp_api`, has tools to retrieve this data in its entirety and paginate through it in a memory-efficient way:
-```python
-from mp_api.client import MPRester
-
-with MPRester("your_api_key") as mpr:
-    tasks = mpr.materials.tasks.search()
-```
-The full `tasks` collection requires >10 GB of on-disk space even in an efficient parquet representation.
-The client query above will download all tasks to your machine and allow you to load them into memory as they are requested.

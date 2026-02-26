@@ -1,10 +1,10 @@
 ---
-description: MP data is also available through the AWS OpenData Program.
+description: MP data is also available through the AWS Open Data Program.
 ---
 
-# AWS OpenData
+# AWS Open Data
 
-In an effort to make our data as accessible as possible (FAIR principle) as well as significantly improve data downloads and take pressure off our servers, we are making a growing list of our data products available through the [AWS OpenData Program](https://aws.amazon.com/opendata). Also see the entries for MP-managed data on the [AWS OpenData Registry](https://registry.opendata.aws/materials-project/) or the [AWS Data Exchange](https://aws.amazon.com/marketplace/pp/prodview-hc3sh3u5ukiya). Usage of all data provided through our API or directly through OpenData is subject to our [terms](https://materialsproject.org/about/terms). 
+In an effort to make our data as accessible as possible (FAIR principle) as well as significantly improve data downloads and take pressure off our servers, we are making a growing list of our data products available through the [AWS Open Data Program](https://aws.amazon.com/opendata). Also see the entries for MP-managed data on the [AWS Open Data Registry](https://registry.opendata.aws/materials-project/) or the [AWS Data Exchange](https://aws.amazon.com/marketplace/pp/prodview-hc3sh3u5ukiya). Usage of all data provided through our API or directly through Open Data is subject to our [terms](https://materialsproject.org/about/terms).
 
 ## Overview
 
@@ -47,7 +47,7 @@ The collections and pre-built objects are versioned by the database release date
 
 ## Explore & Download Data
 
-The `mp-api` python client internally uses direct downloads from the OpenData repositories to improve convenience and efficiency. All data in MP's OpenData buckets can also be downloaded directly using the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+The `mp-api` python client internally uses direct downloads from the Open Data repositories to improve convenience and efficiency. All data in MP's Open Data buckets can also be downloaded directly using the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 Start by exploring the contents of the bucket you're interested in, by either navigating to the bucket's web interface (e.g. [https://materialsproject-parsed.s3.amazonaws.com/index.html](https://materialsproject-parsed.s3.amazonaws.com/index.html)) or using the CLI's `ls` command:
 
