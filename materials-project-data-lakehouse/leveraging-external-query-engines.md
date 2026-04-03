@@ -21,7 +21,7 @@ _Query execution speed will be limited by network speeds when interacting with r
 {% endhint %}
 
 ```sql
--- saved as gga_hex.sql
+-- saved as gga_u_hex.sql
 -- Install and load the delta extension
 INSTALL delta;
 LOAD delta;
@@ -64,7 +64,7 @@ COPY (
 Which can be ran by invoking the DuckDB CLI:
 
 ```bash
-duckdb < gga_hex.sql
+duckdb < gga_u_hex.sql
 ```
 
 and will return a parquet file with around 3800 DOS (in the [format](https://github.com/materialsproject/emmet/blob/324115fa404d37bb7170c95f8570d590fbc98905/emmet-core/emmet/core/band_theory.py#L326) MP uses for storing DOS entries).
