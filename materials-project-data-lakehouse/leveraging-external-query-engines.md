@@ -58,7 +58,7 @@ COPY (
     SELECT *
     FROM   mp_dos
     WHERE  identifier IN getvariable('gga_hex_task_ids')
-) TO 'gga_hex_dos.zstd.parquet' (FORMAT parquet, COMPRESSION zstd);
+) TO 'gga_u_hex_dos.zstd.parquet' (FORMAT parquet, COMPRESSION zstd);
 ```
 
 Which can be ran by invoking the DuckDB CLI:
