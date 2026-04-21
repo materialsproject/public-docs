@@ -16,6 +16,19 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2026.04.13
+
+This version went live on Xxx. XX, 2026 at about XX:XX Pacific
+
+* 74,052 new materials computed at the r<sup>2</sup>SCAN level of theory
+  * Includes all remaining GNoME materials
+* Beginning of recompute of all materials in MP with r<sup>2</sup>SCAN
+  * Will include r<sup>2</sup>SCAN-computed band structures
+* We have begun transitioning to alphabetical identifiers internally
+  * Legacy materials (e.g., `mp-149`) will still be accessible with their old IDs, or with their alphabetical equivalents (`mp-ft`, or even `mp-aaaaaaft`)
+  * Newly-added materials will primarily be accessible by their alphabetical IDs
+* Our data collections on S3 are being migrated to parquet tables backed with DeltaLake. See [this guide](https://docs.materialsproject.org/materials-project-data-lakehouse) for more information
+
 ## v2025.09.25
 
 This version went live on Sept. 25, 2025 at about 5:30pm Pacific
