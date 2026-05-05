@@ -18,7 +18,7 @@ You can verify the current database version powering the website on the footer o
 
 ## v2026.04.13
 
-This version went live on Apr. 29, 2026 at about 19:22 Pacific.
+This version went live on Xxx. XX, XXXX at about XX:XX Pacific.
 
 * 74,052 new materials computed at the r<sup>2</sup>SCAN level of theory
   * Includes all remaining GNoME materials
