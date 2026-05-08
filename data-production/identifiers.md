@@ -15,11 +15,11 @@ Hence, `mp-149` is labelled by task `mp-149`, but task `mp-149` currently contri
 To derive a set of sortable, more memorable, and easily extensible identifiers, we have begun transitioning our IDs internally to alphabetical IDs.
 This system uses base-26 math (based on the Latin lowercase alphabet) to represent integer-valued IDs.
 
-In base-10 math, we represent numbers as coefficients multiplying $10^n$:
+In base-10 math, we represent numbers as coefficients multiplying $$10^n$$:
 $$
 2026 = 2 \times 10^3 + 0 \times 10^2 + 2 \times 10^1 + 6 \times 10^0
 $$
-In base-26 math, where $a=0$, $b=1$, $c=2$,..., $z=25$, the same number would be represented as:
+In base-26 math, where $$a=0,b=1, c=2,...,z=25$$, the same number would be represented as:
 $$
 2026 = czy = 2 \times 26^2 + 25 \times 26^1 + 24 \times 26^0
 $$
@@ -35,7 +35,7 @@ Because `AlphaID`s are just a more compact representation of base-10 `MPID`s, us
 #### Global string sorting
 
 Finally, to ease sorting of IDs, all IDs will be left-padded with zeros to ensure consistent string-sorting behavior.
-In our same example as above, `aaczy` has the same value as `czy`, because this simply adds $0 \times 26^4 + 0 \times 26^3 = 0$.
+In our same example as above, `aaczy` has the same value as `czy`, because this simply adds $$0 \times 26^4 + 0 \times 26^3 = 0$$.
 To allow for a significant new block of calculations, <b>we are currently padding all IDs up to character length of 8</b>, however this may need to be increased with time.
 Thus within the database, `MPID(mp-2026)` would be represented as `AlphaID(mp-aaaaaczy)`.
 Now, without defining custom sort functions, this `AlphaID` will correctly be sorted after `MPID(mp-202) = AlphaID(mp-aaaaaahu)`, whereas a string sort would place `mp-202` before `mp-2026`.
