@@ -18,7 +18,7 @@ You can verify the current database version powering the website on the footer o
 
 ## v2026.04.13
 
-This version went live on Xxx. XX, XXXX at about XX:XX Pacific.
+This version was made available on S3 (via MP's Open Data repositories) on April 13, 2026 for testing.
 
 * 74,052 new materials computed at the r<sup>2</sup>SCAN level of theory
   * Includes all remaining GNoME materials
@@ -37,14 +37,14 @@ This version went live on Sept. 25, 2025 at about 5:30pm Pacific
 
 Fixed filtering errors that incorrectly excluded GGA+U entries and included r2SCAN entries when building the insertion electrode collection. These corrections:
 
-* Added \~1,200  insertion electrode documents
+* Added \~1,200 insertion electrode documents
 * Ensured all data in the collection now comes from the same thermodynamic hull (GGA\_GGA+U)
 
 ## v2025.06.09
 
 This version went live on June 11, 2025 at about 10:15pm Pacific.
 
-[**New Content:**](#user-content-fn-1)[^1]
+**New Content:**
 
 * Migrated [schema](https://github.com/materialsproject/emmet/blob/bcc362a4e375d7a8366c6b611cd57aac672ade13/emmet-core/emmet/core/phonon.py#L805) of legacy phonon data computed with density functional perturbation theory (DFPT) for \~1,500 materials, for consistency with new phonon workflows in atomate2
 * New schema allows for efficient storage of phonon band structures and densities of states (DOSes) with parquet
@@ -129,12 +129,12 @@ Major updates include the addition of r2SCAN calculations and improvements to th
 * Modified the `run_type`requirement for the definition of a valid material (`emmet-core`[622f2e3](https://github.com/materialsproject/emmet/commit/622f2e3035b9bcf66bccc653af03618a0d7d84b9)):
   * **Previously**: A material was required to have at least one `GGA(+U)`calculation
   * **Now**: MP accepts materials with only r2SCAN calculations, as going forward MP will be prioritizing r2SCAN workflows
-  * This change restored 736 previously deprecated materials 
+  * This change restored 736 previously deprecated materials
 
 **Thermodynamic Data Updates:**
 
-* New hierarchy for `thermo`data presentation: 
-  * Affects Materials Explorer and `MPRester().summary` endpoint 
+* New hierarchy for `thermo`data presentation:
+  * Affects Materials Explorer and `MPRester().summary` endpoint
   * Resolves display issues on the Materials Explorer for 586 materials with valid thermodynamic data that were found to have failed to generate thermodynamic stability data using MP's [GGA/GGA+U/r2SCAN Mixing scheme](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/gga-gga+u-r2scan-mixing)
   * These values were not passed through to the `summary` endpoint as a strict `thermo_type`of `GGA_GGA+U_R2SCAN`was required
   * New preference order for `thermo_type: GGA_GGA+U_R2SCAN`> `r2SCAN`> `GGA_GGA+U`
@@ -144,20 +144,20 @@ Major updates include the addition of r2SCAN calculations and improvements to th
 
 This version went live on December 12th, 2024 around noon Pacific.
 
-* Transition in document schemas for the `tasks`  collection:
+* Transition in document schemas for the `tasks` collection:
   * Part of forward-looking transition from `atomate` to `atomate2`workflow orchestration package
   * Previous: `emmet.core.vasp.task_valid.TaskDocument`
   * Current: `emmet.core.tasks.TaskDoc`
-  * Accessing fields is slightly different with `TaskDoc` (ex: each `Calculation` in `calcs_reversed` is no longer accessed like a dict, but as a `Calculation`  object), but `TaskDoc` should be fully backwards compatible with operations on `TaskDocument`.
-  * `TaskDoc` has some advantages over `TaskDocument`, such as dynamically updating `task_type`, `run_type`, and `calc_type`. This would avoid long-term errors such as noted below for certain NSCF calculations, or noted issues with incorrectly parsing r²SCAN meta-GGA calcs as  (PBE) GGA
-* 21,144 `tasks` were incorrectly assigned a `task_type` of `NSCF Uniform`  when they were really `NSCF Line.` `NSCF Uniform` tasks are used to calculate DOSes, `NSCF Line`tasks are used to generate band structure scans. These and associated properties in `materials/summary` (band gaps, DOS, etc.) have been corrected.
-* 39,374 materials were mistakenly assigned a DOS from a deprecated `NSCF Uniform` task. These have been corrected  and removed
+  * Accessing fields is slightly different with `TaskDoc` (ex: each `Calculation` in `calcs_reversed` is no longer accessed like a dict, but as a `Calculation` object), but `TaskDoc` should be fully backwards compatible with operations on `TaskDocument`.
+  * `TaskDoc` has some advantages over `TaskDocument`, such as dynamically updating `task_type`, `run_type`, and `calc_type`. This would avoid long-term errors such as noted below for certain NSCF calculations, or noted issues with incorrectly parsing r²SCAN meta-GGA calcs as (PBE) GGA
+* 21,144 `tasks` were incorrectly assigned a `task_type` of `NSCF Uniform` when they were really `NSCF Line.` `NSCF Uniform` tasks are used to calculate DOSes, `NSCF Line`tasks are used to generate band structure scans. These and associated properties in `materials/summary` (band gaps, DOS, etc.) have been corrected.
+* 39,374 materials were mistakenly assigned a DOS from a deprecated `NSCF Uniform` task. These have been corrected and removed
 * The current set of 2,047 GNoME-originated materials has been deprecated in preparation for a release of about 120,000 GNoME materials
 * While the XAS data has not changed, be sure to update to the newest version of `pymatgen` to avoid issues parsing certain XAS tasks
 
 ## v2023.11.1
 
-* Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`. 
+* Improved and expanded set of elasticity data. Note that there are schema changes with how it is accessed in `SummaryDoc` and `ElasticityDoc`.
 * Conversion electrode data added alongside existing insertion electrode data.
 * \~10k new materials added, with \~5k deprecated. This includes a temporary deprecation of all compounds containing `Yb` while they are being re-run. This is in response to pseudopotential issues identified which were providing incorrect energies.
 
@@ -303,5 +303,3 @@ During deployment of the new v2019.11 database, there was temporary issue with g
 * Fixed incorrect calculation and display of polycrystalline dielectric constants
 * Fixed labeling of all materials as high-pressure. Note we’re parsing ICSD tags for this labeling so while some materials may not conventionally be considered high-pressure, a single matching ICSD entry can tag a material as such. We would love to hear comments on how we could better tag high-pressure materials
 * Begun enforcing the symmetry of the structure on piezo tensors. In general, this reduces the expected piezo value.
-
-[^1]: 
