@@ -1,5 +1,12 @@
 # Website Changelog
 
+#### 2026-05-22
+
+* Support `AlphaID` display, see more [here](https://docs.materialsproject.org/data-production/identifiers).
+* Add XAS explorer popover links
+* Add `messageAIO` upload interface
+* Add Phonon interactive button and fix access control
+
 #### 2022-12-16 (7ca3bcd3)
 
 * Fix issue with API query, see [here](https://matsci.org/t/rest-query-returned-with-error-status-code-500/45793).
