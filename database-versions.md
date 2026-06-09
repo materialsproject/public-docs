@@ -1,5 +1,6 @@
 ---
 description: A changelog of Materials Project (MP) database releases.
+icon: database
 ---
 
 # Database Versions
@@ -18,16 +19,67 @@ You can verify the current database version powering the website on the footer o
 
 ## v2026.04.13
 
-This version was made available on S3 (via MP's Open Data repositories) on April 13, 2026 for testing.
+{% hint style="info" %}
+This version was made available on S3 (via MP's Open Data repositories) on April 13, 2026 for testing and validation
+{% endhint %}
 
-* 74,052 new materials computed at the r<sup>2</sup>SCAN level of theory
-  * Includes all remaining GNoME materials
-* Beginning of recompute of all materials in MP with r<sup>2</sup>SCAN
-  * Will include r<sup>2</sup>SCAN-computed band structures
+This version went live on June 08, 2026 at around 4:00 pm Pacific
+
+#### Backend Changes
+
+* This release is marks a major transition in MP's data storage layer. _All_ core data products are now backed by Delta tables on S3. See [this guide](https://docs.materialsproject.org/materials-project-data-lakehouse) for more information.
+  * Native integrations have been added to the `mp-api` Python client to handle these changes. See notes on using local [MPDatasets and Arrow integrations](materials-project-data-lakehouse/arrow-datasets.md) for further details + working examples
+  * See the `arrow` [MatSci forum subcategory](https://matsci.org/c/materials-project/arrow/) for additional Q\&A or to submit questions
+
+#### New Content
+
+* Added 74,052 new GNoME materials computed at the r2SCAN level of theory
+  * This brings the total to 117k GNoME materials. A future release will be dedicated to the final bulk release of the remaining GNoME materials
+* Began recompute of all materials in MP's core dataset with r<sup>2</sup>SCAN
+  * This data is _not yet integrated_ into the core `materials`  collection (or downstream, e.g., `thermo`, `summary`, etc.)
+    * Only available in the `tasks` collection for the time being with docs where `batch_id==r2scan_2026_kaplan`
+  * Progress: \~26% of non-deprecated, `BY-C` (non-GNoME) materials
+  * r<sup>2</sup>SCAN-computed band structures will be added in future releases
+* Added new phonon documents generated using the pheasy methodology
+  * +26K `material`s now have additional phonon data. Retrievable via `mp-api` by using the `phonon_method` `kwarg` -> `mpr.materials.phonon.search(phonon_method="pheasy")`
+  * ChemRxiv link:&#x20;
+
+#### Electronic Structure Collection
+
+* Metadata corrections:
+  * Previous releases of the `electronic_structure` collection had inconsistent population of the origins field due to a logic bug. This has been fixed, and the origins field now accurately documents the provenance of the various properties that are aggregated to produce each `electronic_structure` document
+* &#x20;More band structure/DOS property coverage:
+  * The `electronic_structure` builder previously only aggregated electronic structure data for materials that had _both_ a band structure and a DOS, with a fallback of propagating VASP calculation outputs for the material's structure when this condition failed. The builder has been updated to handle materials that have _only_ a DOS, _only_ a band structure, or _both_, with the same default of propagating VASP outputs when none of the previous conditions are met
+  * Resulting increase in coverage:
+    * +\~16K materials with associated band structures
+    * +\~40 materials with an associated DOS
+
+#### Internal ID Formatting Changes
+
 * We have begun transitioning to [alphabetical identifiers](https://docs.materialsproject.org/data-production/identifiers) internally
-  * Legacy materials (e.g., `mp-149`) will still be accessible with their old IDs, or with their alphabetical equivalents (`mp-ft`, or even `mp-aaaaaaft`)
+  * For backwards compatibility, all existing materials will still be accessible with their old IDs (e.g., `mp-149`) _or_ their alphabetical equivalents (`mp-ft`, or even `mp-aaaaaaft`)
+    * This applies to the website, the `mp-api` client, and the base REST API
+    * "Power" users that utilize the REST api or retrieve data directly from S3 (i.e., interacting with MP's raw data) should be aware that any backwards compatible identifier format rendering for `material_id`s and `task_id`s has to be done manually
   * Newly-added materials will primarily be accessible by their alphabetical IDs
-* Our data collections on S3 are being migrated to parquet tables backed with DeltaLake. See [this guide](https://docs.materialsproject.org/materials-project-data-lakehouse) for more information
+
+#### EOS, XAS, & Phonon Collection Identifier Changes
+
+* To date, these static collections have used material\_id as their primary key. This may have been accurate when they were first produced, but in many cases the "`material_id`"s associated with these documents have drifted over time as the underlying data and analysis libraries have evolved. This has led to user confusion when matching these documents with materials.
+* For the EOS and XAS collections, `material_id` has been changed to `task_id` to better reflect their origins and to allow consistent matching of these documents to the underlying "task" (calculation) from which they were generated.
+  * Queries to both the EOS and XAS endpoints (via the `mp-api` Python client) that use the old `material_ids` `kwarg` will still continue to work, but a warning will be emitted asking to use `task_ids`  instead
+* The phonon collection is an exception: it now uses a more generic identifier field (literally `identifier`), since the original phonon documents (and the new `pheasy` documents) were never part of a particular "task" and are instead an aggregation of properties. This identifier is still quasi-linked to the corresponding task in the core tasks collection that has the same `task_id` (i.e., where `phonon.identifier == task.task_id`), so that phonon documents can still be accurately linked to `material`s&#x20;
+
+#### Unchanged Collections
+
+* The following collections are unchanged from v2025.09.25 (outside of being backed by Delta tables on S3)
+  * `absorption`
+  * `alloys`
+  * `conversion-electrodes`
+  * `elasticity`
+  * `insertion-electrodes`
+  * `piezoelectric`
+  * `provenance`&#x20;
+* Subsequent builds will update these collections as more of MP's data pipelines are refactored/modernized
 
 ## v2025.09.25
 
@@ -42,7 +94,7 @@ Fixed filtering errors that incorrectly excluded GGA+U entries and included r2SC
 
 ## v2025.06.09
 
-This version went live on June 11, 2025 at about 10:15pm Pacific.
+This version went live on June 11, 2025 at about 10:15pm Pacific
 
 **New Content:**
 

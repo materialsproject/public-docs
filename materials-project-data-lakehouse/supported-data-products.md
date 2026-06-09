@@ -11,46 +11,42 @@ Parquet/Delta Table Available + `mp-api` Support:
 
 * `tasks`
 * `trajectories`
-{% endhint %}
-
-{% hint style="info" icon="bar-progress-half" %}
-Parquet/Delta Table Available:
-
-* `summary`&#x20;
 * `materials`
 * `total-dos`
 * `projected-dos`
 * `bandstructures`
 * `projected-bandstructures`
+* `absorption`
+* `bonds`
+* `electrodes`
+* `alloys`
+* `chemenv`
+* `magnetism`
+* `dielectric`
+* `materials`
+* `phonon`
+* `piezo`
+* `elasticity`
+* `oxidation_states`
+* `robocrys`
+* `provenance`
+* `electronic_structure`
+* `thermo`
+* `summary`
+{% endhint %}
+
+{% hint style="info" icon="bar-progress-half" %}
+Parquet/Delta Table Available:
+
+* `grain_boundaries`
+* `similarity`
+* `eos`
 {% endhint %}
 
 {% hint style="info" icon="triangle-exclamation" %}
 In Progress:
 
-* `absorption`
-* `alloys`
-* `bonds`
-* `chemenv`
-* `dielectric`
-* `doi`
-* `elasticity`
-* `electrodes`
-* `electronic_structure`
-* `eos`
-* `grain_boundaries`
-* `magnetism`
-* `materials`
-* `oxidation_states`
-* `phonon`
-* `piezo`
-* `provenance`
-* `robocrys`
-* `similarity`
-* `substrates`
-* `summary`
+* `molecules`
+* `jcesr`
 * `surface_properties`
-* `synthesis`
-* `tasks`
-* `thermo`
-* `xas`
 {% endhint %}

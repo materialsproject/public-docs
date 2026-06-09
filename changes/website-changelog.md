@@ -1,3 +1,7 @@
+---
+icon: browser
+---
+
 # Website Changelog
 
 #### 2026-05-22
