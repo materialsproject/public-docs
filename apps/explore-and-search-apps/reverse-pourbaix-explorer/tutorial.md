@@ -12,18 +12,22 @@ to immediately cross-reference binding energies using
 adsorption-energy data from the
 [Catalysis Explorer](/apps/explorer-apps/catalysis-explorer).
 
-The app has two tabs: **Reverse Pourbaix** and **Adsorbate Comparison**.
+The app is a single scrolling page. The **Reverse Pourbaix heatmap** sits at
+the top, and two collapsible drop-down sections follow below it: a **results
+table** of the stable materials at the selected conditions, and an **Adsorbate
+Comparison** panel. Both drop-downs are collapsed by default — click their
+headers to expand them.
 
 {% hint style="info" %}
 The thermodynamic stability data used in this app is pre-computed from the MP
 database using pymatgen's Pourbaix analysis. The adsorption-energy data in the
-Adsorbate Comparison tab comes from the Open Catalyst 2020 (OC20) dataset,
+Adsorbate Comparison section comes from the Open Catalyst 2020 (OC20) dataset,
 accessed via the `open_catalyst_project` MPContribs project.
 {% endhint %}
 
 ---
 
-## Reverse Pourbaix tab
+## Reverse Pourbaix heatmap
 
 ### What the heatmap shows
 
@@ -63,18 +67,23 @@ Clicking any cell on the heatmap does three things:
 
 1. The **Selected conditions** panel (bottom-left) updates to show the pH,
    potential, cutoff, and number of stable materials at that point.
-2. The **results table** below the heatmap populates with one row per stable
-   material, including formula, band gap, energy above hull, formation energy,
-   Pourbaix decomposition energy, and a direct link to the standard
+2. The **results table** drop-down below the heatmap populates with one row per
+   stable material, including formula, band gap, energy above hull, formation
+   energy, Pourbaix decomposition energy, and a direct link to the standard
    [Pourbaix Diagram app](/apps/analysis-apps/pourbaix-app) pre-filled with
    that material's composition. This allows for further exploration of the 
    aqueous stability of a material under different conditions.
-3. The selected cell is recorded and passed to the **Adsorbate Comparison** tab
-   for filtering (see below).
+3. The selected cell is recorded and passed to the **Adsorbate Comparison**
+   section for filtering (see below).
 
 ![Reverse pourbaix diagram with selected candidates](../../../.gitbook/assets/reverse_pourbaix_selected_table.png)
 
 ### Results table columns
+
+The results table lives in the collapsible **"Sort and filter the stable
+materials at the selected conditions"** drop-down directly beneath the heatmap;
+expand it to view the table. The header badge reports how many materials are
+stable at the selected cell.
 
 | Column | Description |
 |---|---|
@@ -94,9 +103,11 @@ full aqueous stability diagram without re-entering the formula.
 
 ---
 
-## Adsorbate Comparison tab
+## Adsorbate Comparison
 
-The Adsorbate Comparison tab lets you cross-reference the electrochemically
+The Adsorbate Comparison section is the second collapsible drop-down beneath the
+heatmap (**"Plot OC20 binding energies of stable materials"**); expand it to
+access these controls. It lets you cross-reference the electrochemically
 stable materials identified on the heatmap with their catalytic properties from
 the OC20 dataset. It plots the minimum adsorption energy of one adsorbate
 against another, one point per material, so you can identify promising
@@ -108,7 +119,7 @@ Therefore, fewer number of points than number of stable materials is expected.
 
 ### Prerequisites
 
-Before using this tab, **click a cell on the Reverse Pourbaix heatmap** to
+Before using this section, **click a cell on the Reverse Pourbaix heatmap** to
 select a set of stable materials. The "Selected conditions" panel at the top of
 the controls column confirms which cell is active. If no cell has been clicked,
 clicking "Generate/Update Plot" will show an empty-state message prompting you
@@ -127,8 +138,9 @@ cell. Click this after changing adsorbates or after clicking a new heatmap cell.
 The fetch may take a few seconds on first load.
 
 **Download CSV** — Downloads a CSV file (`adsorbate_comparison.csv`) containing
-`mp_id`, `X value` (ΔE for the X-axis adsorbate, eV), and `Y value` (ΔE for the
-Y-axis adsorbate, eV) for all plotted points.
+`mp_id` plus one column per axis, labelled with the selected adsorbate (e.g.
+`ΔE(*H) [eV]` and `ΔE(*C) [eV]`), for all plotted points. The energy column
+headers track whichever adsorbates you chose for the X and Y axes.
 
 ### What the scatter shows
 
@@ -190,7 +202,7 @@ the context of aqueous stability.
 | App | Role in the workflow |
 |---|---|
 | [Pourbaix Diagram](/apps/analysis-apps/pourbaix-app) | Standard (forward) Pourbaix: stability of a *single* composition across pH/potential. Each row in the Reverse Pourbaix table links here with the composition pre-filled. |
-| [Catalysis Explorer](/apps/explorer-apps/catalysis-explorer) | Browse OC20 adsorption energies by composition, adsorbate, and facet. The Adsorbate Comparison tab surfaces the same data restricted to electrochemically stable materials. |
+| [Catalysis Explorer](/apps/explorer-apps/catalysis-explorer) | Browse OC20 adsorption energies by composition, adsorbate, and facet. The Adsorbate Comparison section surfaces the same data restricted to electrochemically stable materials. |
 | [Materials Explorer](/apps/explorer-apps/materials-explorer) | Full property search across the MP database. Material IDs in the results table link to material detail pages. |
 
 A typical workflow might be:
@@ -198,7 +210,7 @@ A typical workflow might be:
 1. Open the Reverse Pourbaix Explorer and identify the pH/potential window of
    interest (e.g. near the oxygen evolution line at pH 7).
 2. Click the target cell to see which materials are stable there.
-3. Switch to the Adsorbate Comparison tab, choose adsorbates relevant to the
+3. Expand the Adsorbate Comparison drop-down, choose adsorbates relevant to the
    reaction of interest (e.g. \*OH and \*OOH for OER), and generate the scatter.
 4. Identify promising candidates on the scatter and click through to their OC20
    calculations via the detail panel, or follow the Pourbaix Diagram link in the
@@ -209,7 +221,7 @@ A typical workflow might be:
 ## Notes and limitations
 
 - **OC20 coverage.** Not all materials in the MP database have OC20 calculations.
-  The Adsorbate Comparison tab is limited to the intersection of stable materials
+  The Adsorbate Comparison section is limited to the intersection of stable materials
   and OC20-covered materials, which may be small for unusual chemistries or rare
   electrochemical conditions.
 - **Data freshness.** The stability data underlying the heatmap is pre-computed
