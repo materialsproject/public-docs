@@ -20,7 +20,7 @@ with MPRester("your_api_key_here") as mpr:
 
 ### Querying ICSD ID
 
-For structures tagged with at least one ICSD entry, the simplest way to query structure with ICSD ID is this: 
+For structures tagged with at least one ICSD entry, the simplest way to query structure with ICSD ID is this:
 
 ```python
 from mp_api.client import MPRester
@@ -37,7 +37,7 @@ for mp_doc in mp_docs:
         icsd_to_mpid[icsd_id].append(mpid)
 ```
 
-Then the keys of `icsd_to_mpid` will be all ICSD IDs currently matched to at least one entry in MP, and its values  will be the MP IDs which structurally match to that ICSD ID.
+Then the keys of `icsd_to_mpid` will be all ICSD IDs currently matched to at least one entry in MP, and its values will be the MP IDs which structurally match to that ICSD ID.
 
 > _**NOTE:**_ Not every ICSD entry is included in Materials Project - some of them we’re working on adding, others we do not plan to add (e.g., if they are disordered with a complex disordering ratio). Furthermore, many ICSD entries can structure match to the same MP ID. We use the pymatgen StructureMatcher to determine structural similarity
 
@@ -131,7 +131,7 @@ with MPRester("your_api_key_here") as mpr:
 
 ```python
 from mp_api.client import MPRester
-from emmet.core.electronic_structure import BSPathType
+from emmet.core.band_theory import BSPathType
 
 with MPRester("your_api_key_here") as mpr:
     # -- line-mode, Setyawan-Curtarolo (default):
@@ -355,7 +355,7 @@ likely_perovskite_mpids = list(set(robo_perov_mpids).union(possible_perov))
 
 MP contains specialized calculations to compute various materials properties. Sometimes it's of interest to find those calculations. A full list of valid such "task types" are given in our builder software, [emmet](https://github.com/materialsproject/emmet/blob/6b2b8492edfcab6e81f29b5eda1eb938d0724160/emmet-core/emmet/core/vasp/calc_types/enums.py#L87).
 
-**DFPT outputs and data only exist for parts of our database.** The following code snippet will take only relevant task (single DFT calculation) data from our database and check to see if it’s a DFPT calculation: 
+**DFPT outputs and data only exist for parts of our database.** The following code snippet will take only relevant task (single DFT calculation) data from our database and check to see if it’s a DFPT calculation:
 
 ```python
 from mp_api.client import MPRester
@@ -372,7 +372,7 @@ dfpt_tasks = {
 
 ### Identifying Materials with Specific Structural Dimensionalities
 
-Though the Materials Project does not store structure dimension as a formal property, it is possible to  categorize entries by their structure dimension (1D, 2D, and 3D) by parsing [robocrystallographer](https://hackingmaterials.lbl.gov/robocrystallographer/index.html) analyses, which are generated for most materials in the Materials Project.
+Though the Materials Project does not store structure dimension as a formal property, it is possible to categorize entries by their structure dimension (1D, 2D, and 3D) by parsing [robocrystallographer](https://hackingmaterials.lbl.gov/robocrystallographer/index.html) analyses, which are generated for most materials in the Materials Project.
 
 #### Finding Materials by Dimension in a Chemical System
 
