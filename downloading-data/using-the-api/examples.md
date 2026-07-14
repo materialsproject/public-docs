@@ -218,7 +218,7 @@ with MPRester("your_api_key_here") as mpr:
 
 ```python
 from mp_api.client import MPRester
-from emmet.core.electronic_structure import BSPathType
+from emmet.core.band_theory import BSPathType
 
 with MPRester("your_api_key_here") as mpr:
     ph_dos = mpr.get_phonon_dos_by_material_id("mp-149")
