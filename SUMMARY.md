@@ -118,6 +118,8 @@
       * [Symmetry](apps/mof-explorer/property-definitions/symmetry.md)
     * [Version History](apps/mof-explorer/version-history.md)
     * [How to Cite](apps/mof-explorer/how-to-cite.md)
+  * [Reverse Pourbaix Explorer](apps/explorer-apps/reverse-pourbaix-explorer/README.md)
+    * [Tutorial](apps/explorer-apps/reverse-pourbaix-explorer/tutorial.md)
 * [Analysis Apps](apps/analysis-apps/README.md)
   * [Phase Diagram](apps/analysis-apps/phase-diagram/README.md)
     * [Background](apps/analysis-apps/phase-diagram/background.md)

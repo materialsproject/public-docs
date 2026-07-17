@@ -121,13 +121,13 @@ with MPRester("your_api_key") as mpr:
 ## Citations
 
 {% hint style="info" %}
-#### Methodology (I)
+**Methodology (I)**
 
 [S. P. Ong, L. Wang, B. Kang, G. Ceder., The Li-Fe-P-O2 Phase Diagram from First Principles Calculations, Chemistry of Materials, vol. 20, Mar. 2008, pp. 1798-1807.](https://doi.org/10.1021/cm702327g)
 {% endhint %}
 
 {% hint style="info" %}
-#### Methodology (II)
+**Methodology (II)**
 
 [S.P. Ong, A. Jain, G. Hautier, B. Kang, and G. Ceder, Thermal stabilities of delithiated olivine MPO4 (M=Fe, Mn) cathodes investigated using first principles calculations, Electrochemistry Communications, vol. 12, 2010, pp. 427-430](https://doi.org/10.1016/j.elecom.2010.01.010).
 {% endhint %}

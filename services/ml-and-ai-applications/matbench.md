@@ -8,7 +8,7 @@ description: >-
 
 ## MatBench
 
-With Alex Dunn of Anubhav Jain's group. Data stored at a dedicated MPContribs site here: \
+With Alex Dunn of Anubhav Jain's group. Data stored at a dedicated MPContribs site here:\
 [https://ml.materialsproject.org](https://ml.materialsproject.org)
 
 Machine learning requires large amounts of clean and reliable data to train new effective\
@@ -75,7 +75,7 @@ others developed externally.
 
 <figure><img src="../../.gitbook/assets/mm_pipe.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mm_featurization (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mm_featurization.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Matminer is developed by the [Hacking Materials group](https://hackingmaterials.lbl.gov).
 
@@ -83,11 +83,10 @@ Matminer is developed by the [Hacking Materials group](https://hackingmaterials.
 
 [Automatminer](https://hackingmaterials.lbl.gov/automatminer/) is a fully-automatic engine for predicting materials properties. It automatically determines the appropriate feature sets to apply, generates features and applies feature reduction routines, and searches a large space of ML models and hyperparameters to determine the optimal machine learning pipeline for the problem. Automatminer can be trained and deployed entirely without human tuning, and requires as few as 10 lines of code to train a full pipeline.
 
-<figure><img src="../../.gitbook/assets/amm_pipe (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/amm_pipe.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Automatminer is developed by the [Hacking Materials group](https://hackingmaterials.lbl.gov), led by Alex Dunn.
 
 ## References:
 
 \[1] A. Dunn, Q. Wang, A. Ganose, D. Dopp, and A. Jain, npj Computational Materials 6 (2020) ([DOI](https://doi.org/10.1038/s41524-020-00406-3))
-

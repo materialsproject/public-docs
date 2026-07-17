@@ -33,7 +33,7 @@ For more information on this specific implementation of the algorithm, please ci
 ## Citations
 
 {% hint style="info" %}
-#### **Methodology**
+**Methodology**
 
 Todd, P. K., McDermott, M. J., Rom, C. L., Corrao, A. A., Denney, J. J., Dwaraknath, S. S., Khalifah, P. G., Persson, K. A., & Neilson, J. R. (2021). Selectivity in Yttrium Manganese Oxide Synthesis via Local Chemical Potentials in Hyperdimensional Phase Space. Journal of the American Chemical Society, 143(37), 15185-15194. [https://doi.org/10.1021/jacs.1c06229](https://doi.org/10.1021/jacs.1c06229)
 {% endhint %}

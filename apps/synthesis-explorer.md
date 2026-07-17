@@ -8,8 +8,6 @@ description: >-
 
 Here are the articles in this section:
 
-
-
 {% content-ref url="explore-and-search-apps/synthesis-explorer/background.md" %}
 [background.md](explore-and-search-apps/synthesis-explorer/background.md)
 {% endcontent-ref %}
@@ -18,6 +16,6 @@ Here are the articles in this section:
 [tutorial.md](explore-and-search-apps/synthesis-explorer/tutorial.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="https://github.com/materialsproject/public-docs/blob/main/apps/broken-reference/README.md" %}
+[https://github.com/materialsproject/public-docs/blob/main/apps/broken-reference/README.md](https://github.com/materialsproject/public-docs/blob/main/apps/broken-reference/README.md)
 {% endcontent-ref %}

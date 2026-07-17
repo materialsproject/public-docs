@@ -54,7 +54,7 @@ This is implemented for the following elements: O2, F2, Cl2, Br2, Hg
 
 In an aqueous environment, O2 and H2 in their gaseous states are in equilibrium with water through the reaction
 
-![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.32.45 (1).png>)
+![](<../.gitbook/assets/Screen Shot 2022-07-14 at 17.32.45.png>)
 
 Hence, the hydrogen energy is corrected such that the experimental free energy of formation of H2O is reproduced.
 
