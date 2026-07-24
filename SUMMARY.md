@@ -166,6 +166,7 @@
 ## Uploading Data
 
 * [Contribute Data](uploading-data/what-is-mpcontribs.md)
+* [Upload interface](uploading-data/upload-interface.md)
 
 ## Data Production
 
