@@ -166,7 +166,9 @@
 ## Uploading Data
 
 * [Contribute Data](uploading-data/what-is-mpcontribs.md)
-* [Upload interface](uploading-data/upload-interface.md)
+* [Upload Interface](uploading-data/upload-interface/README.md)
+  * [Upload Tab](uploading-data/upload-interface/upload-tab.md)
+  * [Edit Tab](uploading-data/upload-interface/edit-tab.md)
 
 ## Data Production
 
