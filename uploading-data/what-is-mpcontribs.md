@@ -8,8 +8,8 @@ description: >-
 
 ### Interactively
 
-{% hint style="danger" %}
-Under Construction. We are working on creating interactive interfaces that enable our user to contribute data in addition to the programmatic approach below.
+{% hint style="info" %}
+We’ve released the alpha version of the Upload Interface! Check out the [interface](https://next-gen.materialsproject.org/upload-interface) and [documentation](upload-interface/) for more details.
 {% endhint %}
 
 ### Programmatically
