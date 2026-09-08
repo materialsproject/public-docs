@@ -8,7 +8,11 @@ description: >-
 
 ### Getting started
 
-Select your project from the dropdown at the top of the page, then either drag and drop a file, click **select** to choose a CSV or Excel file (`.csv`, `.xlsx`), or paste a Google Sheet URL (the sheet must have "view with link" permissions enabled; this can be set from the Sheet's own **Share** menu). Choose whether your data should be loaded as `nested` or `flat`, then click `Load Data`.
+Select your project from the dropdown at the top of the page, then either drag and drop a file, click **select** to choose a CSV or Excel file (`.csv`, `.xlsx`)~~, or paste a Google Sheet URL (the sheet must have "view with link" permissions enabled;~~ this can be set from the Sheet's own **Share** menu). Choose whether your data should be loaded as `nested` or `flat`, then click `Load Data`.
+
+{% hint style="warning" %}
+Pasting a Google Sheet URL is currently under maintenance and temporarily unavailable.
+{% endhint %}
 
 > If your column headers use dot notation (for example, `band.gap`), **nested** mode treats the dots as a hierarchy separator, grouping related fields together. Choose the option that matches how your column names are structured.
 
