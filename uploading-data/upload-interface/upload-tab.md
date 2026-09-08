@@ -28,9 +28,17 @@ Every file you upload must contain a column named `identifier` and a column name
 
 > **Hard block.** Neither `identifier` nor `formula` can have a unit. If either column appears with a unit suffix (for example, `identifier (mol)`), the file is blocked from loading. You will see an error telling you to remove the unit and re-upload.
 
+### Column header normalization
+
+Column headers are automatically normalized to camelCase, with units in parentheses extracted separately. For example, `BAND GAP`,  `Band Gap`, `band gap` , and `bandgap (eV)` all become `bandGap`.&#x20;
+
+As a best practice, avoid parentheses in column headers unless they specify units. When parentheses indicate units, place them at the end of the column header.&#x20;
+
+Please update your data headers before loading the dataset. Otherwise, the platform may block the dataset from being loaded. See below for more details.
+
 ### Loading your data
 
-Once loaded, your data appears in an editable grid, with a column for each data field and a row for each entry. Column headers are automatically normalized to camelCase, for example, `BAND GAP`,  `Band Gap`, and `band gap` all become `bandGap`. If any column names were changed during normalization, you will see a confirmation message in the bottom right listing which ones changed; otherwise, you will see a general confirmation that your data loaded successfully.
+Once loaded, your data appears in an editable grid, with a column for each data field and a row for each entry. Column headers are automatically normalized. If any column names were changed during normalization, you will see a confirmation message in the bottom right listing which ones changed; otherwise, you will see a general confirmation that your data loaded successfully.
 
 > **Hard block.** If two or more columns normalize to the same name (for example, "Band Gap" and "band\_gap" both becoming `bandGap`), the file is blocked from loading entirely. You will see an error message listing the conflicting column names; rename them in your file and re-upload.
 
