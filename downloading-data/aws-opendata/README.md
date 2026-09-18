@@ -31,6 +31,10 @@ The [`parsed` bucket ](https://materialsproject-parsed.s3.amazonaws.com/index.ht
 | `/tasks`          |     1556    |    34 GB    |
 | `/tasks_atomate2` |     1286    |    28 GB    |
 
+{% hint style="warning" %}
+For those who analyze `/elfcars` files, please take a closer look at the [issue](https://vasp.at/forum/viewtopic.php?f=3\&t=18361) raised on the VASP forum, as it might affect your own parsing.
+{% endhint %}
+
 ### build data
 
 The [`build` bucket](https://materialsproject-build.s3.amazonaws.com/index.html) contains the high-level derived data that comprises the source for the collections available through the [MP API](https://api.materialsproject.org/) as well as pre-built objects and images for efficient visualization on the website.
