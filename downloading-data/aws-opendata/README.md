@@ -32,7 +32,7 @@ The [`parsed` bucket ](https://materialsproject-parsed.s3.amazonaws.com/index.ht
 | `/tasks_atomate2` |     1286    |    28 GB    |
 
 {% hint style="warning" %}
-For those who analyze `/elfcars` files, please take a closer look at the [issue](https://vasp.at/forum/viewtopic.php?f=3\&t=18361) raised on the VASP forum, as it might affect your own parsing.
+For those who analyze `/elfcars` files, please take a closer look at the [issue](https://vasp.at/forum/viewtopic.php?f=3\&t=18361) raised on the VASP forum, as it might affect your own parsing. Thanks to Andrew Rosen and Hananeh Oliaei for bringing this point to our attention!
 {% endhint %}
 
 ### build data
