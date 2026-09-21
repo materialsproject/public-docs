@@ -42,7 +42,7 @@ This version went live on June 08, 2026 at around 4:00 pm Pacific
   * r<sup>2</sup>SCAN-computed band structures will be added in future releases
 * Added new phonon documents generated using the pheasy methodology
   * +26K `material`s now have additional phonon data. Retrievable via `mp-api` by using the `phonon_method` `kwarg` -> `mpr.materials.phonon.search(phonon_method="pheasy")`
-  * ChemRxiv link:&#x20;
+  * ChemRxiv link: [A High-Throughput ab initio Database of Harmonic Phonon Properties for Inorganic Crystals](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15004632/v1)
 
 #### Electronic Structure Collection
 
