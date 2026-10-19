@@ -17,6 +17,27 @@ Database versions are labelled via the date they become generally available to t
 You can verify the current database version powering the website on the footer of every page. If you are using the API, there is a `get_database_version` method available.
 {% endhint %}
 
+## v2026.09.28
+
+{% hint style="info" %}
+This version was made available on S3 (via MP's Open Data repositories) on September 09, 2026 for testing and validation
+{% endhint %}
+
+This version went live on October 19, 2026 at around 11:45 am Pacific. Update the `mp-api` Python client to `>= 0.47.0` for compatibility
+
+#### Corrections to Inconsistencies in Mixing Scheme Thermo Data
+
+* This release primarily incorporates a [correction to the code](https://github.com/materialsproject/pymatgen/pull/4704) used to generate the mixing scheme thermo data + phase diagrams. Only data with `thermo_type=GGA_GGA+U_R2SCAN` is affected; the `GGA_GGA+U` and r`2SCAN` hulls are unchanged. See the related MatSci forum post for further discussion.
+* The collections + data products affected by this change are:
+  * `summary`
+  * `thermo`
+  * `phase_diagrams`
+
+#### &#x20;Schema Changes
+
+* `chemenv` collection/endpoint
+  * The `warnings` field has changed from `str` to `list[str]`, consistent with all other endpoints. Code that treats warnings as a plain string will need updating
+
 ## v2026.04.13
 
 {% hint style="info" %}
