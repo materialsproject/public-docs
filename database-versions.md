@@ -27,7 +27,7 @@ This version went live on October 19, 2026 at around 11:45 am Pacific. Update th
 
 #### Corrections to Inconsistencies in Mixing Scheme Thermo Data
 
-* This release primarily incorporates a [correction to the code](https://github.com/materialsproject/pymatgen/pull/4704) used to generate the mixing scheme thermo data + phase diagrams. Only data with `thermo_type=GGA_GGA+U_R2SCAN` is affected; the `GGA_GGA+U` and r`2SCAN` hulls are unchanged. See the related MatSci forum post for further discussion.
+* This release primarily incorporates a [correction to the code](https://github.com/materialsproject/pymatgen/pull/4704) used to generate the mixing scheme thermo data + phase diagrams. Only data with `thermo_type=GGA_GGA+U_R2SCAN` is affected; the `GGA_GGA+U` and r`2SCAN` hulls are unchanged. See the [related MatSci forum post](https://matsci.org/t/fixes-for-inconsistencies-in-mixing-scheme-thermo-data/) for further discussion.
 * The collections + data products affected by this change are:
   * `summary`
   * `thermo`
