@@ -4,6 +4,13 @@ icon: browser
 
 # Website Changelog
 
+#### 2026-11-06
+
+* TEM Diffraction Tab:
+  * Migrated from the legacy `py4DSTEM` package to the actively maintained `quantEM` package. See more [here](https://github.com/electronmicroscopy/quantem.widget).
+* Latency Optimization – Phase 1:
+  * Introduced more caching in Materials Explorer and Phase Diagram to improve performance on subsequent queries. Further optimization is planned.
+
 #### 2026-05-22
 
 * Support `AlphaID` display, see more [here](https://docs.materialsproject.org/data-production/identifiers).
