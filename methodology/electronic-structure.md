@@ -109,19 +109,19 @@ In some cases, the band structure object may have an incorrect Fermi level. You 
 
 {% code overflow="wrap" %}
 ```python
-from mp_api.client import MPRester
+from mp_api.client import MPRester
 
-from pymatgen.electronic_structure.bandstructure import BandStructure
+from pymatgen.electronic_structure.bandstructure import BandStructure
 
-with MPRester() as mpr:
+with MPRester() as mpr:
     band_struct = mpr.materials.electronic_structure_bandstructure.get_bandstructure_from_task_id("mp-1776854")
     dos =  mpr.materials.electronic_structure_dos.get_dos_from_task_id("mp-1776854")
  
 cbm, vbm = dos.get_cbm_vbm()
 
-bs_corrected = BandStructure( [k.frac_coords for k in bs.kpoints], band_struct.bands, band_struct.lattice_rec, vbm, band_struct.labels_dict, structure=band_struct.structure )
+bs_corrected = BandStructure( [k.frac_coords for k in band_struct.kpoints], band_struct.bands, band_struct.lattice_rec, vbm, band_struct.labels_dict, structure=band_struct.structure )
 
-print("Band gap from corrected band structure:", bs_corrected.get_gap()) # Output: e.g., ~6.14 eV
+print("Band gap from corrected band structure:", bs_corrected.get_gap()) # Output: e.g., ~6.14 eV
 ```
 {% endcode %}
 
